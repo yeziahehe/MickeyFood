@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StartViewController.h"
+#import "RootTabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) StartViewController *startViewController;
+@property (strong, nonatomic) RootTabBarViewController *rootTabBarViewController;
+@property (strong, nonatomic) Reachability *hostReachability;
 
 @end
 

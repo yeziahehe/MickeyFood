@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseMenuViewController.h
 //  SJFood
 //
 //  Created by 叶帆 on 14/11/25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BaseMenuViewController : UIViewController
 
 @end
-

@@ -1,0 +1,21 @@
+//
+//  SJFood-Prefix.pch
+//  SJFood
+//
+//  Created by 叶帆 on 14/11/25.
+//  Copyright (c) 2014年 Ye Fan. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "Constant.h"
+    #import "YFUtils.h"
+    #import "Reachability.h"
+#endif

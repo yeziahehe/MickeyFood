@@ -9,11 +9,25 @@
 /* Begin PBXBuildFile section */
 		758954111A24B4A1001C2350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954101A24B4A1001C2350 /* main.m */; };
 		758954141A24B4A1001C2350 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954131A24B4A1001C2350 /* AppDelegate.m */; };
-		758954171A24B4A1001C2350 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954161A24B4A1001C2350 /* ViewController.m */; };
-		7589541A1A24B4A1001C2350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758954181A24B4A1001C2350 /* Main.storyboard */; };
 		7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7589541B1A24B4A1001C2350 /* Images.xcassets */; };
-		7589541F1A24B4A1001C2350 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7589541D1A24B4A1001C2350 /* LaunchScreen.xib */; };
 		7589542B1A24B4A2001C2350 /* SJFoodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589542A1A24B4A2001C2350 /* SJFoodTests.m */; };
+		7589543B1A24B853001C2350 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954391A24B853001C2350 /* StartViewController.m */; };
+		7589543C1A24B853001C2350 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7589543A1A24B853001C2350 /* StartViewController.xib */; };
+		758954401A24BA69001C2350 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589543F1A24BA69001C2350 /* BaseViewController.m */; };
+		758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954421A24BA7F001C2350 /* BaseMenuViewController.m */; };
+		758954471A24BB0E001C2350 /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954451A24BB0E001C2350 /* RootTabBarViewController.m */; };
+		758954481A24BB0E001C2350 /* RootTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758954461A24BB0E001C2350 /* RootTabBarViewController.xib */; };
+		7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7589544A1A24BB51001C2350 /* CustomNavigationController.m */; };
+		758954531A24E685001C2350 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954521A24E685001C2350 /* Reachability.m */; };
+		7599A9FB1A259CC40052E7A9 /* YFProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7599A9F81A259CC40052E7A9 /* YFProgressHUD.bundle */; };
+		7599A9FC1A259CC40052E7A9 /* YFProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599A9FA1A259CC40052E7A9 /* YFProgressHUD.m */; };
+		7599A9FF1A259D2B0052E7A9 /* YFDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599A9FE1A259D2B0052E7A9 /* YFDownloader.m */; };
+		7599AA021A259D5B0052E7A9 /* YFDownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA011A259D5B0052E7A9 /* YFDownloaderManager.m */; };
+		7599AA051A259D910052E7A9 /* YFAsynImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA041A259D910052E7A9 /* YFAsynImageView.m */; };
+		7599AA081A259DB60052E7A9 /* YFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA071A259DB60052E7A9 /* YFImageDownloader.m */; };
+		7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA0A1A259E030052E7A9 /* UIView+YFUtilities.m */; };
+		7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA0E1A25A3910052E7A9 /* MBProgressHUD.m */; };
+		7599AA151A25AA830052E7A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7599AA141A25AA830052E7A9 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +46,43 @@
 		758954101A24B4A1001C2350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		758954121A24B4A1001C2350 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		758954131A24B4A1001C2350 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		758954151A24B4A1001C2350 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		758954161A24B4A1001C2350 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		758954191A24B4A1001C2350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7589541B1A24B4A1001C2350 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7589541E1A24B4A1001C2350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		758954241A24B4A2001C2350 /* SJFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		758954291A24B4A2001C2350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7589542A1A24B4A2001C2350 /* SJFoodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJFoodTests.m; sourceTree = "<group>"; };
+		758954341A24B658001C2350 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		758954381A24B853001C2350 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		758954391A24B853001C2350 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		7589543A1A24B853001C2350 /* StartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
+		7589543E1A24BA69001C2350 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		7589543F1A24BA69001C2350 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		758954411A24BA7F001C2350 /* BaseMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMenuViewController.h; sourceTree = "<group>"; };
+		758954421A24BA7F001C2350 /* BaseMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMenuViewController.m; sourceTree = "<group>"; };
+		758954441A24BB0E001C2350 /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		758954451A24BB0E001C2350 /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
+		758954461A24BB0E001C2350 /* RootTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootTabBarViewController.xib; sourceTree = "<group>"; };
+		758954491A24BB51001C2350 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		7589544A1A24BB51001C2350 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		7589544C1A24BD8D001C2350 /* SJFood-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SJFood-Prefix.pch"; sourceTree = "<group>"; };
+		758954511A24E685001C2350 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		758954521A24E685001C2350 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7599A9F71A259C630052E7A9 /* YFUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFUtils.h; sourceTree = "<group>"; };
+		7599A9F81A259CC40052E7A9 /* YFProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YFProgressHUD.bundle; sourceTree = "<group>"; };
+		7599A9F91A259CC40052E7A9 /* YFProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFProgressHUD.h; sourceTree = "<group>"; };
+		7599A9FA1A259CC40052E7A9 /* YFProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFProgressHUD.m; sourceTree = "<group>"; };
+		7599A9FD1A259D2B0052E7A9 /* YFDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFDownloader.h; sourceTree = "<group>"; };
+		7599A9FE1A259D2B0052E7A9 /* YFDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFDownloader.m; sourceTree = "<group>"; };
+		7599AA001A259D5B0052E7A9 /* YFDownloaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFDownloaderManager.h; sourceTree = "<group>"; };
+		7599AA011A259D5B0052E7A9 /* YFDownloaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFDownloaderManager.m; sourceTree = "<group>"; };
+		7599AA031A259D910052E7A9 /* YFAsynImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAsynImageView.h; sourceTree = "<group>"; };
+		7599AA041A259D910052E7A9 /* YFAsynImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAsynImageView.m; sourceTree = "<group>"; };
+		7599AA061A259DB60052E7A9 /* YFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFImageDownloader.h; sourceTree = "<group>"; };
+		7599AA071A259DB60052E7A9 /* YFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFImageDownloader.m; sourceTree = "<group>"; };
+		7599AA091A259E030052E7A9 /* UIView+YFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YFUtilities.h"; sourceTree = "<group>"; };
+		7599AA0A1A259E030052E7A9 /* UIView+YFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFUtilities.m"; sourceTree = "<group>"; };
+		7599AA0D1A25A3910052E7A9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		7599AA0E1A25A3910052E7A9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		7599AA141A25AA830052E7A9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +106,7 @@
 		758954021A24B4A1001C2350 = {
 			isa = PBXGroup;
 			children = (
-				7589540D1A24B4A1001C2350 /* SJFood */,
+				7589540D1A24B4A1001C2350 /* RootDirectory */,
 				758954271A24B4A2001C2350 /* SJFoodTests */,
 				7589540C1A24B4A1001C2350 /* Products */,
 			);
@@ -78,24 +121,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7589540D1A24B4A1001C2350 /* SJFood */ = {
+		7589540D1A24B4A1001C2350 /* RootDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				758954341A24B658001C2350 /* Constant.h */,
 				758954121A24B4A1001C2350 /* AppDelegate.h */,
 				758954131A24B4A1001C2350 /* AppDelegate.m */,
-				758954151A24B4A1001C2350 /* ViewController.h */,
-				758954161A24B4A1001C2350 /* ViewController.m */,
-				758954181A24B4A1001C2350 /* Main.storyboard */,
+				758954381A24B853001C2350 /* StartViewController.h */,
+				758954391A24B853001C2350 /* StartViewController.m */,
+				7589543A1A24B853001C2350 /* StartViewController.xib */,
+				7589543D1A24BA1F001C2350 /* ViewControllers */,
+				7599AA101A25A5B20052E7A9 /* Resource */,
+				7589544D1A24E5FE001C2350 /* Utilities */,
 				7589541B1A24B4A1001C2350 /* Images.xcassets */,
-				7589541D1A24B4A1001C2350 /* LaunchScreen.xib */,
 				7589540E1A24B4A1001C2350 /* Supporting Files */,
 			);
+			name = RootDirectory;
 			path = SJFood;
 			sourceTree = "<group>";
 		};
 		7589540E1A24B4A1001C2350 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7589544C1A24BD8D001C2350 /* SJFood-Prefix.pch */,
 				7589540F1A24B4A1001C2350 /* Info.plist */,
 				758954101A24B4A1001C2350 /* main.m */,
 			);
@@ -117,6 +165,95 @@
 				758954291A24B4A2001C2350 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7589543D1A24BA1F001C2350 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7589543E1A24BA69001C2350 /* BaseViewController.h */,
+				7589543F1A24BA69001C2350 /* BaseViewController.m */,
+				758954411A24BA7F001C2350 /* BaseMenuViewController.h */,
+				758954421A24BA7F001C2350 /* BaseMenuViewController.m */,
+				758954441A24BB0E001C2350 /* RootTabBarViewController.h */,
+				758954451A24BB0E001C2350 /* RootTabBarViewController.m */,
+				758954461A24BB0E001C2350 /* RootTabBarViewController.xib */,
+				758954491A24BB51001C2350 /* CustomNavigationController.h */,
+				7589544A1A24BB51001C2350 /* CustomNavigationController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7589544D1A24E5FE001C2350 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7589544F1A24E663001C2350 /* 3rd */,
+				7589544E1A24E64A001C2350 /* YFUtilities */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7589544E1A24E64A001C2350 /* YFUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				7599A9F71A259C630052E7A9 /* YFUtils.h */,
+				7599A9F81A259CC40052E7A9 /* YFProgressHUD.bundle */,
+				7599A9F91A259CC40052E7A9 /* YFProgressHUD.h */,
+				7599A9FA1A259CC40052E7A9 /* YFProgressHUD.m */,
+				7599A9FD1A259D2B0052E7A9 /* YFDownloader.h */,
+				7599A9FE1A259D2B0052E7A9 /* YFDownloader.m */,
+				7599AA001A259D5B0052E7A9 /* YFDownloaderManager.h */,
+				7599AA011A259D5B0052E7A9 /* YFDownloaderManager.m */,
+				7599AA031A259D910052E7A9 /* YFAsynImageView.h */,
+				7599AA041A259D910052E7A9 /* YFAsynImageView.m */,
+				7599AA061A259DB60052E7A9 /* YFImageDownloader.h */,
+				7599AA071A259DB60052E7A9 /* YFImageDownloader.m */,
+				7599AA091A259E030052E7A9 /* UIView+YFUtilities.h */,
+				7599AA0A1A259E030052E7A9 /* UIView+YFUtilities.m */,
+			);
+			path = YFUtilities;
+			sourceTree = "<group>";
+		};
+		7589544F1A24E663001C2350 /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				758954501A24E685001C2350 /* Reachability */,
+				7599AA0C1A25A3910052E7A9 /* MBProgressHUD */,
+			);
+			path = 3rd;
+			sourceTree = "<group>";
+		};
+		758954501A24E685001C2350 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				758954511A24E685001C2350 /* Reachability.h */,
+				758954521A24E685001C2350 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		7599AA0C1A25A3910052E7A9 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7599AA0D1A25A3910052E7A9 /* MBProgressHUD.h */,
+				7599AA0E1A25A3910052E7A9 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		7599AA101A25A5B20052E7A9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7599AA111A25A5B90052E7A9 /* 欢迎页 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		7599AA111A25A5B90052E7A9 /* 欢迎页 */ = {
+			isa = PBXGroup;
+			children = (
+				7599AA141A25AA830052E7A9 /* Default-568h@2x.png */,
+			);
+			name = "欢迎页";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +305,7 @@
 				TargetAttributes = {
 					7589540A1A24B4A1001C2350 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 3WTM5PLDUE;
 					};
 					758954231A24B4A2001C2350 = {
 						CreatedOnToolsVersion = 6.1;
@@ -199,9 +337,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7589541A1A24B4A1001C2350 /* Main.storyboard in Resources */,
-				7589541F1A24B4A1001C2350 /* LaunchScreen.xib in Resources */,
+				758954481A24BB0E001C2350 /* RootTabBarViewController.xib in Resources */,
+				7599A9FB1A259CC40052E7A9 /* YFProgressHUD.bundle in Resources */,
 				7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */,
+				7599AA151A25AA830052E7A9 /* Default-568h@2x.png in Resources */,
+				7589543C1A24B853001C2350 /* StartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +359,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				758954171A24B4A1001C2350 /* ViewController.m in Sources */,
+				7599AA081A259DB60052E7A9 /* YFImageDownloader.m in Sources */,
+				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
+				7599AA021A259D5B0052E7A9 /* YFDownloaderManager.m in Sources */,
+				7589543B1A24B853001C2350 /* StartViewController.m in Sources */,
+				758954531A24E685001C2350 /* Reachability.m in Sources */,
+				7599AA051A259D910052E7A9 /* YFAsynImageView.m in Sources */,
+				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,
+				7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */,
+				7599A9FC1A259CC40052E7A9 /* YFProgressHUD.m in Sources */,
+				7599A9FF1A259D2B0052E7A9 /* YFDownloader.m in Sources */,
+				758954471A24BB0E001C2350 /* RootTabBarViewController.m in Sources */,
+				7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */,
+				758954401A24BA69001C2350 /* BaseViewController.m in Sources */,
 				758954141A24B4A1001C2350 /* AppDelegate.m in Sources */,
 				758954111A24B4A1001C2350 /* main.m in Sources */,
 			);
@@ -242,25 +394,6 @@
 			targetProxy = 758954251A24B4A2001C2350 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		758954181A24B4A1001C2350 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				758954191A24B4A1001C2350 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7589541D1A24B4A1001C2350 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7589541E1A24B4A1001C2350 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7589542C1A24B4A2001C2350 /* Debug */ = {
@@ -286,6 +419,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SJFood/SJFood-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -297,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -326,13 +461,15 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SJFood/SJFood-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -343,7 +480,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SJFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,7 +492,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SJFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +553,7 @@
 				758954301A24B4A2001C2350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		758954311A24B4A2001C2350 /* Build configuration list for PBXNativeTarget "SJFoodTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +562,7 @@
 				758954331A24B4A2001C2350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

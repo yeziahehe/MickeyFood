@@ -14,9 +14,84 @@
 
 @implementation AppDelegate
 
+@synthesize startViewController,rootTabBarViewController;
+@synthesize hostReachability;
+
+#pragma mark - Instance Methods
+- (StartViewController *)startViewController
+{
+    if(nil == startViewController)
+    {
+        startViewController = [[StartViewController alloc] init];
+    }
+    return startViewController;
+}
+
+- (RootTabBarViewController *)rootTabBarViewController
+{
+    if(nil == rootTabBarViewController)
+    {
+        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"RootTabBarViewController" owner:self options:nil];
+        rootTabBarViewController = [nibs lastObject];
+    }
+    return rootTabBarViewController;
+}
+
+#pragma mark - Notification Methods
+- (void)showPannelViewWithNotification:(NSNotification *)notification
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+    if([notification.object isEqualToString:@"fromGuide"])
+    {
+        [self.window addAnimationWithType:kCATransitionPush subtype:kCATransitionFromRight];
+    }
+    else
+    {
+        [self.window addAnimationWithType:kCATransitionFade subtype:nil];
+    }
+    [self notifyNetworkStatus];
+    self.window.rootViewController = self.rootTabBarViewController;
+}
+
+#pragma mark - Private Methods
+- (void)reachabilityChanged:(NSNotification *)note
+{
+    Reachability * reach = [note object];
+    if(reach.currentReachabilityStatus != NotReachable)
+    {
+        //to do
+    }
+    else
+    {
+        if (self.window.rootViewController != self.startViewController) {
+            // to do
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:@"当前无网络连接" hideDelay:2.0f];
+        }
+    }
+}
+
+- (void)notifyNetworkStatus
+{
+    self.hostReachability = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    [self.hostReachability startNotifier];
+}
+
+#pragma mark - Application Methods
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showPannelViewWithNotification:) name:kShowPannelViewNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    [self notifyNetworkStatus];
+    self.window.tintColor = kMainProjColor;
+    self.window.rootViewController = self.startViewController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
