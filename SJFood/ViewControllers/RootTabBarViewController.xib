@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tabBarController definesPresentationContext="YES" id="5Pb-NR-hX9" customClass="RootTabBarViewController">
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="IIy-ar-FDw" id="yER-SV-Vyh">
+            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="m0S-cV-HGi" id="yER-SV-Vyh">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -22,20 +22,32 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="rKF-eV-0ib" userLabel="Root View Controller">
+                        <viewController id="rKF-eV-0ib" userLabel="Root View Controller" customClass="HomeViewController">
                             <navigationItem key="navigationItem" title="首页" id="F5W-jr-s6y"/>
                         </viewController>
                     </viewControllers>
                 </navigationController>
-                <navigationController definesPresentationContext="YES" id="dK7-HT-iC8" userLabel="订单" customClass="CustomNavigationController">
-                    <tabBarItem key="tabBarItem" title="订单" id="YPf-hZ-VIz"/>
+                <navigationController definesPresentationContext="YES" id="dK7-HT-iC8" userLabel="分类" customClass="CustomNavigationController">
+                    <tabBarItem key="tabBarItem" title="分类" id="YPf-hZ-VIz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DWj-th-3hO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
                         <viewController id="lY6-TR-3oc" userLabel="Root View Controller">
-                            <navigationItem key="navigationItem" title="订单" id="Awp-os-j15"/>
+                            <navigationItem key="navigationItem" title="分类" id="Awp-os-j15"/>
+                        </viewController>
+                    </viewControllers>
+                </navigationController>
+                <navigationController definesPresentationContext="YES" id="Cvn-Lx-B7O" userLabel="帖子" customClass="CustomNavigationController">
+                    <tabBarItem key="tabBarItem" title="帖子" id="gmA-aF-PkS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TYQ-Ne-uZl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <viewControllers>
+                        <viewController id="if7-DD-eG3" userLabel="Root View Controller">
+                            <navigationItem key="navigationItem" title="帖子" id="ugc-a1-UIr"/>
                         </viewController>
                     </viewControllers>
                 </navigationController>

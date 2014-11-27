@@ -14,8 +14,7 @@
 
 @implementation RootTabBarViewController
 
-#pragma mark - UIViewController methods
-
+#pragma mark - UIViewController Methods
 - (void)viewDidLoad
 {
     [super viewDidLoad];
