@@ -6,8 +6,10 @@
 //  Copyright (c) 2014年 Ye Fan. All rights reserved.
 //
 
-#import "BaseSearchViewController.h"
+#import "BaseMenuViewController.h"
 
-@interface HomeViewController : BaseSearchViewController
+@interface HomeViewController : BaseMenuViewController<UISearchBarDelegate,UISearchDisplayDelegate>
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UISearchDisplayController *searchDisplayController;
 
 @end

@@ -9,14 +9,14 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tabBarController definesPresentationContext="YES" id="5Pb-NR-hX9" customClass="RootTabBarViewController">
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="m0S-cV-HGi" id="yER-SV-Vyh">
+            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="IIy-ar-FDw" id="yER-SV-Vyh">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tabBar>
             <viewControllers>
                 <navigationController definesPresentationContext="YES" id="ApY-LZ-J8t" userLabel="首页" customClass="CustomNavigationController">
-                    <tabBarItem key="tabBarItem" title="首页" id="m0S-cV-HGi" userLabel="首页"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="btn_home.png" id="m0S-cV-HGi" userLabel="首页"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VJL-qP-fp2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +28,7 @@
                     </viewControllers>
                 </navigationController>
                 <navigationController definesPresentationContext="YES" id="dK7-HT-iC8" userLabel="分类" customClass="CustomNavigationController">
-                    <tabBarItem key="tabBarItem" title="分类" id="YPf-hZ-VIz"/>
+                    <tabBarItem key="tabBarItem" title="分类" image="btn_category.png" id="YPf-hZ-VIz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DWj-th-3hO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +52,7 @@
                     </viewControllers>
                 </navigationController>
                 <navigationController definesPresentationContext="YES" id="8mh-ca-kl7" userLabel="我的" customClass="CustomNavigationController">
-                    <tabBarItem key="tabBarItem" title="我的" id="IIy-ar-FDw" userLabel="我的"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user.png" id="IIy-ar-FDw" userLabel="我的"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tre-8Y-lAp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -67,6 +67,11 @@
             <point key="canvasLocation" x="352" y="355"/>
         </tabBarController>
     </objects>
+    <resources>
+        <image name="btn_category.png" width="23" height="24"/>
+        <image name="btn_home.png" width="24" height="24"/>
+        <image name="btn_user.png" width="22" height="26"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
