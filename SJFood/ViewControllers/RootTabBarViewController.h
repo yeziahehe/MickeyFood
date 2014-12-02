@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomLightNavigationController.h"
 
 @interface RootTabBarViewController : UITabBarController<UITabBarControllerDelegate>
+
+@property (nonatomic, strong)CustomLightNavigationController *loginNavController;
 
 @end

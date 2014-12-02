@@ -83,7 +83,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // to do
-    [self setLeftNaviItemWithTitle:nil imageName:@"icon_header_back_blur.png"];
+    [self setLeftNaviItemWithTitle:nil imageName:@"icon_header_back.png"];
 }
 
 @end

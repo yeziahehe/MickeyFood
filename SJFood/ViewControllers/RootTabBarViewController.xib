@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tabBarController definesPresentationContext="YES" id="5Pb-NR-hX9" customClass="RootTabBarViewController">
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="IIy-ar-FDw" id="yER-SV-Vyh">
+            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="gmA-aF-PkS" id="yER-SV-Vyh">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -27,7 +27,7 @@
                         </viewController>
                     </viewControllers>
                 </navigationController>
-                <navigationController definesPresentationContext="YES" id="dK7-HT-iC8" userLabel="分类" customClass="CustomNavigationController">
+                <navigationController definesPresentationContext="YES" id="dK7-HT-iC8" userLabel="分类" customClass="CustomLightNavigationController">
                     <tabBarItem key="tabBarItem" title="分类" image="btn_category.png" id="YPf-hZ-VIz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DWj-th-3hO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -39,37 +39,41 @@
                         </viewController>
                     </viewControllers>
                 </navigationController>
-                <navigationController definesPresentationContext="YES" id="Cvn-Lx-B7O" userLabel="帖子" customClass="CustomNavigationController">
-                    <tabBarItem key="tabBarItem" title="帖子" id="gmA-aF-PkS"/>
+                <navigationController definesPresentationContext="YES" id="Cvn-Lx-B7O" userLabel="购物车" customClass="CustomLightNavigationController">
+                    <tabBarItem key="tabBarItem" title="购物车" image="btn_shopping.png" id="gmA-aF-PkS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TYQ-Ne-uZl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
                         <viewController id="if7-DD-eG3" userLabel="Root View Controller">
-                            <navigationItem key="navigationItem" title="帖子" id="ugc-a1-UIr"/>
+                            <navigationItem key="navigationItem" title="购物车" id="ugc-a1-UIr"/>
                         </viewController>
                     </viewControllers>
                 </navigationController>
-                <navigationController definesPresentationContext="YES" id="8mh-ca-kl7" userLabel="我的" customClass="CustomNavigationController">
+                <navigationController definesPresentationContext="YES" id="8mh-ca-kl7" userLabel="我的" customClass="CustomLightNavigationController">
                     <tabBarItem key="tabBarItem" title="我的" image="btn_user.png" id="IIy-ar-FDw" userLabel="我的"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tre-8Y-lAp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="zVB-87-Loo" userLabel="Root View Controller">
+                        <viewController id="zVB-87-Loo" userLabel="Root View Controller" customClass="UserInfoViewController">
                             <navigationItem key="navigationItem" title="我的" id="LWf-70-bmI"/>
                         </viewController>
                     </viewControllers>
                 </navigationController>
             </viewControllers>
+            <connections>
+                <outlet property="delegate" destination="-1" id="Z0S-Ys-nmU"/>
+            </connections>
             <point key="canvasLocation" x="352" y="355"/>
         </tabBarController>
     </objects>
     <resources>
         <image name="btn_category.png" width="23" height="24"/>
         <image name="btn_home.png" width="24" height="24"/>
+        <image name="btn_shopping.png" width="24" height="24"/>
         <image name="btn_user.png" width="22" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

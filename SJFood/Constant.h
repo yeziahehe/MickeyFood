@@ -40,11 +40,13 @@
 #define ScreenWidth         [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight        [UIScreen mainScreen].bounds.size.height
 #define kMainProjColor      [UIColor colorWithRed:240.f/255 green:97.f/255 blue:15.f/255 alpha:1.0f]
+#define kMainBlackColor     [UIColor colorWithRed:30.f/255 green:30.f/255 blue:30.f/255 alpha:1.0f]
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"]
 #define kNetWorkErrorString @"网络错误"
 #define kIsWelcomeShown     @"IsWelcomeShown"
 
 //Notification Keys
 #define kShowPannelViewNotification         @"ShowPannelViewNotification"
+#define kShowLoginViewNotification          @"ShowLoginViewNotification"
 
 #endif

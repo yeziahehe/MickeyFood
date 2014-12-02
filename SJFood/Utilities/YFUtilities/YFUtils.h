@@ -22,6 +22,7 @@
 #import "YFAsynImageView.h"
 #import "YFImageDownloader.h"
 #import "UIView+YFUtilities.h"
+#import "YFWebViewController.h"
 
 #endif
 
