@@ -116,7 +116,7 @@
     }
     return YES;
 }
-#pragma mark - RYDownloaderDelegate methods
+#pragma mark - YFDownloaderDelegate methods
 - (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData*)data
 {
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];

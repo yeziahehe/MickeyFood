@@ -50,7 +50,7 @@
     NSString *validString = [self checkFieldValid];
     if(validString)
     {
-        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:4.f];
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:2.f];
     }
     else
     {
@@ -66,7 +66,7 @@
     NSString *validString = [self checkFieldValid];
     if(validString)
     {
-        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:4.f];
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:2.f];
     }
     else
     {

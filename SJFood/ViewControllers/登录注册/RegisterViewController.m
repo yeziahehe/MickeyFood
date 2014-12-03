@@ -32,11 +32,11 @@
     NSString *validString = [self checkFieldValid];
     if(validString)
     {
-        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:4.f];
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:2.f];
     }
     else
     {
-        // to do next action
+        [MemberDataManager sharedManager].loginMember.phone = self.phoneNumTextField.text;
         ConfirmViewController *confirmViewController = [[ConfirmViewController alloc]initWithNibName:@"ConfirmViewController" bundle:nil];
         [self.navigationController pushViewController:confirmViewController animated:YES];
     }

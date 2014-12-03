@@ -81,7 +81,6 @@
     UIWindow *hudWindow = (UIWindow *)hud.superview;
     [hudWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = YES;
-    hud.dimBackground = YES;
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.labelText = text;
     [NSObject cancelPreviousPerformRequestsWithTarget:hud];

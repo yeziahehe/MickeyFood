@@ -12,6 +12,7 @@
                 <outlet property="identifyCodeTextField" destination="PLz-Ev-qdU" id="VK0-4N-RGG"/>
                 <outlet property="nickNameTextField" destination="eVa-gy-opX" id="wqS-i3-RlT"/>
                 <outlet property="passwordTextField" destination="M5d-BM-llH" id="UfT-q2-1Bd"/>
+                <outlet property="phoneLabel" destination="Ewz-dT-rH1" id="Sc2-d4-OPa"/>
                 <outlet property="rePasswordTextField" destination="CAv-rm-2LN" id="lDo-lM-qHa"/>
                 <outlet property="registerButton" destination="x0g-zp-NLs" id="d88-Yu-102"/>
                 <outlet property="resendButton" destination="pLD-ru-43h" id="oD3-Tb-zai"/>
@@ -23,8 +24,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ewz-dT-rH1">
+                    <rect key="frame" x="0.0" y="79" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" id="shO-mi-zqd">
-                    <rect key="frame" x="0.0" y="84" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="114" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_hon_1px_up.png" id="9iM-Ug-LZX">
@@ -60,7 +68,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="sHK-yC-j4i">
-                    <rect key="frame" x="0.0" y="148" width="320" height="135"/>
+                    <rect key="frame" x="0.0" y="178" width="320" height="135"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user.png" id="Zkc-sc-wlk">
@@ -113,7 +121,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x0g-zp-NLs">
-                    <rect key="frame" x="20" y="341" width="280" height="45"/>
+                    <rect key="frame" x="20" y="371" width="280" height="45"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <state key="normal" title="注册" backgroundImage="btn_full.png">
@@ -124,7 +132,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v0Y-MT-27n">
-                    <rect key="frame" x="52" y="294" width="40" height="40"/>
+                    <rect key="frame" x="52" y="324" width="40" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="icon_radio_normal.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -135,7 +143,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9eU-W5-ayD">
-                    <rect key="frame" x="95" y="294" width="159" height="40"/>
+                    <rect key="frame" x="95" y="324" width="159" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="我已阅读并同意米奇的协议">

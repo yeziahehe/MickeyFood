@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UITextField *rePasswordTextField;
 @property (strong, nonatomic) IBOutlet UIButton *agreeProtocolButton;
+@property (strong, nonatomic) IBOutlet UILabel *phoneLabel;
 
 - (IBAction)registerButtonClicked:(id)sender;
 - (IBAction)resendButtonClicked:(id)sender;

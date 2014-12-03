@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <SMS_SDK/SMS_SDK.h>
 
 @interface AppDelegate ()
 
@@ -87,6 +88,9 @@
     // Override point for customization after application launch.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showPannelViewWithNotification:) name:kShowPannelViewNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    //添加SMS应用
+    [self connectShareSDK];
+    //检测网络状态
     [self notifyNetworkStatus];
     self.window.tintColor = kMainProjColor;
     self.window.rootViewController = self.startViewController;
@@ -115,6 +119,13 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - ShareSDK methods
+- (void)connectShareSDK
+{
+    //配置SMS
+    [SMS_SDK registerApp:@"486f6cde1a52" withSecret:@"0af52d82128a9eadab1447b94435a47c"];
 }
 
 @end

@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7051A2F46370010A2E9 /* MemberDataManager.m */; };
+		750DF7091A2F49650010A2E9 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7081A2F49650010A2E9 /* Member.m */; };
+		750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF70D1A2F4F4B0010A2E9 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		750DF7191A2F4F4B0010A2E9 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF70F1A2F4F4B0010A2E9 /* NSString+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		750DF71A1A2F4F4B0010A2E9 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7111A2F4F4B0010A2E9 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7131A2F4F4B0010A2E9 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7151A2F4F4B0010A2E9 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7171A2F4F4B0010A2E9 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		750DF71F1A2F66930010A2E9 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF71E1A2F66930010A2E9 /* SMS_SDK.framework */; };
+		750DF7211A2F66AC0010A2E9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7201A2F66AC0010A2E9 /* MessageUI.framework */; };
+		750DF7231A2F66E10010A2E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7221A2F66E10010A2E9 /* CoreGraphics.framework */; };
+		750DF7251A2F66EB0010A2E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7241A2F66EB0010A2E9 /* libz.dylib */; };
+		750DF7271A2F66F70010A2E9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7261A2F66F70010A2E9 /* libicucore.dylib */; };
 		75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */; };
 		75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */; };
 		75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D231A2EBC190034523F /* ResetPwdViewController.m */; };
@@ -101,6 +114,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750DF7041A2F46370010A2E9 /* MemberDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataManager.h; sourceTree = "<group>"; };
+		750DF7051A2F46370010A2E9 /* MemberDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberDataManager.m; sourceTree = "<group>"; };
+		750DF7071A2F49650010A2E9 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		750DF7081A2F49650010A2E9 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		750DF70B1A2F4F4B0010A2E9 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		750DF70C1A2F4F4B0010A2E9 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		750DF70D1A2F4F4B0010A2E9 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		750DF70E1A2F4F4B0010A2E9 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		750DF70F1A2F4F4B0010A2E9 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		750DF7101A2F4F4B0010A2E9 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		750DF7111A2F4F4B0010A2E9 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		750DF7121A2F4F4B0010A2E9 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		750DF7131A2F4F4B0010A2E9 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		750DF7141A2F4F4B0010A2E9 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		750DF7151A2F4F4B0010A2E9 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		750DF7161A2F4F4B0010A2E9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		750DF7171A2F4F4B0010A2E9 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		750DF71E1A2F66930010A2E9 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		750DF7201A2F66AC0010A2E9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		750DF7221A2F66E10010A2E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		750DF7241A2F66EB0010A2E9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		750DF7261A2F66F70010A2E9 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		75158D1D1A2EBBE60034523F /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
@@ -220,6 +255,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750DF7271A2F66F70010A2E9 /* libicucore.dylib in Frameworks */,
+				750DF7251A2F66EB0010A2E9 /* libz.dylib in Frameworks */,
+				750DF7231A2F66E10010A2E9 /* CoreGraphics.framework in Frameworks */,
+				750DF7211A2F66AC0010A2E9 /* MessageUI.framework in Frameworks */,
+				750DF71F1A2F66930010A2E9 /* SMS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +273,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750DF7031A2F46010010A2E9 /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				750DF7041A2F46370010A2E9 /* MemberDataManager.h */,
+				750DF7051A2F46370010A2E9 /* MemberDataManager.m */,
+				750DF7071A2F49650010A2E9 /* Member.h */,
+				750DF7081A2F49650010A2E9 /* Member.m */,
+			);
+			name = DataCenter;
+			sourceTree = "<group>";
+		};
+		750DF70A1A2F4F4B0010A2E9 /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				750DF70B1A2F4F4B0010A2E9 /* JSON.h */,
+				750DF70C1A2F4F4B0010A2E9 /* NSObject+SBJSON.h */,
+				750DF70D1A2F4F4B0010A2E9 /* NSObject+SBJSON.m */,
+				750DF70E1A2F4F4B0010A2E9 /* NSString+SBJSON.h */,
+				750DF70F1A2F4F4B0010A2E9 /* NSString+SBJSON.m */,
+				750DF7101A2F4F4B0010A2E9 /* SBJSON.h */,
+				750DF7111A2F4F4B0010A2E9 /* SBJSON.m */,
+				750DF7121A2F4F4B0010A2E9 /* SBJsonBase.h */,
+				750DF7131A2F4F4B0010A2E9 /* SBJsonBase.m */,
+				750DF7141A2F4F4B0010A2E9 /* SBJsonParser.h */,
+				750DF7151A2F4F4B0010A2E9 /* SBJsonParser.m */,
+				750DF7161A2F4F4B0010A2E9 /* SBJsonWriter.h */,
+				750DF7171A2F4F4B0010A2E9 /* SBJsonWriter.m */,
+			);
+			path = SBJSON;
+			sourceTree = "<group>";
+		};
 		7533EEAE1A2E1496001D12D4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +412,7 @@
 		7542C45F1A2CA2EA00BB083D /* 登录注册 */ = {
 			isa = PBXGroup;
 			children = (
+				750DF7031A2F46010010A2E9 /* DataCenter */,
 				7542C4601A2CA42400BB083D /* LoginViewController.h */,
 				7542C4611A2CA42400BB083D /* LoginViewController.m */,
 				7542C4621A2CA42400BB083D /* LoginViewController.xib */,
@@ -504,6 +576,12 @@
 		7589544F1A24E663001C2350 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				750DF7261A2F66F70010A2E9 /* libicucore.dylib */,
+				750DF7241A2F66EB0010A2E9 /* libz.dylib */,
+				750DF7221A2F66E10010A2E9 /* CoreGraphics.framework */,
+				750DF7201A2F66AC0010A2E9 /* MessageUI.framework */,
+				750DF71E1A2F66930010A2E9 /* SMS_SDK.framework */,
+				750DF70A1A2F4F4B0010A2E9 /* SBJSON */,
 				758954501A24E685001C2350 /* Reachability */,
 				7599AA0C1A25A3910052E7A9 /* MBProgressHUD */,
 			);
@@ -683,8 +761,10 @@
 			files = (
 				7599AA081A259DB60052E7A9 /* YFImageDownloader.m in Sources */,
 				7542C4671A2CAB0500BB083D /* CustomLightNavigationController.m in Sources */,
+				750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */,
 				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
 				7599AA021A259D5B0052E7A9 /* YFDownloaderManager.m in Sources */,
+				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
 				7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */,
 				7589543B1A24B853001C2350 /* StartViewController.m in Sources */,
 				7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */,
@@ -692,16 +772,22 @@
 				7599AA051A259D910052E7A9 /* YFAsynImageView.m in Sources */,
 				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
+				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
 				7542C4631A2CA42400BB083D /* LoginViewController.m in Sources */,
 				758116371A27611900065E65 /* HomeViewController.m in Sources */,
 				7542C48E1A2CD09E00BB083D /* ConfirmViewController.m in Sources */,
 				7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */,
 				7599A9FC1A259CC40052E7A9 /* YFProgressHUD.m in Sources */,
+				750DF7091A2F49650010A2E9 /* Member.m in Sources */,
 				7533EEAD1A2E10A8001D12D4 /* NSString+HtmlCss.m in Sources */,
+				750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */,
 				75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */,
 				7599A9FF1A259D2B0052E7A9 /* YFDownloader.m in Sources */,
 				758954471A24BB0E001C2350 /* RootTabBarViewController.m in Sources */,
 				7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */,
+				750DF7191A2F4F4B0010A2E9 /* NSString+SBJSON.m in Sources */,
+				750DF71A1A2F4F4B0010A2E9 /* SBJSON.m in Sources */,
+				750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */,
 				758954401A24BA69001C2350 /* BaseViewController.m in Sources */,
 				75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */,
 				758954141A24B4A1001C2350 /* AppDelegate.m in Sources */,
@@ -813,6 +899,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
+				);
 				INFOPLIST_FILE = SJFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -825,6 +915,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
+				);
 				INFOPLIST_FILE = SJFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

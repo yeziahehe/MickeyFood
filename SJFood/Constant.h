@@ -42,11 +42,24 @@
 #define kMainProjColor      [UIColor colorWithRed:240.f/255 green:97.f/255 blue:15.f/255 alpha:1.0f]
 #define kMainBlackColor     [UIColor colorWithRed:30.f/255 green:30.f/255 blue:30.f/255 alpha:1.0f]
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"]
+#define kCommonParamsDict   [NSMutableDictionary dictionaryWithObjectsAndKeys:nil];
+
 #define kNetWorkErrorString @"网络错误"
 #define kIsWelcomeShown     @"IsWelcomeShown"
+#define kLoginUserDataFile  @"LoginUserDataFile"
+#define kCodeKey            @"status"
+#define kMessageKey         @"message"
+#define kSuccessCode        @"success"
+#define kFailureCode        @"failure"
+
 
 //Notification Keys
 #define kShowPannelViewNotification         @"ShowPannelViewNotification"
 #define kShowLoginViewNotification          @"ShowLoginViewNotification"
+
+//Url values
+#define kServerAddress      @"http://192.168.1.145:8400/SJFood/"
+#define kLoginUrl           @"user/toLogin.do"
+#define kRegisterUrl        @"user/registerIn.do"
 
 #endif

@@ -32,7 +32,7 @@
     NSString *validString = [self checkPasswordValid];
     if(validString)
     {
-        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:4.f];
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:validString customView:nil hideDelay:2.f];
     }
     else
     {

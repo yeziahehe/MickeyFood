@@ -34,10 +34,13 @@
     
     NSString *checkString = [self checkFieldValid];
     if (checkString) {
-        [[YFProgressHUD sharedProgressHUD] showWithMessage:checkString customView:nil hideDelay:0.4f];
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:checkString customView:nil hideDelay:2.f];
     }
     else {
-        // to do login action
+        [MemberDataManager sharedManager].loginMember.phone = self.usernameTextField.text;
+        [MemberDataManager sharedManager].loginMember.password = self.passwordTextField.text;
+        [[YFProgressHUD sharedProgressHUD] startedNetWorkActivityWithText:@"登陆中..."];
+        [[MemberDataManager sharedManager] loginWithAccountName:self.usernameTextField.text password:self.passwordTextField.text];
     }
 }
 
@@ -49,6 +52,22 @@
 - (IBAction)forgetPasswordButtonClicked:(id)sender {
     ForgetPwdViewController *forgetPwdViewController = [[ForgetPwdViewController alloc]initWithNibName:@"ForgetPwdViewController" bundle:nil];
     [self.navigationController pushViewController:forgetPwdViewController animated:YES];
+}
+
+#pragma mark - Notification methods
+- (void)loginRespnseWithNotification:(NSNotification *)notification
+{
+    if(notification.object)
+    {
+        //登录失败
+        [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:notification.object hideDelay:2.f];
+    }
+    else
+    {
+        //登录成功
+        [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"登陆成功" hideDelay:2.f];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 #pragma mark - BaseViewController methods
@@ -64,6 +83,13 @@
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"登录"];
     [self setLeftNaviItemWithTitle:nil imageName:@"icon_header_cancel.png"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginRespnseWithNotification:) name:kLoginResponseNotification object:nil];;
+}
+
+- (void)dealloc
+{
+    [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:[MemberDataManager sharedManager] purpose:kLoginDownloaderKey];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITextFieldDelegate methods
