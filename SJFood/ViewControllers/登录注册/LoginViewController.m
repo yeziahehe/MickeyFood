@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "ForgetPwdViewController.h"
 
 @interface LoginViewController ()
 
@@ -46,7 +47,8 @@
 }
 
 - (IBAction)forgetPasswordButtonClicked:(id)sender {
-    // to do forget password action
+    ForgetPwdViewController *forgetPwdViewController = [[ForgetPwdViewController alloc]initWithNibName:@"ForgetPwdViewController" bundle:nil];
+    [self.navigationController pushViewController:forgetPwdViewController animated:YES];
 }
 
 #pragma mark - BaseViewController methods

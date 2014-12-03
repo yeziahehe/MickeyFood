@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */; };
+		75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */; };
+		75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D231A2EBC190034523F /* ResetPwdViewController.m */; };
+		75158D261A2EBC190034523F /* ResetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D241A2EBC190034523F /* ResetPwdViewController.xib */; };
 		7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7533EEA71A2E0EF4001D12D4 /* YFWebViewController.m */; };
 		7533EEAA1A2E0EF4001D12D4 /* YFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7533EEA81A2E0EF4001D12D4 /* YFWebViewController.xib */; };
 		7533EEAD1A2E10A8001D12D4 /* NSString+HtmlCss.m in Sources */ = {isa = PBXBuildFile; fileRef = 7533EEAC1A2E10A8001D12D4 /* NSString+HtmlCss.m */; };
@@ -97,6 +101,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75158D1D1A2EBBE60034523F /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
+		75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
+		75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
+		75158D221A2EBC190034523F /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
+		75158D231A2EBC190034523F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
+		75158D241A2EBC190034523F /* ResetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPwdViewController.xib; sourceTree = "<group>"; };
 		7533EEA61A2E0EF4001D12D4 /* YFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFWebViewController.h; sourceTree = "<group>"; };
 		7533EEA71A2E0EF4001D12D4 /* YFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFWebViewController.m; sourceTree = "<group>"; };
 		7533EEA81A2E0EF4001D12D4 /* YFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFWebViewController.xib; sourceTree = "<group>"; };
@@ -340,6 +350,12 @@
 				7542C48B1A2CD09E00BB083D /* ConfirmViewController.h */,
 				7542C48C1A2CD09E00BB083D /* ConfirmViewController.m */,
 				7542C48D1A2CD09E00BB083D /* ConfirmViewController.xib */,
+				75158D1D1A2EBBE60034523F /* ForgetPwdViewController.h */,
+				75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */,
+				75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */,
+				75158D221A2EBC190034523F /* ResetPwdViewController.h */,
+				75158D231A2EBC190034523F /* ResetPwdViewController.m */,
+				75158D241A2EBC190034523F /* ResetPwdViewController.xib */,
 			);
 			path = "登录注册";
 			sourceTree = "<group>";
@@ -632,6 +648,7 @@
 				7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */,
 				7533EF041A2E1549001D12D4 /* icon_header_cancel@2x.png in Resources */,
 				7533EEEE1A2E1536001D12D4 /* btn_get_code_bg@2x.png in Resources */,
+				75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */,
 				758116711A276E9200065E65 /* Default-568h@2x.png in Resources */,
 				7533EEF41A2E1536001D12D4 /* icon_mobile_num@2x.png in Resources */,
 				7542C4861A2CC11C00BB083D /* RegisterViewController.xib in Resources */,
@@ -646,6 +663,7 @@
 				7533EEFC1A2E1536001D12D4 /* icon_user@2x.png in Resources */,
 				7533EF031A2E1549001D12D4 /* icon_header_back@3x.png in Resources */,
 				7533EEF61A2E1536001D12D4 /* icon_pwd@2x.png in Resources */,
+				75158D261A2EBC190034523F /* ResetPwdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,10 +698,12 @@
 				7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */,
 				7599A9FC1A259CC40052E7A9 /* YFProgressHUD.m in Sources */,
 				7533EEAD1A2E10A8001D12D4 /* NSString+HtmlCss.m in Sources */,
+				75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */,
 				7599A9FF1A259D2B0052E7A9 /* YFDownloader.m in Sources */,
 				758954471A24BB0E001C2350 /* RootTabBarViewController.m in Sources */,
 				7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */,
 				758954401A24BA69001C2350 /* BaseViewController.m in Sources */,
+				75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */,
 				758954141A24B4A1001C2350 /* AppDelegate.m in Sources */,
 				758954111A24B4A1001C2350 /* main.m in Sources */,
 			);

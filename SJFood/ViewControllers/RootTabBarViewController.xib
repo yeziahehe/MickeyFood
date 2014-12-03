@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tabBarController definesPresentationContext="YES" id="5Pb-NR-hX9" customClass="RootTabBarViewController">
             <nil key="simulatedBottomBarMetrics"/>
-            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="gmA-aF-PkS" id="yER-SV-Vyh">
+            <tabBar key="tabBar" contentMode="scaleToFill" selectedItem="IIy-ar-FDw" id="yER-SV-Vyh">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
