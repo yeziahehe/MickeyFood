@@ -64,7 +64,6 @@
         if ([vc isKindOfClass:[UserInfoViewController class]]) {
             if ([[MemberDataManager sharedManager] isLogin])
             {
-                UserInfoViewController *uivc = (UserInfoViewController *)vc;
                 return YES;
             }
             else

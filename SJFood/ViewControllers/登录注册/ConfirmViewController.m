@@ -204,4 +204,8 @@
     [self.view endEditing:YES];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self resignAllFirstResponders];
+}
 @end
