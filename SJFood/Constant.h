@@ -58,8 +58,10 @@
 #define kShowLoginViewNotification          @"ShowLoginViewNotification"
 
 //Url values
-#define kServerAddress      @"http://192.168.1.145:8400/SJFood/"
-#define kLoginUrl           @"user/toLogin.do"
-#define kRegisterUrl        @"user/registerIn.do"
+#define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
+#define kLoginUrl               @"user/toLogin.do"
+#define kRegisterUrl            @"user/registerIn.do"
+#define kCheckUserExistUrl      @"user/checkUserIsExist.do"
+#define kResetPwdUrl            @"user/resetPassword.do"
 
 #endif

@@ -36,6 +36,20 @@
     }
     else
     {
+        [[MemberDataManager sharedManager] checkUserExistWithPhone:self.phoneNumTextField.text];
+    }
+}
+
+#pragma mark - Notification Methods
+- (void)checkUserExistResponseNotification:(NSNotification *)notification
+{
+    if(notification.object)
+    {
+        //手机号码已存在
+        [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:notification.object hideDelay:2.f];
+    }
+    else
+    {
         [MemberDataManager sharedManager].loginMember.phone = self.phoneNumTextField.text;
         ConfirmViewController *confirmViewController = [[ConfirmViewController alloc]initWithNibName:@"ConfirmViewController" bundle:nil];
         [self.navigationController pushViewController:confirmViewController animated:YES];
@@ -55,6 +69,7 @@
     [self setNaviTitle:@"注册"];
     self.nextButton.enabled = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChange:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkUserExistResponseNotification:) name:kCheckUserExistResponseNotification object:nil];
 }
 
 - (void)dealloc

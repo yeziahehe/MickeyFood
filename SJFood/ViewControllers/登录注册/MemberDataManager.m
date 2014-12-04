@@ -38,6 +38,20 @@
                                                                 purpose:kLoginDownloaderKey];
 }
 
+- (void)checkUserExistWithPhone:(NSString *)phone
+{
+    if(nil == phone)
+        phone = @"";
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kCheckUserExistUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:phone forKey:@"phone"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kCheckUserExistDownloaderKey];
+}
+
 - (void)registerWithPhone:(NSString *)phone
                  password:(NSString *)password
                  nickName:(NSString *)nickName
@@ -58,6 +72,23 @@
                                                             contentType:@"application/x-www-form-urlencoded"
                                                                delegate:self
                                                                 purpose:kRegisterDownloaderKey];
+}
+
+- (void)resetPwdWithPhone:(NSString *)phone newPassword:(NSString *)newPassword
+{
+    if (nil == phone)
+        phone = @"";
+    if (nil == newPassword)
+        newPassword = @"";
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kResetPwdUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:phone forKey:@"phone"];
+    [dict setObject:newPassword forKey:@"newPassword"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kResetPwdDownloaderKey];
 }
 
 - (void)saveLoginMemberData
@@ -106,7 +137,7 @@
         NSDictionary *dict = [str JSONValue];
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
-            self.loginMember = [Member memberWithDict:dict];
+            //self.loginMember = [Member memberWithDict:dict];
             [[MemberDataManager sharedManager] saveLoginMemberData];
             [[NSNotificationCenter defaultCenter] postNotificationName:kLoginResponseNotification object:nil];
         }
@@ -120,6 +151,25 @@
             if(message.length == 0)
                 message = @"登录失败";
             [[NSNotificationCenter defaultCenter] postNotificationName:kLoginResponseNotification object:message];
+        }
+    }
+    else if ([downloader.purpose isEqualToString:kCheckUserExistDownloaderKey])
+    {
+        NSDictionary *dict = [str JSONValue];
+        if ([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kCheckUserExistResponseNotification object:nil];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"该手机号码已经注册";
+            [[NSNotificationCenter defaultCenter] postNotificationName:kCheckUserExistResponseNotification object:message];
         }
     }
     else if ([downloader.purpose isEqualToString:kRegisterDownloaderKey])
@@ -139,6 +189,24 @@
             if(message.length == 0)
                 message = @"注册失败";
             [[NSNotificationCenter defaultCenter] postNotificationName:kRegisterResponseNotification object:message];
+        }
+    }
+    else if ([downloader.purpose isEqualToString:kResetPwdDownloaderKey])
+    {
+        NSDictionary *dict = [str JSONValue];
+        if ([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kResetPwdResponseNotification object:nil];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"重设密码失败";
+            [[NSNotificationCenter defaultCenter] postNotificationName:kResetPwdResponseNotification object:message];
         }
     }
 }

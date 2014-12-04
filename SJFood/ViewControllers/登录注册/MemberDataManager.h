@@ -11,9 +11,13 @@
 
 #define kLoginDownloaderKey             @"LoginDownloaderKey"
 #define kRegisterDownloaderKey          @"RegisterDownloaderKey"
+#define kCheckUserExistDownloaderKey    @"CheckUserExistDownloaderKey"
+#define kResetPwdDownloaderKey          @"ResetPwdDownloaderKey"
 
-#define kLoginResponseNotification      @"LoginResponseNotification"
-#define kRegisterResponseNotification   @"RegisterResponseNotification"
+#define kLoginResponseNotification              @"LoginResponseNotification"
+#define kRegisterResponseNotification           @"RegisterResponseNotification"
+#define kCheckUserExistResponseNotification     @"CheckUserExistResponseNotification"
+#define kResetPwdResponseNotification           @"ResetPwdResponseNotification"
 
 /**
  *  该类用于管理注册登录模块的数据处理
@@ -37,10 +41,16 @@
 /**
  *  用户登录
  *
- *  @param phone 用户名
+ *  @param phone    用户名
  *  @param password 密码
  */
--(void)loginWithAccountName:(NSString *)phone password:(NSString *)password;
+- (void)loginWithAccountName:(NSString *)phone password:(NSString *)password;
+/**
+ *  校验手机号是否存在
+ *
+ *  @param phone 手机号
+ */
+- (void)checkUserExistWithPhone:(NSString *)phone;
 /**
  *  用户注册
  *
@@ -51,6 +61,12 @@
 - (void)registerWithPhone:(NSString *)phone
                  password:(NSString *)password
                  nickName:(NSString *)nickName;
-
+/**
+ * 通过手机号找回密码
+ *
+ * @param phone       手机号
+ * @param newPassword 新密码
+ */
+- (void)resetPwdWithPhone:(NSString *)phone newPassword:(NSString *)newPassword;
 
 @end

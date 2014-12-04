@@ -14,6 +14,7 @@
 
 @implementation ResetPwdViewController
 @synthesize pwdTextField,rePwdTextField,commitButton;
+@synthesize phone;
 
 #pragma mark - Private methods
 - (NSString *)checkPasswordValid
@@ -36,7 +37,24 @@
     }
     else
     {
-        // to do next action
+        //重置密码
+        [[MemberDataManager sharedManager] resetPwdWithPhone:self.phone newPassword:self.pwdTextField.text];
+    }
+}
+
+#pragma mark - Notification Methods
+- (void)resetPwdResponseNotification:(NSNotification *)notification
+{
+    if(notification.object)
+    {
+        //重置密码失败
+        [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:notification.object hideDelay:2.f];
+    }
+    else
+    {
+        //重置密码成功
+        [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"重置密码成功，请登录" hideDelay:2.f];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 
@@ -50,9 +68,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setNaviTitle:@"重设密码"];
+    [self setNaviTitle:@"重置密码"];
     self.commitButton.enabled = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldChange:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetPwdResponseNotification:) name:kResetPwdResponseNotification object:nil];
 }
 
 - (void)dealloc

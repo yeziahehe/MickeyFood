@@ -62,8 +62,15 @@
         id vc = [naviController topViewController];
         // to do
         if ([vc isKindOfClass:[UserInfoViewController class]]) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kShowLoginViewNotification object:nil];
-            return NO;
+            if ([[MemberDataManager sharedManager] isLogin])
+            {
+                return YES;
+            }
+            else
+            {
+                [[NSNotificationCenter defaultCenter] postNotificationName:kShowLoginViewNotification object:nil];
+                return NO;
+            }
         }
     }
     return YES;
