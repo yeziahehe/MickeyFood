@@ -10,4 +10,6 @@
 
 @interface UserInfoViewController : BaseMenuViewController
 
+@property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
+
 @end
