@@ -20,4 +20,5 @@
     #import "Reachability.h"
     #import "JSON.h"
     #import "MemberDataManager.h"
+    #import "MJRefresh.h"
 #endif
