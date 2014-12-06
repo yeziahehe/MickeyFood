@@ -11,6 +11,33 @@
 @implementation UserView
 @synthesize iconImageView;
 
+#pragma mark - IBAction Methods
+- (IBAction)deleveryButtonClicked:(id)sender {
+    if ([self showLoginViewController]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:@"DeliveryViewController"];
+    }
+}
+
+- (IBAction)receiveButtonClicked:(id)sender {
+    if ([self showLoginViewController]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:@"ReceiveViewController"];
+    }
+}
+
+- (IBAction)commentButtonClicked:(id)sender {
+    if ([self showLoginViewController]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:@"CommentViewController"];
+    }
+}
+
+- (IBAction)refundButtonClicked:(id)sender {
+    if ([self showLoginViewController]) {
+        if ([self showLoginViewController]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:@"RefundViewController"];
+        }
+    }
+}
+
 #pragma mark - UIView methods
 - (void)awakeFromNib
 {

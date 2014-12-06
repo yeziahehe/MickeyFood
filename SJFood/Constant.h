@@ -56,6 +56,7 @@
 //Notification Keys
 #define kShowPannelViewNotification         @"ShowPannelViewNotification"
 #define kShowLoginViewNotification          @"ShowLoginViewNotification"
+#define kShowUserInfoViewNotification       @"ShowUserInfoViewNotification"
 
 //Url values
 #define kServerAddress          @"http://192.168.1.145:8400/SJFood/"

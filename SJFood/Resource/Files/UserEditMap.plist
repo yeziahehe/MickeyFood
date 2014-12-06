@@ -3,18 +3,24 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>classname</key>
+		<string>MyAccountViewController</string>
 		<key>keyname</key>
 		<string>我的账号</string>
 		<key>iconname</key>
 		<string>icon_user_info.png</string>
 	</dict>
 	<dict>
+		<key>classname</key>
+		<string>MyMessageViewController</string>
 		<key>keyname</key>
 		<string>我的消息</string>
 		<key>iconname</key>
 		<string>icon_user_message.png</string>
 	</dict>
 	<dict>
+		<key>classname</key>
+		<string>AddressViewController</string>
 		<key>keyname</key>
 		<string>地址管理</string>
 		<key>iconname</key>

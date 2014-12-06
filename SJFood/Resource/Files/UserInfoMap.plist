@@ -5,6 +5,6 @@
 	<string>UserView</string>
 	<string>OrderInfoView</string>
 	<string>UserEditView</string>
-	<string>SettingView</string>
+	<string>UserSettingView</string>
 </array>
 </plist>

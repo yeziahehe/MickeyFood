@@ -89,6 +89,28 @@
 		758512761A32E91100504FA8 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585126C1A32E91100504FA8 /* UIScrollView+MJExtension.m */; };
 		758512771A32E91100504FA8 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585126E1A32E91100504FA8 /* UIScrollView+MJRefresh.m */; };
 		758512781A32E91100504FA8 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512701A32E91100504FA8 /* UIView+MJExtension.m */; };
+		7585127C1A32EE7A00504FA8 /* DeliveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585127A1A32EE7A00504FA8 /* DeliveryViewController.m */; };
+		7585127D1A32EE7A00504FA8 /* DeliveryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585127B1A32EE7A00504FA8 /* DeliveryViewController.xib */; };
+		758512811A32EEEC00504FA8 /* ReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585127F1A32EEEC00504FA8 /* ReceiveViewController.m */; };
+		758512821A32EEEC00504FA8 /* ReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512801A32EEEC00504FA8 /* ReceiveViewController.xib */; };
+		758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512841A32EEFF00504FA8 /* CommentViewController.m */; };
+		758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512851A32EEFF00504FA8 /* CommentViewController.xib */; };
+		7585128B1A32EF0F00504FA8 /* RefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512891A32EF0F00504FA8 /* RefundViewController.m */; };
+		7585128C1A32EF0F00504FA8 /* RefundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585128A1A32EF0F00504FA8 /* RefundViewController.xib */; };
+		758512901A32F2AC00504FA8 /* AllOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */; };
+		758512911A32F2AC00504FA8 /* AllOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */; };
+		758512951A32F43400504FA8 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512931A32F43400504FA8 /* MyAccountViewController.m */; };
+		758512961A32F43400504FA8 /* MyAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512941A32F43400504FA8 /* MyAccountViewController.xib */; };
+		7585129A1A32F44700504FA8 /* MyMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512981A32F44700504FA8 /* MyMessageViewController.m */; };
+		7585129B1A32F44700504FA8 /* MyMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512991A32F44700504FA8 /* MyMessageViewController.xib */; };
+		7585129F1A32F45800504FA8 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585129D1A32F45800504FA8 /* AddressViewController.m */; };
+		758512A01A32F45800504FA8 /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585129E1A32F45800504FA8 /* AddressViewController.xib */; };
+		758512A51A32F60C00504FA8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512A31A32F60C00504FA8 /* SettingViewController.m */; };
+		758512A61A32F60C00504FA8 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512A41A32F60C00504FA8 /* SettingViewController.xib */; };
+		758512AA1A32F68D00504FA8 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512A81A32F68D00504FA8 /* FeedbackViewController.m */; };
+		758512AB1A32F68D00504FA8 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512A91A32F68D00504FA8 /* FeedbackViewController.xib */; };
+		758512AE1A32F77500504FA8 /* UserSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512AD1A32F77500504FA8 /* UserSettingView.m */; };
+		758512B01A32F78400504FA8 /* UserSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512AF1A32F78400504FA8 /* UserSettingView.xib */; };
 		758954111A24B4A1001C2350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954101A24B4A1001C2350 /* main.m */; };
 		758954141A24B4A1001C2350 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 758954131A24B4A1001C2350 /* AppDelegate.m */; };
 		7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7589541B1A24B4A1001C2350 /* Images.xcassets */; };
@@ -114,8 +136,6 @@
 		75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EED3D81A31630B002ECA75 /* OrderInfoView.xib */; };
 		75EED3DC1A31638E002ECA75 /* UserEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3DB1A31638E002ECA75 /* UserEditView.m */; };
 		75EED3DE1A31639B002ECA75 /* UserEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EED3DD1A31639B002ECA75 /* UserEditView.xib */; };
-		75EED3E11A3163FF002ECA75 /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3E01A3163FF002ECA75 /* SettingView.m */; };
-		75EED3E31A31640A002ECA75 /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EED3E21A31640A002ECA75 /* SettingView.xib */; };
 		75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EED3FE1A3165EC002ECA75 /* UserInfoMap.plist */; };
 		75EED4031A31EDDE002ECA75 /* icon_user_image_defult@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75EED4011A31EDDE002ECA75 /* icon_user_image_defult@2x.png */; };
 		75EED4041A31EDDE002ECA75 /* icon_user_image_defult@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75EED4021A31EDDE002ECA75 /* icon_user_image_defult@3x.png */; };
@@ -268,6 +288,39 @@
 		7585126E1A32E91100504FA8 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		7585126F1A32E91100504FA8 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		758512701A32E91100504FA8 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		758512791A32EE7A00504FA8 /* DeliveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryViewController.h; sourceTree = "<group>"; };
+		7585127A1A32EE7A00504FA8 /* DeliveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryViewController.m; sourceTree = "<group>"; };
+		7585127B1A32EE7A00504FA8 /* DeliveryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryViewController.xib; sourceTree = "<group>"; };
+		7585127E1A32EEEC00504FA8 /* ReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveViewController.h; sourceTree = "<group>"; };
+		7585127F1A32EEEC00504FA8 /* ReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveViewController.m; sourceTree = "<group>"; };
+		758512801A32EEEC00504FA8 /* ReceiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiveViewController.xib; sourceTree = "<group>"; };
+		758512831A32EEFF00504FA8 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		758512841A32EEFF00504FA8 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
+		758512851A32EEFF00504FA8 /* CommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		758512881A32EF0F00504FA8 /* RefundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundViewController.h; sourceTree = "<group>"; };
+		758512891A32EF0F00504FA8 /* RefundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundViewController.m; sourceTree = "<group>"; };
+		7585128A1A32EF0F00504FA8 /* RefundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefundViewController.xib; sourceTree = "<group>"; };
+		7585128D1A32F2AC00504FA8 /* AllOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderViewController.h; sourceTree = "<group>"; };
+		7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrderViewController.m; sourceTree = "<group>"; };
+		7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllOrderViewController.xib; sourceTree = "<group>"; };
+		758512921A32F43400504FA8 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
+		758512931A32F43400504FA8 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
+		758512941A32F43400504FA8 /* MyAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountViewController.xib; sourceTree = "<group>"; };
+		758512971A32F44700504FA8 /* MyMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageViewController.h; sourceTree = "<group>"; };
+		758512981A32F44700504FA8 /* MyMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageViewController.m; sourceTree = "<group>"; };
+		758512991A32F44700504FA8 /* MyMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMessageViewController.xib; sourceTree = "<group>"; };
+		7585129C1A32F45800504FA8 /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		7585129D1A32F45800504FA8 /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		7585129E1A32F45800504FA8 /* AddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
+		758512A21A32F60C00504FA8 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		758512A31A32F60C00504FA8 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		758512A41A32F60C00504FA8 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		758512A71A32F68D00504FA8 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		758512A81A32F68D00504FA8 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		758512A91A32F68D00504FA8 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		758512AC1A32F77500504FA8 /* UserSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingView.h; sourceTree = "<group>"; };
+		758512AD1A32F77500504FA8 /* UserSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingView.m; sourceTree = "<group>"; };
+		758512AF1A32F78400504FA8 /* UserSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSettingView.xib; sourceTree = "<group>"; };
 		7589540B1A24B4A1001C2350 /* SJFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7589540F1A24B4A1001C2350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758954101A24B4A1001C2350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -317,9 +370,6 @@
 		75EED3DA1A31638E002ECA75 /* UserEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditView.h; sourceTree = "<group>"; };
 		75EED3DB1A31638E002ECA75 /* UserEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditView.m; sourceTree = "<group>"; };
 		75EED3DD1A31639B002ECA75 /* UserEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserEditView.xib; sourceTree = "<group>"; };
-		75EED3DF1A3163FF002ECA75 /* SettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingView.h; sourceTree = "<group>"; };
-		75EED3E01A3163FF002ECA75 /* SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingView.m; sourceTree = "<group>"; };
-		75EED3E21A31640A002ECA75 /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
 		75EED3FE1A3165EC002ECA75 /* UserInfoMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInfoMap.plist; sourceTree = "<group>"; };
 		75EED4011A31EDDE002ECA75 /* icon_user_image_defult@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_user_image_defult@2x.png"; sourceTree = "<group>"; };
 		75EED4021A31EDDE002ECA75 /* icon_user_image_defult@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_user_image_defult@3x.png"; sourceTree = "<group>"; };
@@ -588,6 +638,19 @@
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
+		758512A11A32F5D800504FA8 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				758512A21A32F60C00504FA8 /* SettingViewController.h */,
+				758512A31A32F60C00504FA8 /* SettingViewController.m */,
+				758512A41A32F60C00504FA8 /* SettingViewController.xib */,
+				758512A71A32F68D00504FA8 /* FeedbackViewController.h */,
+				758512A81A32F68D00504FA8 /* FeedbackViewController.m */,
+				758512A91A32F68D00504FA8 /* FeedbackViewController.xib */,
+			);
+			path = "设置";
+			sourceTree = "<group>";
+		};
 		758954021A24B4A1001C2350 = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +730,7 @@
 				7589544A1A24BB51001C2350 /* CustomNavigationController.m */,
 				7542C4651A2CAB0500BB083D /* CustomLightNavigationController.h */,
 				7542C4661A2CAB0500BB083D /* CustomLightNavigationController.m */,
+				758512A11A32F5D800504FA8 /* 设置 */,
 				7542C4A01A2D970E00BB083D /* 我的 */,
 				7542C45F1A2CA2EA00BB083D /* 登录注册 */,
 				758116301A26E46200065E65 /* 首页 */,
@@ -755,9 +819,9 @@
 				75EED3DA1A31638E002ECA75 /* UserEditView.h */,
 				75EED3DB1A31638E002ECA75 /* UserEditView.m */,
 				75EED3DD1A31639B002ECA75 /* UserEditView.xib */,
-				75EED3DF1A3163FF002ECA75 /* SettingView.h */,
-				75EED3E01A3163FF002ECA75 /* SettingView.m */,
-				75EED3E21A31640A002ECA75 /* SettingView.xib */,
+				758512AC1A32F77500504FA8 /* UserSettingView.h */,
+				758512AD1A32F77500504FA8 /* UserSettingView.m */,
+				758512AF1A32F78400504FA8 /* UserSettingView.xib */,
 				75EED43C1A320F61002ECA75 /* UserInfoTableViewCell.h */,
 				75EED43D1A320F61002ECA75 /* UserInfoTableViewCell.m */,
 				75EED43E1A320F61002ECA75 /* UserInfoTableViewCell.xib */,
@@ -768,6 +832,30 @@
 		75EED3FD1A31648C002ECA75 /* 我的子页面 */ = {
 			isa = PBXGroup;
 			children = (
+				758512791A32EE7A00504FA8 /* DeliveryViewController.h */,
+				7585127A1A32EE7A00504FA8 /* DeliveryViewController.m */,
+				7585127B1A32EE7A00504FA8 /* DeliveryViewController.xib */,
+				7585127E1A32EEEC00504FA8 /* ReceiveViewController.h */,
+				7585127F1A32EEEC00504FA8 /* ReceiveViewController.m */,
+				758512801A32EEEC00504FA8 /* ReceiveViewController.xib */,
+				758512831A32EEFF00504FA8 /* CommentViewController.h */,
+				758512841A32EEFF00504FA8 /* CommentViewController.m */,
+				758512851A32EEFF00504FA8 /* CommentViewController.xib */,
+				758512881A32EF0F00504FA8 /* RefundViewController.h */,
+				758512891A32EF0F00504FA8 /* RefundViewController.m */,
+				7585128A1A32EF0F00504FA8 /* RefundViewController.xib */,
+				7585128D1A32F2AC00504FA8 /* AllOrderViewController.h */,
+				7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */,
+				7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */,
+				758512921A32F43400504FA8 /* MyAccountViewController.h */,
+				758512931A32F43400504FA8 /* MyAccountViewController.m */,
+				758512941A32F43400504FA8 /* MyAccountViewController.xib */,
+				758512971A32F44700504FA8 /* MyMessageViewController.h */,
+				758512981A32F44700504FA8 /* MyMessageViewController.m */,
+				758512991A32F44700504FA8 /* MyMessageViewController.xib */,
+				7585129C1A32F45800504FA8 /* AddressViewController.h */,
+				7585129D1A32F45800504FA8 /* AddressViewController.m */,
+				7585129E1A32F45800504FA8 /* AddressViewController.xib */,
 			);
 			name = "我的子页面";
 			sourceTree = "<group>";
@@ -889,8 +977,12 @@
 				7533EEEF1A2E1536001D12D4 /* btn_get_code_bg@3x.png in Resources */,
 				75EED4361A320B79002ECA75 /* icon_user_info@2x.png in Resources */,
 				7533EEFB1A2E1536001D12D4 /* icon_radio_selected@3x.png in Resources */,
+				758512AB1A32F68D00504FA8 /* FeedbackViewController.xib in Resources */,
+				758512A61A32F60C00504FA8 /* SettingViewController.xib in Resources */,
+				758512911A32F2AC00504FA8 /* AllOrderViewController.xib in Resources */,
 				75EED4311A320B79002ECA75 /* icon_feedback@3x.png in Resources */,
 				7542C4641A2CA42400BB083D /* LoginViewController.xib in Resources */,
+				758512A01A32F45800504FA8 /* AddressViewController.xib in Resources */,
 				7533EEC41A2E14E7001D12D4 /* btn_home@3x.png in Resources */,
 				7533EED61A2E150A001D12D4 /* line_ver_1px_left.png in Resources */,
 				7533EF021A2E1549001D12D4 /* icon_header_back@2x.png in Resources */,
@@ -902,8 +994,9 @@
 				7533EEC71A2E14E7001D12D4 /* btn_user@2x.png in Resources */,
 				7533EEC31A2E14E7001D12D4 /* btn_home@2x.png in Resources */,
 				75EED4211A32040B002ECA75 /* UserView.xib in Resources */,
-				75EED3E31A31640A002ECA75 /* SettingView.xib in Resources */,
 				7533EEC61A2E14E7001D12D4 /* btn_shopping@3x.png in Resources */,
+				758512821A32EEEC00504FA8 /* ReceiveViewController.xib in Resources */,
+				7585127D1A32EE7A00504FA8 /* DeliveryViewController.xib in Resources */,
 				758116381A27611900065E65 /* HomeViewController.xib in Resources */,
 				758512711A32E91100504FA8 /* MJRefresh.bundle in Resources */,
 				7533EEF21A2E1536001D12D4 /* icon_confirm_pwd@2x.png in Resources */,
@@ -913,6 +1006,7 @@
 				7533EEF91A2E1536001D12D4 /* icon_radio_normal@3x.png in Resources */,
 				7533EEFA1A2E1536001D12D4 /* icon_radio_selected@2x.png in Resources */,
 				7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */,
+				7585129B1A32F44700504FA8 /* MyMessageViewController.xib in Resources */,
 				75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */,
 				75EED40F1A31F7C7002ECA75 /* icon_delevery@2x.png in Resources */,
 				75EED4181A31F7DA002ECA75 /* icon_comment@3x.png in Resources */,
@@ -921,7 +1015,9 @@
 				7533EECC1A2E14E7001D12D4 /* icon_qrcode@3x.png in Resources */,
 				7533EEC11A2E14E7001D12D4 /* btn_category@2x.png in Resources */,
 				75EED4131A31F7D1002ECA75 /* icon_receive@2x.png in Resources */,
+				758512B01A32F78400504FA8 /* UserSettingView.xib in Resources */,
 				7533EEF11A2E1536001D12D4 /* icon_code@3x.png in Resources */,
+				758512961A32F43400504FA8 /* MyAccountViewController.xib in Resources */,
 				75EED4301A320B79002ECA75 /* icon_feedback@2x.png in Resources */,
 				7533EEF71A2E1536001D12D4 /* icon_pwd@3x.png in Resources */,
 				7533EEF81A2E1536001D12D4 /* icon_radio_normal@2x.png in Resources */,
@@ -952,7 +1048,9 @@
 				75EED4421A3216BA002ECA75 /* UserEditMap.plist in Resources */,
 				75EED4391A320B79002ECA75 /* icon_user_message@3x.png in Resources */,
 				75EED4371A320B79002ECA75 /* icon_user_info@3x.png in Resources */,
+				758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */,
 				7533EECE1A2E14E7001D12D4 /* icon_search@3x.png in Resources */,
+				7585128C1A32EF0F00504FA8 /* RefundViewController.xib in Resources */,
 				75EED41C1A31F7E5002ECA75 /* icon_refund@3x.png in Resources */,
 				7533EEC81A2E14E7001D12D4 /* btn_user@3x.png in Resources */,
 				75EED43B1A320DDA002ECA75 /* OrderInfoMap.plist in Resources */,
@@ -987,27 +1085,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				7599AA081A259DB60052E7A9 /* YFImageDownloader.m in Sources */,
+				7585129A1A32F44700504FA8 /* MyMessageViewController.m in Sources */,
 				758512731A32E91100504FA8 /* MJRefreshConst.m in Sources */,
+				7585128B1A32EF0F00504FA8 /* RefundViewController.m in Sources */,
 				7542C4671A2CAB0500BB083D /* CustomLightNavigationController.m in Sources */,
 				758512781A32E91100504FA8 /* UIView+MJExtension.m in Sources */,
+				758512811A32EEEC00504FA8 /* ReceiveViewController.m in Sources */,
 				750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */,
 				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
+				758512A51A32F60C00504FA8 /* SettingViewController.m in Sources */,
 				75EED43F1A320F61002ECA75 /* UserInfoTableViewCell.m in Sources */,
 				758512741A32E91100504FA8 /* MJRefreshFooterView.m in Sources */,
 				7599AA021A259D5B0052E7A9 /* YFDownloaderManager.m in Sources */,
 				758512761A32E91100504FA8 /* UIScrollView+MJExtension.m in Sources */,
+				758512901A32F2AC00504FA8 /* AllOrderViewController.m in Sources */,
 				75EED41F1A3203FC002ECA75 /* UserView.m in Sources */,
+				7585129F1A32F45800504FA8 /* AddressViewController.m in Sources */,
 				75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */,
 				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
 				7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */,
 				7589543B1A24B853001C2350 /* StartViewController.m in Sources */,
+				758512951A32F43400504FA8 /* MyAccountViewController.m in Sources */,
 				7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */,
+				7585127C1A32EE7A00504FA8 /* DeliveryViewController.m in Sources */,
+				758512AE1A32F77500504FA8 /* UserSettingView.m in Sources */,
 				758954531A24E685001C2350 /* Reachability.m in Sources */,
 				7599AA051A259D910052E7A9 /* YFAsynImageView.m in Sources */,
 				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
 				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
+				758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */,
 				7542C4631A2CA42400BB083D /* LoginViewController.m in Sources */,
+				758512AA1A32F68D00504FA8 /* FeedbackViewController.m in Sources */,
 				758512751A32E91100504FA8 /* MJRefreshHeaderView.m in Sources */,
 				758512721A32E91100504FA8 /* MJRefreshBaseView.m in Sources */,
 				758512771A32E91100504FA8 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1016,7 +1125,6 @@
 				7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */,
 				7599A9FC1A259CC40052E7A9 /* YFProgressHUD.m in Sources */,
 				750DF7091A2F49650010A2E9 /* Member.m in Sources */,
-				75EED3E11A3163FF002ECA75 /* SettingView.m in Sources */,
 				7533EEAD1A2E10A8001D12D4 /* NSString+HtmlCss.m in Sources */,
 				750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */,
 				75EED3CF1A31627F002ECA75 /* UserInfoSubView.m in Sources */,

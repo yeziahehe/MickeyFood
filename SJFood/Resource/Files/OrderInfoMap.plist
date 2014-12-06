@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>classname</key>
+		<string>AllOrderViewController</string>
 		<key>iconname</key>
 		<string>icon_order.png</string>
 		<key>keyname</key>

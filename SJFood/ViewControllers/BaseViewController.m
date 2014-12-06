@@ -77,12 +77,16 @@
 }
 
 #pragma mark - UIViewController methods
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // to do
     [self setLeftNaviItemWithTitle:nil imageName:@"icon_header_back.png"];
 }
 

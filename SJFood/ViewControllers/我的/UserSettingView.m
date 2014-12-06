@@ -1,22 +1,23 @@
 //
-//  SettingView.m
+//  UserSettingView.m
 //  SJFood
 //
-//  Created by 叶帆 on 14/12/5.
+//  Created by 叶帆 on 14/12/6.
 //  Copyright (c) 2014年 Ye Fan. All rights reserved.
 //
 
-#import "SettingView.h"
+#import "UserSettingView.h"
+
 #import "UserInfoTableViewCell.h"
 
 #define kSettingInfoMapFileName         @"SettingInfoMap"
 
-@interface SettingView ()
+@interface UserSettingView ()
 @property (nonatomic, strong) NSMutableArray *settingArray;
 @end
 
-@implementation SettingView
-@synthesize settingTableView;
+@implementation UserSettingView
+@synthesize userSettingTableView;
 @synthesize settingArray;
 
 #pragma mark - Private
@@ -24,7 +25,7 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:kSettingInfoMapFileName ofType:@"plist"];
     self.settingArray = [NSMutableArray arrayWithContentsOfFile:path];
-    [self.settingTableView reloadData];
+    [self.userSettingTableView reloadData];
 }
 
 #pragma mark - UIView methods
@@ -62,6 +63,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([self showLoginViewController]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:[[self.settingArray objectAtIndex:indexPath.row] objectForKey:@"classname"]];
+    }
 }
 
 @end

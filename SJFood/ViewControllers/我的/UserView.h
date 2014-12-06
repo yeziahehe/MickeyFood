@@ -11,4 +11,10 @@
 @interface UserView : UserInfoSubView
 
 @property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
+
+- (IBAction)deleveryButtonClicked:(id)sender;
+- (IBAction)receiveButtonClicked:(id)sender;
+- (IBAction)commentButtonClicked:(id)sender;
+- (IBAction)refundButtonClicked:(id)sender;
+
 @end

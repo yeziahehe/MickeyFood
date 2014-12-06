@@ -10,4 +10,9 @@
 
 @interface UserInfoSubView : UIView
 
+/**
+ * 每个子UIView用来判断是否登录的方法
+ */
+- (BOOL)showLoginViewController;
+
 @end

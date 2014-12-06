@@ -10,7 +10,7 @@
 #import "UserView.h"
 #import "OrderInfoView.h"
 #import "UserEditView.h"
-#import "SettingView.h"
+#import "UserSettingView.h"
 
 #define kUserInfoMapFileName            @"UserInfoMap"
 #define kSubViewGap                     15.f
@@ -58,15 +58,25 @@
             UserEditView *uev = (UserEditView *)userInfoSubView;
             rect.size.height = uev.userEditTableView.contentSize.height;
         }
-        else if ([userInfoSubView isKindOfClass:[SettingView class]]) {
-            SettingView *sv = (SettingView *)userInfoSubView;
-            rect.size.height = sv.settingTableView.contentSize.height;
+        else if ([userInfoSubView isKindOfClass:[UserSettingView class]]) {
+            UserSettingView *usv = (UserSettingView *)userInfoSubView;
+            rect.size.height = usv.userSettingTableView.contentSize.height;
         }
         userInfoSubView.frame = rect;
         [self.contentScrollView addSubview:userInfoSubView];
         originY = rect.origin.y + rect.size.height + kSubViewGap;
     }
     [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, originY)];
+}
+
+#pragma mark - Notification Methods
+- (void)showUserInfoViewResponseWithNotification:(NSNotification *)notification
+{
+    if (notification) {
+        NSString *moduleClassName = notification.object;
+        id moduleViewController = [[NSClassFromString(moduleClassName) alloc] init];
+        [self.navigationController pushViewController:moduleViewController animated:YES];
+    }
 }
 
 #pragma mark - BaseViewController methods
@@ -81,6 +91,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"我的"];
     [self loadSubViews];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showUserInfoViewResponseWithNotification:) name:kShowUserInfoViewNotification object:nil];
 }
 
 @end
