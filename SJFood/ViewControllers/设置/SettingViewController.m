@@ -16,12 +16,13 @@
 #define kVersionDownloaderKey       @"VersionDownloaderKey"
 
 @interface SettingViewController ()
-@property (nonatomic, retain) NSArray *menuArray;
+@property (nonatomic, strong) NSArray *menuArray;
+@property (nonatomic, strong) NSString *isNewVersion;
 @end
 
 @implementation SettingViewController
 @synthesize settingTableView,logoutView,messageView;
-@synthesize menuArray;
+@synthesize menuArray,isNewVersion;
 
 #pragma mark - Private Methods
 - (void)loadSubViews
@@ -88,6 +89,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"设置"];
     [self loadSubViews];
+    [self checkVersionRequest];
 }
 
 - (void)dealloc
@@ -165,12 +167,25 @@
         if(notifyTypes & UIRemoteNotificationTypeAlert)
         {
             cell.detailLabel.text = @"已开启";
-            cell.detailLabel.textColor = [UIColor colorWithRed:4.f/255.0 green:143.f/255.0 blue:204.f/255.0 alpha:1.0];
+            cell.detailLabel.textColor = [UIColor colorWithRed:79.f/255.0 green:160.f/255.0 blue:97.f/255.0 alpha:1.0];
         }
         else
         {
             cell.detailLabel.text = @"未开启";
             cell.detailLabel.textColor = [UIColor colorWithRed:255.f/255.0 green:124.f/255.0 blue:106.f/255.0 alpha:1.0];
+        }
+    }
+    if (indexPath.section == 2 && indexPath.row == 1) {
+        cell.detailLabel.hidden = NO;
+        if ([self.isNewVersion isEqualToString:@"检测到新版本"]) {
+            cell.detailLabel.text = self.isNewVersion;
+            cell.detailLabel.textColor = [UIColor colorWithRed:255.f/255.0 green:124.f/255.0 blue:106.f/255.0 alpha:1.0];
+        } else {
+            cell.detailLabel.text = self.isNewVersion;
+            cell.detailLabel.textColor = [UIColor colorWithRed:79.f/255.0 green:160.f/255.0 blue:97.f/255.0 alpha:1.0];
+            if ([self.isNewVersion isEqualToString:@"已是最新版本"]) {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+            }
         }
     }
     
@@ -241,7 +256,37 @@
     }
     else if ([titleString isEqualToString:@"检查更新"])
     {
-        [self checkVersionRequest];
+        if ([self.isNewVersion isEqualToString:@"检测到新版本"]) {
+            //更新应用版本
+            if (IsIos8)
+            {
+                NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"升级提醒"
+                                                                               message:[NSString stringWithFormat:@"%@有新版本，是否马上升级？",appName]
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"取消"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction *action) {
+                                                        }]];
+                [alert addAction:[UIAlertAction actionWithTitle:@"升级"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction *action) {
+                                                            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:kAppDownloadUrl,kAppAppleId]]];
+                                                        }]];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+            else
+            {
+                NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"升级提醒"
+                                                                    message:[NSString stringWithFormat:@"%@有新版本，是否马上升级？",appName]
+                                                                   delegate:self
+                                                          cancelButtonTitle:@"取消"
+                                                          otherButtonTitles:@"升级", nil];
+                alertView.tag = 3;
+                [alertView show];
+            }
+        }
     }
     else if ([titleString isEqualToString:@"给我评分"])
     {
@@ -270,55 +315,25 @@
                 NSString *localVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
                 if (![appVersion isEqualToString:localVersion])
                 {
-                    //更新应用版本
-                    if (IsIos8)
-                    {
-                        NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-                        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"升级提醒"
-                                                                                       message:[NSString stringWithFormat:@"%@有新版本，是否马上升级？",appName]
-                                                                                preferredStyle:UIAlertControllerStyleAlert];
-                        [alert addAction:[UIAlertAction actionWithTitle:@"取消"
-                                                                  style:UIAlertActionStyleDefault
-                                                                handler:^(UIAlertAction *action) {
-                                                                }]];
-                        [alert addAction:[UIAlertAction actionWithTitle:@"升级"
-                                                                  style:UIAlertActionStyleDefault
-                                                                handler:^(UIAlertAction *action) {
-                                                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:kAppDownloadUrl,kAppAppleId]]];
-                                                                }]];
-                        [self presentViewController:alert animated:YES completion:nil];
-                    }
-                    else
-                    {
-                        NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"升级提醒"
-                                                                            message:[NSString stringWithFormat:@"%@有新版本，是否马上升级？",appName]
-                                                                           delegate:self
-                                                                  cancelButtonTitle:@"取消"
-                                                                  otherButtonTitles:@"升级", nil];
-                        alertView.tag = 3;
-                        [alertView show];
-                    }
+                    self.isNewVersion = @"检测到新版本";
+                }
+                else
+                {
+                    self.isNewVersion = @"已是最新版本";
                 }
             }
             else
             {
-                NSString *message = [dict objectForKey:kMessageKey];
-                if ([message isKindOfClass:[NSNull class]])
-                {
-                    message = @"";
-                }
-                if(message.length == 0)
-                    message = @"版本检查失败";
-                [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:@"版本检查失败" hideDelay:2.f];
+                self.isNewVersion = @"已是最新版本";
             }
+            [self refreshSetting];
         }
     }
 }
 
 - (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString*)message
 {
-    [[YFProgressHUD sharedProgressHUD] showWithMessage:kNetWorkErrorString customView:nil hideDelay:2.f];
+    self.isNewVersion = @"已是最新版本";
 }
 
 @end
