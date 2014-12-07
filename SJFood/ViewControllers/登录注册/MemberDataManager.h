@@ -35,6 +35,10 @@
  */
 - (BOOL)isLogin;
 /**
+ *  退出登录
+ */
+- (void)logout;
+/**
  *  缓存当前登录用户数据
  */
 - (void)saveLoginMemberData;

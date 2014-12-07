@@ -15,6 +15,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="293"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_hon_1px_up.png" id="wXd-Vl-UrQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_hon_1px_down.png" id="DWw-n3-Zly">
+                        <rect key="frame" x="0.0" y="293" width="320" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    </imageView>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="RDP-m1-RwF"/>
                         <outlet property="delegate" destination="iN0-l3-epB" id="f4P-uD-vfk"/>
@@ -29,6 +37,10 @@
             <point key="canvasLocation" x="269" y="298.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="line_hon_1px_down.png" width="640" height="2"/>
+        <image name="line_hon_1px_up.png" width="640" height="2"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

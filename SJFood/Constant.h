@@ -57,6 +57,7 @@
 #define kShowPannelViewNotification         @"ShowPannelViewNotification"
 #define kShowLoginViewNotification          @"ShowLoginViewNotification"
 #define kShowUserInfoViewNotification       @"ShowUserInfoViewNotification"
+#define kUserChangeNotification             @"UserChangeNotification"
 
 //Url values
 #define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
@@ -64,5 +65,6 @@
 #define kRegisterUrl            @"user/registerIn.do"
 #define kCheckUserExistUrl      @"user/checkUserIsExist.do"
 #define kResetPwdUrl            @"user/resetPassword.do"
+#define kCheckVersionUrl        @"version/getVersion.do"
 
 #endif

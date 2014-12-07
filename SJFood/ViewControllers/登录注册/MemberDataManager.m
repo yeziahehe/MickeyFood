@@ -21,6 +21,14 @@
         return NO;
 }
 
+- (void)logout
+{
+    //清空用户信息
+    self.loginMember.phone = nil;
+    self.loginMember.password = nil;
+    [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"退出成功" hideDelay:2.0f];
+}
+
 - (void)loginWithAccountName:(NSString *)phone password:(NSString *)password
 {
     if(nil == phone)

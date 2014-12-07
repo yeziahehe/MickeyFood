@@ -19,7 +19,7 @@
 @synthesize userEditTableView;
 @synthesize userEditArray;
 
-#pragma mark - Private
+#pragma mark - Private Methods
 - (void)loadFile
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:kUserEditMapFileName ofType:@"plist"];
@@ -27,14 +27,14 @@
     [self.userEditTableView reloadData];
 }
 
-#pragma mark - UIView methods
+#pragma mark - UIView Methods
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     [self loadFile];
 }
 
-#pragma mark - UITableViewDataSource methods
+#pragma mark - UITableViewDataSource Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.userEditArray.count;
@@ -53,7 +53,7 @@
     return cell;
 }
 
-#pragma mark - UITableViewDelegate methods
+#pragma mark - UITableViewDelegate Methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 44.f;

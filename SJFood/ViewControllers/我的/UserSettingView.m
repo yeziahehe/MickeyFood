@@ -63,8 +63,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([self showLoginViewController]) {
+    if (indexPath.row == 1) {
         [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:[[self.settingArray objectAtIndex:indexPath.row] objectForKey:@"classname"]];
+    } else {
+        if ([self showLoginViewController]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:[[self.settingArray objectAtIndex:indexPath.row] objectForKey:@"classname"]];
+        }
     }
 }
 

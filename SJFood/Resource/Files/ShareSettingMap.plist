@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>keyname</key>
+		<string>新浪微博</string>
+		<key>iconname</key>
+		<string>icon_sina_weibo.png</string>
+	</dict>
+	<dict>
+		<key>keyname</key>
+		<string>微信朋友圈</string>
+		<key>iconname</key>
+		<string>icon_wechat_moment.png</string>
+	</dict>
+	<dict>
+		<key>keyname</key>
+		<string>QQ空间</string>
+		<key>iconname</key>
+		<string>icon_qzone.png</string>
+	</dict>
+</array>
+</plist>

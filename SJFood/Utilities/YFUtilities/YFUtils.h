@@ -11,6 +11,8 @@
  版本日志
  -v1.0 
     引入常用的网络库，图片下载库，小菊花，动画库
+ -v1.1
+    加入缓存计算清除的库
 */
 
 #ifndef YFUtils_YFUtils_h
@@ -23,6 +25,7 @@
 #import "YFImageDownloader.h"
 #import "UIView+YFUtilities.h"
 #import "YFWebViewController.h"
+#import "YFAppBackgroudConfiger.h"
 
 #endif
 

@@ -8,6 +8,12 @@
 
 #import "BaseViewController.h"
 
-@interface SettingViewController : BaseViewController
+@interface SettingViewController : BaseViewController<UIAlertViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *settingTableView;
+@property (strong, nonatomic) IBOutlet UIView *logoutView;
+@property (strong, nonatomic) IBOutlet UIView *messageView;
+
+- (IBAction)logoutButtonClicked:(id)sender;
 
 @end
