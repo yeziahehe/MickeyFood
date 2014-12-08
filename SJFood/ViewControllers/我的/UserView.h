@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) IBOutlet YFAsynImageView *iconImageView;
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
+@property (strong, nonatomic) IBOutlet UIView *deliveryView;
+@property (strong, nonatomic) IBOutlet UIView *receiveView;
+@property (strong, nonatomic) IBOutlet UIView *commentView;
+@property (strong, nonatomic) IBOutlet UIView *refundView;
 
 - (IBAction)loginButtonClicked:(id)sender;
 - (IBAction)deleveryButtonClicked:(id)sender;

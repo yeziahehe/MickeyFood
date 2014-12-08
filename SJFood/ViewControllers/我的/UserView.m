@@ -9,7 +9,8 @@
 #import "UserView.h"
 
 @implementation UserView
-@synthesize iconImageView;
+@synthesize iconImageView,loginButton;
+@synthesize deliveryView,receiveView,commentView,refundView;
 
 #pragma mark - Public Methods
 - (void)reloadWithUserInfo:(MineInfo *)mineInfo
@@ -20,8 +21,14 @@
     self.iconImageView.cacheDir = kUserIconCacheDir;
     [self.iconImageView aysnLoadImageWithUrl:mineInfo.userInfo.imgUrl placeHolder:@"icon_user_image_defult.png"];
     
-//    YFBadgeView *badgeView = [[YFBadgeView alloc]initWithParentView:self alignment:YFBadgeViewAlignmentTopRight];
-//    badgeView.badgeText = @"1";
+    YFBadgeView *deliveryBadgeView = [[YFBadgeView alloc]initWithParentView:self.deliveryView alignment:YFBadgeViewAlignmentTopRight];
+    deliveryBadgeView.badgeText = mineInfo.waitDeliveryOrder;
+    YFBadgeView *receiveBadgeView = [[YFBadgeView alloc]initWithParentView:self.receiveView alignment:YFBadgeViewAlignmentTopRight];
+    receiveBadgeView.badgeText = mineInfo.waitReceiveOrder;
+    YFBadgeView *commentBadgeView = [[YFBadgeView alloc]initWithParentView:self.commentView alignment:YFBadgeViewAlignmentTopRight];
+    commentBadgeView.badgeText = mineInfo.waitCommentOrder;
+    YFBadgeView *refundBadgeView = [[YFBadgeView alloc]initWithParentView:self.refundView alignment:YFBadgeViewAlignmentTopRight];
+    refundBadgeView.badgeText = mineInfo.waitRefundOrder;
 }
 
 #pragma mark - IBAction Methods
@@ -61,7 +68,7 @@
     [super awakeFromNib];
     self.loginButton.enabled = YES;
     self.iconImageView.layer.cornerRadius = 37.f;
-    self.iconImageView.layer.borderWidth =  4.f;
+    self.iconImageView.layer.borderWidth =  2.5f;
     self.iconImageView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.iconImageView.layer.masksToBounds = YES;
 }
