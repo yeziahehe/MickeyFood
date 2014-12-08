@@ -16,7 +16,7 @@
 @interface ForgetPwdViewController ()
 
 @property (nonatomic, assign) NSInteger resendSecond;
-@property (nonatomic, retain) NSTimer *resendTimer;
+@property (nonatomic, strong) NSTimer *resendTimer;
 
 @end
 

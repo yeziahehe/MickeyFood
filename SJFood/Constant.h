@@ -51,6 +51,7 @@
 #define kMessageKey         @"message"
 #define kSuccessCode        @"success"
 #define kFailureCode        @"failure"
+#define kUserIconCacheDir   @"UserIconCacheDir"
 
 
 //Notification Keys
@@ -66,5 +67,6 @@
 #define kCheckUserExistUrl      @"user/checkUserIsExist.do"
 #define kResetPwdUrl            @"user/resetPassword.do"
 #define kCheckVersionUrl        @"version/getVersion.do"
+#define kUserInfoUrl            @"user/mineInfo.do"
 
 #endif

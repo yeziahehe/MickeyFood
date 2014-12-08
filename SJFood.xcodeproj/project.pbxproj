@@ -120,6 +120,9 @@
 		755722BD1A34891400CC6A8F /* icon_sina_weibo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 755722B71A34891400CC6A8F /* icon_sina_weibo@3x.png */; };
 		755722BE1A34891400CC6A8F /* icon_wechat_moment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 755722B81A34891400CC6A8F /* icon_wechat_moment@2x.png */; };
 		755722BF1A34891400CC6A8F /* icon_wechat_moment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 755722B91A34891400CC6A8F /* icon_wechat_moment@3x.png */; };
+		755722C81A35857000CC6A8F /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722C71A35857000CC6A8F /* UserInfo.m */; };
+		755722CE1A35C7C800CC6A8F /* MineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722CD1A35C7C800CC6A8F /* MineInfo.m */; };
+		755722D11A35CAC300CC6A8F /* YFBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722D01A35CAC300CC6A8F /* YFBadgeView.m */; };
 		758116371A27611900065E65 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758116351A27611900065E65 /* HomeViewController.m */; };
 		758116381A27611900065E65 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758116361A27611900065E65 /* HomeViewController.xib */; };
 		758116711A276E9200065E65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758116701A276E9200065E65 /* Default-568h@2x.png */; };
@@ -362,6 +365,12 @@
 		755722B71A34891400CC6A8F /* icon_sina_weibo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_sina_weibo@3x.png"; sourceTree = "<group>"; };
 		755722B81A34891400CC6A8F /* icon_wechat_moment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_wechat_moment@2x.png"; sourceTree = "<group>"; };
 		755722B91A34891400CC6A8F /* icon_wechat_moment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_wechat_moment@3x.png"; sourceTree = "<group>"; };
+		755722C61A35857000CC6A8F /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		755722C71A35857000CC6A8F /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		755722CC1A35C7C800CC6A8F /* MineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfo.h; sourceTree = "<group>"; };
+		755722CD1A35C7C800CC6A8F /* MineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfo.m; sourceTree = "<group>"; };
+		755722CF1A35CAC300CC6A8F /* YFBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBadgeView.h; sourceTree = "<group>"; };
+		755722D01A35CAC300CC6A8F /* YFBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFBadgeView.m; sourceTree = "<group>"; };
 		758116341A27611900065E65 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		758116351A27611900065E65 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		758116361A27611900065E65 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -816,11 +825,23 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		755722C01A349AF100CC6A8F /* Model */ = {
+		755722C41A35853000CC6A8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				755722C51A35853E00CC6A8F /* 我的 */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		755722C51A35853E00CC6A8F /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				755722CC1A35C7C800CC6A8F /* MineInfo.h */,
+				755722CD1A35C7C800CC6A8F /* MineInfo.m */,
+				755722C61A35857000CC6A8F /* UserInfo.h */,
+				755722C71A35857000CC6A8F /* UserInfo.m */,
+			);
+			path = "我的";
 			sourceTree = "<group>";
 		};
 		758116301A26E46200065E65 /* 首页 */ = {
@@ -912,7 +933,7 @@
 				758954381A24B853001C2350 /* StartViewController.h */,
 				758954391A24B853001C2350 /* StartViewController.m */,
 				7589543A1A24B853001C2350 /* StartViewController.xib */,
-				755722C01A349AF100CC6A8F /* Model */,
+				755722C41A35853000CC6A8F /* Model */,
 				7589543D1A24BA1F001C2350 /* ViewControllers */,
 				7533EEAE1A2E1496001D12D4 /* Resource */,
 				7589544D1A24E5FE001C2350 /* Utilities */,
@@ -1005,6 +1026,8 @@
 				7533EEAC1A2E10A8001D12D4 /* NSString+HtmlCss.m */,
 				7557225B1A34264C00CC6A8F /* YFAppBackgroudConfiger.h */,
 				7557225C1A34264C00CC6A8F /* YFAppBackgroudConfiger.m */,
+				755722CF1A35CAC300CC6A8F /* YFBadgeView.h */,
+				755722D01A35CAC300CC6A8F /* YFBadgeView.m */,
 			);
 			path = YFUtilities;
 			sourceTree = "<group>";
@@ -1393,6 +1416,7 @@
 				7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */,
 				7599A9FC1A259CC40052E7A9 /* YFProgressHUD.m in Sources */,
 				750DF7091A2F49650010A2E9 /* Member.m in Sources */,
+				755722D11A35CAC300CC6A8F /* YFBadgeView.m in Sources */,
 				7533EEAD1A2E10A8001D12D4 /* NSString+HtmlCss.m in Sources */,
 				750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */,
 				75EED3CF1A31627F002ECA75 /* UserInfoSubView.m in Sources */,
@@ -1402,8 +1426,10 @@
 				7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */,
 				7557226B1A344A1100CC6A8F /* ShareViewController.m in Sources */,
 				750DF7191A2F4F4B0010A2E9 /* NSString+SBJSON.m in Sources */,
+				755722C81A35857000CC6A8F /* UserInfo.m in Sources */,
 				75EED3DC1A31638E002ECA75 /* UserEditView.m in Sources */,
 				750DF71A1A2F4F4B0010A2E9 /* SBJSON.m in Sources */,
+				755722CE1A35C7C800CC6A8F /* MineInfo.m in Sources */,
 				750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */,
 				758954401A24BA69001C2350 /* BaseViewController.m in Sources */,
 				75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */,

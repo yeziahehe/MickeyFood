@@ -11,7 +11,24 @@
 @implementation UserView
 @synthesize iconImageView;
 
+#pragma mark - Public Methods
+- (void)reloadWithUserInfo:(MineInfo *)mineInfo
+{
+    self.loginButton.enabled = NO;
+    [self.loginButton setTitle:mineInfo.userInfo.nickname forState:UIControlStateNormal];
+    //头像
+    self.iconImageView.cacheDir = kUserIconCacheDir;
+    [self.iconImageView aysnLoadImageWithUrl:mineInfo.userInfo.imgUrl placeHolder:@"icon_user_image_defult.png"];
+    
+//    YFBadgeView *badgeView = [[YFBadgeView alloc]initWithParentView:self alignment:YFBadgeViewAlignmentTopRight];
+//    badgeView.badgeText = @"1";
+}
+
 #pragma mark - IBAction Methods
+- (IBAction)loginButtonClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kShowLoginViewNotification object:nil];
+}
+
 - (IBAction)deleveryButtonClicked:(id)sender {
     if ([self showLoginViewController]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:@"DeliveryViewController"];
@@ -42,6 +59,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.loginButton.enabled = YES;
     self.iconImageView.layer.cornerRadius = 37.f;
     self.iconImageView.layer.borderWidth =  4.f;
     self.iconImageView.layer.borderColor = [UIColor whiteColor].CGColor;

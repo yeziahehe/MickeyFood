@@ -24,6 +24,10 @@
     }
 }
 
+- (void)reloadWithUserInfo:(MineInfo *)mineInfo
+{
+}
+
 #pragma mark - UIVIew Methods
 - (id)initWithFrame:(CGRect)frame
 {

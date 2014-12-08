@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
+- (void)requestForUserInfo:(NSString *)phone;
+
 @end

@@ -63,6 +63,11 @@
         // to do
         if ([vc isKindOfClass:[UserInfoViewController class]]) {
             // to do
+            if (vc != nil) {
+                if ([[MemberDataManager sharedManager] isLogin]) {
+                    [vc requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
+                }
+            }
         }
     }
     return YES;

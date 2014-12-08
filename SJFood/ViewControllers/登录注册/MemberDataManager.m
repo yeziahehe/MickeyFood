@@ -27,6 +27,7 @@
     self.loginMember.phone = nil;
     self.loginMember.password = nil;
     [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"退出成功" hideDelay:2.0f];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kUserChangeNotification object:nil];
 }
 
 - (void)loginWithAccountName:(NSString *)phone password:(NSString *)password
@@ -148,6 +149,7 @@
             //self.loginMember = [Member memberWithDict:dict];
             [[MemberDataManager sharedManager] saveLoginMemberData];
             [[NSNotificationCenter defaultCenter] postNotificationName:kLoginResponseNotification object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kUserChangeNotification object:nil];
         }
         else
         {
@@ -186,6 +188,7 @@
         if ([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
             [[NSNotificationCenter defaultCenter] postNotificationName:kRegisterResponseNotification object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kUserChangeNotification object:nil];
         }
         else
         {

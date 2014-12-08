@@ -15,7 +15,7 @@
 @interface ConfirmViewController ()
 
 @property (nonatomic, assign) NSInteger resendSecond;
-@property (nonatomic, retain) NSTimer *resendTimer;
+@property (nonatomic, strong) NSTimer *resendTimer;
 
 @end
 
@@ -182,6 +182,11 @@
     [self setNaviTitle:@"注册"];
     [self initViewController];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerResponseWithNotification:) name:kRegisterResponseNotification object:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 #pragma mark - UITextFieldDelegate Methods

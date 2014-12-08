@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MineInfo.h"
 
 @interface UserInfoSubView : UIView
 
@@ -14,5 +15,6 @@
  * 每个子UIView用来判断是否登录的方法
  */
 - (BOOL)showLoginViewController;
+- (void)reloadWithUserInfo:(MineInfo *)mineInfo;
 
 @end

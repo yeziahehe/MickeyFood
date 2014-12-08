@@ -10,8 +10,10 @@
 
 @interface UserView : UserInfoSubView
 
-@property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (strong, nonatomic) IBOutlet YFAsynImageView *iconImageView;
+@property (strong, nonatomic) IBOutlet UIButton *loginButton;
 
+- (IBAction)loginButtonClicked:(id)sender;
 - (IBAction)deleveryButtonClicked:(id)sender;
 - (IBAction)receiveButtonClicked:(id)sender;
 - (IBAction)commentButtonClicked:(id)sender;
