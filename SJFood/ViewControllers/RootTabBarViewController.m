@@ -43,7 +43,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.tabBar.tintColor = kMainProjColor;
-    self.tabBar.barTintColor = [UIColor colorWithRed:233.f/255 green:233.f/255 blue:233.f/255 alpha:1.f];
+    self.tabBar.barTintColor = [UIColor whiteColor];
     self.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLoginViewWithNotification:) name:kShowLoginViewNotification object:nil];
 }

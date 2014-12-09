@@ -157,6 +157,7 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     if (indexPath.section == 0) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         NSInteger notifyTypes;
         if (IsIos8) {
             notifyTypes = [[[UIApplication sharedApplication] currentUserNotificationSettings] types];

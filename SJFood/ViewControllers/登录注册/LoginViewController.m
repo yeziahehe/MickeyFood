@@ -37,8 +37,6 @@
         [[YFProgressHUD sharedProgressHUD] showWithMessage:checkString customView:nil hideDelay:2.f];
     }
     else {
-        [MemberDataManager sharedManager].loginMember.phone = self.usernameTextField.text;
-        [MemberDataManager sharedManager].loginMember.password = self.passwordTextField.text;
         [[YFProgressHUD sharedProgressHUD] startedNetWorkActivityWithText:@"登陆中..."];
         [[MemberDataManager sharedManager] loginWithAccountName:self.usernameTextField.text password:self.passwordTextField.text];
     }
@@ -65,6 +63,8 @@
     else
     {
         //登录成功
+        [MemberDataManager sharedManager].loginMember.phone = self.usernameTextField.text;
+        [MemberDataManager sharedManager].loginMember.password = self.passwordTextField.text;
         [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"登陆成功" hideDelay:2.f];
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
@@ -78,6 +78,13 @@
 }
 
 #pragma mark - UIViewController Methods
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.usernameTextField.text = [MemberDataManager sharedManager].loginMember.phone;
+    self.passwordTextField.text = nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
