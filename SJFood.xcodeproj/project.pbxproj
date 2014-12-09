@@ -126,7 +126,6 @@
 		758116371A27611900065E65 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758116351A27611900065E65 /* HomeViewController.m */; };
 		758116381A27611900065E65 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758116361A27611900065E65 /* HomeViewController.xib */; };
 		758116711A276E9200065E65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758116701A276E9200065E65 /* Default-568h@2x.png */; };
-		758512711A32E91100504FA8 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 758512611A32E91100504FA8 /* MJRefresh.bundle */; };
 		758512721A32E91100504FA8 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512641A32E91100504FA8 /* MJRefreshBaseView.m */; };
 		758512731A32E91100504FA8 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512661A32E91100504FA8 /* MJRefreshConst.m */; };
 		758512741A32E91100504FA8 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512681A32E91100504FA8 /* MJRefreshFooterView.m */; };
@@ -375,7 +374,6 @@
 		758116351A27611900065E65 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		758116361A27611900065E65 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		758116701A276E9200065E65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		758512611A32E91100504FA8 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		758512621A32E91100504FA8 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		758512631A32E91100504FA8 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
 		758512641A32E91100504FA8 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
@@ -857,7 +855,6 @@
 		758512601A32E91100504FA8 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				758512611A32E91100504FA8 /* MJRefresh.bundle */,
 				758512621A32E91100504FA8 /* MJRefresh.h */,
 				758512631A32E91100504FA8 /* MJRefreshBaseView.h */,
 				758512641A32E91100504FA8 /* MJRefreshBaseView.m */,
@@ -1270,7 +1267,6 @@
 				758512821A32EEEC00504FA8 /* ReceiveViewController.xib in Resources */,
 				7585127D1A32EE7A00504FA8 /* DeliveryViewController.xib in Resources */,
 				758116381A27611900065E65 /* HomeViewController.xib in Resources */,
-				758512711A32E91100504FA8 /* MJRefresh.bundle in Resources */,
 				7533EEF21A2E1536001D12D4 /* icon_confirm_pwd@2x.png in Resources */,
 				7533EEF01A2E1536001D12D4 /* icon_code@2x.png in Resources */,
 				7533EEC51A2E14E7001D12D4 /* btn_shopping@2x.png in Resources */,

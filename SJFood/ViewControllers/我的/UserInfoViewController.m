@@ -82,6 +82,11 @@
     [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, originY)];
 }
 
+- (void)refreshUserInfo
+{
+    [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
+}
+
 #pragma mark - Public Methods
 - (void)requestForUserInfo:(NSString *)phone
 {
@@ -109,8 +114,11 @@
 
 - (void)userChangeWithNotification:(NSNotification *)notification
 {
+    [self extraItemTapped];
+    [self.contentScrollView removeHeader];
     if ([[MemberDataManager sharedManager] isLogin])
     {
+        [self.contentScrollView addHeaderWithTarget:self action:@selector(refreshUserInfo) dateKey:@"userInfoScrollView"];
         [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
     } else {
         [self loadSubViews];
@@ -128,11 +136,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"我的"];
+    [self loadSubViews];
+    [self.contentScrollView addHeaderWithTarget:self action:@selector(refreshUserInfo) dateKey:@"userInfoScrollView"];
     if ([[MemberDataManager sharedManager] isLogin]) {
-        //to do 先加载缓存
         [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
     } else {
-        [self loadSubViews];
+        [self.contentScrollView removeHeader];
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showUserInfoViewResponseWithNotification:) name:kShowUserInfoViewNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userChangeWithNotification:) name:kUserChangeNotification object:nil];
@@ -153,6 +162,7 @@
         NSDictionary *dict = [str JSONValue];
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
+            [self.contentScrollView headerEndRefreshing];
             self.mineInfo = [MineInfo mineInfoWithDict:dict];
             //to do 缓存
             [self loadSubViews];
@@ -165,7 +175,7 @@
                 message = @"";
             }
             if(message.length == 0)
-                message = @"刷新个人信息失败";
+                message = @"个人信息获取失败";
             [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
         }
     }

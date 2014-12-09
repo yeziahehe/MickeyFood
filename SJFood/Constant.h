@@ -44,7 +44,7 @@
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"]
 #define kCommonParamsDict   [NSMutableDictionary dictionaryWithObjectsAndKeys:nil];
 
-#define kNetWorkErrorString @"网络错误"
+#define kNetWorkErrorString @"当前网络不给力"
 #define kIsWelcomeShown     @"IsWelcomeShown"
 #define kLoginUserDataFile  @"LoginUserDataFile"
 #define kCodeKey            @"status"
