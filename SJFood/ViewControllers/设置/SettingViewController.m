@@ -10,7 +10,6 @@
 #import "SettingTableViewCell.h"
 #import "WelcomeViewController.h"
 #import "AboutAppViewController.h"
-#import "ShareViewController.h"
 
 #define kSettingMapFileName         @"SettingMap"
 #define kVersionDownloaderKey       @"VersionDownloaderKey"
@@ -152,7 +151,7 @@
     cell.detailLabel.hidden = YES;
     cell.titleLabel.text = titleString;
     
-    if ((indexPath.section == 1 && indexPath.row == 1) || indexPath.section == 0)
+    if ((indexPath.section == 1) || indexPath.section == 0)
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
@@ -244,11 +243,6 @@
             alertView.tag = 2;
             [alertView show];
         }
-    }
-    else if ([titleString isEqualToString:@"分享设置"])
-    {
-        ShareViewController *shareViewController = [[ShareViewController alloc]initWithNibName:@"ShareViewController" bundle:nil];
-        [self.navigationController pushViewController:shareViewController animated:YES];
     }
     else if ([titleString isEqualToString:@"欢迎页面"])
     {

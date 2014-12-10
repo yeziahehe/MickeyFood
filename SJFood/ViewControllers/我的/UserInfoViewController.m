@@ -12,6 +12,7 @@
 #import "UserEditView.h"
 #import "UserSettingView.h"
 #import "MineInfo.h"
+#import "MyAccountViewController.h"
 
 #define kUserInfoDownloaderKey          @"UserInfoDownloaderKey"
 #define kUserInfoMapFileName            @"UserInfoMap"
@@ -56,23 +57,23 @@
         }
         else if ([userInfoSubView isKindOfClass:[OrderInfoView class]]) {
             OrderInfoView *oiv = (OrderInfoView *)userInfoSubView;
-            if ([[MemberDataManager sharedManager] isLogin]) {
-                [oiv reloadWithUserInfo:self.mineInfo];
-            }
+//            if ([[MemberDataManager sharedManager] isLogin]) {
+//                [oiv reloadWithUserInfo:self.mineInfo];
+//            }
             rect.size.height = oiv.orderInfoTableView.contentSize.height;
         }
         else if ([userInfoSubView isKindOfClass:[UserEditView class]]) {
             UserEditView *uev = (UserEditView *)userInfoSubView;
-            if ([[MemberDataManager sharedManager] isLogin]) {
-                [uev reloadWithUserInfo:self.mineInfo];
-            }
+//            if ([[MemberDataManager sharedManager] isLogin]) {
+//                [uev reloadWithUserInfo:self.mineInfo];
+//            }
             rect.size.height = uev.userEditTableView.contentSize.height;
         }
         else if ([userInfoSubView isKindOfClass:[UserSettingView class]]) {
             UserSettingView *usv = (UserSettingView *)userInfoSubView;
-            if ([[MemberDataManager sharedManager] isLogin]) {
-                [usv reloadWithUserInfo:self.mineInfo];
-            }
+//            if ([[MemberDataManager sharedManager] isLogin]) {
+//                [usv reloadWithUserInfo:self.mineInfo];
+//            }
             rect.size.height = usv.userSettingTableView.contentSize.height;
         }
         userInfoSubView.frame = rect;
@@ -107,6 +108,12 @@
 {
     if (notification) {
         NSString *moduleClassName = notification.object;
+        if ([moduleClassName isEqualToString:@"MyAccountViewController"]) {
+            MyAccountViewController *myAccountViewController = [[MyAccountViewController alloc] initWithNibName:@"MyAccountViewController" bundle:nil];
+            [myAccountViewController reloadWithUserInfo:self.mineInfo];
+            [self.navigationController pushViewController:myAccountViewController animated:YES];
+            return;
+        }
         id moduleViewController = [[NSClassFromString(moduleClassName) alloc] init];
         [self.navigationController pushViewController:moduleViewController animated:YES];
     }
@@ -123,6 +130,11 @@
     } else {
         [self loadSubViews];
     }
+}
+
+- (void)refreshUserInfoWithNotification:(NSNotification *)notification
+{
+    [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
 }
 
 #pragma mark - BaseViewController methods
@@ -145,6 +157,7 @@
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showUserInfoViewResponseWithNotification:) name:kShowUserInfoViewNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userChangeWithNotification:) name:kUserChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUserInfoWithNotification:) name:kRefreshUserInfoNotificaiton object:nil];
 }
 
 - (void)dealloc

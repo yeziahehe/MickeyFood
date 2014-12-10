@@ -59,6 +59,8 @@
 #define kShowLoginViewNotification          @"ShowLoginViewNotification"
 #define kShowUserInfoViewNotification       @"ShowUserInfoViewNotification"
 #define kUserChangeNotification             @"UserChangeNotification"
+#define kRefreshUserInfoNotificaiton        @"RefreshUserInfoNotificaiton"
+#define kRefreshAccoutNotification          @"RefreshAccoutNotification"
 
 //Url values
 #define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
@@ -68,5 +70,6 @@
 #define kResetPwdUrl            @"user/resetPassword.do"
 #define kCheckVersionUrl        @"version/getVersion.do"
 #define kUserInfoUrl            @"user/mineInfo.do"
+#define kUpdateNicknameUrl      @"user/updateUserInfo.do"
 
 #endif

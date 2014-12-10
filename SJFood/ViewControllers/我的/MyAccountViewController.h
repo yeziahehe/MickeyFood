@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "MineInfo.h"
 
 @interface MyAccountViewController : BaseViewController
+
+@property (strong, nonatomic) IBOutlet UITableView *MyAccountTableView;
+
+- (void)reloadWithUserInfo:(MineInfo *)baseMineInfo;
 
 @end

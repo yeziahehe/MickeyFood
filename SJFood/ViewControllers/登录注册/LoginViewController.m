@@ -37,6 +37,8 @@
         [[YFProgressHUD sharedProgressHUD] showWithMessage:checkString customView:nil hideDelay:2.f];
     }
     else {
+        [MemberDataManager sharedManager].loginMember.phone = self.usernameTextField.text;
+        [MemberDataManager sharedManager].loginMember.password = self.passwordTextField.text;
         [[YFProgressHUD sharedProgressHUD] startedNetWorkActivityWithText:@"登陆中..."];
         [[MemberDataManager sharedManager] loginWithAccountName:self.usernameTextField.text password:self.passwordTextField.text];
     }
@@ -58,13 +60,13 @@
     if(notification.object)
     {
         //登录失败
+        [MemberDataManager sharedManager].loginMember.phone = nil;
+        [MemberDataManager sharedManager].loginMember.password = nil;
         [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:notification.object hideDelay:2.f];
     }
     else
     {
         //登录成功
-        [MemberDataManager sharedManager].loginMember.phone = self.usernameTextField.text;
-        [MemberDataManager sharedManager].loginMember.password = self.passwordTextField.text;
         [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"登陆成功" hideDelay:2.f];
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }

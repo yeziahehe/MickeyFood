@@ -17,12 +17,10 @@
          "phone": "18762885079",
          "password": "12345678",
          "type": 2,
-         "address1": "苏州大学本部女生大院",
-         "address2": "苏州大学东区五号楼",
-         "address3": null,
-         "address4": null,
+
          "nickname": "叶帆",
          "imgUrl": "http://tupian.qqjay.com/u/2011/0729/e755c434c91fed9f6f73152731788cb3.jpg"
+         "lastLoginDate": 1418140800000
      },
      "waitCommentOrder": 4
  }

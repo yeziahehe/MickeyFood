@@ -9,7 +9,7 @@
 #import "UserInfo.h"
 
 @implementation UserInfo
-@synthesize phone,nickname,address1,address2,address3,address4,roleType,type;
+@synthesize phone,nickname,imgUrl,roleType,type;
 
 - (RoleType)roleType
 {

@@ -86,8 +86,6 @@
 		755722621A34290F00CC6A8F /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755722601A34290F00CC6A8F /* WelcomeViewController.xib */; };
 		755722661A34334E00CC6A8F /* AboutAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722641A34334E00CC6A8F /* AboutAppViewController.m */; };
 		755722671A34334E00CC6A8F /* AboutAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755722651A34334E00CC6A8F /* AboutAppViewController.xib */; };
-		7557226B1A344A1100CC6A8F /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722691A344A1100CC6A8F /* ShareViewController.m */; };
-		7557226C1A344A1100CC6A8F /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7557226A1A344A1100CC6A8F /* ShareViewController.xib */; };
 		7557228A1A344C4B00CC6A8F /* QZoneConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557226F1A344C4B00CC6A8F /* QZoneConnection.framework */; };
 		7557228B1A344C4B00CC6A8F /* SinaWeiboConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755722701A344C4B00CC6A8F /* SinaWeiboConnection.framework */; };
 		7557228C1A344C4B00CC6A8F /* WeChatConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755722711A344C4B00CC6A8F /* WeChatConnection.framework */; };
@@ -111,8 +109,6 @@
 		755722A81A344E1C00CC6A8F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557229A1A344D7100CC6A8F /* SystemConfiguration.framework */; };
 		755722AA1A344E5600CC6A8F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 755722A91A344E5600CC6A8F /* libstdc++.dylib */; };
 		755722AC1A344E6400CC6A8F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 755722AB1A344E6400CC6A8F /* libsqlite3.dylib */; };
-		755722B01A34554900CC6A8F /* ShareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722AE1A34554900CC6A8F /* ShareTableViewCell.m */; };
-		755722B11A34554900CC6A8F /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755722AF1A34554900CC6A8F /* ShareTableViewCell.xib */; };
 		755722B31A34886500CC6A8F /* ShareSettingMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 755722B21A34886500CC6A8F /* ShareSettingMap.plist */; };
 		755722BA1A34891400CC6A8F /* icon_qzone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 755722B41A34891400CC6A8F /* icon_qzone@2x.png */; };
 		755722BB1A34891400CC6A8F /* icon_qzone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 755722B51A34891400CC6A8F /* icon_qzone@3x.png */; };
@@ -175,6 +171,19 @@
 		7599AA081A259DB60052E7A9 /* YFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA071A259DB60052E7A9 /* YFImageDownloader.m */; };
 		7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA0A1A259E030052E7A9 /* UIView+YFUtilities.m */; };
 		7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA0E1A25A3910052E7A9 /* MBProgressHUD.m */; };
+		75AD582E1A3810C000E39640 /* ShareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58291A3810C000E39640 /* ShareTableViewCell.m */; };
+		75AD582F1A3810C000E39640 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD582A1A3810C000E39640 /* ShareTableViewCell.xib */; };
+		75AD58301A3810C000E39640 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD582C1A3810C000E39640 /* ShareViewController.m */; };
+		75AD58311A3810C000E39640 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD582D1A3810C000E39640 /* ShareViewController.xib */; };
+		75AD583A1A38113A00E39640 /* MyAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58381A38113A00E39640 /* MyAccountTableViewCell.m */; };
+		75AD583B1A38113A00E39640 /* MyAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58391A38113A00E39640 /* MyAccountTableViewCell.xib */; };
+		75AD583D1A38122C00E39640 /* MyAccountMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75AD583C1A38122C00E39640 /* MyAccountMap.plist */; };
+		75AD58411A38178C00E39640 /* MyAccountImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD583F1A38178C00E39640 /* MyAccountImageTableViewCell.m */; };
+		75AD58421A38178C00E39640 /* MyAccountImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58401A38178C00E39640 /* MyAccountImageTableViewCell.xib */; };
+		75AD58471A38285300E39640 /* NicknameEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58451A38285300E39640 /* NicknameEditViewController.m */; };
+		75AD58481A38285300E39640 /* NicknameEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58461A38285300E39640 /* NicknameEditViewController.xib */; };
+		75AD584C1A38287200E39640 /* PasswordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD584A1A38287200E39640 /* PasswordEditViewController.m */; };
+		75AD584D1A38287200E39640 /* PasswordEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD584B1A38287200E39640 /* PasswordEditViewController.xib */; };
 		75EED3CF1A31627F002ECA75 /* UserInfoSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3CE1A31627F002ECA75 /* UserInfoSubView.m */; };
 		75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3D61A316302002ECA75 /* OrderInfoView.m */; };
 		75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EED3D81A31630B002ECA75 /* OrderInfoView.xib */; };
@@ -324,9 +333,6 @@
 		755722631A34334E00CC6A8F /* AboutAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutAppViewController.h; sourceTree = "<group>"; };
 		755722641A34334E00CC6A8F /* AboutAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAppViewController.m; sourceTree = "<group>"; };
 		755722651A34334E00CC6A8F /* AboutAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutAppViewController.xib; sourceTree = "<group>"; };
-		755722681A344A1100CC6A8F /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		755722691A344A1100CC6A8F /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
-		7557226A1A344A1100CC6A8F /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
 		7557226F1A344C4B00CC6A8F /* QZoneConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QZoneConnection.framework; sourceTree = "<group>"; };
 		755722701A344C4B00CC6A8F /* SinaWeiboConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SinaWeiboConnection.framework; sourceTree = "<group>"; };
 		755722711A344C4B00CC6A8F /* WeChatConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WeChatConnection.framework; sourceTree = "<group>"; };
@@ -354,9 +360,6 @@
 		755722A21A344DC100CC6A8F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		755722A91A344E5600CC6A8F /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		755722AB1A344E6400CC6A8F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		755722AD1A34554900CC6A8F /* ShareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTableViewCell.h; sourceTree = "<group>"; };
-		755722AE1A34554900CC6A8F /* ShareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTableViewCell.m; sourceTree = "<group>"; };
-		755722AF1A34554900CC6A8F /* ShareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
 		755722B21A34886500CC6A8F /* ShareSettingMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShareSettingMap.plist; sourceTree = "<group>"; };
 		755722B41A34891400CC6A8F /* icon_qzone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_qzone@2x.png"; sourceTree = "<group>"; };
 		755722B51A34891400CC6A8F /* icon_qzone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_qzone@3x.png"; sourceTree = "<group>"; };
@@ -463,6 +466,25 @@
 		7599AA0A1A259E030052E7A9 /* UIView+YFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFUtilities.m"; sourceTree = "<group>"; };
 		7599AA0D1A25A3910052E7A9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		7599AA0E1A25A3910052E7A9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		75AD58281A3810C000E39640 /* ShareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTableViewCell.h; sourceTree = "<group>"; };
+		75AD58291A3810C000E39640 /* ShareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTableViewCell.m; sourceTree = "<group>"; };
+		75AD582A1A3810C000E39640 /* ShareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
+		75AD582B1A3810C000E39640 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		75AD582C1A3810C000E39640 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		75AD582D1A3810C000E39640 /* ShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController.xib; sourceTree = "<group>"; };
+		75AD58371A38113A00E39640 /* MyAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountTableViewCell.h; sourceTree = "<group>"; };
+		75AD58381A38113A00E39640 /* MyAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountTableViewCell.m; sourceTree = "<group>"; };
+		75AD58391A38113A00E39640 /* MyAccountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountTableViewCell.xib; sourceTree = "<group>"; };
+		75AD583C1A38122C00E39640 /* MyAccountMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyAccountMap.plist; sourceTree = "<group>"; };
+		75AD583E1A38178C00E39640 /* MyAccountImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountImageTableViewCell.h; sourceTree = "<group>"; };
+		75AD583F1A38178C00E39640 /* MyAccountImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountImageTableViewCell.m; sourceTree = "<group>"; };
+		75AD58401A38178C00E39640 /* MyAccountImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountImageTableViewCell.xib; sourceTree = "<group>"; };
+		75AD58441A38285300E39640 /* NicknameEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NicknameEditViewController.h; sourceTree = "<group>"; };
+		75AD58451A38285300E39640 /* NicknameEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NicknameEditViewController.m; sourceTree = "<group>"; };
+		75AD58461A38285300E39640 /* NicknameEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NicknameEditViewController.xib; sourceTree = "<group>"; };
+		75AD58491A38287200E39640 /* PasswordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordEditViewController.h; sourceTree = "<group>"; };
+		75AD584A1A38287200E39640 /* PasswordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordEditViewController.m; sourceTree = "<group>"; };
+		75AD584B1A38287200E39640 /* PasswordEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordEditViewController.xib; sourceTree = "<group>"; };
 		75EED3CD1A31627F002ECA75 /* UserInfoSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoSubView.h; sourceTree = "<group>"; };
 		75EED3CE1A31627F002ECA75 /* UserInfoSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoSubView.m; sourceTree = "<group>"; };
 		75EED3D51A316302002ECA75 /* OrderInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoView.h; sourceTree = "<group>"; };
@@ -611,6 +633,7 @@
 				75EED4431A321A33002ECA75 /* SettingInfoMap.plist */,
 				7557224F1A3339DE00CC6A8F /* SettingMap.plist */,
 				755722B21A34886500CC6A8F /* ShareSettingMap.plist */,
+				75AD583C1A38122C00E39640 /* MyAccountMap.plist */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -892,12 +915,6 @@
 				755722631A34334E00CC6A8F /* AboutAppViewController.h */,
 				755722641A34334E00CC6A8F /* AboutAppViewController.m */,
 				755722651A34334E00CC6A8F /* AboutAppViewController.xib */,
-				755722681A344A1100CC6A8F /* ShareViewController.h */,
-				755722691A344A1100CC6A8F /* ShareViewController.m */,
-				7557226A1A344A1100CC6A8F /* ShareViewController.xib */,
-				755722AD1A34554900CC6A8F /* ShareTableViewCell.h */,
-				755722AE1A34554900CC6A8F /* ShareTableViewCell.m */,
-				755722AF1A34554900CC6A8F /* ShareTableViewCell.xib */,
 			);
 			path = "设置";
 			sourceTree = "<group>";
@@ -1071,6 +1088,25 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		75AD58431A38261600E39640 /* 我的账号子页面 */ = {
+			isa = PBXGroup;
+			children = (
+				75AD58441A38285300E39640 /* NicknameEditViewController.h */,
+				75AD58451A38285300E39640 /* NicknameEditViewController.m */,
+				75AD58461A38285300E39640 /* NicknameEditViewController.xib */,
+				75AD58491A38287200E39640 /* PasswordEditViewController.h */,
+				75AD584A1A38287200E39640 /* PasswordEditViewController.m */,
+				75AD584B1A38287200E39640 /* PasswordEditViewController.xib */,
+				75AD58281A3810C000E39640 /* ShareTableViewCell.h */,
+				75AD58291A3810C000E39640 /* ShareTableViewCell.m */,
+				75AD582A1A3810C000E39640 /* ShareTableViewCell.xib */,
+				75AD582B1A3810C000E39640 /* ShareViewController.h */,
+				75AD582C1A3810C000E39640 /* ShareViewController.m */,
+				75AD582D1A3810C000E39640 /* ShareViewController.xib */,
+			);
+			name = "我的账号子页面";
+			sourceTree = "<group>";
+		};
 		75EED3CC1A316204002ECA75 /* 我的入口页面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1114,6 +1150,13 @@
 				758512921A32F43400504FA8 /* MyAccountViewController.h */,
 				758512931A32F43400504FA8 /* MyAccountViewController.m */,
 				758512941A32F43400504FA8 /* MyAccountViewController.xib */,
+				75AD58371A38113A00E39640 /* MyAccountTableViewCell.h */,
+				75AD58381A38113A00E39640 /* MyAccountTableViewCell.m */,
+				75AD58391A38113A00E39640 /* MyAccountTableViewCell.xib */,
+				75AD583E1A38178C00E39640 /* MyAccountImageTableViewCell.h */,
+				75AD583F1A38178C00E39640 /* MyAccountImageTableViewCell.m */,
+				75AD58401A38178C00E39640 /* MyAccountImageTableViewCell.xib */,
+				75AD58431A38261600E39640 /* 我的账号子页面 */,
 				758512971A32F44700504FA8 /* MyMessageViewController.h */,
 				758512981A32F44700504FA8 /* MyMessageViewController.m */,
 				758512991A32F44700504FA8 /* MyMessageViewController.xib */,
@@ -1245,6 +1288,7 @@
 				7533EEFB1A2E1536001D12D4 /* icon_radio_selected@3x.png in Resources */,
 				758512AB1A32F68D00504FA8 /* FeedbackViewController.xib in Resources */,
 				758512A61A32F60C00504FA8 /* SettingViewController.xib in Resources */,
+				75AD58481A38285300E39640 /* NicknameEditViewController.xib in Resources */,
 				758512911A32F2AC00504FA8 /* AllOrderViewController.xib in Resources */,
 				75EED4311A320B79002ECA75 /* icon_feedback@3x.png in Resources */,
 				7542C4641A2CA42400BB083D /* LoginViewController.xib in Resources */,
@@ -1257,7 +1301,6 @@
 				755722921A344C4B00CC6A8F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				75EED4351A320B79002ECA75 /* icon_setting@3x.png in Resources */,
 				755722671A34334E00CC6A8F /* AboutAppViewController.xib in Resources */,
-				755722B11A34554900CC6A8F /* ShareTableViewCell.xib in Resources */,
 				7599A9FB1A259CC40052E7A9 /* YFProgressHUD.bundle in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
 				7533EEC71A2E14E7001D12D4 /* btn_user@2x.png in Resources */,
@@ -1270,6 +1313,7 @@
 				7533EEF21A2E1536001D12D4 /* icon_confirm_pwd@2x.png in Resources */,
 				7533EEF01A2E1536001D12D4 /* icon_code@2x.png in Resources */,
 				7533EEC51A2E14E7001D12D4 /* btn_shopping@2x.png in Resources */,
+				75AD58311A3810C000E39640 /* ShareViewController.xib in Resources */,
 				75EED4441A321A33002ECA75 /* SettingInfoMap.plist in Resources */,
 				7533EEF91A2E1536001D12D4 /* icon_radio_normal@3x.png in Resources */,
 				7533EEFA1A2E1536001D12D4 /* icon_radio_selected@2x.png in Resources */,
@@ -1298,7 +1342,6 @@
 				7533EEF51A2E1536001D12D4 /* icon_mobile_num@3x.png in Resources */,
 				7533EECD1A2E14E7001D12D4 /* icon_search@2x.png in Resources */,
 				755722941A344C4B00CC6A8F /* WeiboSDK.bundle in Resources */,
-				7557226C1A344A1100CC6A8F /* ShareViewController.xib in Resources */,
 				75EED3DE1A31639B002ECA75 /* UserEditView.xib in Resources */,
 				7542C48F1A2CD09E00BB083D /* ConfirmViewController.xib in Resources */,
 				7533EEEC1A2E1536001D12D4 /* btn_full@2x.png in Resources */,
@@ -1308,6 +1351,8 @@
 				7533EEFD1A2E1536001D12D4 /* icon_user@3x.png in Resources */,
 				755722BE1A34891400CC6A8F /* icon_wechat_moment@2x.png in Resources */,
 				75EED4381A320B79002ECA75 /* icon_user_message@2x.png in Resources */,
+				75AD584D1A38287200E39640 /* PasswordEditViewController.xib in Resources */,
+				75AD58421A38178C00E39640 /* MyAccountImageTableViewCell.xib in Resources */,
 				7557228E1A344C4B00CC6A8F /* ShareSDKLocalizable.strings in Resources */,
 				7533EED41A2E150A001D12D4 /* line_hon_1px_down.png in Resources */,
 				7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */,
@@ -1328,6 +1373,8 @@
 				75EED4421A3216BA002ECA75 /* UserEditMap.plist in Resources */,
 				75EED4391A320B79002ECA75 /* icon_user_message@3x.png in Resources */,
 				755722B31A34886500CC6A8F /* ShareSettingMap.plist in Resources */,
+				75AD582F1A3810C000E39640 /* ShareTableViewCell.xib in Resources */,
+				75AD583D1A38122C00E39640 /* MyAccountMap.plist in Resources */,
 				75EED4371A320B79002ECA75 /* icon_user_info@3x.png in Resources */,
 				758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */,
 				7533EECE1A2E14E7001D12D4 /* icon_search@3x.png in Resources */,
@@ -1337,6 +1384,7 @@
 				75EED43B1A320DDA002ECA75 /* OrderInfoMap.plist in Resources */,
 				7533EECA1A2E14E7001D12D4 /* icon_message@3x.png in Resources */,
 				75EED42E1A320B79002ECA75 /* icon_address@2x.png in Resources */,
+				75AD583B1A38113A00E39640 /* MyAccountTableViewCell.xib in Resources */,
 				75EED4321A320B79002ECA75 /* icon_order@2x.png in Resources */,
 				755722501A3339DE00CC6A8F /* SettingMap.plist in Resources */,
 				7533EEED1A2E1536001D12D4 /* btn_full@3x.png in Resources */,
@@ -1378,10 +1426,10 @@
 				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
 				758512A51A32F60C00504FA8 /* SettingViewController.m in Sources */,
 				75EED43F1A320F61002ECA75 /* UserInfoTableViewCell.m in Sources */,
+				75AD58411A38178C00E39640 /* MyAccountImageTableViewCell.m in Sources */,
 				755722611A34290F00CC6A8F /* WelcomeViewController.m in Sources */,
 				758512741A32E91100504FA8 /* MJRefreshFooterView.m in Sources */,
 				7599AA021A259D5B0052E7A9 /* YFDownloaderManager.m in Sources */,
-				755722B01A34554900CC6A8F /* ShareTableViewCell.m in Sources */,
 				758512761A32E91100504FA8 /* UIScrollView+MJExtension.m in Sources */,
 				758512901A32F2AC00504FA8 /* AllOrderViewController.m in Sources */,
 				75EED41F1A3203FC002ECA75 /* UserView.m in Sources */,
@@ -1390,6 +1438,7 @@
 				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
 				7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */,
 				7589543B1A24B853001C2350 /* StartViewController.m in Sources */,
+				75AD58301A3810C000E39640 /* ShareViewController.m in Sources */,
 				758512951A32F43400504FA8 /* MyAccountViewController.m in Sources */,
 				7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */,
 				7585127C1A32EE7A00504FA8 /* DeliveryViewController.m in Sources */,
@@ -1403,7 +1452,11 @@
 				758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */,
 				7557225D1A34264C00CC6A8F /* YFAppBackgroudConfiger.m in Sources */,
 				7542C4631A2CA42400BB083D /* LoginViewController.m in Sources */,
+				75AD58471A38285300E39640 /* NicknameEditViewController.m in Sources */,
+				75AD583A1A38113A00E39640 /* MyAccountTableViewCell.m in Sources */,
+				75AD584C1A38287200E39640 /* PasswordEditViewController.m in Sources */,
 				758512AA1A32F68D00504FA8 /* FeedbackViewController.m in Sources */,
+				75AD582E1A3810C000E39640 /* ShareTableViewCell.m in Sources */,
 				758512751A32E91100504FA8 /* MJRefreshHeaderView.m in Sources */,
 				758512721A32E91100504FA8 /* MJRefreshBaseView.m in Sources */,
 				758512771A32E91100504FA8 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1420,7 +1473,6 @@
 				7599A9FF1A259D2B0052E7A9 /* YFDownloader.m in Sources */,
 				758954471A24BB0E001C2350 /* RootTabBarViewController.m in Sources */,
 				7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */,
-				7557226B1A344A1100CC6A8F /* ShareViewController.m in Sources */,
 				750DF7191A2F4F4B0010A2E9 /* NSString+SBJSON.m in Sources */,
 				755722C81A35857000CC6A8F /* UserInfo.m in Sources */,
 				75EED3DC1A31638E002ECA75 /* UserEditView.m in Sources */,
