@@ -65,7 +65,7 @@
             // to do
             if (vc != nil) {
                 if ([[MemberDataManager sharedManager] isLogin]) {
-                    [vc requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
+                    [[MemberDataManager sharedManager] requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
                 }
             }
         }

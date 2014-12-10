@@ -10,7 +10,6 @@
 
 @interface NicknameEditViewController : BaseViewController
 
-@property (nonatomic, strong) NSString *nickname;
 @property (strong, nonatomic) IBOutlet UITextField *nicknameTextField;
 
 - (IBAction)saveButtonClicked:(id)sender;

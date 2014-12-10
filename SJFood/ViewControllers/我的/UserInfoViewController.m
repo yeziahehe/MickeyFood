@@ -14,7 +14,6 @@
 #import "MineInfo.h"
 #import "MyAccountViewController.h"
 
-#define kUserInfoDownloaderKey          @"UserInfoDownloaderKey"
 #define kUserInfoMapFileName            @"UserInfoMap"
 #define kSubViewGap                     15.f
 
@@ -85,22 +84,7 @@
 
 - (void)refreshUserInfo
 {
-    [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
-}
-
-#pragma mark - Public Methods
-- (void)requestForUserInfo:(NSString *)phone
-{
-    if (nil == phone)
-        phone = @"";
-    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kUserInfoUrl];
-    NSMutableDictionary *dict = kCommonParamsDict;
-    [dict setObject:phone forKey:@"phone"];
-    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
-                                                             postParams:dict
-                                                            contentType:@"application/x-www-form-urlencoded"
-                                                               delegate:self
-                                                                purpose:kUserInfoDownloaderKey];
+    [[MemberDataManager sharedManager] requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
 }
 
 #pragma mark - Notification Methods
@@ -108,12 +92,6 @@
 {
     if (notification) {
         NSString *moduleClassName = notification.object;
-        if ([moduleClassName isEqualToString:@"MyAccountViewController"]) {
-            MyAccountViewController *myAccountViewController = [[MyAccountViewController alloc] initWithNibName:@"MyAccountViewController" bundle:nil];
-            [myAccountViewController reloadWithUserInfo:self.mineInfo];
-            [self.navigationController pushViewController:myAccountViewController animated:YES];
-            return;
-        }
         id moduleViewController = [[NSClassFromString(moduleClassName) alloc] init];
         [self.navigationController pushViewController:moduleViewController animated:YES];
     }
@@ -126,7 +104,7 @@
     if ([[MemberDataManager sharedManager] isLogin])
     {
         [self.contentScrollView addHeaderWithTarget:self action:@selector(refreshUserInfo) dateKey:@"userInfoScrollView"];
-        [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
+        [[MemberDataManager sharedManager] requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
     } else {
         [self loadSubViews];
     }
@@ -134,7 +112,19 @@
 
 - (void)refreshUserInfoWithNotification:(NSNotification *)notification
 {
-    [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
+    [[MemberDataManager sharedManager] requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
+}
+
+- (void)userInfoResponseWithNotification:(NSNotification *)notification
+{
+    if (notification.object) {
+        [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:@"个人信息获取失败" hideDelay:2.f];
+    } else {
+        self.mineInfo = [MemberDataManager sharedManager].mineInfo;
+        [self.contentScrollView headerEndRefreshing];
+        [self loadSubViews];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kRefreshAccoutNotification object:nil];
+    }
 }
 
 #pragma mark - BaseViewController methods
@@ -151,52 +141,20 @@
     [self loadSubViews];
     [self.contentScrollView addHeaderWithTarget:self action:@selector(refreshUserInfo) dateKey:@"userInfoScrollView"];
     if ([[MemberDataManager sharedManager] isLogin]) {
-        [self requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
+        [[MemberDataManager sharedManager] requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
     } else {
         [self.contentScrollView removeHeader];
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showUserInfoViewResponseWithNotification:) name:kShowUserInfoViewNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userChangeWithNotification:) name:kUserChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUserInfoWithNotification:) name:kRefreshUserInfoNotificaiton object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userInfoResponseWithNotification:) name:kUserInfoResponseNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager]cancelDownloaderWithDelegate:self purpose:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
-
-#pragma mark - YFDownloaderDelegate Methods
-- (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData *)data
-{
-    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    if ([downloader.purpose isEqualToString:kUserInfoDownloaderKey])
-    {
-        NSDictionary *dict = [str JSONValue];
-        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
-        {
-            [self.contentScrollView headerEndRefreshing];
-            self.mineInfo = [MineInfo mineInfoWithDict:dict];
-            //to do 缓存
-            [self loadSubViews];
-        }
-        else
-        {
-            NSString *message = [dict objectForKey:kMessageKey];
-            if ([message isKindOfClass:[NSNull class]])
-            {
-                message = @"";
-            }
-            if(message.length == 0)
-                message = @"个人信息获取失败";
-            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
-        }
-    }
-}
-
-- (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString *)message
-{
-    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:kNetWorkErrorString hideDelay:2.f];
 }
 
 @end

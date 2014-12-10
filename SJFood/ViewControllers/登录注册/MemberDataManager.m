@@ -101,6 +101,20 @@
                                                                 purpose:kResetPwdDownloaderKey];
 }
 
+- (void)requestForUserInfo:(NSString *)phone
+{
+    if (nil == phone)
+        phone = @"";
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kUserInfoUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:phone forKey:@"phone"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kUserInfoDownloaderKey];
+}
+
 - (void)saveLoginMemberData
 {
     //保存登录用户信息
@@ -219,6 +233,26 @@
             if(message.length == 0)
                 message = @"重设密码失败";
             [[NSNotificationCenter defaultCenter] postNotificationName:kResetPwdResponseNotification object:message];
+        }
+    }
+    else if ([downloader.purpose isEqualToString:kUserInfoDownloaderKey])
+    {
+        NSDictionary *dict = [str JSONValue];
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            self.mineInfo = [MineInfo mineInfoWithDict:dict];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kUserInfoResponseNotification object:nil];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"个人信息获取失败";
+            [[NSNotificationCenter defaultCenter] postNotificationName:kUserInfoResponseNotification object:message];
         }
     }
 }

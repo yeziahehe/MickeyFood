@@ -8,16 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #include "Member.h"
+#include "MineInfo.h"
 
 #define kLoginDownloaderKey             @"LoginDownloaderKey"
 #define kRegisterDownloaderKey          @"RegisterDownloaderKey"
 #define kCheckUserExistDownloaderKey    @"CheckUserExistDownloaderKey"
 #define kResetPwdDownloaderKey          @"ResetPwdDownloaderKey"
+#define kUserInfoDownloaderKey          @"UserInfoDownloaderKey"
 
 #define kLoginResponseNotification              @"LoginResponseNotification"
 #define kRegisterResponseNotification           @"RegisterResponseNotification"
 #define kCheckUserExistResponseNotification     @"CheckUserExistResponseNotification"
 #define kResetPwdResponseNotification           @"ResetPwdResponseNotification"
+#define kUserInfoResponseNotification           @"UserInfoResponseNotification"
 
 /**
  *  该类用于管理注册登录模块的数据处理
@@ -26,6 +29,7 @@
 @interface MemberDataManager : NSObject
 
 @property (nonatomic, strong) Member *loginMember;
+@property (nonatomic, strong) MineInfo *mineInfo;
 
 + (MemberDataManager *)sharedManager;
 /**
@@ -72,5 +76,10 @@
  * @param newPassword 新密码
  */
 - (void)resetPwdWithPhone:(NSString *)phone newPassword:(NSString *)newPassword;
+/**
+ * 请求个人信息
+ @param phone 手机号
+ */
+- (void)requestForUserInfo:(NSString *)phone;
 
 @end

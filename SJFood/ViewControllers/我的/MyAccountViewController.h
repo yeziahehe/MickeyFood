@@ -13,6 +13,4 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *MyAccountTableView;
 
-- (void)reloadWithUserInfo:(MineInfo *)baseMineInfo;
-
 @end

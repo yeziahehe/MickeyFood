@@ -16,7 +16,6 @@
 
 @implementation NicknameEditViewController
 @synthesize nicknameTextField;
-@synthesize nickname;
 
 #pragma mark - Private methods
 - (NSString *)checkFieldValid
@@ -55,7 +54,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"修改昵称"];
-    self.nicknameTextField.text = nickname;
+    self.nicknameTextField.text = [MemberDataManager sharedManager].mineInfo.userInfo.nickname;
 }
 
 - (void)dealloc
@@ -86,7 +85,6 @@
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
             [[NSNotificationCenter defaultCenter] postNotificationName:kRefreshUserInfoNotificaiton object:nil];
-            [[NSNotificationCenter defaultCenter] postNotificationName:kRefreshAccoutNotification object:nil];
             [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"修改昵称成功" hideDelay:2.f];
             [self.navigationController popViewControllerAnimated:YES];
         }

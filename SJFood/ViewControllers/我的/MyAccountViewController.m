@@ -29,13 +29,8 @@
 {
     NSString *tempPath = [[NSBundle mainBundle] pathForResource:kMyAccountMapFileName ofType:@"plist"];
     self.myAccountArray = [NSArray arrayWithContentsOfFile:tempPath];
+    self.mineInfo = [MemberDataManager sharedManager].mineInfo;
     [self.MyAccountTableView reloadData];
-}
-
-#pragma mark - Public Methods
-- (void)reloadWithUserInfo:(MineInfo *)baseMineInfo
-{
-    self.mineInfo = baseMineInfo;
 }
 
 #pragma mark - Notification Methods
@@ -126,7 +121,6 @@
     else if ([titleString isEqualToString:@"昵称"])
     {
         NicknameEditViewController *nicknameEditViewController = [[NicknameEditViewController alloc]initWithNibName:@"NicknameEditViewController" bundle:nil];
-        nicknameEditViewController.nickname = mineInfo.userInfo.nickname;
         [self.navigationController pushViewController:nicknameEditViewController animated:YES];
     }
     else if ([titleString isEqualToString:@"修改密码"])
