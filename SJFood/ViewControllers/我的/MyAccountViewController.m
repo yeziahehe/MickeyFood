@@ -17,6 +17,8 @@
 
 @interface MyAccountViewController ()
 @property (nonatomic, strong) NSArray *myAccountArray;
+@property (strong, nonatomic) NSData *imageData;
+@property (strong, nonatomic) NSString *imageFileName;
 @property (nonatomic, strong) MineInfo *mineInfo;
 @end
 
@@ -116,7 +118,38 @@
     NSString *titleString = [[self.myAccountArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     if ([titleString isEqualToString:@"头像"])
     {
-        
+        if (IsIos8) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"上传头像" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+            [alert addAction:[UIAlertAction actionWithTitle:@"取消"
+                                                      style:UIAlertActionStyleCancel
+                                                    handler:^(UIAlertAction *action) {
+                                                    }]];
+            [alert addAction:[UIAlertAction actionWithTitle:@"拍照"
+                                                      style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction *action) {
+                                                        //拍照
+                                                        [YFMediaPicker sharedPicker].parentController = self;
+                                                        [YFMediaPicker sharedPicker].delegate = self;
+                                                        [YFMediaPicker sharedPicker].fileType = kPhotoType;
+                                                        [[YFMediaPicker sharedPicker] takePhotoWithCamera];
+                                                    }]];
+            [alert addAction:[UIAlertAction actionWithTitle:@"相册选取"
+                                                      style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction *action) {
+                                                        //从相册选取
+                                                        [YFMediaPicker sharedPicker].parentController = self;
+                                                        [YFMediaPicker sharedPicker].delegate = self;
+                                                        [YFMediaPicker sharedPicker].fileType = kPhotoType;
+                                                        [[YFMediaPicker sharedPicker] getPhotoFromLibrary];
+                                                    }]];
+            [self presentViewController:alert animated:YES completion:nil];
+        } else {
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"上传头像"
+                                                                     delegate:self
+                                                            cancelButtonTitle:@"取消"
+                                                       destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"相册选取",nil];
+            [actionSheet showInView:self.view];
+        }
     }
     else if ([titleString isEqualToString:@"昵称"])
     {
@@ -132,6 +165,50 @@
     {
         ShareViewController *shareViewController = [[ShareViewController alloc]initWithNibName:@"ShareViewController" bundle:nil];
         [self.navigationController pushViewController:shareViewController animated:YES];
+    }
+}
+
+#pragma mark - YFMediaPickerDelegate methods
+- (void)didGetFileWithData:(YFMediaPicker *)mediaPicker
+{
+    //编辑过的图片尺寸640*640，大小约350KB，压缩为120*120大小的图片，约20KB
+    //本地保存当前选中的图片，同时上传至服务器
+    UIImage *originalImage = [UIImage imageWithData:mediaPicker.fileData];
+    CGSize userIconSize = [UIImage equalScaleSizeForMaxSize:CGSizeMake(640.f, 640.f) actualSize:originalImage.size];
+    UIImage *userIconImage = [originalImage imageByScalingProportionallyToSize:userIconSize];
+    
+    NSString *userIconDir = [DOCUMENTS_FOLDER stringByAppendingPathComponent:kUserIconCacheDir];
+    NSString *userIconPath = [NSString stringWithFormat:@"%@/%@",userIconDir,mediaPicker.fileName];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    if(![manager fileExistsAtPath:userIconDir])
+        [manager createDirectoryAtPath:userIconDir withIntermediateDirectories:NO attributes:nil error:nil];
+    NSData *userIconData = UIImageJPEGRepresentation(userIconImage, 1);
+    [userIconData writeToFile:userIconPath atomically:NO];
+    
+    self.imageData = userIconData;
+    self.imageFileName = mediaPicker.fileName;
+}
+
+- (void)didGetFileFailedWithMessage:(NSString *)message
+{
+    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.0f];
+}
+
+#pragma mark - UIActionSheet Delegate Methods
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        //拍照
+        [YFMediaPicker sharedPicker].parentController = self;
+        [YFMediaPicker sharedPicker].delegate = self;
+        [YFMediaPicker sharedPicker].fileType = kPhotoType;
+        [[YFMediaPicker sharedPicker] takePhotoWithCamera];
+    }else if (buttonIndex == 1) {
+        //从相册选取
+        [YFMediaPicker sharedPicker].parentController = self;
+        [YFMediaPicker sharedPicker].delegate = self;
+        [YFMediaPicker sharedPicker].fileType = kPhotoType;
+        [[YFMediaPicker sharedPicker] getPhotoFromLibrary];
     }
 }
 

@@ -19,7 +19,7 @@
 #pragma mark - Private methods
 - (NSString *)checkPasswordValid
 {
-    if(self.pwdTextField.text.length < 6 || self.rePwdTextField.text.length > 16)
+    if(self.pwdTextField.text.length < 6 || self.pwdTextField.text.length > 16)
         return @"请输入6-20位密码";
     else if(![self.pwdTextField.text isEqualToString:self.rePwdTextField.text])
         return @"两次密码不相同，请重新输入";

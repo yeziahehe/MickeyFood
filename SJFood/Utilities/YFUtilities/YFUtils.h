@@ -8,7 +8,8 @@
 
 /**
  必要的denpendencies
- <QuartzCore/QuartzCore.h>
+ <QuartzCore/QuartzCore.h>          --YFBadgeView
+ <CoreLocation/CoreLocation.h>      --YFMediaPicker
  
  版本日志
  -v1.0 
@@ -17,6 +18,8 @@
     加入缓存计算清除的库
  -v1.2
     加入角标库
+ -v1.3
+    加入照片选择库
 */
 
 #ifndef YFUtils_YFUtils_h
@@ -31,6 +34,8 @@
 #import "YFWebViewController.h"
 #import "YFAppBackgroudConfiger.h"
 #import "YFBadgeView.h"
+#import "YFMediaPicker.h"
+#import "UIImage+YFUtilities.h"
 
 #endif
 

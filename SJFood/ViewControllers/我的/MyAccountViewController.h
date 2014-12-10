@@ -9,7 +9,7 @@
 #import "BaseViewController.h"
 #import "MineInfo.h"
 
-@interface MyAccountViewController : BaseViewController
+@interface MyAccountViewController : BaseViewController<UIActionSheetDelegate,YFMediaPickerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *MyAccountTableView;
 

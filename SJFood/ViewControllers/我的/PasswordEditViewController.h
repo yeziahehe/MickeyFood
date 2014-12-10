@@ -10,4 +10,9 @@
 
 @interface PasswordEditViewController : BaseViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *theNewPasswordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *rePasswordTextField;
+
+- (IBAction)saveButtonClicked:(id)sender;
 @end

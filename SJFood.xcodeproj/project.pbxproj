@@ -184,6 +184,9 @@
 		75AD58481A38285300E39640 /* NicknameEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58461A38285300E39640 /* NicknameEditViewController.xib */; };
 		75AD584C1A38287200E39640 /* PasswordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD584A1A38287200E39640 /* PasswordEditViewController.m */; };
 		75AD584D1A38287200E39640 /* PasswordEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD584B1A38287200E39640 /* PasswordEditViewController.xib */; };
+		75AD58501A387E8300E39640 /* YFMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD584F1A387E8300E39640 /* YFMediaPicker.m */; };
+		75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AD58511A387EA800E39640 /* CoreLocation.framework */; };
+		75AD58551A38832D00E39640 /* UIImage+YFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58541A38832D00E39640 /* UIImage+YFUtilities.m */; };
 		75EED3CF1A31627F002ECA75 /* UserInfoSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3CE1A31627F002ECA75 /* UserInfoSubView.m */; };
 		75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3D61A316302002ECA75 /* OrderInfoView.m */; };
 		75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EED3D81A31630B002ECA75 /* OrderInfoView.xib */; };
@@ -485,6 +488,11 @@
 		75AD58491A38287200E39640 /* PasswordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordEditViewController.h; sourceTree = "<group>"; };
 		75AD584A1A38287200E39640 /* PasswordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordEditViewController.m; sourceTree = "<group>"; };
 		75AD584B1A38287200E39640 /* PasswordEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordEditViewController.xib; sourceTree = "<group>"; };
+		75AD584E1A387E8300E39640 /* YFMediaPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMediaPicker.h; sourceTree = "<group>"; };
+		75AD584F1A387E8300E39640 /* YFMediaPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMediaPicker.m; sourceTree = "<group>"; };
+		75AD58511A387EA800E39640 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		75AD58531A38832D00E39640 /* UIImage+YFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFUtilities.h"; sourceTree = "<group>"; };
+		75AD58541A38832D00E39640 /* UIImage+YFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFUtilities.m"; sourceTree = "<group>"; };
 		75EED3CD1A31627F002ECA75 /* UserInfoSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoSubView.h; sourceTree = "<group>"; };
 		75EED3CE1A31627F002ECA75 /* UserInfoSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoSubView.m; sourceTree = "<group>"; };
 		75EED3D51A316302002ECA75 /* OrderInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoView.h; sourceTree = "<group>"; };
@@ -532,6 +540,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				755722AC1A344E6400CC6A8F /* libsqlite3.dylib in Frameworks */,
 				755722AA1A344E5600CC6A8F /* libstdc++.dylib in Frameworks */,
 				755722A81A344E1C00CC6A8F /* SystemConfiguration.framework in Frameworks */,
@@ -1042,6 +1051,10 @@
 				7557225C1A34264C00CC6A8F /* YFAppBackgroudConfiger.m */,
 				755722CF1A35CAC300CC6A8F /* YFBadgeView.h */,
 				755722D01A35CAC300CC6A8F /* YFBadgeView.m */,
+				75AD584E1A387E8300E39640 /* YFMediaPicker.h */,
+				75AD584F1A387E8300E39640 /* YFMediaPicker.m */,
+				75AD58531A38832D00E39640 /* UIImage+YFUtilities.h */,
+				75AD58541A38832D00E39640 /* UIImage+YFUtilities.m */,
 			);
 			path = YFUtilities;
 			sourceTree = "<group>";
@@ -1049,6 +1062,7 @@
 		7589544F1A24E663001C2350 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				75AD58511A387EA800E39640 /* CoreLocation.framework */,
 				7557226D1A344C4B00CC6A8F /* ShareSDK2.10.3 */,
 				755722AB1A344E6400CC6A8F /* libsqlite3.dylib */,
 				755722A91A344E5600CC6A8F /* libstdc++.dylib */,
@@ -1449,10 +1463,12 @@
 				755722661A34334E00CC6A8F /* AboutAppViewController.m in Sources */,
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
 				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
+				75AD58501A387E8300E39640 /* YFMediaPicker.m in Sources */,
 				758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */,
 				7557225D1A34264C00CC6A8F /* YFAppBackgroudConfiger.m in Sources */,
 				7542C4631A2CA42400BB083D /* LoginViewController.m in Sources */,
 				75AD58471A38285300E39640 /* NicknameEditViewController.m in Sources */,
+				75AD58551A38832D00E39640 /* UIImage+YFUtilities.m in Sources */,
 				75AD583A1A38113A00E39640 /* MyAccountTableViewCell.m in Sources */,
 				75AD584C1A38287200E39640 /* PasswordEditViewController.m in Sources */,
 				758512AA1A32F68D00504FA8 /* FeedbackViewController.m in Sources */,
