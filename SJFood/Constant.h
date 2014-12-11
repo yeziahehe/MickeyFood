@@ -71,5 +71,6 @@
 #define kCheckVersionUrl        @"version/getVersion.do"
 #define kUserInfoUrl            @"user/mineInfo.do"
 #define kUpdateNicknameUrl      @"user/updateUserInfo.do"
+#define kGetAddressInfoUrl      @"receiver/selectReceiver.do"
 
 #endif

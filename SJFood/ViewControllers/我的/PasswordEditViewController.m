@@ -56,6 +56,7 @@
         //重置密码成功
         [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"重置密码成功" hideDelay:2.f];
         [MemberDataManager sharedManager].loginMember.password = self.theNewPasswordTextField.text;
+        [[MemberDataManager sharedManager] saveLoginMemberData];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

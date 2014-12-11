@@ -12,6 +12,15 @@
 @synthesize iconImageView,loginButton;
 @synthesize deliveryView,receiveView,commentView,refundView;
 
+#pragma mark - Private Methods
+- (void)setBadgeViewWithView:(UIView *)parentView badgeNum:(NSString *)badgeNum
+{
+    if (![badgeNum isEqualToString:@"0"]) {
+        YFBadgeView *badgeView = [[YFBadgeView alloc]initWithParentView:parentView alignment:YFBadgeViewAlignmentTopRight];
+        badgeView.badgeText = badgeNum;
+    }
+}
+
 #pragma mark - Public Methods
 - (void)reloadWithUserInfo:(MineInfo *)mineInfo
 {
@@ -21,14 +30,11 @@
     self.iconImageView.cacheDir = kUserIconCacheDir;
     [self.iconImageView aysnLoadImageWithUrl:mineInfo.userInfo.imgUrl placeHolder:@"icon_user_image_defult.png"];
     
-    YFBadgeView *deliveryBadgeView = [[YFBadgeView alloc]initWithParentView:self.deliveryView alignment:YFBadgeViewAlignmentTopRight];
-    deliveryBadgeView.badgeText = mineInfo.waitDeliveryOrder;
-    YFBadgeView *receiveBadgeView = [[YFBadgeView alloc]initWithParentView:self.receiveView alignment:YFBadgeViewAlignmentTopRight];
-    receiveBadgeView.badgeText = mineInfo.waitReceiveOrder;
-    YFBadgeView *commentBadgeView = [[YFBadgeView alloc]initWithParentView:self.commentView alignment:YFBadgeViewAlignmentTopRight];
-    commentBadgeView.badgeText = mineInfo.waitCommentOrder;
-    YFBadgeView *refundBadgeView = [[YFBadgeView alloc]initWithParentView:self.refundView alignment:YFBadgeViewAlignmentTopRight];
-    refundBadgeView.badgeText = mineInfo.waitRefundOrder;
+    //角标
+    [self setBadgeViewWithView:self.deliveryView badgeNum:mineInfo.waitDeliveryOrder];
+    [self setBadgeViewWithView:self.receiveView badgeNum:mineInfo.waitReceiveOrder];
+    [self setBadgeViewWithView:self.commentView badgeNum:mineInfo.waitCommentOrder];
+    [self setBadgeViewWithView:self.refundView badgeNum:mineInfo.waitRefundOrder];
 }
 
 #pragma mark - IBAction Methods
