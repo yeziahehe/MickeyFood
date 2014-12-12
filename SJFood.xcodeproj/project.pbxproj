@@ -171,10 +171,6 @@
 		7599AA081A259DB60052E7A9 /* YFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA071A259DB60052E7A9 /* YFImageDownloader.m */; };
 		7599AA0B1A259E030052E7A9 /* UIView+YFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA0A1A259E030052E7A9 /* UIView+YFUtilities.m */; };
 		7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599AA0E1A25A3910052E7A9 /* MBProgressHUD.m */; };
-		75A35B921A395D1800533148 /* DefaultAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A35B901A395D1800533148 /* DefaultAddressTableViewCell.m */; };
-		75A35B931A395D1800533148 /* DefaultAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A35B911A395D1800533148 /* DefaultAddressTableViewCell.xib */; };
-		75A35B9A1A395EAA00533148 /* icon_default_address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A35B981A395EAA00533148 /* icon_default_address@2x.png */; };
-		75A35B9B1A395EAA00533148 /* icon_default_address@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A35B991A395EAA00533148 /* icon_default_address@3x.png */; };
 		75A35B9E1A39B85E00533148 /* btn_add_address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A35B9C1A39B85E00533148 /* btn_add_address@2x.png */; };
 		75A35B9F1A39B85E00533148 /* btn_add_address@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A35B9D1A39B85E00533148 /* btn_add_address@3x.png */; };
 		75AD582E1A3810C000E39640 /* ShareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58291A3810C000E39640 /* ShareTableViewCell.m */; };
@@ -195,6 +191,16 @@
 		75AD58551A38832D00E39640 /* UIImage+YFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58541A38832D00E39640 /* UIImage+YFUtilities.m */; };
 		75AD58591A388F5F00E39640 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58571A388F5F00E39640 /* AddressTableViewCell.m */; };
 		75AD585A1A388F5F00E39640 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */; };
+		75D1E2B91A3AC6F6008555B1 /* btn_default_address_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2B71A3AC6F6008555B1 /* btn_default_address_selected@2x.png */; };
+		75D1E2BA1A3AC6F6008555B1 /* btn_default_address_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2B81A3AC6F6008555B1 /* btn_default_address_selected@3x.png */; };
+		75D1E2BD1A3AC806008555B1 /* btn_default_address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2BB1A3AC806008555B1 /* btn_default_address@2x.png */; };
+		75D1E2BE1A3AC806008555B1 /* btn_default_address@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2BC1A3AC806008555B1 /* btn_default_address@3x.png */; };
+		75D1E2C11A3ACA25008555B1 /* btn_edit_address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2BF1A3ACA25008555B1 /* btn_edit_address@2x.png */; };
+		75D1E2C21A3ACA25008555B1 /* btn_edit_address@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2C01A3ACA25008555B1 /* btn_edit_address@3x.png */; };
+		75D1E2C61A3ACEC5008555B1 /* AddressEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D1E2C41A3ACEC5008555B1 /* AddressEditViewController.m */; };
+		75D1E2C71A3ACEC5008555B1 /* AddressEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2C51A3ACEC5008555B1 /* AddressEditViewController.xib */; };
+		75D1E2CB1A3ACEE5008555B1 /* AddressAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D1E2C91A3ACEE5008555B1 /* AddressAddViewController.m */; };
+		75D1E2CC1A3ACEE5008555B1 /* AddressAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2CA1A3ACEE5008555B1 /* AddressAddViewController.xib */; };
 		75E18EC41A39C932000AEF48 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18EC31A39C932000AEF48 /* Address.m */; };
 		75EED3CF1A31627F002ECA75 /* UserInfoSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3CE1A31627F002ECA75 /* UserInfoSubView.m */; };
 		75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED3D61A316302002ECA75 /* OrderInfoView.m */; };
@@ -478,11 +484,6 @@
 		7599AA0A1A259E030052E7A9 /* UIView+YFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFUtilities.m"; sourceTree = "<group>"; };
 		7599AA0D1A25A3910052E7A9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		7599AA0E1A25A3910052E7A9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		75A35B8F1A395D1800533148 /* DefaultAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultAddressTableViewCell.h; sourceTree = "<group>"; };
-		75A35B901A395D1800533148 /* DefaultAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultAddressTableViewCell.m; sourceTree = "<group>"; };
-		75A35B911A395D1800533148 /* DefaultAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultAddressTableViewCell.xib; sourceTree = "<group>"; };
-		75A35B981A395EAA00533148 /* icon_default_address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_default_address@2x.png"; sourceTree = "<group>"; };
-		75A35B991A395EAA00533148 /* icon_default_address@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_default_address@3x.png"; sourceTree = "<group>"; };
 		75A35B9C1A39B85E00533148 /* btn_add_address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add_address@2x.png"; sourceTree = "<group>"; };
 		75A35B9D1A39B85E00533148 /* btn_add_address@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add_address@3x.png"; sourceTree = "<group>"; };
 		75AD58281A3810C000E39640 /* ShareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTableViewCell.h; sourceTree = "<group>"; };
@@ -512,6 +513,18 @@
 		75AD58561A388F5F00E39640 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
 		75AD58571A388F5F00E39640 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
 		75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		75D1E2B71A3AC6F6008555B1 /* btn_default_address_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address_selected@2x.png"; sourceTree = "<group>"; };
+		75D1E2B81A3AC6F6008555B1 /* btn_default_address_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address_selected@3x.png"; sourceTree = "<group>"; };
+		75D1E2BB1A3AC806008555B1 /* btn_default_address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address@2x.png"; sourceTree = "<group>"; };
+		75D1E2BC1A3AC806008555B1 /* btn_default_address@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address@3x.png"; sourceTree = "<group>"; };
+		75D1E2BF1A3ACA25008555B1 /* btn_edit_address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_edit_address@2x.png"; sourceTree = "<group>"; };
+		75D1E2C01A3ACA25008555B1 /* btn_edit_address@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_edit_address@3x.png"; sourceTree = "<group>"; };
+		75D1E2C31A3ACEC5008555B1 /* AddressEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressEditViewController.h; sourceTree = "<group>"; };
+		75D1E2C41A3ACEC5008555B1 /* AddressEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressEditViewController.m; sourceTree = "<group>"; };
+		75D1E2C51A3ACEC5008555B1 /* AddressEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressEditViewController.xib; sourceTree = "<group>"; };
+		75D1E2C81A3ACEE5008555B1 /* AddressAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAddViewController.h; sourceTree = "<group>"; };
+		75D1E2C91A3ACEE5008555B1 /* AddressAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAddViewController.m; sourceTree = "<group>"; };
+		75D1E2CA1A3ACEE5008555B1 /* AddressAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressAddViewController.xib; sourceTree = "<group>"; };
 		75E18EC21A39C932000AEF48 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		75E18EC31A39C932000AEF48 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		75EED3CD1A31627F002ECA75 /* UserInfoSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoSubView.h; sourceTree = "<group>"; };
@@ -1144,6 +1157,19 @@
 			name = "我的账号子页面";
 			sourceTree = "<group>";
 		};
+		75D1E2CD1A3ACEF1008555B1 /* 地址管理子页面 */ = {
+			isa = PBXGroup;
+			children = (
+				75D1E2C31A3ACEC5008555B1 /* AddressEditViewController.h */,
+				75D1E2C41A3ACEC5008555B1 /* AddressEditViewController.m */,
+				75D1E2C51A3ACEC5008555B1 /* AddressEditViewController.xib */,
+				75D1E2C81A3ACEE5008555B1 /* AddressAddViewController.h */,
+				75D1E2C91A3ACEE5008555B1 /* AddressAddViewController.m */,
+				75D1E2CA1A3ACEE5008555B1 /* AddressAddViewController.xib */,
+			);
+			name = "地址管理子页面";
+			sourceTree = "<group>";
+		};
 		75EED3CC1A316204002ECA75 /* 我的入口页面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1203,9 +1229,7 @@
 				75AD58561A388F5F00E39640 /* AddressTableViewCell.h */,
 				75AD58571A388F5F00E39640 /* AddressTableViewCell.m */,
 				75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */,
-				75A35B8F1A395D1800533148 /* DefaultAddressTableViewCell.h */,
-				75A35B901A395D1800533148 /* DefaultAddressTableViewCell.m */,
-				75A35B911A395D1800533148 /* DefaultAddressTableViewCell.xib */,
+				75D1E2CD1A3ACEF1008555B1 /* 地址管理子页面 */,
 			);
 			name = "我的子页面";
 			sourceTree = "<group>";
@@ -1235,10 +1259,14 @@
 				75EED42B1A320B79002ECA75 /* icon_user_info@3x.png */,
 				75EED42C1A320B79002ECA75 /* icon_user_message@2x.png */,
 				75EED42D1A320B79002ECA75 /* icon_user_message@3x.png */,
-				75A35B981A395EAA00533148 /* icon_default_address@2x.png */,
-				75A35B991A395EAA00533148 /* icon_default_address@3x.png */,
 				75A35B9C1A39B85E00533148 /* btn_add_address@2x.png */,
 				75A35B9D1A39B85E00533148 /* btn_add_address@3x.png */,
+				75D1E2B71A3AC6F6008555B1 /* btn_default_address_selected@2x.png */,
+				75D1E2B81A3AC6F6008555B1 /* btn_default_address_selected@3x.png */,
+				75D1E2BB1A3AC806008555B1 /* btn_default_address@2x.png */,
+				75D1E2BC1A3AC806008555B1 /* btn_default_address@3x.png */,
+				75D1E2BF1A3ACA25008555B1 /* btn_edit_address@2x.png */,
+				75D1E2C01A3ACA25008555B1 /* btn_edit_address@3x.png */,
 			);
 			name = "我的";
 			sourceTree = "<group>";
@@ -1327,8 +1355,10 @@
 			files = (
 				75EED4401A320F61002ECA75 /* UserInfoTableViewCell.xib in Resources */,
 				758954481A24BB0E001C2350 /* RootTabBarViewController.xib in Resources */,
+				75D1E2C11A3ACA25008555B1 /* btn_edit_address@2x.png in Resources */,
 				7533EEC21A2E14E7001D12D4 /* btn_category@3x.png in Resources */,
 				7533EEAA1A2E0EF4001D12D4 /* YFWebViewController.xib in Resources */,
+				75D1E2BA1A3AC6F6008555B1 /* btn_default_address_selected@3x.png in Resources */,
 				755722BF1A34891400CC6A8F /* icon_wechat_moment@3x.png in Resources */,
 				7533EEEF1A2E1536001D12D4 /* btn_get_code_bg@3x.png in Resources */,
 				75EED4361A320B79002ECA75 /* icon_user_info@2x.png in Resources */,
@@ -1347,17 +1377,20 @@
 				7533EF091A2E177E001D12D4 /* htmlTemplate.html in Resources */,
 				7533EEC91A2E14E7001D12D4 /* icon_message@2x.png in Resources */,
 				755722921A344C4B00CC6A8F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				75D1E2BE1A3AC806008555B1 /* btn_default_address@3x.png in Resources */,
 				75EED4351A320B79002ECA75 /* icon_setting@3x.png in Resources */,
 				755722671A34334E00CC6A8F /* AboutAppViewController.xib in Resources */,
 				7599A9FB1A259CC40052E7A9 /* YFProgressHUD.bundle in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
 				7533EEC71A2E14E7001D12D4 /* btn_user@2x.png in Resources */,
 				7533EEC31A2E14E7001D12D4 /* btn_home@2x.png in Resources */,
+				75D1E2C71A3ACEC5008555B1 /* AddressEditViewController.xib in Resources */,
 				75EED4211A32040B002ECA75 /* UserView.xib in Resources */,
 				7533EEC61A2E14E7001D12D4 /* btn_shopping@3x.png in Resources */,
 				758512821A32EEEC00504FA8 /* ReceiveViewController.xib in Resources */,
 				7585127D1A32EE7A00504FA8 /* DeliveryViewController.xib in Resources */,
 				758116381A27611900065E65 /* HomeViewController.xib in Resources */,
+				75D1E2CC1A3ACEE5008555B1 /* AddressAddViewController.xib in Resources */,
 				7533EEF21A2E1536001D12D4 /* icon_confirm_pwd@2x.png in Resources */,
 				7533EEF01A2E1536001D12D4 /* icon_code@2x.png in Resources */,
 				7533EEC51A2E14E7001D12D4 /* btn_shopping@2x.png in Resources */,
@@ -1367,7 +1400,6 @@
 				7533EEFA1A2E1536001D12D4 /* icon_radio_selected@2x.png in Resources */,
 				7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */,
 				755722971A344C4B00CC6A8F /* ShareSDKFlatShareViewUI.bundle in Resources */,
-				75A35B931A395D1800533148 /* DefaultAddressTableViewCell.xib in Resources */,
 				7585129B1A32F44700504FA8 /* MyMessageViewController.xib in Resources */,
 				75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */,
 				75EED40F1A31F7C7002ECA75 /* icon_delevery@2x.png in Resources */,
@@ -1384,8 +1416,10 @@
 				758512961A32F43400504FA8 /* MyAccountViewController.xib in Resources */,
 				75EED4301A320B79002ECA75 /* icon_feedback@2x.png in Resources */,
 				7533EEF71A2E1536001D12D4 /* icon_pwd@3x.png in Resources */,
+				75D1E2BD1A3AC806008555B1 /* btn_default_address@2x.png in Resources */,
 				7533EEF81A2E1536001D12D4 /* icon_radio_normal@2x.png in Resources */,
 				7533EECB1A2E14E7001D12D4 /* icon_qrcode@2x.png in Resources */,
+				75D1E2B91A3AC6F6008555B1 /* btn_default_address_selected@2x.png in Resources */,
 				7533EF071A2E1568001D12D4 /* Mickeyabout.html in Resources */,
 				75EED41B1A31F7E5002ECA75 /* icon_refund@2x.png in Resources */,
 				7533EEF51A2E1536001D12D4 /* icon_mobile_num@3x.png in Resources */,
@@ -1404,14 +1438,12 @@
 				75AD58421A38178C00E39640 /* MyAccountImageTableViewCell.xib in Resources */,
 				7557228E1A344C4B00CC6A8F /* ShareSDKLocalizable.strings in Resources */,
 				7533EED41A2E150A001D12D4 /* line_hon_1px_down.png in Resources */,
-				75A35B9A1A395EAA00533148 /* icon_default_address@2x.png in Resources */,
 				7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */,
 				755722621A34290F00CC6A8F /* WelcomeViewController.xib in Resources */,
 				7533EF041A2E1549001D12D4 /* icon_header_cancel@2x.png in Resources */,
 				755722BD1A34891400CC6A8F /* icon_sina_weibo@3x.png in Resources */,
 				75EED4341A320B79002ECA75 /* icon_setting@2x.png in Resources */,
 				75EED4041A31EDDE002ECA75 /* icon_user_image_defult@3x.png in Resources */,
-				75A35B9B1A395EAA00533148 /* icon_default_address@3x.png in Resources */,
 				75EED4101A31F7C7002ECA75 /* icon_delevery@3x.png in Resources */,
 				7533EEEE1A2E1536001D12D4 /* btn_get_code_bg@2x.png in Resources */,
 				75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */,
@@ -1442,6 +1474,7 @@
 				755722501A3339DE00CC6A8F /* SettingMap.plist in Resources */,
 				7533EEED1A2E1536001D12D4 /* btn_full@3x.png in Resources */,
 				7533EEF31A2E1536001D12D4 /* icon_confirm_pwd@3x.png in Resources */,
+				75D1E2C21A3ACA25008555B1 /* btn_edit_address@3x.png in Resources */,
 				75EED4031A31EDDE002ECA75 /* icon_user_image_defult@2x.png in Resources */,
 				7533EED51A2E150A001D12D4 /* line_hon_1px_up.png in Resources */,
 				7533EEFC1A2E1536001D12D4 /* icon_user@2x.png in Resources */,
@@ -1475,7 +1508,6 @@
 				758512781A32E91100504FA8 /* UIView+MJExtension.m in Sources */,
 				758512811A32EEEC00504FA8 /* ReceiveViewController.m in Sources */,
 				750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */,
-				75A35B921A395D1800533148 /* DefaultAddressTableViewCell.m in Sources */,
 				7557224D1A33356500CC6A8F /* SettingTableViewCell.m in Sources */,
 				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
 				758512A51A32F60C00504FA8 /* SettingViewController.m in Sources */,
@@ -1490,6 +1522,7 @@
 				7585129F1A32F45800504FA8 /* AddressViewController.m in Sources */,
 				75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */,
 				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
+				75D1E2CB1A3ACEE5008555B1 /* AddressAddViewController.m in Sources */,
 				7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */,
 				7589543B1A24B853001C2350 /* StartViewController.m in Sources */,
 				75AD58301A3810C000E39640 /* ShareViewController.m in Sources */,
@@ -1497,6 +1530,7 @@
 				7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */,
 				7585127C1A32EE7A00504FA8 /* DeliveryViewController.m in Sources */,
 				758512AE1A32F77500504FA8 /* UserSettingView.m in Sources */,
+				75D1E2C61A3ACEC5008555B1 /* AddressEditViewController.m in Sources */,
 				758954531A24E685001C2350 /* Reachability.m in Sources */,
 				7599AA051A259D910052E7A9 /* YFAsynImageView.m in Sources */,
 				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,

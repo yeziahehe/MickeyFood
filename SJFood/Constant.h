@@ -61,6 +61,7 @@
 #define kUserChangeNotification             @"UserChangeNotification"
 #define kRefreshUserInfoNotificaiton        @"RefreshUserInfoNotificaiton"
 #define kRefreshAccoutNotification          @"RefreshAccoutNotification"
+#define kRefreshAddressNotification         @"RefreshAddressNotification"
 
 //Url values
 #define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
@@ -72,5 +73,9 @@
 #define kUserInfoUrl            @"user/mineInfo.do"
 #define kUpdateNicknameUrl      @"user/updateUserInfo.do"
 #define kGetAddressInfoUrl      @"receiver/selectReceiver.do"
+#define kDeleteAddressUrl       @"receiver/deleteReceiver.do"
+#define kUpdateAddressUrl       @"receiver/updateReceiver.do"
+#define kSetDefaultAddressUrl   @"receiver/setDefaultAddress.do"
+#define kAddAddressUrl          @"receiver/addReceiver.do"
 
 #endif

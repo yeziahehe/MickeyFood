@@ -70,6 +70,23 @@
     [self showWithMessage:startMessage customView:[[UIImageView alloc]initWithImage:HUD_IMAGE_ERROR] hideDelay:delay];
 }
 
+- (void)showActivityViewWithMessage:(NSString *)startMessage
+{
+    if(nil == startMessage || [startMessage isEqualToString:@""])
+    {
+        NSLog(@"YFProgressHUD显示空信息.");
+        [hud hide:YES];
+        return;
+    }
+    UIWindow *hudWindow = (UIWindow *)hud.superview;
+    [hudWindow bringSubviewToFront:hud];
+    hud.userInteractionEnabled = NO;
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = startMessage;
+    [NSObject cancelPreviousPerformRequestsWithTarget:hud];
+    [hud show:YES];
+}
+
 - (void)startedNetWorkActivityWithText:(NSString *)text
 {
     if(nil == text || [text isEqualToString:@""])

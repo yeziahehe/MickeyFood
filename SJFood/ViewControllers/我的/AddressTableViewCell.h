@@ -13,5 +13,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;
 @property (strong, nonatomic) NSString *rank;
+@property (strong, nonatomic) IBOutlet UIButton *defaultAddressButton;
+@property (strong, nonatomic) IBOutlet UILabel *defaultAddressLabel;
+@property (strong, nonatomic) IBOutlet UIButton *editAddressButton;
 
 @end

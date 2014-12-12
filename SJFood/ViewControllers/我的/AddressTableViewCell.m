@@ -9,7 +9,7 @@
 #import "AddressTableViewCell.h"
 
 @implementation AddressTableViewCell
-@synthesize nameLabel,phoneLabel,addressLabel,rank;
+@synthesize nameLabel,phoneLabel,addressLabel,rank,defaultAddressButton,defaultAddressLabel,editAddressButton;
 
 - (void)awakeFromNib {
     // Initialization code

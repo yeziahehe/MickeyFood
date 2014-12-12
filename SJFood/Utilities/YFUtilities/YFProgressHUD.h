@@ -37,7 +37,12 @@
     @param delay hud隐藏时间
  */
 - (void)showWithMessage:(NSString *)startMessage customView:(UIView *)customView hideDelay:(CGFloat)delay;
-
+/**
+    加载Activity的hud，不隐藏，需要调用stop方法隐藏
+    区别于startedNetWorkActivityWithText，该方式显示hud是不会覆盖window下面view的touch事件，hud.userTouchEnable = NO;
+    注意：该方法需要在viewDidDisappear中添加[[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];目的是防止用户在请求未完成前就返回而导致页面销毁但hud未消失的情况
+ */
+- (void)showActivityViewWithMessage:(NSString *)startMessage;
 /**
     成功时图文混杂的hud，图片为默认的对号图片"success.png"
     @param startMessage hud中显示的文字，message是nil的时候不显示hud

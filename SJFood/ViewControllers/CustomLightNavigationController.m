@@ -21,7 +21,7 @@
     
     self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: kMainBlackColor};
     self.navigationBar.barTintColor = [UIColor whiteColor];//导航条的颜色
-    self.navigationBar.tintColor = kMainBlackColor;//左侧返回按钮，文字的颜色
+    self.navigationBar.tintColor = kMainProjColor;//左侧返回按钮，文字的颜色
     self.interactivePopGestureRecognizer.delegate = self;
     self.delegate = self;
 }
