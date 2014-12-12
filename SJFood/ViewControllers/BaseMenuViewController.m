@@ -15,9 +15,9 @@
 @implementation BaseMenuViewController
 
 #pragma mark - UIViewController methods
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
     self.tabBarController.tabBar.hidden = NO;
 }
 
