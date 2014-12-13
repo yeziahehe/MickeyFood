@@ -16,12 +16,13 @@
 @end
 
 @implementation AddressEditViewController
-@synthesize nameTextField,phoneTextField,schoolAreaTextField,addressTextField;
+@synthesize nameTextField,phoneTextField,schoolAreaTextField,addressTextField,contentScrollView,deleteAddressButton;
 @synthesize editAddress;
 
 #pragma mark - Private Methods
 - (void)loadSubViews
 {
+    [self.contentScrollView setContentSize:CGSizeMake(ScreenWidth, self.deleteAddressButton.frame.origin.y + self.deleteAddressButton.frame.size.height + 15.f)];
     self.nameTextField.text = editAddress.name;
     self.phoneTextField.text = editAddress.phone;
     self.addressTextField.text = [editAddress.address stringByReplacingOccurrencesOfString:self.schoolAreaTextField.text withString:@""];
@@ -106,11 +107,25 @@
     [self setNaviTitle:@"编辑收货地址"];
     [self setRightNaviItemWithTitle:@"保存" imageName:nil];
     [self loadSubViews];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
+}
+
+#pragma mark - Keyboard Notification methords
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, keyboardSize.height, self.contentScrollView.contentInset.right);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, 0, self.contentScrollView.contentInset.right);
 }
 
 #pragma mark - AlertViewDelegate methods

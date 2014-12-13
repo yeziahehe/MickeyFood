@@ -15,7 +15,7 @@
 @end
 
 @implementation AddressAddViewController
-@synthesize nameTextField,phoneTextField,schoolAreaTextField,addressTextField;
+@synthesize nameTextField,phoneTextField,schoolAreaTextField,addressTextField,contentView,contentScrollView;
 
 #pragma mark - Private Methods
 - (NSString *)checkFieldValid
@@ -60,11 +60,26 @@
     [self setNaviTitle:@"新增收货地址"];
     [self setRightNaviItemWithTitle:@"保存" imageName:nil];
     [self.nameTextField becomeFirstResponder];
+    [self.contentScrollView setContentSize:CGSizeMake(ScreenWidth, self.contentView.frame.origin.y + self.contentView.frame.size.height + 15.f)];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
+}
+
+#pragma mark - Keyboard Notification methords
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, keyboardSize.height, self.contentScrollView.contentInset.right);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, 0, self.contentScrollView.contentInset.right);
 }
 
 #pragma mark - UITextFieldDelegate methods

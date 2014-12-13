@@ -10,6 +10,9 @@
 
 @interface FeedbackViewController : BaseViewController
 @property (strong, nonatomic) IBOutlet UITextView *feedbackTextView;
+@property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
+@property (strong, nonatomic) IBOutlet UIButton *commitButton;
+
 
 - (IBAction)commitFeedbackButtonClicked:(id)sender;
 @end

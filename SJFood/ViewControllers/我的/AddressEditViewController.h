@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (strong, nonatomic) IBOutlet UITextField *schoolAreaTextField;
 @property (strong, nonatomic) IBOutlet UITextField *addressTextField;
+@property (strong, nonatomic) IBOutlet UIButton *deleteAddressButton;
+@property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 - (IBAction)deleteAddressButtonClicked:(id)sender;
 

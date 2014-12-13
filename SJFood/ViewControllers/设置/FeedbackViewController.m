@@ -15,7 +15,7 @@
 @end
 
 @implementation FeedbackViewController
-@synthesize feedbackTextView;
+@synthesize feedbackTextView,contentScrollView,commitButton;
 
 #pragma mark - Private methods
 - (NSString *)checkFieldValid
@@ -52,12 +52,28 @@
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"意见反馈"];
     [self.feedbackTextView becomeFirstResponder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    [self.contentScrollView setContentSize:CGSizeMake(ScreenWidth, self.commitButton.frame.origin.y + self.commitButton.frame.size.height + 15.f)];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
 }
+
+#pragma mark - Keyboard Notification methords
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, keyboardSize.height, self.contentScrollView.contentInset.right);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, 0, self.contentScrollView.contentInset.right);
+}
+
 
 #pragma mark - UITextViewDelegate methods
 - (void)resignAllField
