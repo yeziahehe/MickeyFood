@@ -21,7 +21,7 @@
 
 @implementation ConfirmViewController
 @synthesize registerButton,resendButton,checkBoxButton,agreeProtocolButton;
-@synthesize identifyCodeTextField,nickNameTextField,passwordTextField,rePasswordTextField,phoneLabel;
+@synthesize identifyCodeTextField,nickNameTextField,passwordTextField,rePasswordTextField,phoneLabel,contentScrollView;
 @synthesize resendSecond,resendTimer;
 
 #pragma mark - Private Methods
@@ -180,12 +180,27 @@
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"注册"];
     [self initViewController];
+    [self.contentScrollView setContentSize:CGSizeMake(ScreenWidth, self.registerButton.frame.origin.y + self.registerButton.frame.size.height + 15.f)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerResponseWithNotification:) name:kRegisterResponseNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+#pragma mark - Keyboard Notification methords
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, keyboardSize.height, self.contentScrollView.contentInset.right);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.contentScrollView.contentInset = UIEdgeInsetsMake(self.contentScrollView.contentInset.top, self.contentScrollView.contentInset.left, 0, self.contentScrollView.contentInset.right);
 }
 
 #pragma mark - UITextFieldDelegate Methods
