@@ -24,7 +24,7 @@
 {
     self.nameTextField.text = editAddress.name;
     self.phoneTextField.text = editAddress.phone;
-    self.addressTextField.text = editAddress.address;
+    self.addressTextField.text = [editAddress.address stringByReplacingOccurrencesOfString:self.schoolAreaTextField.text withString:@""];
     [self.nameTextField becomeFirstResponder];
 }
 
