@@ -69,7 +69,6 @@
                                                   style:UIAlertActionStyleDefault
                                                 handler:^(UIAlertAction *action) {
                                                     [[MemberDataManager sharedManager] logout];
-                                                    // to do 改变我的登录按钮
                                                     [[NSNotificationCenter defaultCenter] postNotificationName:kUserChangeNotification object:nil];
                                                     [self.tabBarController setSelectedIndex:0];
                                                     [self.navigationController popToRootViewControllerAnimated:YES];
@@ -103,7 +102,6 @@
         if (buttonIndex == 1)
         {
             [[MemberDataManager sharedManager] logout];
-            // to do 改变我的登录按钮
             [[NSNotificationCenter defaultCenter] postNotificationName:kUserChangeNotification object:nil];
             [self.tabBarController setSelectedIndex:0];
             [self.navigationController popToRootViewControllerAnimated:YES];

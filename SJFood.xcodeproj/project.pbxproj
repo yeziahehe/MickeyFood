@@ -119,6 +119,7 @@
 		755722C81A35857000CC6A8F /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722C71A35857000CC6A8F /* UserInfo.m */; };
 		755722CE1A35C7C800CC6A8F /* MineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722CD1A35C7C800CC6A8F /* MineInfo.m */; };
 		755722D11A35CAC300CC6A8F /* YFBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 755722D01A35CAC300CC6A8F /* YFBadgeView.m */; };
+		757331D81A3C0EB300D32E12 /* feedback_input_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 757331D71A3C0EB300D32E12 /* feedback_input_box.png */; };
 		758116371A27611900065E65 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758116351A27611900065E65 /* HomeViewController.m */; };
 		758116381A27611900065E65 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758116361A27611900065E65 /* HomeViewController.xib */; };
 		758116711A276E9200065E65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 758116701A276E9200065E65 /* Default-568h@2x.png */; };
@@ -391,6 +392,7 @@
 		755722CD1A35C7C800CC6A8F /* MineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfo.m; sourceTree = "<group>"; };
 		755722CF1A35CAC300CC6A8F /* YFBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBadgeView.h; sourceTree = "<group>"; };
 		755722D01A35CAC300CC6A8F /* YFBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFBadgeView.m; sourceTree = "<group>"; };
+		757331D71A3C0EB300D32E12 /* feedback_input_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback_input_box.png; sourceTree = "<group>"; };
 		758116341A27611900065E65 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		758116351A27611900065E65 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		758116361A27611900065E65 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -796,6 +798,7 @@
 		755722511A333BFB00CC6A8F /* 设置 */ = {
 			isa = PBXGroup;
 			children = (
+				757331D71A3C0EB300D32E12 /* feedback_input_box.png */,
 				755722B41A34891400CC6A8F /* icon_qzone@2x.png */,
 				755722B51A34891400CC6A8F /* icon_qzone@3x.png */,
 				755722B61A34891400CC6A8F /* icon_sina_weibo@2x.png */,
@@ -1357,6 +1360,7 @@
 				758954481A24BB0E001C2350 /* RootTabBarViewController.xib in Resources */,
 				75D1E2C11A3ACA25008555B1 /* btn_edit_address@2x.png in Resources */,
 				7533EEC21A2E14E7001D12D4 /* btn_category@3x.png in Resources */,
+				757331D81A3C0EB300D32E12 /* feedback_input_box.png in Resources */,
 				7533EEAA1A2E0EF4001D12D4 /* YFWebViewController.xib in Resources */,
 				75D1E2BA1A3AC6F6008555B1 /* btn_default_address_selected@3x.png in Resources */,
 				755722BF1A34891400CC6A8F /* icon_wechat_moment@3x.png in Resources */,

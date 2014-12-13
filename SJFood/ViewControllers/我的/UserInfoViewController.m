@@ -43,7 +43,6 @@
     for (NSString *classString in self.subViewArray) {
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:classString owner:self options:nil];
         UserInfoSubView *userInfoSubView = [nibs lastObject];
-        //to do userInfoSubView Delegate
         CGRect rect = userInfoSubView.frame;
         rect.origin.y = originY;
         rect.origin.x = (self.contentScrollView.frame.size.width-rect.size.width)/2;

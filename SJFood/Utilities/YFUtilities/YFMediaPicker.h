@@ -34,13 +34,13 @@ typedef enum {
 @property (nonatomic, assign) FileType fileType;        //media文件的类型
 
 //详细信息
-@property (nonatomic, retain) CLLocation *fileLocation; //media文件的经纬度
-@property (nonatomic, retain) NSDate *fileDate;         //media文件的日期
+@property (nonatomic, strong) CLLocation *fileLocation; //media文件的经纬度
+@property (nonatomic, strong) NSDate *fileDate;         //media文件的日期
 @property (nonatomic, copy) NSString *fileLocationName; //media文件的地址名称
 
 //基本信息
-@property (nonatomic, retain) NSData *fileData;         //media文件的二进制流数据
-@property (nonatomic, retain) NSString *fileName;       //media文件的文件名 - 唯一识别名称
+@property (nonatomic, strong) NSData *fileData;         //media文件的二进制流数据
+@property (nonatomic, strong) NSString *fileName;       //media文件的文件名 - 唯一识别名称
 
 + (YFMediaPicker *)sharedPicker;
 

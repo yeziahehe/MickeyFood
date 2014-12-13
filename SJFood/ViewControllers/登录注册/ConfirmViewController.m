@@ -67,7 +67,6 @@
     [SMS_SDK getVerifyCodeByPhoneNumber:[MemberDataManager sharedManager].loginMember.phone AndZone:@"86" result:^(enum SMS_GetVerifyCodeResponseState state) {
         if (1 == state) {
             self.phoneLabel.attributedText = [self codeStatusLabel:@"验证码已发往%@，请稍等"];
-            //to do 成功操作
         }
         else if (0 == state) {
             self.phoneLabel.text = @"验证码发送失败，请稍后重试";

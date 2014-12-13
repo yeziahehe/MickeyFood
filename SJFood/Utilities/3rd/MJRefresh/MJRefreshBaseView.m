@@ -148,10 +148,10 @@
         if (self.window) {
             self.state = MJRefreshStateRefreshing;
         } else {
-    #warning 不能调用set方法
+    //#warning 不能调用set方法
             _state = MJRefreshStateWillRefreshing;
             
-#warning 为了保证在viewWillAppear等方法中也能刷新
+//#warning 为了保证在viewWillAppear等方法中也能刷新
             [self setNeedsDisplay];
         }
     }

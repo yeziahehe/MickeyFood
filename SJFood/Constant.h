@@ -77,5 +77,6 @@
 #define kUpdateAddressUrl       @"receiver/updateReceiver.do"
 #define kSetDefaultAddressUrl   @"receiver/setDefaultAddress.do"
 #define kAddAddressUrl          @"receiver/addReceiver.do"
+#define kFeedbackUrl            @"user/feedbackMessage.do"
 
 #endif

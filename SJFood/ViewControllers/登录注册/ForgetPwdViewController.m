@@ -52,7 +52,6 @@
     [SMS_SDK getVerifyCodeByPhoneNumber:self.phoneTextField.text AndZone:@"86" result:^(enum SMS_GetVerifyCodeResponseState state) {
         if (1 == state) {
             [[YFProgressHUD sharedProgressHUD]showSuccessViewWithMessage:@"验证码发送成功，请稍等" hideDelay:2.f];
-            //to do 成功操作
         }
         else if (0 == state) {
             [[YFProgressHUD sharedProgressHUD]showFailureViewWithMessage:@"验证码发送失败，请稍后重试" hideDelay:2.f];
@@ -78,7 +77,6 @@
     }
     else
     {
-        //to do 获取验证码
         self.resendButton.enabled = NO;
         self.resendSecond = kResendTimeCount;
         self.resendTimer = [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(resendTimerChange) userInfo:nil repeats:YES];

@@ -50,6 +50,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshAccountWithNotification:) name:kRefreshAccoutNotification object:nil];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - UITableViewDataSource methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

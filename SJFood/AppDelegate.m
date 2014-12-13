@@ -66,7 +66,6 @@
     else
     {
         if (self.window.rootViewController != self.startViewController) {
-            // to do
             [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:@"当前无网络连接" hideDelay:2.0f];
         }
     }

@@ -10,7 +10,7 @@
 #import "AssetsLibrary/AssetsLibrary.h"
 
 @interface YFMediaPicker()
-@property (nonatomic, retain) UIImagePickerController *imagePickerController;
+@property (nonatomic, strong) UIImagePickerController *imagePickerController;
 @end
 
 @implementation YFMediaPicker
