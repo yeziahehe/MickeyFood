@@ -21,7 +21,6 @@
 {
     if ([self.navigationItem.rightBarButtonItem.title isEqualToString:@"取消"]) {
         [self.searchBar endEditing:YES];
-        [self setLeftNaviItemWithTitle:nil imageName:@"icon_qrcode.png"];
         [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
     }
 }
@@ -55,7 +54,6 @@
     // Do any additional setup after loading the view from its nib.
     [self loadSubViews];
     self.navigationItem.titleView = self.searchBar;
-    [self setLeftNaviItemWithTitle:nil imageName:@"icon_qrcode.png"];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
 }
 
