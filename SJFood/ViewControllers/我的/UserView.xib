@@ -15,6 +15,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_user.png" id="rjN-od-6es">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user_image_defult.png" id="61x-o5-mz1" customClass="YFAsynImageView">
                             <rect key="frame" x="123" y="23" width="74" height="74"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
@@ -31,7 +35,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="L3e-sJ-Hu7">
                     <rect key="frame" x="0.0" y="150" width="320" height="80"/>
@@ -175,6 +179,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bg_user.png" width="320" height="150"/>
         <image name="icon_comment.png" width="30" height="30"/>
         <image name="icon_delevery.png" width="30" height="30"/>
         <image name="icon_receive.png" width="30" height="30"/>

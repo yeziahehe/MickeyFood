@@ -20,6 +20,7 @@
 		750DF7231A2F66E10010A2E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7221A2F66E10010A2E9 /* CoreGraphics.framework */; };
 		750DF7251A2F66EB0010A2E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7241A2F66EB0010A2E9 /* libz.dylib */; };
 		750DF7271A2F66F70010A2E9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7261A2F66F70010A2E9 /* libicucore.dylib */; };
+		7514E5021A3D81470091A26D /* bg_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7514E5011A3D81470091A26D /* bg_user@2x.png */; };
 		75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */; };
 		75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */; };
 		75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D231A2EBC190034523F /* ResetPwdViewController.m */; };
@@ -273,6 +274,7 @@
 		750DF7221A2F66E10010A2E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		750DF7241A2F66EB0010A2E9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		750DF7261A2F66F70010A2E9 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		7514E5011A3D81470091A26D /* bg_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_user@2x.png"; sourceTree = "<group>"; };
 		75158D1D1A2EBBE60034523F /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
@@ -1240,6 +1242,7 @@
 		75EED4001A31EDD3002ECA75 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				7514E5011A3D81470091A26D /* bg_user@2x.png */,
 				75EED4011A31EDDE002ECA75 /* icon_user_image_defult@2x.png */,
 				75EED4021A31EDDE002ECA75 /* icon_user_image_defult@3x.png */,
 				75EED40D1A31F7C7002ECA75 /* icon_delevery@2x.png */,
@@ -1430,6 +1433,7 @@
 				7533EECD1A2E14E7001D12D4 /* icon_search@2x.png in Resources */,
 				755722941A344C4B00CC6A8F /* WeiboSDK.bundle in Resources */,
 				75EED3DE1A31639B002ECA75 /* UserEditView.xib in Resources */,
+				7514E5021A3D81470091A26D /* bg_user@2x.png in Resources */,
 				7542C48F1A2CD09E00BB083D /* ConfirmViewController.xib in Resources */,
 				7533EEEC1A2E1536001D12D4 /* btn_full@2x.png in Resources */,
 				755722BB1A34891400CC6A8F /* icon_qzone@3x.png in Resources */,
