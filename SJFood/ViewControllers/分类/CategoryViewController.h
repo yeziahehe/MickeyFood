@@ -9,5 +9,5 @@
 #import "BaseMenuViewController.h"
 
 @interface CategoryViewController : BaseMenuViewController
-
+- (void)requestForGetFoodCategory;
 @end

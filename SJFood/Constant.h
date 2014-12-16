@@ -52,6 +52,7 @@
 #define kSuccessCode        @"success"
 #define kFailureCode        @"failure"
 #define kUserIconCacheDir   @"UserIconCacheDir"
+#define kFoodIconCacheDir   @"FoodIconCacheDir"
 
 
 //Notification Keys
@@ -62,6 +63,7 @@
 #define kRefreshUserInfoNotificaiton        @"RefreshUserInfoNotificaiton"
 #define kRefreshAccoutNotification          @"RefreshAccoutNotification"
 #define kRefreshAddressNotification         @"RefreshAddressNotification"
+#define kCategoryTableViewSelectedNotificaition     @"CategoryTableViewSelectedNotificaition"
 
 //Url values
 #define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
@@ -78,5 +80,6 @@
 #define kSetDefaultAddressUrl   @"receiver/setDefaultAddress.do"
 #define kAddAddressUrl          @"receiver/addReceiver.do"
 #define kFeedbackUrl            @"user/feedbackMessage.do"
+#define kGetFoodCategoryUrl     @"food/getFoodCategory.do"
 
 #endif

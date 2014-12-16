@@ -20,6 +20,8 @@
     加入角标库
  -v1.3
     加入照片选择库
+ -v1.4
+    加入iOS8下tableview分割线的问题
 */
 
 #ifndef YFUtils_YFUtils_h
@@ -36,6 +38,8 @@
 #import "YFBadgeView.h"
 #import "YFMediaPicker.h"
 #import "UIImage+YFUtilities.h"
+#import "UITableView+YFAdditions.h"
+#import "UITableViewCell+YFAdditions.h"
 
 #endif
 

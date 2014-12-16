@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController id="lY6-TR-3oc" userLabel="Root View Controller">
+                        <viewController id="lY6-TR-3oc" userLabel="Root View Controller" customClass="CategoryViewController">
                             <navigationItem key="navigationItem" title="挑食" id="Awp-os-j15"/>
                         </viewController>
                     </viewControllers>
