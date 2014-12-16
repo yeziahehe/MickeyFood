@@ -34,4 +34,13 @@
     return self;
 }
 
+- (NSMutableDictionary *)toCacheDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:self.category forKey:@"category"];
+    [dict setValue:self.categoryId forKey:@"categoryId"];
+    [dict setValue:self.imgUrl forKey:@"imgUrl"];
+    return dict;
+}
+
 @end

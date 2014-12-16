@@ -45,4 +45,6 @@
 - (id)initWithDict:(NSDictionary *)dict;
 + (instancetype)foodCategoryWithDict:(NSDictionary *)dict;
 
+- (NSMutableDictionary *)toCacheDictionary;
+
 @end

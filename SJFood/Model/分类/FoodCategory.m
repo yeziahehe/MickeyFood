@@ -54,4 +54,16 @@
     return [[FoodCategory alloc] initWithDict:dict];
 }
 
+- (NSMutableDictionary *)toCacheDictionary
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    NSMutableArray *array = [NSMutableArray array];
+    for (FoodCategoryDetail *foodCategoryDetail in self.child) {
+        [array addObject:[foodCategoryDetail toCacheDictionary]];
+    }
+    [dict setValue:self.category forKey:@"category"];
+    [dict setValue:array forKey:@"child"];
+    return dict;
+}
+
 @end

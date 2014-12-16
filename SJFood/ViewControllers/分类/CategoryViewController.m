@@ -88,8 +88,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    //TO DO 缓存
     [self requestForGetFoodCategory];
+    self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
+    if ([[CacheManager sharedManager] category]) {
+        for (NSDictionary *valueDict in [[CacheManager sharedManager] category]) {
+            FoodCategory *fc = [[FoodCategory alloc]initWithDict:valueDict];
+            [self.categoryTableArray addObject:fc];
+        }
+        [self loadSubViews];
+    }
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(categoryTableViewSelected:) name:kCategoryTableViewSelectedNotificaition object:nil];
 }
@@ -115,8 +123,8 @@
                 FoodCategory *fc = [[FoodCategory alloc]initWithDict:valueDict];
                 [self.categoryTableArray addObject:fc];
             }
+            [[CacheManager sharedManager] cacheCategoryWithArray:self.categoryTableArray];
             [self loadSubViews];
-            //TO DO 缓存
         }
         else
         {

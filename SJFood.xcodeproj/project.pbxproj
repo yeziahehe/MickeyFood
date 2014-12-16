@@ -191,6 +191,7 @@
 		75A95CD91A4035D00009962F /* tab_select_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A95CD81A4035D00009962F /* tab_select_bg@2x.png */; };
 		75A95CDB1A40367D0009962F /* tab_select_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A95CDA1A40367D0009962F /* tab_select_bg@3x.png */; };
 		75A95CDD1A403B0A0009962F /* loading_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A95CDC1A403B0A0009962F /* loading_square.png */; };
+		75A95CE01A4059B40009962F /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A95CDF1A4059B40009962F /* CacheManager.m */; };
 		75AD582E1A3810C000E39640 /* ShareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58291A3810C000E39640 /* ShareTableViewCell.m */; };
 		75AD582F1A3810C000E39640 /* ShareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD582A1A3810C000E39640 /* ShareTableViewCell.xib */; };
 		75AD58301A3810C000E39640 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD582C1A3810C000E39640 /* ShareViewController.m */; };
@@ -532,6 +533,8 @@
 		75A95CD81A4035D00009962F /* tab_select_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_select_bg@2x.png"; sourceTree = "<group>"; };
 		75A95CDA1A40367D0009962F /* tab_select_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_select_bg@3x.png"; sourceTree = "<group>"; };
 		75A95CDC1A403B0A0009962F /* loading_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_square.png; sourceTree = "<group>"; };
+		75A95CDE1A4059B40009962F /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		75A95CDF1A4059B40009962F /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		75AD58281A3810C000E39640 /* ShareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTableViewCell.h; sourceTree = "<group>"; };
 		75AD58291A3810C000E39640 /* ShareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTableViewCell.m; sourceTree = "<group>"; };
 		75AD582A1A3810C000E39640 /* ShareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareTableViewCell.xib; sourceTree = "<group>"; };
@@ -664,8 +667,11 @@
 				750DF7051A2F46370010A2E9 /* MemberDataManager.m */,
 				750DF7071A2F49650010A2E9 /* Member.h */,
 				750DF7081A2F49650010A2E9 /* Member.m */,
+				75A95CDE1A4059B40009962F /* CacheManager.h */,
+				75A95CDF1A4059B40009962F /* CacheManager.m */,
 			);
 			name = DataCenter;
+			path = "../ViewControllers/登录注册";
 			sourceTree = "<group>";
 		};
 		750DF70A1A2F4F4B0010A2E9 /* SBJSON */ = {
@@ -839,7 +845,6 @@
 		7542C45F1A2CA2EA00BB083D /* 登录注册 */ = {
 			isa = PBXGroup;
 			children = (
-				750DF7031A2F46010010A2E9 /* DataCenter */,
 				7542C4601A2CA42400BB083D /* LoginViewController.h */,
 				7542C4611A2CA42400BB083D /* LoginViewController.m */,
 				7542C4621A2CA42400BB083D /* LoginViewController.xib */,
@@ -975,6 +980,7 @@
 			children = (
 				7514E5091A3D88F00091A26D /* 分类 */,
 				755722C51A35853E00CC6A8F /* 我的 */,
+				750DF7031A2F46010010A2E9 /* DataCenter */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1688,6 +1694,7 @@
 				75E18EC41A39C932000AEF48 /* Address.m in Sources */,
 				75A95CD61A4024450009962F /* CategoryCollectionViewCell.m in Sources */,
 				75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */,
+				75A95CE01A4059B40009962F /* CacheManager.m in Sources */,
 				758954141A24B4A1001C2350 /* AppDelegate.m in Sources */,
 				75A95CB41A4012870009962F /* UITableView+YFAdditions.m in Sources */,
 				758954111A24B4A1001C2350 /* main.m in Sources */,

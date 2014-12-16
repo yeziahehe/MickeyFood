@@ -9,6 +9,7 @@
 #import "RootTabBarViewController.h"
 #import "UserInfoViewController.h"
 #import "LoginViewController.h"
+#import "CategoryViewController.h"
 
 @interface RootTabBarViewController ()
 
@@ -67,6 +68,12 @@
                 if ([[MemberDataManager sharedManager] isLogin]) {
                     [[MemberDataManager sharedManager] requestForUserInfo:[MemberDataManager sharedManager].loginMember.phone];
                 }
+            }
+        }
+        if ([vc isKindOfClass:[CategoryViewController class]]) {
+            if (vc != nil) {
+                CategoryViewController *cvc = (CategoryViewController *)vc;
+                [cvc requestForGetFoodCategory];
             }
         }
     }

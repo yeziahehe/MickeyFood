@@ -15,5 +15,6 @@
 @property (nonatomic, strong) NSString *imgUrl;//二级页面的图片
 
 - (id)initWithDict:(NSDictionary *)dict;
+- (NSMutableDictionary *)toCacheDictionary;
 
 @end

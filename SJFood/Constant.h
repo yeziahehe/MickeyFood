@@ -53,6 +53,7 @@
 #define kFailureCode        @"failure"
 #define kUserIconCacheDir   @"UserIconCacheDir"
 #define kFoodIconCacheDir   @"FoodIconCacheDir"
+#define kUsersCacheDataDir  @"UsersCacheDataDir"
 
 
 //Notification Keys
