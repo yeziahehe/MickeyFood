@@ -21,6 +21,10 @@
 		750DF7251A2F66EB0010A2E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7241A2F66EB0010A2E9 /* libz.dylib */; };
 		750DF7271A2F66F70010A2E9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7261A2F66F70010A2E9 /* libicucore.dylib */; };
 		7514E5021A3D81470091A26D /* bg_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7514E5011A3D81470091A26D /* bg_user@2x.png */; };
+		7514E50E1A3D890D0091A26D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514E50C1A3D890D0091A26D /* CategoryViewController.m */; };
+		7514E50F1A3D890D0091A26D /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7514E50D1A3D890D0091A26D /* CategoryViewController.xib */; };
+		7514E5121A3D89840091A26D /* FoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514E5111A3D89840091A26D /* FoodCategory.m */; };
+		7514E5151A3D92C30091A26D /* FoodCategoryDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514E5141A3D92C30091A26D /* FoodCategoryDetail.m */; };
 		75158D201A2EBBE60034523F /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */; };
 		75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */; };
 		75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D231A2EBC190034523F /* ResetPwdViewController.m */; };
@@ -273,6 +277,13 @@
 		750DF7241A2F66EB0010A2E9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		750DF7261A2F66F70010A2E9 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		7514E5011A3D81470091A26D /* bg_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_user@2x.png"; sourceTree = "<group>"; };
+		7514E50B1A3D890D0091A26D /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		7514E50C1A3D890D0091A26D /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		7514E50D1A3D890D0091A26D /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		7514E5101A3D89840091A26D /* FoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCategory.h; sourceTree = "<group>"; };
+		7514E5111A3D89840091A26D /* FoodCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodCategory.m; sourceTree = "<group>"; };
+		7514E5131A3D92C30091A26D /* FoodCategoryDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCategoryDetail.h; sourceTree = "<group>"; };
+		7514E5141A3D92C30091A26D /* FoodCategoryDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodCategoryDetail.m; sourceTree = "<group>"; };
 		75158D1D1A2EBBE60034523F /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		75158D1E1A2EBBE60034523F /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgetPwdViewController.xib; sourceTree = "<group>"; };
@@ -642,6 +653,27 @@
 			path = SBJSON;
 			sourceTree = "<group>";
 		};
+		7514E5091A3D88F00091A26D /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				7514E5101A3D89840091A26D /* FoodCategory.h */,
+				7514E5111A3D89840091A26D /* FoodCategory.m */,
+				7514E5131A3D92C30091A26D /* FoodCategoryDetail.h */,
+				7514E5141A3D92C30091A26D /* FoodCategoryDetail.m */,
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
+		7514E50A1A3D890D0091A26D /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				7514E50B1A3D890D0091A26D /* CategoryViewController.h */,
+				7514E50C1A3D890D0091A26D /* CategoryViewController.m */,
+				7514E50D1A3D890D0091A26D /* CategoryViewController.xib */,
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
 		7533EEAE1A2E1496001D12D4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -891,6 +923,7 @@
 		755722C41A35853000CC6A8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7514E5091A3D88F00091A26D /* 分类 */,
 				755722C51A35853E00CC6A8F /* 我的 */,
 			);
 			path = Model;
@@ -1043,6 +1076,7 @@
 				7589544A1A24BB51001C2350 /* CustomNavigationController.m */,
 				7542C4651A2CAB0500BB083D /* CustomLightNavigationController.h */,
 				7542C4661A2CAB0500BB083D /* CustomLightNavigationController.m */,
+				7514E50A1A3D890D0091A26D /* 分类 */,
 				758512A11A32F5D800504FA8 /* 设置 */,
 				7542C4A01A2D970E00BB083D /* 我的 */,
 				7542C45F1A2CA2EA00BB083D /* 登录注册 */,
@@ -1392,6 +1426,7 @@
 				7585127D1A32EE7A00504FA8 /* DeliveryViewController.xib in Resources */,
 				758116381A27611900065E65 /* HomeViewController.xib in Resources */,
 				75D1E2CC1A3ACEE5008555B1 /* AddressAddViewController.xib in Resources */,
+				7514E50F1A3D890D0091A26D /* CategoryViewController.xib in Resources */,
 				7533EEF21A2E1536001D12D4 /* icon_confirm_pwd@2x.png in Resources */,
 				7533EEF01A2E1536001D12D4 /* icon_code@2x.png in Resources */,
 				7533EEC51A2E14E7001D12D4 /* btn_shopping@2x.png in Resources */,
@@ -1510,6 +1545,7 @@
 				750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */,
 				7557224D1A33356500CC6A8F /* SettingTableViewCell.m in Sources */,
 				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
+				7514E5121A3D89840091A26D /* FoodCategory.m in Sources */,
 				758512A51A32F60C00504FA8 /* SettingViewController.m in Sources */,
 				75EED43F1A320F61002ECA75 /* UserInfoTableViewCell.m in Sources */,
 				75AD58411A38178C00E39640 /* MyAccountImageTableViewCell.m in Sources */,
@@ -1520,6 +1556,8 @@
 				758512901A32F2AC00504FA8 /* AllOrderViewController.m in Sources */,
 				75EED41F1A3203FC002ECA75 /* UserView.m in Sources */,
 				7585129F1A32F45800504FA8 /* AddressViewController.m in Sources */,
+				7514E50E1A3D890D0091A26D /* CategoryViewController.m in Sources */,
+				7514E5151A3D92C30091A26D /* FoodCategoryDetail.m in Sources */,
 				75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */,
 				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
 				75D1E2CB1A3ACEE5008555B1 /* AddressAddViewController.m in Sources */,
