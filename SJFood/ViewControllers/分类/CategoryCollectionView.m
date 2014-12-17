@@ -55,7 +55,8 @@
 #pragma mark - UICollectionViewDelegate methods
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    FoodCategoryDetail *fcd = [self.categoryCollectionArray objectAtIndex:indexPath.row];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kShowFoodViewNotification object:fcd.categoryId];
 }
 
 @end

@@ -29,6 +29,8 @@
 		75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */; };
 		75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D231A2EBC190034523F /* ResetPwdViewController.m */; };
 		75158D261A2EBC190034523F /* ResetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D241A2EBC190034523F /* ResetPwdViewController.xib */; };
+		7533463D1A416C40000CD338 /* btn_food_sort_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7533463B1A416C40000CD338 /* btn_food_sort_selected@2x.png */; };
+		7533463E1A416C40000CD338 /* btn_food_sort_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7533463C1A416C40000CD338 /* btn_food_sort_selected@3x.png */; };
 		7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7533EEA71A2E0EF4001D12D4 /* YFWebViewController.m */; };
 		7533EEAA1A2E0EF4001D12D4 /* YFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7533EEA81A2E0EF4001D12D4 /* YFWebViewController.xib */; };
 		7533EEAD1A2E10A8001D12D4 /* NSString+HtmlCss.m in Sources */ = {isa = PBXBuildFile; fileRef = 7533EEAC1A2E10A8001D12D4 /* NSString+HtmlCss.m */; };
@@ -210,6 +212,8 @@
 		75AD58551A38832D00E39640 /* UIImage+YFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58541A38832D00E39640 /* UIImage+YFUtilities.m */; };
 		75AD58591A388F5F00E39640 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58571A388F5F00E39640 /* AddressTableViewCell.m */; };
 		75AD585A1A388F5F00E39640 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */; };
+		75C1439C1A415EF100E6F92B /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C1439A1A415EF100E6F92B /* FoodViewController.m */; };
+		75C1439D1A415EF100E6F92B /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C1439B1A415EF100E6F92B /* FoodViewController.xib */; };
 		75D1E2B91A3AC6F6008555B1 /* btn_default_address_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2B71A3AC6F6008555B1 /* btn_default_address_selected@2x.png */; };
 		75D1E2BA1A3AC6F6008555B1 /* btn_default_address_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2B81A3AC6F6008555B1 /* btn_default_address_selected@3x.png */; };
 		75D1E2BD1A3AC806008555B1 /* btn_default_address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2BB1A3AC806008555B1 /* btn_default_address@2x.png */; };
@@ -305,6 +309,8 @@
 		75158D221A2EBC190034523F /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
 		75158D231A2EBC190034523F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		75158D241A2EBC190034523F /* ResetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPwdViewController.xib; sourceTree = "<group>"; };
+		7533463B1A416C40000CD338 /* btn_food_sort_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_food_sort_selected@2x.png"; sourceTree = "<group>"; };
+		7533463C1A416C40000CD338 /* btn_food_sort_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_food_sort_selected@3x.png"; sourceTree = "<group>"; };
 		7533EEA61A2E0EF4001D12D4 /* YFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFWebViewController.h; sourceTree = "<group>"; };
 		7533EEA71A2E0EF4001D12D4 /* YFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFWebViewController.m; sourceTree = "<group>"; };
 		7533EEA81A2E0EF4001D12D4 /* YFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFWebViewController.xib; sourceTree = "<group>"; };
@@ -562,6 +568,9 @@
 		75AD58561A388F5F00E39640 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
 		75AD58571A388F5F00E39640 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
 		75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		75C143991A415EF100E6F92B /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		75C1439A1A415EF100E6F92B /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
+		75C1439B1A415EF100E6F92B /* FoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodViewController.xib; sourceTree = "<group>"; };
 		75D1E2B71A3AC6F6008555B1 /* btn_default_address_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address_selected@2x.png"; sourceTree = "<group>"; };
 		75D1E2B81A3AC6F6008555B1 /* btn_default_address_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address_selected@3x.png"; sourceTree = "<group>"; };
 		75D1E2BB1A3AC806008555B1 /* btn_default_address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address@2x.png"; sourceTree = "<group>"; };
@@ -725,6 +734,7 @@
 				75A95CD31A4024450009962F /* CategoryCollectionViewCell.h */,
 				75A95CD41A4024450009962F /* CategoryCollectionViewCell.m */,
 				75A95CD51A4024450009962F /* CategoryCollectionViewCell.xib */,
+				75C143981A415A6D00E6F92B /* 分类子页面 */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -1237,6 +1247,8 @@
 				75A95CD81A4035D00009962F /* tab_select_bg@2x.png */,
 				75A95CDA1A40367D0009962F /* tab_select_bg@3x.png */,
 				75A95CDC1A403B0A0009962F /* loading_square.png */,
+				7533463B1A416C40000CD338 /* btn_food_sort_selected@2x.png */,
+				7533463C1A416C40000CD338 /* btn_food_sort_selected@3x.png */,
 			);
 			name = "分类";
 			sourceTree = "<group>";
@@ -1258,6 +1270,16 @@
 				75AD582D1A3810C000E39640 /* ShareViewController.xib */,
 			);
 			name = "我的账号子页面";
+			sourceTree = "<group>";
+		};
+		75C143981A415A6D00E6F92B /* 分类子页面 */ = {
+			isa = PBXGroup;
+			children = (
+				75C143991A415EF100E6F92B /* FoodViewController.h */,
+				75C1439A1A415EF100E6F92B /* FoodViewController.m */,
+				75C1439B1A415EF100E6F92B /* FoodViewController.xib */,
+			);
+			name = "分类子页面";
 			sourceTree = "<group>";
 		};
 		75D1E2CD1A3ACEF1008555B1 /* 地址管理子页面 */ = {
@@ -1489,6 +1511,7 @@
 				7599A9FB1A259CC40052E7A9 /* YFProgressHUD.bundle in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
 				7533EEC71A2E14E7001D12D4 /* btn_user@2x.png in Resources */,
+				7533463E1A416C40000CD338 /* btn_food_sort_selected@3x.png in Resources */,
 				7533EEC31A2E14E7001D12D4 /* btn_home@2x.png in Resources */,
 				75D1E2C71A3ACEC5008555B1 /* AddressEditViewController.xib in Resources */,
 				75EED4211A32040B002ECA75 /* UserView.xib in Resources */,
@@ -1561,6 +1584,7 @@
 				7542C4861A2CC11C00BB083D /* RegisterViewController.xib in Resources */,
 				7533EED71A2E150A001D12D4 /* line_ver_1px_right.png in Resources */,
 				75A95CAF1A4006BD0009962F /* CategoryTableViewCell.xib in Resources */,
+				7533463D1A416C40000CD338 /* btn_food_sort_selected@2x.png in Resources */,
 				7542C4A51A2D972400BB083D /* UserInfoViewController.xib in Resources */,
 				755722BA1A34891400CC6A8F /* icon_qzone@2x.png in Resources */,
 				75EED4421A3216BA002ECA75 /* UserEditMap.plist in Resources */,
@@ -1570,6 +1594,7 @@
 				75AD582F1A3810C000E39640 /* ShareTableViewCell.xib in Resources */,
 				75AD583D1A38122C00E39640 /* MyAccountMap.plist in Resources */,
 				75EED4371A320B79002ECA75 /* icon_user_info@3x.png in Resources */,
+				75C1439D1A415EF100E6F92B /* FoodViewController.xib in Resources */,
 				758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */,
 				7533EECE1A2E14E7001D12D4 /* icon_search@3x.png in Resources */,
 				7585128C1A32EF0F00504FA8 /* RefundViewController.xib in Resources */,
@@ -1630,6 +1655,7 @@
 				755722611A34290F00CC6A8F /* WelcomeViewController.m in Sources */,
 				758512741A32E91100504FA8 /* MJRefreshFooterView.m in Sources */,
 				7599AA021A259D5B0052E7A9 /* YFDownloaderManager.m in Sources */,
+				75C1439C1A415EF100E6F92B /* FoodViewController.m in Sources */,
 				758512761A32E91100504FA8 /* UIScrollView+MJExtension.m in Sources */,
 				758512901A32F2AC00504FA8 /* AllOrderViewController.m in Sources */,
 				75A95CD01A4023620009962F /* CategoryCollectionView.m in Sources */,

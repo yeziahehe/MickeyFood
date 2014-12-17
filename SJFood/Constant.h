@@ -65,6 +65,7 @@
 #define kRefreshAccoutNotification          @"RefreshAccoutNotification"
 #define kRefreshAddressNotification         @"RefreshAddressNotification"
 #define kCategoryTableViewSelectedNotificaition     @"CategoryTableViewSelectedNotificaition"
+#define kShowFoodViewNotification           @"ShowFoodViewNotification"
 
 //Url values
 #define kServerAddress          @"http://192.168.1.145:8400/SJFood/"

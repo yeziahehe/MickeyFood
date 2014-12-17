@@ -11,6 +11,7 @@
 #import "CategorySubView.h"
 #import "CategoryTableView.h"
 #import "CategoryCollectionView.h"
+#import "FoodViewController.h"
 
 #define kGetFoodCategoryDownloaderKey       @"GetFoodCategoryDownloaderKey"
 
@@ -84,6 +85,12 @@
     [self.view addSubview:ccv];
 }
 
+- (void)showFoodViewResponseWithNotification:(NSNotification *)notification
+{
+    FoodViewController *foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController" bundle:nil];
+    [self.navigationController pushViewController:foodViewController animated:YES];
+}
+
 #pragma mark - UIViewController Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -100,6 +107,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(categoryTableViewSelected:) name:kCategoryTableViewSelectedNotificaition object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showFoodViewResponseWithNotification:) name:kShowFoodViewNotification object:nil];
 }
 
 - (void)dealloc
