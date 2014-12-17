@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface FoodViewController : BaseViewController
+@interface FoodViewController : BaseViewController<UISearchBarDelegate>
 
 @end

@@ -214,6 +214,8 @@
 		75AD585A1A388F5F00E39640 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */; };
 		75C1439C1A415EF100E6F92B /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C1439A1A415EF100E6F92B /* FoodViewController.m */; };
 		75C1439D1A415EF100E6F92B /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C1439B1A415EF100E6F92B /* FoodViewController.xib */; };
+		75CD70AD1A41C5140073A7E5 /* SearchHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CD70AB1A41C5140073A7E5 /* SearchHistoryViewController.m */; };
+		75CD70AE1A41C5140073A7E5 /* SearchHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75CD70AC1A41C5140073A7E5 /* SearchHistoryViewController.xib */; };
 		75D1E2B91A3AC6F6008555B1 /* btn_default_address_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2B71A3AC6F6008555B1 /* btn_default_address_selected@2x.png */; };
 		75D1E2BA1A3AC6F6008555B1 /* btn_default_address_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2B81A3AC6F6008555B1 /* btn_default_address_selected@3x.png */; };
 		75D1E2BD1A3AC806008555B1 /* btn_default_address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D1E2BB1A3AC806008555B1 /* btn_default_address@2x.png */; };
@@ -571,6 +573,9 @@
 		75C143991A415EF100E6F92B /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
 		75C1439A1A415EF100E6F92B /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		75C1439B1A415EF100E6F92B /* FoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodViewController.xib; sourceTree = "<group>"; };
+		75CD70AA1A41C5140073A7E5 /* SearchHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryViewController.h; sourceTree = "<group>"; };
+		75CD70AB1A41C5140073A7E5 /* SearchHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryViewController.m; sourceTree = "<group>"; };
+		75CD70AC1A41C5140073A7E5 /* SearchHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchHistoryViewController.xib; sourceTree = "<group>"; };
 		75D1E2B71A3AC6F6008555B1 /* btn_default_address_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address_selected@2x.png"; sourceTree = "<group>"; };
 		75D1E2B81A3AC6F6008555B1 /* btn_default_address_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address_selected@3x.png"; sourceTree = "<group>"; };
 		75D1E2BB1A3AC806008555B1 /* btn_default_address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_default_address@2x.png"; sourceTree = "<group>"; };
@@ -1278,6 +1283,9 @@
 				75C143991A415EF100E6F92B /* FoodViewController.h */,
 				75C1439A1A415EF100E6F92B /* FoodViewController.m */,
 				75C1439B1A415EF100E6F92B /* FoodViewController.xib */,
+				75CD70AA1A41C5140073A7E5 /* SearchHistoryViewController.h */,
+				75CD70AB1A41C5140073A7E5 /* SearchHistoryViewController.m */,
+				75CD70AC1A41C5140073A7E5 /* SearchHistoryViewController.xib */,
 			);
 			name = "分类子页面";
 			sourceTree = "<group>";
@@ -1572,6 +1580,7 @@
 				7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */,
 				755722621A34290F00CC6A8F /* WelcomeViewController.xib in Resources */,
 				7533EF041A2E1549001D12D4 /* icon_header_cancel@2x.png in Resources */,
+				75CD70AE1A41C5140073A7E5 /* SearchHistoryViewController.xib in Resources */,
 				755722BD1A34891400CC6A8F /* icon_sina_weibo@3x.png in Resources */,
 				75EED4341A320B79002ECA75 /* icon_setting@2x.png in Resources */,
 				75EED4041A31EDDE002ECA75 /* icon_user_image_defult@3x.png in Resources */,
@@ -1716,6 +1725,7 @@
 				755722CE1A35C7C800CC6A8F /* MineInfo.m in Sources */,
 				75AD58591A388F5F00E39640 /* AddressTableViewCell.m in Sources */,
 				750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */,
+				75CD70AD1A41C5140073A7E5 /* SearchHistoryViewController.m in Sources */,
 				758954401A24BA69001C2350 /* BaseViewController.m in Sources */,
 				75E18EC41A39C932000AEF48 /* Address.m in Sources */,
 				75A95CD61A4024450009962F /* CategoryCollectionViewCell.m in Sources */,
