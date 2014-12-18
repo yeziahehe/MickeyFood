@@ -9,5 +9,13 @@
 #import "BaseViewController.h"
 
 @interface FoodViewController : BaseViewController<UISearchBarDelegate>
+@property (nonatomic, strong) NSString *categoryId;
+@property (strong, nonatomic) IBOutlet UIButton *sortByAllButton;
+@property (strong, nonatomic) IBOutlet UIButton *sortByPriceButton;
+@property (strong, nonatomic) IBOutlet UIButton *sortBySaleButton;
+@property (strong, nonatomic) IBOutlet UITableView *foodTableView;
 
+- (IBAction)sortByAllButtonClicked:(id)sender;
+- (IBAction)sortByPriceButtonClicked:(id)sender;
+- (IBAction)sortBySaleButtonClicked:(id)sender;
 @end

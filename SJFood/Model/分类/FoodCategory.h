@@ -39,7 +39,7 @@
 
 @interface FoodCategory : NSObject
 
-@property (nonatomic, strong) NSString *category;//一级分类名称
+@property (nonatomic, copy) NSString *category;//一级分类名称
 @property (nonatomic, strong) NSMutableArray *child;//二级分类数组
 
 - (id)initWithDict:(NSDictionary *)dict;

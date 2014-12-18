@@ -10,9 +10,9 @@
 
 @interface FoodCategoryDetail : NSObject
 
-@property (nonatomic, strong) NSString *categoryId;//三级页面的id
-@property (nonatomic, strong) NSString *category;//二级页面的名称
-@property (nonatomic, strong) NSString *imgUrl;//二级页面的图片
+@property (nonatomic, copy) NSString *categoryId;//三级页面的id
+@property (nonatomic, copy) NSString *category;//二级页面的名称
+@property (nonatomic, copy) NSString *imgUrl;//二级页面的图片
 
 - (id)initWithDict:(NSDictionary *)dict;
 - (NSMutableDictionary *)toCacheDictionary;

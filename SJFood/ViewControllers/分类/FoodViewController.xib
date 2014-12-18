@@ -7,6 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FoodViewController">
             <connections>
+                <outlet property="foodTableView" destination="5Ys-gS-re1" id="7kY-xb-WfZ"/>
+                <outlet property="sortByAllButton" destination="k5Q-pG-tdL" id="vhR-nT-rem"/>
+                <outlet property="sortByPriceButton" destination="GfB-k9-6tN" id="LX6-Lt-hpg"/>
+                <outlet property="sortBySaleButton" destination="O9r-BK-UTT" id="sge-54-aMM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5Ys-gS-re1">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zNe-6d-ldT"/>
+                        <outlet property="delegate" destination="-1" id="D52-pe-FuG"/>
+                    </connections>
                 </tableView>
                 <view contentMode="scaleToFill" id="ASE-hv-bB1">
                     <rect key="frame" x="0.0" y="64" width="320" height="40"/>
@@ -44,6 +52,9 @@
                                 <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="sortByAllButtonClicked:" destination="-1" eventType="touchUpInside" id="dG0-sV-5jd"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GfB-k9-6tN">
                             <rect key="frame" x="224.99999916180963" y="0.0" width="80" height="40"/>
@@ -57,6 +68,9 @@
                                 <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="sortByPriceButtonClicked:" destination="-1" eventType="touchUpInside" id="mxm-yJ-KRO"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O9r-BK-UTT">
                             <rect key="frame" x="120" y="0.0" width="80" height="40"/>
@@ -67,6 +81,9 @@
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="selected" title="销量" backgroundImage="btn_food_sort_selected"/>
+                            <connections>
+                                <action selector="sortBySaleButtonClicked:" destination="-1" eventType="touchUpInside" id="Omp-8e-JqF"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

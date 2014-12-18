@@ -88,6 +88,8 @@
 - (void)showFoodViewResponseWithNotification:(NSNotification *)notification
 {
     FoodViewController *foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController" bundle:nil];
+    foodViewController.categoryId = notification.object;
+    NSLog(@"%@",foodViewController.categoryId);
     [self.navigationController pushViewController:foodViewController animated:YES];
 }
 
@@ -103,6 +105,8 @@
             [self.categoryTableArray addObject:fc];
         }
         [self loadSubViews];
+    } else {
+        [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
     }
     
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -125,6 +129,7 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
+            [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
             self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
             NSArray *valueArray = [dict objectForKey:@"foodFirstCategory"];
             for (NSDictionary *valueDict in valueArray) {

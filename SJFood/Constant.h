@@ -41,6 +41,7 @@
 #define ScreenHeight        [UIScreen mainScreen].bounds.size.height
 #define kMainProjColor      [UIColor colorWithRed:240.f/255 green:97.f/255 blue:15.f/255 alpha:1.0f]
 #define kMainBlackColor     [UIColor colorWithRed:30.f/255 green:30.f/255 blue:30.f/255 alpha:1.0f]
+#define kLightTextColor     [UIColor colorWithRed:155.f/255 green:155.f/255 blue:155.f/255 alpha:1.0f]
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"]
 #define kCommonParamsDict   [NSMutableDictionary dictionaryWithObjectsAndKeys:nil];
 
@@ -83,5 +84,6 @@
 #define kAddAddressUrl          @"receiver/addReceiver.do"
 #define kFeedbackUrl            @"user/feedbackMessage.do"
 #define kGetFoodCategoryUrl     @"food/getFoodCategory.do"
+#define kFoodSearchUrl          @"food/selectFoods.do"
 
 #endif
