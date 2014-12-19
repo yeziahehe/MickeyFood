@@ -24,7 +24,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem id="XnT-X7-Y9r">
-                            <barButtonItem key="rightBarButtonItem" style="plain" id="sdC-J4-EPV">
+                            <barButtonItem key="rightBarButtonItem" id="sdC-J4-EPV">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bVI-MN-CEo">
                                     <rect key="frame" x="264" y="7" width="40" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>

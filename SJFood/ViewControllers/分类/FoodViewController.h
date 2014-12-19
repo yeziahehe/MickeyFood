@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *sortByPriceButton;
 @property (strong, nonatomic) IBOutlet UIButton *sortBySaleButton;
 @property (strong, nonatomic) IBOutlet UITableView *foodTableView;
+@property (strong, nonatomic) IBOutlet UIView *messageFooterView;
+@property (strong, nonatomic) IBOutlet UILabel *loadMessageLabel;
 
 - (IBAction)sortByAllButtonClicked:(id)sender;
 - (IBAction)sortByPriceButtonClicked:(id)sender;
