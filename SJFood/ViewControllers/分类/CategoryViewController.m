@@ -89,7 +89,6 @@
 {
     FoodViewController *foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController" bundle:nil];
     foodViewController.categoryId = notification.object;
-    NSLog(@"%@",foodViewController.categoryId);
     [self.navigationController pushViewController:foodViewController animated:YES];
 }
 

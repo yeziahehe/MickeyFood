@@ -30,9 +30,7 @@
 }
 
 - (IBAction)cancelButtonClicked:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:^{
-        
-    }];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 #pragma mark - UIViewController Methods
@@ -66,7 +64,7 @@
     [self.userDefaults setObject:self.searchHistoryArray forKey:kSearchHistoryArray];
     [self.userDefaults synchronize];
     [self dismissViewControllerAnimated:NO completion:^{
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:kFoodSearchNotification object:self.searchBar.text];
     }];
 }
 
@@ -111,6 +109,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFoodSearchNotification object:[self.searchHistoryArray objectAtIndex:indexPath.row]];
+    [self.searchHistoryArray exchangeObjectAtIndex:indexPath.row withObjectAtIndex:0];
+    [self.userDefaults setObject:self.searchHistoryArray forKey:kSearchHistoryArray];
+    [self.userDefaults synchronize];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end

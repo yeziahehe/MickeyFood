@@ -72,6 +72,7 @@
 - (IBAction)sortByAllButtonClicked:(id)sender {
     if (!self.sortByAllButton.selected)
     {
+        [self.foodTableView removeFooter];
         self.foodTableView.tableFooterView = [UIView new];
         [self.foodTableView addFooterWithTarget:self action:@selector(refreshFooter)];
         self.foodArray = [NSMutableArray arrayWithCapacity:0];
@@ -87,6 +88,7 @@
 - (IBAction)sortByPriceButtonClicked:(id)sender {
     if (!self.sortByPriceButton.selected)
     {
+        [self.foodTableView removeFooter];
         self.foodTableView.tableFooterView = [UIView new];
         [self.foodTableView addFooterWithTarget:self action:@selector(refreshFooter)];
         self.foodArray = [NSMutableArray arrayWithCapacity:0];
@@ -102,6 +104,7 @@
 - (IBAction)sortBySaleButtonClicked:(id)sender {
     if (!self.sortBySaleButton.selected)
     {
+        [self.foodTableView removeFooter];
         self.foodTableView.tableFooterView = [UIView new];
         [self.foodTableView addFooterWithTarget:self action:@selector(refreshFooter)];
         self.foodArray = [NSMutableArray arrayWithCapacity:0];
@@ -121,6 +124,23 @@
         more = self.lastestId;
     }
     [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:more];
+}
+
+#pragma mark - NSNotification Methods
+- (void)foodSearchWithNotification:(NSNotification *)notification
+{
+    self.categoryId = nil;
+    self.foodTag = notification.object;
+    [self.foodTableView removeFooter];
+    self.foodTableView.tableFooterView = [UIView new];
+    [self.foodTableView addFooterWithTarget:self action:@selector(refreshFooter)];
+    self.foodArray = [NSMutableArray arrayWithCapacity:0];
+    self.sort = @"0";
+    self.sortByAllButton.selected = YES;
+    self.sortByPriceButton.selected = NO;
+    self.sortBySaleButton.selected = NO;
+    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+    [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
 }
 
 #pragma mark - BaseViewController Methods
@@ -143,6 +163,13 @@
     self.sort = @"0";
     [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
     [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kFoodSearchNotification object:nil];
+}
+
+- (void)dealloc
+{
+    [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UISearchBar Delegate
