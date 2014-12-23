@@ -40,8 +40,6 @@
 @property (nonatomic, copy)NSString *price;//价钱
 @property (nonatomic, copy)NSString *discountPrice;//折扣价（可空）
 @property (nonatomic, copy)NSString *imgUrl;//食品图片
-//@property (nonatomic, copy)NSString *info;//食品详情，图文
-//@property (nonatomic, copy)NSString *foodCount;//食品余量
 @property (nonatomic, copy)NSString *isDiscount;//是否是折扣价 0-否 1-是
 @property (nonatomic, copy)NSString *saleNumber;//销量
 

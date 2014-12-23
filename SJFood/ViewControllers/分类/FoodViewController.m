@@ -10,6 +10,7 @@
 #import "SearchHistoryViewController.h"
 #import "FoodTableViewCell.h"
 #import "FoodSelect.h"
+#import "FoodDetailViewController.h"
 
 #define kFoodSearchDownloaderKey        @"FoodSearchDownloaderKey"
 #define kLastIdInit             @"0"
@@ -219,6 +220,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    FoodDetailViewController *foodDetailViewController = [[FoodDetailViewController alloc] initWithNibName:@"FoodDetailViewController" bundle:nil];
+    FoodSelect *foods = [self.foodArray objectAtIndex:indexPath.row];
+    foodDetailViewController.foodId = foods.foodId;
+    [self.navigationController pushViewController:foodDetailViewController animated:YES];
 }
 
 #pragma mark - YFDownloaderDelegate Methods

@@ -86,5 +86,6 @@
 #define kFeedbackUrl            @"user/feedbackMessage.do"
 #define kGetFoodCategoryUrl     @"food/getFoodCategory.do"
 #define kFoodSearchUrl          @"food/selectFoods.do"
+#define kGetFoodByIdUrl         @"food/getFoodById.do"
 
 #endif
