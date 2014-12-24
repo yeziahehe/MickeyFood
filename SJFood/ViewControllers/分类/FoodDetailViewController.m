@@ -63,7 +63,7 @@
         else if ([foodDetailSubView isKindOfClass:[FoodImageDetailView class]]) {
             FoodImageDetailView *fidv = (FoodImageDetailView *)foodDetailSubView;
             [fidv reloadWithFoodDetail:self.foodDetail];
-            rect.size.height = fidv.webview.scrollView.contentSize.height + 35.f;
+            rect.size.height = fidv.frame.size.height;
         }
         foodDetailSubView.frame = rect;
         [self.contentScrollView addSubview:foodDetailSubView];
@@ -104,6 +104,27 @@
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager]cancelDownloaderWithDelegate:self purpose:nil];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)aWebView {
+    CGRect frame = aWebView.frame;
+    frame.size.height = 1;
+    aWebView.frame = frame;
+    CGSize fittingSize = [aWebView sizeThatFits:CGSizeZero];
+    frame.size = fittingSize;
+    aWebView.frame = frame;
+    for (UIView *subView in self.contentScrollView.subviews)
+    {
+        if ([subView isKindOfClass:[FoodImageDetailView class]]) {
+            CGRect rect = subView.frame;
+            rect.origin.y = subView.frame.origin.y;
+            rect.origin.x = subView.frame.origin.x;
+            rect.size.height = aWebView.frame.size.height + 30.f;
+            subView.frame = rect;
+            [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, rect.origin.y + rect.size.height + kSubViewGap+60)];
+            aWebView.hidden = NO;
+        }
+    }
 }
 
 #pragma mark - YFDownloaderDelegate Methods

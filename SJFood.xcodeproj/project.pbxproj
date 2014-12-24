@@ -294,6 +294,10 @@
 		75EED4441A321A33002ECA75 /* SettingInfoMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EED4431A321A33002ECA75 /* SettingInfoMap.plist */; };
 		75F90A7F1A49966B00CB19EB /* FoodSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F90A7E1A49966B00CB19EB /* FoodSpec.m */; };
 		75F90A811A49B44700CB19EB /* ImageTemplete.html in Resources */ = {isa = PBXBuildFile; fileRef = 75F90A801A49B44700CB19EB /* ImageTemplete.html */; };
+		75F90A891A49CFE700CB19EB /* SpecView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F90A881A49CFE700CB19EB /* SpecView.m */; };
+		75F90A8B1A49CFF600CB19EB /* SpecView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F90A8A1A49CFF600CB19EB /* SpecView.xib */; };
+		75F90A8E1A49D16700CB19EB /* UIImage+YFBlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F90A8D1A49D16700CB19EB /* UIImage+YFBlurGlass.m */; };
+		75F90A911A49D19F00CB19EB /* UIImage+YFScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F90A901A49D19F00CB19EB /* UIImage+YFScreenShot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -704,6 +708,13 @@
 		75F90A7D1A49966B00CB19EB /* FoodSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodSpec.h; sourceTree = "<group>"; };
 		75F90A7E1A49966B00CB19EB /* FoodSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodSpec.m; sourceTree = "<group>"; };
 		75F90A801A49B44700CB19EB /* ImageTemplete.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ImageTemplete.html; sourceTree = "<group>"; };
+		75F90A871A49CFE700CB19EB /* SpecView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecView.h; sourceTree = "<group>"; };
+		75F90A881A49CFE700CB19EB /* SpecView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecView.m; sourceTree = "<group>"; };
+		75F90A8A1A49CFF600CB19EB /* SpecView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecView.xib; sourceTree = "<group>"; };
+		75F90A8C1A49D16700CB19EB /* UIImage+YFBlurGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFBlurGlass.h"; sourceTree = "<group>"; };
+		75F90A8D1A49D16700CB19EB /* UIImage+YFBlurGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFBlurGlass.m"; sourceTree = "<group>"; };
+		75F90A8F1A49D19F00CB19EB /* UIImage+YFScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFScreenShot.h"; sourceTree = "<group>"; };
+		75F90A901A49D19F00CB19EB /* UIImage+YFScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFScreenShot.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -990,6 +1001,9 @@
 				755077671A46BCE400CD18EF /* FoodImageDetailView.h */,
 				755077681A46BCE400CD18EF /* FoodImageDetailView.m */,
 				7550776A1A46BCF300CD18EF /* FoodImageDetailView.xib */,
+				75F90A871A49CFE700CB19EB /* SpecView.h */,
+				75F90A881A49CFE700CB19EB /* SpecView.m */,
+				75F90A8A1A49CFF600CB19EB /* SpecView.xib */,
 			);
 			name = "食品详情子页面";
 			sourceTree = "<group>";
@@ -1300,6 +1314,10 @@
 				75A95CB11A4012870009962F /* UITableView+YFAdditions.m */,
 				75A95CB21A4012870009962F /* UITableViewCell+YFAdditions.h */,
 				75A95CB31A4012870009962F /* UITableViewCell+YFAdditions.m */,
+				75F90A8C1A49D16700CB19EB /* UIImage+YFBlurGlass.h */,
+				75F90A8D1A49D16700CB19EB /* UIImage+YFBlurGlass.m */,
+				75F90A8F1A49D19F00CB19EB /* UIImage+YFScreenShot.h */,
+				75F90A901A49D19F00CB19EB /* UIImage+YFScreenShot.m */,
 			);
 			path = YFUtilities;
 			sourceTree = "<group>";
@@ -1644,6 +1662,7 @@
 				75EED4351A320B79002ECA75 /* icon_setting@3x.png in Resources */,
 				758E4C9E1A42BD2E004547E2 /* FoodTableViewCell.xib in Resources */,
 				755722671A34334E00CC6A8F /* AboutAppViewController.xib in Resources */,
+				75F90A8B1A49CFF600CB19EB /* SpecView.xib in Resources */,
 				7599A9FB1A259CC40052E7A9 /* YFProgressHUD.bundle in Resources */,
 				756C62EF1A47071C007B2ECB /* bg_star_empty@2x.png in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
@@ -1854,6 +1873,7 @@
 				758512751A32E91100504FA8 /* MJRefreshHeaderView.m in Sources */,
 				758512721A32E91100504FA8 /* MJRefreshBaseView.m in Sources */,
 				755077521A46A2CF00CD18EF /* FoodParamView.m in Sources */,
+				75F90A891A49CFE700CB19EB /* SpecView.m in Sources */,
 				758512771A32E91100504FA8 /* UIScrollView+MJRefresh.m in Sources */,
 				758116371A27611900065E65 /* HomeViewController.m in Sources */,
 				7542C48E1A2CD09E00BB083D /* ConfirmViewController.m in Sources */,
@@ -1863,6 +1883,8 @@
 				75A95CC51A4018170009962F /* CategorySubView.m in Sources */,
 				750DF7091A2F49650010A2E9 /* Member.m in Sources */,
 				75A95CAE1A4006BD0009962F /* CategoryTableViewCell.m in Sources */,
+				75F90A8E1A49D16700CB19EB /* UIImage+YFBlurGlass.m in Sources */,
+				75F90A911A49D19F00CB19EB /* UIImage+YFScreenShot.m in Sources */,
 				755722D11A35CAC300CC6A8F /* YFBadgeView.m in Sources */,
 				7533EEAD1A2E10A8001D12D4 /* NSString+HtmlCss.m in Sources */,
 				750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */,

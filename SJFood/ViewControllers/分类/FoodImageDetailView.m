@@ -14,8 +14,8 @@
 @end
 
 @implementation FoodImageDetailView
-@synthesize webview;
-@synthesize htmlString,imageUrl;
+@synthesize htmlString,webview;
+@synthesize imageUrl;
 
 #pragma mark - Public Methods
 - (void)reloadWithFoodDetail:(FoodDetail *)foodDetail
@@ -34,31 +34,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
-    CGRect frame = webView.frame;
-    frame.size.height = 5.0f;
-    webView.frame = frame;
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
-    CGSize mWebViewTextSize = [webView sizeThatFits:CGSizeMake(1.0f, 1.0f)];  // Pass about any size
-    
-    CGRect mWebViewFrame = webView.frame;
-    mWebViewFrame.size.height = mWebViewTextSize.height;
-    webView.frame = mWebViewFrame;
-
-    //Disable bouncing in webview
-    for (id subview in self.subviews)
-    {
-        if ([[subview class] isSubclassOfClass: [UIScrollView class]])
-        {
-            [subview setBounces:NO];
-        }
-    }
+    self.webview.hidden = YES;
 }
 
 @end

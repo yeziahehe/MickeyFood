@@ -11,4 +11,5 @@
 @interface FoodImageDetailView : FoodDetailSubView
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
 
+
 @end
