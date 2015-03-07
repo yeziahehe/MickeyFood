@@ -22,6 +22,8 @@
     加入照片选择库
  -v1.4
     加入iOS8下tableview分割线的问题
+ -v1.5
+    加入截屏和毛玻璃效果
 */
 
 #ifndef YFUtils_YFUtils_h
@@ -40,6 +42,8 @@
 #import "UIImage+YFUtilities.h"
 #import "UITableView+YFAdditions.h"
 #import "UITableViewCell+YFAdditions.h"
+#import "UIImage+YFBlurGlass.h"
+#import "UIImage+YFScreenShot.h"
 
 #endif
 

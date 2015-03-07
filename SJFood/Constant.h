@@ -68,9 +68,11 @@
 #define kCategoryTableViewSelectedNotificaition     @"CategoryTableViewSelectedNotificaition"
 #define kShowFoodViewNotification           @"ShowFoodViewNotification"
 #define kFoodSearchNotification             @"FoodSearchNotification"
+#define kSpecChooseNotification             @"SpecChooseNotification"
+#define kRefreshShoppingCarNotification     @"RefreshShoppingCarNotification"
 
 //Url values
-#define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
+#define kServerAddress          @"http://mialab.suda.edu.cn/SJFood/"
 #define kLoginUrl               @"user/toLogin.do"
 #define kRegisterUrl            @"user/registerIn.do"
 #define kCheckUserExistUrl      @"user/checkUserIsExist.do"

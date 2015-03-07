@@ -17,6 +17,9 @@
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-A6-A3v">
                         <rect key="frame" x="0.0" y="15" width="320" height="112"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line_hon_1px_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="6zO-bk-Rte">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="叶帆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNq-cL-xWu">
                                 <rect key="frame" x="15" y="54" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -57,6 +60,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line_hon_1px_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="dDJ-SC-QUA">
+                                <rect key="frame" x="0.0" y="112" width="320" height="1"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -78,6 +84,7 @@
         <image name="btn_default_address.png" width="20" height="20"/>
         <image name="btn_default_address_selected.png" width="20" height="20"/>
         <image name="btn_edit_address.png" width="20" height="20"/>
+        <image name="line_hon_1px_down.png" width="640" height="2"/>
         <image name="line_hon_1px_up.png" width="640" height="2"/>
     </resources>
 </document>

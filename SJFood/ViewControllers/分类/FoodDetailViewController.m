@@ -12,6 +12,7 @@
 #import "FoodParamView.h"
 #import "FoodCommentView.h"
 #import "FoodImageDetailView.h"
+#import "SpecView.h"
 
 #define kGetFoodByIdDownloaderKey         @"GetFoodByIdDownloaderKey"
 #define kFoodDetailMapFileName            @"FoodDetailMap"
@@ -86,7 +87,39 @@
                                                                 purpose:kGetFoodByIdDownloaderKey];
 }
 
-#pragma mark - BaseViewController methods
+#pragma mark - IBAction Methods
+- (IBAction)addShoppingCarButtonClicked:(id)sender {
+    UIImage *screenShotWithBlur = [UIImage blurryImage:[UIImage screenShotForView:self.view] withBlurLevel:0.3];
+    SpecView *specView = [[[NSBundle mainBundle] loadNibNamed:@"SpecView" owner:self options:nil] lastObject];
+    specView.screenImageView.image = screenShotWithBlur;
+    specView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+    [self.navigationController.view addSubview:specView];
+    [specView reloadWithFoodDetail:self.foodDetail];
+}
+
+- (IBAction)buyNowButtonClicked:(id)sender {
+}
+
+#pragma mark - Notification Methods
+- (void)specChooseNotification:(NSNotification *)notification
+{
+    if (notification.object) {
+        //
+    } else {
+        for (UIView *subView in self.navigationController.view.subviews)
+        {
+            if ([subView isKindOfClass:[SpecView class]]) {
+                [UIView animateWithDuration:.2f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                    subView.alpha = 0.f;
+                } completion:^(BOOL finished) {
+                    [subView removeFromSuperview];
+                }];
+            }
+        }
+    }
+}
+
+#pragma mark - BaseViewController Methods
 - (void)extraItemTapped
 {
     [self.contentScrollView setContentOffset:CGPointMake(0, -self.contentScrollView.contentInset.top) animated:YES];
@@ -99,13 +132,16 @@
     [self setNaviTitle:@"宝贝详情"];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self requestForFoodDetail];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(specChooseNotification:) name:kSpecChooseNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager]cancelDownloaderWithDelegate:self purpose:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+#pragma mark - UIWebView Delegate Methods
 - (void)webViewDidFinishLoad:(UIWebView *)aWebView {
     CGRect frame = aWebView.frame;
     frame.size.height = 1;

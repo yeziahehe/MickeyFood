@@ -13,4 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 @property (strong, nonatomic) NSString *foodId;
 
+- (IBAction)addShoppingCarButtonClicked:(id)sender;
+- (IBAction)buyNowButtonClicked:(id)sender;
 @end
