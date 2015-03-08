@@ -11,6 +11,11 @@
 @interface ShoppingCarViewController : BaseMenuViewController
 @property (strong, nonatomic) IBOutlet UITableView *shoppingCarTableView;
 @property (strong, nonatomic) IBOutlet UIView *noFoodView;
+@property (strong, nonatomic) IBOutlet UIView *calculateFoodView;
+@property (strong, nonatomic) IBOutlet UIButton *totalPriceButton;
+@property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
 - (IBAction)addFoodButtonClicked:(id)sender;
+- (void)requestForShoppingCar;
+- (void)loadSubViews;
 
 @end

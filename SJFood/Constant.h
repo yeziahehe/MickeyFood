@@ -32,7 +32,7 @@
 #define kAppDownloadUrl     @"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%@&mt=8"
 
 //Constant Values
-#define kMaxCacheSize 1000*1024*1024
+#define kMaxCacheSize       1000*1024*1024
 #define IsIos8              [[UIDevice currentDevice].systemVersion floatValue]>=8.0?YES:NO
 #define IsDevicePhone5      [UIScreen mainScreen].bounds.size.height==568.f?YES:NO
 #define IsDevicePhone6      [UIScreen mainScreen].bounds.size.height==667.f?YES:NO
@@ -42,7 +42,7 @@
 #define kMainProjColor      [UIColor colorWithRed:240.f/255 green:97.f/255 blue:15.f/255 alpha:1.0f]
 #define kMainBlackColor     [UIColor colorWithRed:30.f/255 green:30.f/255 blue:30.f/255 alpha:1.0f]
 #define kLightTextColor     [UIColor colorWithRed:155.f/255 green:155.f/255 blue:155.f/255 alpha:1.0f]
-#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"]
+#define DOCUMENTS_FOLDER    [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"]
 #define kCommonParamsDict   [NSMutableDictionary dictionaryWithObjectsAndKeys:nil];
 
 #define kNetWorkErrorString @"当前网络不给力"
@@ -72,7 +72,7 @@
 #define kRefreshShoppingCarNotification     @"RefreshShoppingCarNotification"
 
 //Url values
-#define kServerAddress          @"http://mialab.suda.edu.cn/SJFood/"
+#define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
 #define kLoginUrl               @"user/toLogin.do"
 #define kRegisterUrl            @"user/registerIn.do"
 #define kCheckUserExistUrl      @"user/checkUserIsExist.do"
@@ -89,5 +89,7 @@
 #define kGetFoodCategoryUrl     @"food/getFoodCategory.do"
 #define kFoodSearchUrl          @"food/selectFoods.do"
 #define kGetFoodByIdUrl         @"food/getFoodById.do"
+#define kGetOrderUrl            @"order/getUserOrder.do"
+
 
 #endif

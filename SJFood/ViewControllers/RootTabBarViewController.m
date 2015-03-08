@@ -10,6 +10,7 @@
 #import "UserInfoViewController.h"
 #import "LoginViewController.h"
 #import "CategoryViewController.h"
+#import "ShoppingCarViewController.h"
 
 @interface RootTabBarViewController ()
 
@@ -74,6 +75,18 @@
             if (vc != nil) {
                 CategoryViewController *cvc = (CategoryViewController *)vc;
                 [cvc requestForGetFoodCategory];
+            }
+        }
+        if ([vc isKindOfClass:[ShoppingCarViewController class]]) {
+            if (vc != nil) {
+                if ([[MemberDataManager sharedManager] isLogin]) {
+                    ShoppingCarViewController *scvc = (ShoppingCarViewController *)vc;
+                    scvc.totalPriceButton.selected = NO;
+                    [scvc requestForShoppingCar];
+                } else {
+                    ShoppingCarViewController *scvc = (ShoppingCarViewController *)vc;
+                    [scvc loadSubViews];
+                }
             }
         }
     }

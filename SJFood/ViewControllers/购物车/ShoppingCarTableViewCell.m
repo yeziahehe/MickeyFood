@@ -9,7 +9,7 @@
 #import "ShoppingCarTableViewCell.h"
 
 @implementation ShoppingCarTableViewCell
-@synthesize foodImageView,foodNameLabel,foodSpecalLabel,selectButton,priceLabel,numberLabel;
+@synthesize foodImageView,foodNameLabel,foodSpecalLabel,selectButton,priceLabel,numberLabel,discountPriceLabel,discountLine,editButton,minusButton,plusButton,numberTextField;
 
 - (void)awakeFromNib {
     // Initialization code
