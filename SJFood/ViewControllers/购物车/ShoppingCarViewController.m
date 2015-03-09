@@ -78,9 +78,9 @@
         [self.selectStatusArray replaceObjectAtIndex:indexPath.row withObject:@"0"];
     }
     if (self.shoppingCarCodeArray.count == self.shoppingCarArray.count) {
-        self.totalPriceButton.selected = YES;
+        self.tag = @"1";
     } else if (self.shoppingCarCodeArray.count == 0) {
-        self.totalPriceButton.selected = NO;
+        self.tag = @"0";
     } else {
         self.tag = @"2";
     }
@@ -202,9 +202,12 @@
     cell.numberLabel.text = [NSString stringWithFormat:@"x%@",self.shoppingCarInfo.orderCount];
     if ([self.tag isEqualToString:@"1"]) {
         cell.selectButton.selected = YES;
+        self.totalPriceButton.selected = YES;
     } else if ([self.tag isEqualToString:@"0"]) {
         cell.selectButton.selected = NO;
+        self.totalPriceButton.selected = NO;
     } else if ([self.tag isEqualToString:@"2"]) {
+        self.totalPriceButton.selected = NO;
         if ([[self.selectStatusArray objectAtIndex:indexPath.row] isEqualToString:@"1"]) {
             cell.selectButton.selected = YES;
         } else {
