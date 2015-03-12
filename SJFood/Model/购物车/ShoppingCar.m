@@ -9,7 +9,7 @@
 #import "ShoppingCar.h"
 
 @implementation ShoppingCar
-@synthesize orderId,name,price,discountPrice,isDiscount,orderCount,specialName,imageUrl,foodCount;
+@synthesize orderId,name,price,discountPrice,isDiscount,orderCount,specialName,imageUrl,foodCount,foodId;
 
 - (id)initWithDict:(NSDictionary *)dict
 {

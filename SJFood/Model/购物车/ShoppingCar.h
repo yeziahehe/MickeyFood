@@ -60,6 +60,7 @@
 @property (nonatomic, copy) NSString *specialName;//规格
 @property (nonatomic, copy) NSString *imageUrl;//商品照片
 @property (nonatomic, copy) NSString *foodCount;//商品余量
+@property (nonatomic, copy) NSString *foodId;//商品id
 
 - (id)initWithDict:(NSDictionary *)dict;
 + (instancetype)shoppingCarWithDict:(NSDictionary *)dict;

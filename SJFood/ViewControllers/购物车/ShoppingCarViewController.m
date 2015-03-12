@@ -8,6 +8,7 @@
 
 #import "ShoppingCarViewController.h"
 #import "ShoppingCarTableViewCell.h"
+#import "FoodDetailViewController.h"
 #import "ShoppingCar.h"
 
 #define kGetShoppingCarDownloadKey          @"GetShoppingCarDownloadKey"
@@ -349,6 +350,7 @@
         [self.shoppingCarTableView removeHeader];
         [self loadSubViews];
     }
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshShoppingCarWithNotification:) name:kRefreshShoppingCarNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedState) name:kSelecteButtonClickedNotification object:nil];
 }
@@ -467,6 +469,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    FoodDetailViewController *foodDetailViewController = [[FoodDetailViewController alloc] initWithNibName:@"FoodDetailViewController" bundle:nil];
+    ShoppingCar *shoppingCar = [self.shoppingCarArray objectAtIndex:indexPath.row];
+    foodDetailViewController.foodId = shoppingCar.foodId;
+    [self.navigationController pushViewController:foodDetailViewController animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -500,6 +506,29 @@
             [self.shoppingCarArray removeObjectAtIndex:indexPath.row];
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
+    }
+}
+
+#pragma mark - UITextFieldDelegate methods
+- (void)resignAllField
+{
+    [self.view endEditing:YES];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    CGPoint buttonPosition = [textField convertPoint:CGPointZero toView:self.shoppingCarTableView];
+    NSIndexPath *indexPath = [self.shoppingCarTableView indexPathForRowAtPoint:buttonPosition];
+    ShoppingCar *sc = [self.shoppingCarArray objectAtIndex:indexPath.row];
+    if ([sc.orderCount isEqualToString:@"1"]) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"已减少到最小数量" customView:nil hideDelay:2.f];
+    } else if ([sc.orderCount intValue] > [sc.foodCount intValue]) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"已增加到最大库存" customView:nil hideDelay:2.f];
+    } else {
+        sc.orderCount = textField.text;
+        [self.shoppingCarTableView reloadData];
+        //request for change
+        [self requestForEdit:sc.orderId withOrderCount:sc.orderCount];
     }
 }
 
