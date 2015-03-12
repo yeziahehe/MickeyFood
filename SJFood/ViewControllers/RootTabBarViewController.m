@@ -81,7 +81,6 @@
             if (vc != nil) {
                 if ([[MemberDataManager sharedManager] isLogin]) {
                     ShoppingCarViewController *scvc = (ShoppingCarViewController *)vc;
-                    scvc.totalPriceButton.selected = NO;
                     [scvc requestForShoppingCar];
                 } else {
                     ShoppingCarViewController *scvc = (ShoppingCarViewController *)vc;

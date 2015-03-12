@@ -9,7 +9,7 @@
 #import "ShoppingCarTableViewCell.h"
 
 @implementation ShoppingCarTableViewCell
-@synthesize foodImageView,foodNameLabel,foodSpecalLabel,selectButton,priceLabel,numberLabel,discountPriceLabel,discountLine,editButton,minusButton,plusButton,numberTextField;
+@synthesize foodImageView,foodNameLabel,foodSpecalLabel,selectButton,priceLabel,numberLabel,discountPriceLabel,discountLine,editButton,minusButton,plusButton,numberTextField,confirmNumButton,countStatusLabel;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -20,5 +20,16 @@
 
     // Configure the view for the selected state
 }
+
+-(void)layoutSubviews
+{
+    NSMutableArray *subviews = [self.subviews mutableCopy];
+    UIView *subV = subviews[0];
+    [subviews removeObjectAtIndex:0];
+    CGRect f = subV.frame;
+    f.size.height = 100; // Here you set height of Delete button
+    subV.frame = f;
+}
+
 
 @end

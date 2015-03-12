@@ -24,7 +24,8 @@
         "foodSpecial": 1,
         "foodId": 1001001,
         "imageUrl": "http://tp.cdn.di5.net:8880/uploadfile/2014/1210/20141210103440911.jpg",
-        "specialName": "玉米味"
+        "specialName": "玉米味",
+        "foodCount": 200
     },
     {
         "orderId": 10010002,
@@ -40,6 +41,7 @@
         "foodId": 1001001,
         "imageUrl": "http://tp.cdn.di5.net:8880/uploadfile/2014/1210/20141210103440911.jpg",
         "specialName": null
+        "foodCount": 200
     }
  ]
  }
@@ -54,9 +56,10 @@
 @property (nonatomic, copy) NSString *price;//商品价格
 @property (nonatomic, copy) NSString *discountPrice;//折扣价格
 @property (nonatomic, copy) NSString *isDiscount;//是否打折
-@property (nonatomic, copy) NSString *orderCount;//商品数量
+@property (nonatomic, strong) NSString *orderCount;//商品数量(允许修改)
 @property (nonatomic, copy) NSString *specialName;//规格
 @property (nonatomic, copy) NSString *imageUrl;//商品照片
+@property (nonatomic, copy) NSString *foodCount;//商品余量
 
 - (id)initWithDict:(NSDictionary *)dict;
 + (instancetype)shoppingCarWithDict:(NSDictionary *)dict;

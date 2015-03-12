@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingCarViewController">
             <connections>
+                <outlet property="RMBLabel" destination="48h-be-xDb" id="XJZ-2Z-KbK"/>
+                <outlet property="allLabel" destination="lK3-Ab-H4x" id="20k-fO-oZ1"/>
+                <outlet property="calculateButton" destination="uBq-ev-xfX" id="dRP-ch-Ape"/>
                 <outlet property="calculateFoodView" destination="6gy-uF-klU" id="Sv8-Bc-AIB"/>
                 <outlet property="noFoodView" destination="GMM-KU-vVK" id="gwJ-eH-HsI"/>
                 <outlet property="shoppingCarTableView" destination="h2F-9P-HvQ" id="nIE-W8-U7B"/>

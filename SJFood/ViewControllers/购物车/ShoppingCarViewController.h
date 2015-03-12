@@ -8,7 +8,7 @@
 
 #import "BaseMenuViewController.h"
 
-@interface ShoppingCarViewController : BaseMenuViewController
+@interface ShoppingCarViewController : BaseMenuViewController<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *shoppingCarTableView;
 @property (strong, nonatomic) IBOutlet UIView *noFoodView;
 @property (strong, nonatomic) IBOutlet UIView *calculateFoodView;

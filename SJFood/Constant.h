@@ -90,6 +90,8 @@
 #define kFoodSearchUrl          @"food/selectFoods.do"
 #define kGetFoodByIdUrl         @"food/getFoodById.do"
 #define kGetOrderUrl            @"order/getUserOrder.do"
-
+#define kDeleteOrderUrl         @"order/deleteUserOrder.do"
+#define kEditUserOrderUrl       @"order/editUserOrder.do"
+#define kDeleteAllUserOrderUrl  @"order/deleteAllUserOrder.do"
 
 #endif

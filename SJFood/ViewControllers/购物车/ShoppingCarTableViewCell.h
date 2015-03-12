@@ -22,5 +22,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *minusButton;
 @property (strong, nonatomic) IBOutlet UIButton *plusButton;
 @property (strong, nonatomic) IBOutlet UITextField *numberTextField;
+@property (strong, nonatomic) IBOutlet UIButton *confirmNumButton;
+@property (strong, nonatomic) IBOutlet UILabel *countStatusLabel;
+
 
 @end
