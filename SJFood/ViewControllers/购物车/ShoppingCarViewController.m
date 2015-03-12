@@ -102,6 +102,11 @@
                                                                 purpose:kDeleteAllShoppingCarDownloadKey];
 }
 
+- (void)refreshShoppingCarInfo
+{
+    [self requestForShoppingCar];
+}
+
 #pragma mark - IBActions Methods
 - (IBAction)addFoodButtonClicked:(id)sender
 {
@@ -337,9 +342,11 @@
     [self setNaviTitle:@"购物车"];
     self.shoppingCarArray = [NSMutableArray arrayWithCapacity:0];
     self.shoppingCarTableView.tableFooterView = [UIView new];
+    [self.shoppingCarTableView addHeaderWithTarget:self action:@selector(refreshShoppingCarInfo) dateKey:@"shoppingCarTableView"];
     if ([[MemberDataManager sharedManager] isLogin]) {
         [self requestForShoppingCar];
     } else {
+        [self.shoppingCarTableView removeHeader];
         [self loadSubViews];
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshShoppingCarWithNotification:) name:kRefreshShoppingCarNotification object:nil];
@@ -505,8 +512,8 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
-
             [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+            [self.shoppingCarTableView headerEndRefreshing];
             self.tag = @"0";
             self.editTag = @"0";
             self.totalPrice = @"0.00";
