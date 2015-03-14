@@ -8,9 +8,14 @@
 
 #import "SpecView.h"
 
+@interface SpecView ()
+@property (nonatomic, strong) NSMutableArray *countForSpecArray;
+@end
+
 @implementation SpecView
 @synthesize screenImageView,specDetailView;
-@synthesize iconImageView,foodTitleLabel,priceLabel,buyNumButton,restLabel;
+@synthesize iconImageView,foodTitleLabel,priceLabel,buyNumButton,restLabel,specHeaderView;
+@synthesize countForSpecArray,specButton1,specButton2,specButton3;
 
 #pragma mark - Public Methods
 - (void)reloadWithFoodDetail:(FoodDetail *)foodDetail
@@ -26,6 +31,47 @@
     }
     self.restLabel.text = [NSString stringWithFormat:@"%@件",foodDetail.foodCount];
     
+    self.countForSpecArray = [NSMutableArray arrayWithCapacity:foodDetail.foodSpecial.count];
+    if (foodDetail.foodSpecial.count == 0) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"获取口味失败" customView:nil hideDelay:2.f];
+    } else if (foodDetail.foodSpecial.count == 1) {
+        FoodSpec *foodSpec = [foodDetail.foodSpecial objectAtIndex:0];
+        //[self.specButton1 setTitle:foodSpec.name forState:UIControlStateNormal];
+        self.specButton1.tag = [foodSpec.specialId integerValue];
+        [self.countForSpecArray addObject:foodSpec.foodCount];
+        [self.specButton1 addTarget:self action:@selector(specButton1Clicked:) forControlEvents:UIControlEventTouchUpInside];
+    } else if (foodDetail.foodSpecial.count == 2) {
+        FoodSpec *foodSpec = [foodDetail.foodSpecial objectAtIndex:0];
+        [self.specButton1 setTitle:foodSpec.name forState:UIControlStateNormal];
+        self.specButton1.tag = [foodSpec.specialId integerValue];
+        [self.countForSpecArray addObject:foodSpec.foodCount];
+        [self.specButton1 addTarget:self action:@selector(specButton1Clicked:) forControlEvents:UIControlEventTouchUpInside];
+        FoodSpec *foodSpecplus = [foodDetail.foodSpecial objectAtIndex:1];
+        self.specButton2.hidden = NO;
+        [self.specButton2 setTitle:foodSpecplus.name forState:UIControlStateNormal];
+        self.specButton2.tag = [foodSpecplus.specialId integerValue];
+        [self.countForSpecArray addObject:foodSpecplus.foodCount];
+        [self.specButton2 addTarget:self action:@selector(specButton2Clicked:) forControlEvents:UIControlEventTouchUpInside];
+    } else if (foodDetail.foodSpecial.count == 3) {
+        FoodSpec *foodSpec = [foodDetail.foodSpecial objectAtIndex:0];
+        [self.specButton1 setTitle:foodSpec.name forState:UIControlStateNormal];
+        self.specButton1.tag = [foodSpec.specialId integerValue];
+        [self.countForSpecArray addObject:foodSpec.foodCount];
+        [self.specButton1 addTarget:self action:@selector(specButton1Clicked:) forControlEvents:UIControlEventTouchUpInside];
+        FoodSpec *foodSpecplus = [foodDetail.foodSpecial objectAtIndex:1];
+        self.specButton2.hidden = NO;
+        [self.specButton2 setTitle:foodSpecplus.name forState:UIControlStateNormal];
+        self.specButton2.tag = [foodSpecplus.specialId integerValue];
+        [self.countForSpecArray addObject:foodSpecplus.foodCount];
+        [self.specButton2 addTarget:self action:@selector(specButton2Clicked:) forControlEvents:UIControlEventTouchUpInside];
+        FoodSpec *foodSpecpluss = [foodDetail.foodSpecial objectAtIndex:2];
+        self.specButton3.hidden = NO;
+        [self.specButton3 setTitle:foodSpecpluss.name forState:UIControlStateNormal];
+        self.specButton3.tag = [foodSpecpluss.specialId integerValue];
+        [self.countForSpecArray addObject:foodSpecpluss.foodCount];
+        [self.specButton3 addTarget:self action:@selector(specButton3Clicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
     [UIView animateWithDuration:0.3f delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect progressFrame = CGRectMake(20, 30, ScreenWidth - 40, ScreenHeight - 60);
         self.screenImageView.frame = progressFrame;
@@ -39,6 +85,33 @@
 - (IBAction)backButtonClicked:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:kSpecChooseNotification object:nil];
 }
+- (IBAction)cancelButtonClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kSpecChooseNotification object:nil];
+}
+
+- (void)specButton1Clicked:(UIButton *)button
+{
+    specButton1.selected = YES;
+    specButton2.selected = NO;
+    specButton3.selected = NO;
+    self.restLabel.text = [NSString stringWithFormat:@"%@件",[self.countForSpecArray objectAtIndex:0]];
+}
+
+- (void)specButton2Clicked:(UIButton *)button
+{
+    specButton1.selected = NO;
+    specButton2.selected = YES;
+    specButton3.selected = NO;
+    self.restLabel.text = [NSString stringWithFormat:@"%@件",[self.countForSpecArray objectAtIndex:1]];
+}
+
+- (void)specButton3Clicked:(UIButton *)button
+{
+    specButton1.selected = NO;
+    specButton2.selected = NO;
+    specButton3.selected = YES;
+    self.restLabel.text = [NSString stringWithFormat:@"%@件",[self.countForSpecArray objectAtIndex:2]];
+}
 
 - (IBAction)addNumberButtonClicked:(id)sender {
 }
@@ -50,6 +123,13 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.specHeaderView.layer.shadowOffset = CGSizeZero;
+    self.specHeaderView.layer.shadowOpacity = 0.75f;
+    self.specHeaderView.layer.shadowRadius = 5.f;
+    self.specHeaderView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.specHeaderView.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.layer.bounds].CGPath;
+    self.specHeaderView.clipsToBounds = NO;
+    self.countForSpecArray = [NSMutableArray arrayWithCapacity:0];
 }
 
 @end

@@ -17,6 +17,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 @property (strong, nonatomic) IBOutlet UIButton *buyNumButton;
 @property (strong, nonatomic) IBOutlet UILabel *restLabel;
+@property (strong, nonatomic) IBOutlet UIView *specHeaderView;
+@property (strong, nonatomic) IBOutlet UIButton *specButton1;
+@property (strong, nonatomic) IBOutlet UIButton *specButton2;
+@property (strong, nonatomic) IBOutlet UIButton *specButton3;
 
 - (void)reloadWithFoodDetail:(FoodDetail *)foodDetail;
 - (IBAction)backButtonClicked:(id)sender;
