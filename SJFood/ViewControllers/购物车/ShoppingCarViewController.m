@@ -42,6 +42,10 @@
 - (void)loadSubViews
 {
     //初始化界面为购物车中没有商品
+    CGRect rect = self.noFoodView.frame;
+    rect.size.height = ScreenHeight;
+    rect.size.width = ScreenWidth;
+    self.noFoodView.frame = rect;
     self.shoppingCarArray = [NSMutableArray arrayWithCapacity:0];
     self.shoppingCarTableView.tableFooterView = self.noFoodView;
     self.shoppingCarTableView.scrollEnabled = NO;
@@ -558,7 +562,6 @@
             self.totalPriceLabel.hidden = NO;
             self.RMBLabel.hidden = NO;
             [self.calculateButton addTarget:self action:@selector(calculateButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-            [self setRightNaviItemWithTitle:@"编辑全部" imageName:nil];
             NSArray *valueArray = [dict objectForKey:@"orderList"];
             for(NSDictionary *valueDict in valueArray)
             {
@@ -571,6 +574,7 @@
                 self.shoppingCarTableView.tableFooterView = [UIView new];
                 self.calculateFoodView.hidden = NO;
                 self.shoppingCarTableView.scrollEnabled = YES;
+                [self setRightNaviItemWithTitle:@"编辑全部" imageName:nil];
                 [self setNaviTitle:[NSString stringWithFormat:@"购物车(%lu)",(unsigned long)self.shoppingCarArray.count]];
                 [self.shoppingCarTableView reloadData];
             } else {

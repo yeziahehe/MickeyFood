@@ -36,7 +36,7 @@
 #pragma mark - Gesture methods
 - (void)swipeWithGesture:(UISwipeGestureRecognizer *)gesture
 {
-    if(self.startScrollView.contentOffset.x >= (self.guideArray.count-1)*self.startScrollView.frame.size.width)
+    if(self.startScrollView.contentOffset.x >= (self.guideArray.count-1)*ScreenWidth)
     {
         [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:kIsWelcomeShown];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -85,13 +85,13 @@
         NSInteger index = 0;
         for(NSString *imgName in self.guideArray)
         {
-            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(index*self.startScrollView.frame.size.width, 0, self.startScrollView.frame.size.width, self.startScrollView.frame.size.height)];
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(index*ScreenWidth, 0, ScreenWidth, ScreenHeight)];
             imgView.image = [UIImage imageNamed:imgName];
             imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
             [self.startScrollView addSubview:imgView];
             index++;
         }
-        [self.startScrollView setContentSize:CGSizeMake(self.startScrollView.frame.size.width*self.guideArray.count, [UIScreen mainScreen].bounds.size.height)];
+        [self.startScrollView setContentSize:CGSizeMake(ScreenWidth*self.guideArray.count, [UIScreen mainScreen].bounds.size.height)];
         
         UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeWithGesture:)];
         swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -112,7 +112,7 @@
 #pragma mark - ScrollView Delegate Methods
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSInteger page = floor((scrollView.contentOffset.x - scrollView.frame.size.width / 2) / scrollView.frame.size.width) + 1;
+    NSInteger page = floor((scrollView.contentOffset.x - ScreenWidth / 2) / ScreenWidth) + 1;
     self.pageControl.currentPage = page;
 }
 

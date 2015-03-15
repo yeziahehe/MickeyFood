@@ -174,8 +174,6 @@
 		758512821A32EEEC00504FA8 /* ReceiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512801A32EEEC00504FA8 /* ReceiveViewController.xib */; };
 		758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512841A32EEFF00504FA8 /* CommentViewController.m */; };
 		758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512851A32EEFF00504FA8 /* CommentViewController.xib */; };
-		7585128B1A32EF0F00504FA8 /* RefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512891A32EF0F00504FA8 /* RefundViewController.m */; };
-		7585128C1A32EF0F00504FA8 /* RefundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585128A1A32EF0F00504FA8 /* RefundViewController.xib */; };
 		758512901A32F2AC00504FA8 /* AllOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */; };
 		758512911A32F2AC00504FA8 /* AllOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */; };
 		758512951A32F43400504FA8 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512931A32F43400504FA8 /* MyAccountViewController.m */; };
@@ -548,9 +546,6 @@
 		758512831A32EEFF00504FA8 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
 		758512841A32EEFF00504FA8 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		758512851A32EEFF00504FA8 /* CommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
-		758512881A32EF0F00504FA8 /* RefundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundViewController.h; sourceTree = "<group>"; };
-		758512891A32EF0F00504FA8 /* RefundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundViewController.m; sourceTree = "<group>"; };
-		7585128A1A32EF0F00504FA8 /* RefundViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefundViewController.xib; sourceTree = "<group>"; };
 		7585128D1A32F2AC00504FA8 /* AllOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderViewController.h; sourceTree = "<group>"; };
 		7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrderViewController.m; sourceTree = "<group>"; };
 		7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllOrderViewController.xib; sourceTree = "<group>"; };
@@ -1563,9 +1558,6 @@
 				758512831A32EEFF00504FA8 /* CommentViewController.h */,
 				758512841A32EEFF00504FA8 /* CommentViewController.m */,
 				758512851A32EEFF00504FA8 /* CommentViewController.xib */,
-				758512881A32EF0F00504FA8 /* RefundViewController.h */,
-				758512891A32EF0F00504FA8 /* RefundViewController.m */,
-				7585128A1A32EF0F00504FA8 /* RefundViewController.xib */,
 				7585128D1A32F2AC00504FA8 /* AllOrderViewController.h */,
 				7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */,
 				7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */,
@@ -1863,7 +1855,6 @@
 				758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */,
 				75544EBE1AAC114F0034F4A8 /* btn_shoppingcar_edit@2x.png in Resources */,
 				7533EECE1A2E14E7001D12D4 /* icon_search@3x.png in Resources */,
-				7585128C1A32EF0F00504FA8 /* RefundViewController.xib in Resources */,
 				75EED41C1A31F7E5002ECA75 /* icon_refund@3x.png in Resources */,
 				75A95CD71A4024450009962F /* CategoryCollectionViewCell.xib in Resources */,
 				7533EEC81A2E14E7001D12D4 /* btn_user@3x.png in Resources */,
@@ -1913,7 +1904,6 @@
 				7599AA081A259DB60052E7A9 /* YFImageDownloader.m in Sources */,
 				7585129A1A32F44700504FA8 /* MyMessageViewController.m in Sources */,
 				758512731A32E91100504FA8 /* MJRefreshConst.m in Sources */,
-				7585128B1A32EF0F00504FA8 /* RefundViewController.m in Sources */,
 				7542C4671A2CAB0500BB083D /* CustomLightNavigationController.m in Sources */,
 				758512781A32E91100504FA8 /* UIView+MJExtension.m in Sources */,
 				758512811A32EEEC00504FA8 /* ReceiveViewController.m in Sources */,

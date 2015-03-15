@@ -45,13 +45,14 @@
         UserInfoSubView *userInfoSubView = [nibs lastObject];
         CGRect rect = userInfoSubView.frame;
         rect.origin.y = originY;
-        rect.origin.x = (self.contentScrollView.frame.size.width-rect.size.width)/2;
+        rect.origin.x = 0.0f;
         if ([userInfoSubView isKindOfClass:[UserView class]]) {
             UserView *uv = (UserView *)userInfoSubView;
             if ([[MemberDataManager sharedManager] isLogin]) {
                 [uv reloadWithUserInfo:self.mineInfo];
             }
             rect = uv.frame;
+            rect.size.width = ScreenWidth;
         }
         else if ([userInfoSubView isKindOfClass:[OrderInfoView class]]) {
             OrderInfoView *oiv = (OrderInfoView *)userInfoSubView;
@@ -59,6 +60,7 @@
 //                [oiv reloadWithUserInfo:self.mineInfo];
 //            }
             rect.size.height = oiv.orderInfoTableView.contentSize.height;
+            rect.size.width = ScreenWidth;
         }
         else if ([userInfoSubView isKindOfClass:[UserEditView class]]) {
             UserEditView *uev = (UserEditView *)userInfoSubView;
@@ -66,6 +68,7 @@
 //                [uev reloadWithUserInfo:self.mineInfo];
 //            }
             rect.size.height = uev.userEditTableView.contentSize.height;
+            rect.size.width = ScreenWidth;
         }
         else if ([userInfoSubView isKindOfClass:[UserSettingView class]]) {
             UserSettingView *usv = (UserSettingView *)userInfoSubView;
@@ -73,6 +76,7 @@
 //                [usv reloadWithUserInfo:self.mineInfo];
 //            }
             rect.size.height = usv.userSettingTableView.contentSize.height;
+            rect.size.width = ScreenWidth;
         }
         userInfoSubView.frame = rect;
         [self.contentScrollView addSubview:userInfoSubView];

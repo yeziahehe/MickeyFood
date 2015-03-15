@@ -15,12 +15,10 @@
 @property (strong, nonatomic) IBOutlet UIView *deliveryView;
 @property (strong, nonatomic) IBOutlet UIView *receiveView;
 @property (strong, nonatomic) IBOutlet UIView *commentView;
-@property (strong, nonatomic) IBOutlet UIView *refundView;
 
 - (IBAction)loginButtonClicked:(id)sender;
 - (IBAction)deleveryButtonClicked:(id)sender;
 - (IBAction)receiveButtonClicked:(id)sender;
 - (IBAction)commentButtonClicked:(id)sender;
-- (IBAction)refundButtonClicked:(id)sender;
 
 @end

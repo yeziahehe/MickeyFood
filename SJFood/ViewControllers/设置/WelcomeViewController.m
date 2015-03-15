@@ -19,7 +19,7 @@
 #pragma mark - Gesture methods
 - (void)swipeWithGesture:(UISwipeGestureRecognizer *)gesture
 {
-    if(self.welcomeScrollView.contentOffset.x >= (self.welcomeImageArray.count-1)*self.welcomeScrollView.frame.size.width)
+    if(self.welcomeScrollView.contentOffset.x >= (self.welcomeImageArray.count-1)*ScreenWidth)
     {
         [self.navigationController popViewControllerAnimated:YES];
     }
@@ -75,13 +75,13 @@
     NSInteger index = 0;
     for(NSString *imgName in self.welcomeImageArray)
     {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(index*self.welcomeScrollView.frame.size.width, 0, self.welcomeScrollView.frame.size.width, self.welcomeScrollView.frame.size.height)];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(index*ScreenWidth, 0, ScreenWidth, ScreenWidth)];
         imgView.image = [UIImage imageNamed:imgName];
         imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [self.welcomeScrollView addSubview:imgView];
         index++;
     }
-    [self.welcomeScrollView setContentSize:CGSizeMake(self.welcomeScrollView.frame.size.width*self.welcomeImageArray.count, [UIScreen mainScreen].bounds.size.height)];
+    [self.welcomeScrollView setContentSize:CGSizeMake(ScreenWidth*self.welcomeImageArray.count, [UIScreen mainScreen].bounds.size.height)];
     
     UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeWithGesture:)];
     swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -97,7 +97,7 @@
 #pragma mark - ScrollView Delegate Methods
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSInteger page = floor((scrollView.contentOffset.x - scrollView.frame.size.width / 2) / scrollView.frame.size.width) + 1;
+    NSInteger page = floor((scrollView.contentOffset.x - ScreenWidth / 2) / ScreenWidth) + 1;
     self.pageControl.currentPage = page;
 }
 

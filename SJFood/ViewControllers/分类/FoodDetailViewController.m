@@ -45,7 +45,8 @@
         FoodDetailSubView *foodDetailSubView = [nibs lastObject];
         CGRect rect = foodDetailSubView.frame;
         rect.origin.y = originY;
-        rect.origin.x = (self.contentScrollView.frame.size.width-rect.size.width)/2;
+        rect.origin.x = 0.f;
+        rect.size.width = ScreenWidth;
         if ([foodDetailSubView isKindOfClass:[FoodHeaderView class]]) {
             FoodHeaderView *fhv = (FoodHeaderView *)foodDetailSubView;
             [fhv reloadWithFoodDetail:self.foodDetail];
@@ -70,7 +71,7 @@
         [self.contentScrollView addSubview:foodDetailSubView];
         originY = rect.origin.y + rect.size.height + kSubViewGap;
     }
-    [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, originY+60)];
+    [self.contentScrollView setContentSize:CGSizeMake(ScreenWidth, originY+60)];
 }
 
 - (void)requestForFoodDetail

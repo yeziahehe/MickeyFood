@@ -10,7 +10,7 @@
 
 @implementation UserView
 @synthesize iconImageView,loginButton;
-@synthesize deliveryView,receiveView,commentView,refundView;
+@synthesize deliveryView,receiveView,commentView;
 
 #pragma mark - Private Methods
 - (void)setBadgeViewWithView:(UIView *)parentView badgeNum:(NSString *)badgeNum
@@ -34,7 +34,6 @@
     [self setBadgeViewWithView:self.deliveryView badgeNum:mineInfo.waitDeliveryOrder];
     [self setBadgeViewWithView:self.receiveView badgeNum:mineInfo.waitReceiveOrder];
     [self setBadgeViewWithView:self.commentView badgeNum:mineInfo.waitCommentOrder];
-    [self setBadgeViewWithView:self.refundView badgeNum:mineInfo.waitRefundOrder];
 }
 
 #pragma mark - IBAction Methods
@@ -60,13 +59,7 @@
     }
 }
 
-- (IBAction)refundButtonClicked:(id)sender {
-    if ([self showLoginViewController]) {
-        if ([self showLoginViewController]) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kShowUserInfoViewNotification object:@"RefundViewController"];
-        }
-    }
-}
+
 
 #pragma mark - UIView methods
 - (void)awakeFromNib
