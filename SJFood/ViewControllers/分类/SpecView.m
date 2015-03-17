@@ -8,18 +8,24 @@
 
 #import "SpecView.h"
 
+#define kCreateOrderDownloadKey     @"CreateOrderDownloadKey"
+
 @interface SpecView ()
 @property (nonatomic, strong) NSMutableArray *countForSpecArray;
+@property (nonatomic, strong) NSString *foodCount;
+@property (nonatomic, strong) NSString *specId;
+@property (nonatomic, strong) NSString *foodId;
 @end
 
 @implementation SpecView
 @synthesize screenImageView,specDetailView;
 @synthesize iconImageView,foodTitleLabel,priceLabel,buyNumButton,restLabel,specHeaderView;
-@synthesize countForSpecArray,specButton1,specButton2,specButton3;
+@synthesize countForSpecArray,specButton1,specButton2,specButton3,foodCount,specId,foodId;
 
 #pragma mark - Public Methods
 - (void)reloadWithFoodDetail:(FoodDetail *)foodDetail
 {
+    self.foodId = foodDetail.foodId;
     self.iconImageView.cacheDir = kUserIconCacheDir;
     [self.iconImageView aysnLoadImageWithUrl:foodDetail.imgUrl placeHolder:@"loading_square.png"];
     self.foodTitleLabel.text = foodDetail.name;
@@ -78,7 +84,6 @@
     } completion:nil];
     [self bringSubviewToFront:specDetailView];
     [specDetailView addAnimationWithType:kCATransitionPush subtype:kCATransitionFromTop];
-    
 }
 
 #pragma mark - IBAction Methods
@@ -89,11 +94,33 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:kSpecChooseNotification object:nil];
 }
 
+- (IBAction)confirmButtonClicked:(id)sender {
+    if ([self.specId isEqualToString:@"-1"]) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"请选择口味" customView:nil hideDelay:2.f];
+    } else if (![[MemberDataManager sharedManager] isLogin]) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"请先登录再添加到购物车" customView:nil hideDelay:2.f];
+    } else {
+        NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kCreateOrderUrl];
+        NSMutableDictionary *dict = kCommonParamsDict;
+        [dict setObject:self.foodId forKey:@"foodId"];
+        [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
+        [dict setObject:self.foodCount forKey:@"foodCount"];
+        [dict setObject:self.specId forKey:@"foodSpecial"];
+        [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                                 postParams:dict
+                                                                contentType:@"application/x-www-form-urlencoded"
+                                                                   delegate:self
+                                                                    purpose:kCreateOrderDownloadKey];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSpecChooseNotification object:nil];
+    }
+}
+
 - (void)specButton1Clicked:(UIButton *)button
 {
     specButton1.selected = YES;
     specButton2.selected = NO;
     specButton3.selected = NO;
+    self.specId = [NSString stringWithFormat:@"%ld",(long)button.tag];
     self.restLabel.text = [NSString stringWithFormat:@"%@件",[self.countForSpecArray objectAtIndex:0]];
 }
 
@@ -102,6 +129,7 @@
     specButton1.selected = NO;
     specButton2.selected = YES;
     specButton3.selected = NO;
+    self.specId = [NSString stringWithFormat:@"%ld",(long)button.tag];
     self.restLabel.text = [NSString stringWithFormat:@"%@件",[self.countForSpecArray objectAtIndex:1]];
 }
 
@@ -110,13 +138,26 @@
     specButton1.selected = NO;
     specButton2.selected = NO;
     specButton3.selected = YES;
+    self.specId = [NSString stringWithFormat:@"%ld",(long)button.tag];
     self.restLabel.text = [NSString stringWithFormat:@"%@件",[self.countForSpecArray objectAtIndex:2]];
 }
 
 - (IBAction)addNumberButtonClicked:(id)sender {
+    if ([self.foodCount integerValue] > [self.restLabel.text integerValue]) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"已增加到最大库存" customView:nil hideDelay:2.f];
+    } else {
+        self.foodCount = [NSString stringWithFormat:@"%ld",[self.foodCount integerValue] + 1];
+        [self.buyNumButton setTitle:self.foodCount forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)reduceNumberButtonClicked:(id)sender {
+    if ([self.foodCount isEqualToString:@"1"]) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"已减少到最小数量" customView:nil hideDelay:2.f];
+    } else {
+        self.foodCount = [NSString stringWithFormat:@"%ld",[self.foodCount integerValue] - 1];
+        [self.buyNumButton setTitle:self.foodCount forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark - UIView Methods
@@ -130,6 +171,43 @@
     self.specHeaderView.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.layer.bounds].CGPath;
     self.specHeaderView.clipsToBounds = NO;
     self.countForSpecArray = [NSMutableArray arrayWithCapacity:0];
+    self.foodCount = @"1";
+    self.specId = @"-1";
+}
+
+- (void)dealloc
+{
+    [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
+}
+
+#pragma mark - YFDownloaderDelegate Methods
+- (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData *)data
+{
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [str JSONValue];
+    if ([downloader.purpose isEqualToString:kCreateOrderDownloadKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[YFProgressHUD sharedProgressHUD] showWithMessage:@"添加购物车成功，请去购物车结算" customView:nil hideDelay:3.f];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"添加购物车失败";
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+        }
+    }
+}
+
+- (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString *)message
+{
+    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:kNetWorkErrorString hideDelay:2.f];
 }
 
 @end

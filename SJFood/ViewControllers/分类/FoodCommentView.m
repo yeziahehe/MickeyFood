@@ -13,6 +13,7 @@
 
 #pragma mark - IBAction Methods
 - (IBAction)specButtonClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kSpecViewShowNotification object:nil];
 }
 
 - (IBAction)commentButtonClicked:(id)sender {

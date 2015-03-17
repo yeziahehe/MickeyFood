@@ -70,6 +70,7 @@
 #define kFoodSearchNotification             @"FoodSearchNotification"
 #define kSpecChooseNotification             @"SpecChooseNotification"
 #define kRefreshShoppingCarNotification     @"RefreshShoppingCarNotification"
+#define kSpecViewShowNotification           @"SpecViewShowNotification"
 
 //Url values
 #define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
@@ -93,5 +94,6 @@
 #define kDeleteOrderUrl         @"order/deleteUserOrder.do"
 #define kEditUserOrderUrl       @"order/editUserOrder.do"
 #define kDeleteAllUserOrderUrl  @"order/deleteAllUserOrder.do"
+#define kCreateOrderUrl         @"order/createOrder.do"
 
 #endif

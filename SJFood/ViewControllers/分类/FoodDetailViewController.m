@@ -120,6 +120,20 @@
     }
 }
 
+- (void)specViewShowNotification:(NSNotification *)notification
+{
+    if (notification.object) {
+        //
+    } else {
+        UIImage *screenShotWithBlur = [UIImage blurryImage:[UIImage screenShotForView:self.view] withBlurLevel:0.3];
+        SpecView *specView = [[[NSBundle mainBundle] loadNibNamed:@"SpecView" owner:self options:nil] lastObject];
+        specView.screenImageView.image = screenShotWithBlur;
+        specView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+        [self.navigationController.view addSubview:specView];
+        [specView reloadWithFoodDetail:self.foodDetail];
+    }
+}
+
 #pragma mark - BaseViewController Methods
 - (void)extraItemTapped
 {
@@ -134,6 +148,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self requestForFoodDetail];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(specChooseNotification:) name:kSpecChooseNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(specViewShowNotification:) name:kSpecViewShowNotification object:nil];
 }
 
 - (void)dealloc
