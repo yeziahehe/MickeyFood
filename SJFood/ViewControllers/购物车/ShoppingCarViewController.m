@@ -303,6 +303,17 @@
     self.totalPriceLabel.text = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]];
 }
 
+- (void)userChangeWithNotification:(NSNotification *)notification
+{
+    [self.shoppingCarTableView addHeaderWithTarget:self action:@selector(refreshShoppingCarInfo) dateKey:@"shoppingCarTableView"];
+    if ([[MemberDataManager sharedManager] isLogin]) {
+        [self requestForShoppingCar];
+    } else {
+        [self.shoppingCarTableView removeHeader];
+        [self loadSubViews];
+    }
+}
+
 #pragma mark - BaseViewController methods
 - (void)rightItemTapped
 {
@@ -358,6 +369,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshShoppingCarWithNotification:) name:kRefreshShoppingCarNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectedState) name:kSelecteButtonClickedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userChangeWithNotification:) name:kUserChangeNotification object:nil];
 }
 
 - (void)dealloc
