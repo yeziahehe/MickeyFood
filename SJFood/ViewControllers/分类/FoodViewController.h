@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UIView *messageFooterView;
 @property (strong, nonatomic) IBOutlet UILabel *loadMessageLabel;
 
+- (void)requestForFoodSearchWithCategoryId:(NSString *)category foodTag:(NSString *)tag sortId:(NSString *)sortId page:(NSString *)page;
+
 - (IBAction)sortByAllButtonClicked:(id)sender;
 - (IBAction)sortByPriceButtonClicked:(id)sender;
 - (IBAction)sortBySaleButtonClicked:(id)sender;

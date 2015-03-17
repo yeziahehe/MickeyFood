@@ -8,8 +8,7 @@
 
 #import "BaseMenuViewController.h"
 
-@interface HomeViewController : BaseMenuViewController<UISearchBarDelegate,UISearchDisplayDelegate>
+@interface HomeViewController : BaseMenuViewController<UISearchBarDelegate>
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (strong, nonatomic) IBOutlet UISearchDisplayController *searchDisplayController;
 
 @end

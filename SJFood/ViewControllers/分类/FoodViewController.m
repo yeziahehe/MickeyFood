@@ -157,6 +157,16 @@
     [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [[self transitionCoordinator] animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: kMainBlackColor};
+        self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];//导航条的颜色
+        self.navigationController.navigationBar.tintColor = kMainProjColor;//左侧返回按钮，文字的颜色
+    } completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -169,7 +179,8 @@
     self.sortByAllButton.selected = YES;
     self.sort = @"0";
     [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
-    [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+    if (self.categoryId != nil)
+        [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kFoodSearchNotification object:nil];
 }
 

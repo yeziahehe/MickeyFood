@@ -60,6 +60,7 @@
 #pragma mark - UISearchBar Delegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [self.searchHistoryArray removeObject:self.searchBar.text];
     [self.searchHistoryArray insertObject:self.searchBar.text atIndex:0];
     [self.userDefaults setObject:self.searchHistoryArray forKey:kSearchHistoryArray];
     [self.userDefaults synchronize];

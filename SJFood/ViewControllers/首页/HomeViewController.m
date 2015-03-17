@@ -7,27 +7,25 @@
 //
 
 #import "HomeViewController.h"
+#import "SearchHistoryViewController.h"
+#import "FoodViewController.h"
 
 @interface HomeViewController ()
-
 @end
 
 @implementation HomeViewController
 
-@synthesize searchBar,searchDisplayController;
-
-#pragma mark - Navigation Custom Method
-- (void)rightItemTapped
-{
-    if ([self.navigationItem.rightBarButtonItem.title isEqualToString:@"取消"]) {
-        [self.searchBar endEditing:YES];
-        [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
-    }
-}
+@synthesize searchBar;
 
 #pragma mark - Private Methods
 - (void)loadSearchBar
 {
+    self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar.delegate = self;
+    [self.searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    [self.searchBar sizeToFit];
+    [self.searchBar setPlaceholder:@"搜索美食"];
+    self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
     UITextField *searchField = [self.searchBar valueForKey:@"_searchField"];
     // Change search bar text color
     searchField.textColor = [UIColor whiteColor];
@@ -38,9 +36,7 @@
     UIImageView *iView = [[UIImageView alloc] initWithImage:image];
     iView.frame = CGRectMake(0, 0, 16, 16);
     searchField.leftView  = iView;
-    
-    self.searchBar.delegate = self;
-    self.searchDisplayController.delegate = self;
+    self.navigationItem.titleView = self.searchBar;
 }
 
 - (void)loadSubViews
@@ -48,40 +44,31 @@
     [self loadSearchBar];
 }
 
+#pragma mark - NSNotification Methods
+- (void)foodSearchWithNotification:(NSNotification *)notification
+{
+    FoodViewController *foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController" bundle:nil];
+    [foodViewController requestForFoodSearchWithCategoryId:nil foodTag:notification.object sortId:@"0" page:@"0"];
+    [self.navigationController pushViewController:foodViewController animated:YES];
+}
+
 #pragma mark - UIViewController Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self loadSubViews];
-    self.navigationItem.titleView = self.searchBar;
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kFoodSearchNotification object:nil];
 }
 
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    self.navigationItem.leftBarButtonItem = nil;
-    [self setRightNaviItemWithTitle:@"取消" imageName:nil];
+#pragma mark - UISearchBar Delegate
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    SearchHistoryViewController *searchHistoryViewController = [[SearchHistoryViewController alloc] initWithNibName:@"SearchHistoryViewController" bundle:nil];
+    [self presentViewController:searchHistoryViewController animated:NO completion:nil];
+    return NO;
 }
 
-# pragma mark UISearchDisplayDelegate delegates
-- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller {
-    NSLog(@"Will begin search");
-//    self.navigationItem.leftBarButtonItem = nil;
-//    [self setRightNaviItemWithTitle:@"取消" imageName:nil];
-}
-
-- (void)searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller {
-    NSLog(@"Did begin search");
-//    self.navigationItem.leftBarButtonItem = nil;
-//    [self setRightNaviItemWithTitle:@"取消" imageName:nil];
-}
-
-- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller {
-    NSLog(@"Will end search");
-}
-
-- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
-    NSLog(@"Did end search");
-}
 
 @end
