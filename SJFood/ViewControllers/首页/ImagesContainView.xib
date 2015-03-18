@@ -17,7 +17,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </scrollView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" id="bBE-sH-m3l">
-                    <rect key="frame" x="0.0" y="84" width="320" height="36"/>
+                    <rect key="frame" x="160" y="84" width="160" height="36"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="pageIndicatorTintColor" white="0.61265120969999998" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -30,7 +30,7 @@
                 <outlet property="cycleScrollView" destination="CQ4-3j-TaC" id="0yZ-C2-CP1"/>
                 <outlet property="pageControl" destination="bBE-sH-m3l" id="COk-FA-k3i"/>
             </connections>
-            <point key="canvasLocation" x="239" y="-39.5"/>
+            <point key="canvasLocation" x="239" y="-40"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
