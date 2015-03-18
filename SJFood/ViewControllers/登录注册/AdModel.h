@@ -11,6 +11,7 @@
 @interface AdModel : NSObject
 
 @property (nonatomic, copy) NSString *imgUrl;
+@property (nonatomic, copy) NSString *newsId;
 
 - (id)initWithDict:(NSDictionary *)dict;
 

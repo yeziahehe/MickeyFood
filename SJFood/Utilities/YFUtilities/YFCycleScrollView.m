@@ -62,7 +62,6 @@
             asynImgView.contentMode = UIViewContentModeScaleAspectFill;
             //加载图片
             asynImgView.cacheDir = cacheDir;
-            //            asynImgView.forYulong = YES;
             [asynImgView aysnLoadImageWithUrl:str placeHolder:placeHolder];
             //加载手势
             asynImgView.userInteractionEnabled = YES;

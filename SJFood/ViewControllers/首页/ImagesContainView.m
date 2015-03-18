@@ -26,7 +26,7 @@
     {
         [images addObject:productAd.imgUrl];
     }
-    [self.cycleScrollView reloadWithImages:images placeHolder:@"loading_rectangle_square.png" cacheDir:kFoodIconCacheDir];
+    [self.cycleScrollView reloadWithImages:images placeHolder:@"loading_square.png" cacheDir:kFoodIconCacheDir];
     if (self.pageControl.numberOfPages == 1) {
         self.cycleScrollView.scrollEnabled = NO;
     }
@@ -52,7 +52,6 @@
 
 - (void)scrollViewDidEndDecelerating:(YFCycleScrollView *)scrollView
 {
-    
     NSInteger page = floor((scrollView.contentOffset.x - scrollView.frame.size.width / 2) / scrollView.frame.size.width) + 1;
     if(page == 0)
     {

@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeSubView.h"
 #import "YFCycleScrollView.h"
 #import "AdModel.h"
 
 @protocol ImagesContainViewDelegate;
 
-@interface ImagesContainView : UIView<YFCycleScrollViewDelegate>
+@interface ImagesContainView : HomeSubView<YFCycleScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet YFCycleScrollView *cycleScrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, assign) id<ImagesContainViewDelegate> delegate;

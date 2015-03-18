@@ -29,6 +29,8 @@
 		75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */; };
 		75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D231A2EBC190034523F /* ResetPwdViewController.m */; };
 		75158D261A2EBC190034523F /* ResetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D241A2EBC190034523F /* ResetPwdViewController.xib */; };
+		7519C7791AB962B40069F400 /* HomeSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7519C7781AB962B40069F400 /* HomeSubView.m */; };
+		7519C77B1AB964550069F400 /* HomeMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7519C77A1AB964550069F400 /* HomeMap.plist */; };
 		751B20FD1AB1D4B000B1CFE6 /* btn_cancel_specal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 751B20FB1AB1D4B000B1CFE6 /* btn_cancel_specal@2x.png */; };
 		751B20FE1AB1D4B000B1CFE6 /* btn_cancel_specal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 751B20FC1AB1D4B000B1CFE6 /* btn_cancel_specal@3x.png */; };
 		751B21011AB1DED900B1CFE6 /* btn_spec_num@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 751B20FF1AB1DED900B1CFE6 /* btn_spec_num@2x.png */; };
@@ -153,6 +155,8 @@
 		757DE9AA1A45617F0054BE47 /* bg_buy_shopping@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757DE9A61A45617F0054BE47 /* bg_buy_shopping@3x.png */; };
 		758116371A27611900065E65 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758116351A27611900065E65 /* HomeViewController.m */; };
 		758116381A27611900065E65 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758116361A27611900065E65 /* HomeViewController.xib */; };
+		758349521AB95D3D00C60CD7 /* HomeModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758349511AB95D3D00C60CD7 /* HomeModuleView.m */; };
+		758349541AB95D4C00C60CD7 /* HomeModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758349531AB95D4C00C60CD7 /* HomeModuleView.xib */; };
 		758512721A32E91100504FA8 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512641A32E91100504FA8 /* MJRefreshBaseView.m */; };
 		758512731A32E91100504FA8 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512661A32E91100504FA8 /* MJRefreshConst.m */; };
 		758512741A32E91100504FA8 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512681A32E91100504FA8 /* MJRefreshFooterView.m */; };
@@ -377,6 +381,9 @@
 		75158D221A2EBC190034523F /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
 		75158D231A2EBC190034523F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		75158D241A2EBC190034523F /* ResetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPwdViewController.xib; sourceTree = "<group>"; };
+		7519C7771AB962B40069F400 /* HomeSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSubView.h; sourceTree = "<group>"; };
+		7519C7781AB962B40069F400 /* HomeSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSubView.m; sourceTree = "<group>"; };
+		7519C77A1AB964550069F400 /* HomeMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeMap.plist; sourceTree = "<group>"; };
 		751B20FB1AB1D4B000B1CFE6 /* btn_cancel_specal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_cancel_specal@2x.png"; sourceTree = "<group>"; };
 		751B20FC1AB1D4B000B1CFE6 /* btn_cancel_specal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_cancel_specal@3x.png"; sourceTree = "<group>"; };
 		751B20FF1AB1DED900B1CFE6 /* btn_spec_num@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_spec_num@2x.png"; sourceTree = "<group>"; };
@@ -528,6 +535,9 @@
 		758116341A27611900065E65 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		758116351A27611900065E65 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		758116361A27611900065E65 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		758349501AB95D3D00C60CD7 /* HomeModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModuleView.h; sourceTree = "<group>"; };
+		758349511AB95D3D00C60CD7 /* HomeModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModuleView.m; sourceTree = "<group>"; };
+		758349531AB95D4C00C60CD7 /* HomeModuleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeModuleView.xib; sourceTree = "<group>"; };
 		758512621A32E91100504FA8 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		758512631A32E91100504FA8 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
 		758512641A32E91100504FA8 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
@@ -941,6 +951,7 @@
 				755722B21A34886500CC6A8F /* ShareSettingMap.plist */,
 				75AD583C1A38122C00E39640 /* MyAccountMap.plist */,
 				7550776F1A46C07100CD18EF /* FoodDetailMap.plist */,
+				7519C77A1AB964550069F400 /* HomeMap.plist */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -1219,12 +1230,17 @@
 		758116301A26E46200065E65 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				7519C7771AB962B40069F400 /* HomeSubView.h */,
+				7519C7781AB962B40069F400 /* HomeSubView.m */,
 				758116341A27611900065E65 /* HomeViewController.h */,
 				758116351A27611900065E65 /* HomeViewController.m */,
 				758116361A27611900065E65 /* HomeViewController.xib */,
 				75F5F3A11AB8947E00FA849E /* ImagesContainView.h */,
 				75F5F3A21AB8947E00FA849E /* ImagesContainView.m */,
 				75F5F3A41AB894A400FA849E /* ImagesContainView.xib */,
+				758349501AB95D3D00C60CD7 /* HomeModuleView.h */,
+				758349511AB95D3D00C60CD7 /* HomeModuleView.m */,
+				758349531AB95D4C00C60CD7 /* HomeModuleView.xib */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -1802,6 +1818,7 @@
 				75EED4211A32040B002ECA75 /* UserView.xib in Resources */,
 				758512821A32EEEC00504FA8 /* ReceiveViewController.xib in Resources */,
 				75F5F3BE1AB8A31E00FA849E /* btn_today_discount@2x.png in Resources */,
+				758349541AB95D4C00C60CD7 /* HomeModuleView.xib in Resources */,
 				7585127D1A32EE7A00504FA8 /* DeliveryViewController.xib in Resources */,
 				758116381A27611900065E65 /* HomeViewController.xib in Resources */,
 				75D1E2CC1A3ACEE5008555B1 /* AddressAddViewController.xib in Resources */,
@@ -1894,6 +1911,7 @@
 				7542C4861A2CC11C00BB083D /* RegisterViewController.xib in Resources */,
 				7533EED71A2E150A001D12D4 /* line_ver_1px_right.png in Resources */,
 				75A95CAF1A4006BD0009962F /* CategoryTableViewCell.xib in Resources */,
+				7519C77B1AB964550069F400 /* HomeMap.plist in Resources */,
 				7533463D1A416C40000CD338 /* btn_food_sort_selected@2x.png in Resources */,
 				7542C4A51A2D972400BB083D /* UserInfoViewController.xib in Resources */,
 				758937BA1AB673A30003ECEE /* btn_category@3x.png in Resources */,
@@ -2028,6 +2046,7 @@
 				75F90A891A49CFE700CB19EB /* SpecView.m in Sources */,
 				758512771A32E91100504FA8 /* UIScrollView+MJRefresh.m in Sources */,
 				758116371A27611900065E65 /* HomeViewController.m in Sources */,
+				758349521AB95D3D00C60CD7 /* HomeModuleView.m in Sources */,
 				7542C48E1A2CD09E00BB083D /* ConfirmViewController.m in Sources */,
 				756C62FD1A4721AD007B2ECB /* FoodDetail.m in Sources */,
 				7599AA0F1A25A3910052E7A9 /* MBProgressHUD.m in Sources */,
@@ -2053,6 +2072,7 @@
 				755722CE1A35C7C800CC6A8F /* MineInfo.m in Sources */,
 				75AD58591A388F5F00E39640 /* AddressTableViewCell.m in Sources */,
 				750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */,
+				7519C7791AB962B40069F400 /* HomeSubView.m in Sources */,
 				75CD70AD1A41C5140073A7E5 /* SearchHistoryViewController.m in Sources */,
 				758954401A24BA69001C2350 /* BaseViewController.m in Sources */,
 				75E4789F1A7F58AE002DC26D /* ShoppingCarViewController.m in Sources */,

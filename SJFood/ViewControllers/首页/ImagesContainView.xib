@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ImagesContainView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="CQ4-3j-TaC" customClass="YFCycleScrollView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQ4-3j-TaC" customClass="YFCycleScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="CQ4-3j-TaC" secondAttribute="height" multiplier="320:179" id="qp0-SS-h6h"/>
+                    </constraints>
                 </scrollView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" id="bBE-sH-m3l">
-                    <rect key="frame" x="160" y="84" width="160" height="36"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-sH-m3l">
+                    <rect key="frame" x="160" y="143" width="160" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="o9p-mD-8NV"/>
+                    </constraints>
                     <color key="pageIndicatorTintColor" white="0.61265120969999998" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CQ4-3j-TaC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6ar-6G-Hrx"/>
+                <constraint firstItem="bBE-sH-m3l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="160" id="8MI-mW-PiH"/>
+                <constraint firstAttribute="trailing" secondItem="CQ4-3j-TaC" secondAttribute="trailing" id="CFs-Em-JEk"/>
+                <constraint firstAttribute="trailing" secondItem="bBE-sH-m3l" secondAttribute="trailing" id="FFM-WI-MOx"/>
+                <constraint firstItem="CQ4-3j-TaC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aoh-Vk-bYS"/>
+                <constraint firstAttribute="bottom" secondItem="CQ4-3j-TaC" secondAttribute="bottom" id="frB-m6-pCn"/>
+                <constraint firstAttribute="bottom" secondItem="bBE-sH-m3l" secondAttribute="bottom" id="lbo-pj-vji"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

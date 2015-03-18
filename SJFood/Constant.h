@@ -95,5 +95,6 @@
 #define kEditUserOrderUrl       @"order/editUserOrder.do"
 #define kDeleteAllUserOrderUrl  @"order/deleteAllUserOrder.do"
 #define kCreateOrderUrl         @"order/createOrder.do"
+#define kGetMainImageUrl        @"news/getMainImage.do"
 
 #endif

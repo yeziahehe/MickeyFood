@@ -7,15 +7,25 @@
 //
 
 #import "HomeViewController.h"
+#import "HomeSubView.h"
 #import "SearchHistoryViewController.h"
 #import "FoodViewController.h"
+#import "ImagesContainView.h"
+#import "HomeModuleView.h"
+
+#define kHomeMapFileName        @"HomeMap"
+#define kSubViewGap             0.f
+#define kGetMainNewsDownloadKey @"GetMainNewsDownloadKey"
 
 @interface HomeViewController ()
 @property (strong, nonatomic) UISearchBar *searchBar;
+@property (strong, nonatomic) NSMutableArray *subViewArray;
+@property (strong, nonatomic) NSMutableArray *newsListArray;
 @end
 
 @implementation HomeViewController
 
+@synthesize contentScrollView,subViewArray,newsListArray;
 @synthesize searchBar;
 
 #pragma mark - Private Methods
@@ -42,7 +52,47 @@
 
 - (void)loadSubViews
 {
-    [self loadSearchBar];
+    for (UIView *subView in self.contentScrollView.subviews)
+    {
+        if ([subView isKindOfClass:[HomeSubView class]]) {
+            [subView removeFromSuperview];
+        }
+    }
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:kHomeMapFileName ofType:@"plist"];
+    self.subViewArray = [NSMutableArray arrayWithContentsOfFile:path];
+    
+    //加载每个子模块
+    CGFloat originY = kSubViewGap;
+    for (NSString *classString in self.subViewArray) {
+        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:classString owner:self options:nil];
+        HomeSubView *homeSubView = [nibs lastObject];
+        CGRect rect = homeSubView.frame;
+        rect.origin.y = originY;
+        rect.origin.x = 0.0f;
+        if ([homeSubView isKindOfClass:[ImagesContainView class]]) {
+            ImagesContainView *icv = (ImagesContainView *)homeSubView;
+            rect = icv.frame;
+            if (self.newsListArray.count > 0) {
+                [icv reloadWithProductAds:self.newsListArray];
+            }
+        }
+        else if ([homeSubView isKindOfClass:[HomeModuleView class]]) {
+            HomeModuleView *hmv = (HomeModuleView *)homeSubView;
+        }
+        homeSubView.frame = rect;
+        [self.contentScrollView addSubview:homeSubView];
+        originY = rect.origin.y + rect.size.height + kSubViewGap;
+    }
+    [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, originY)];
+}
+
+- (void)requestForNews
+{
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kGetMainImageUrl];
+    [[YFDownloaderManager sharedManager] requestDataByGetWithURLString:url
+                                                              delegate:self
+                                                               purpose:kGetMainNewsDownloadKey];
 }
 
 #pragma mark - NSNotification Methods
@@ -57,6 +107,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self requestForNews];
+    [self loadSearchBar];
     [self loadSubViews];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kFoodSearchNotification object:nil];
@@ -71,5 +123,42 @@
     return NO;
 }
 
+
+#pragma mark - YFDownloaderDelegate Methods
+- (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData *)data
+{
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [str JSONValue];
+    if ([downloader.purpose isEqualToString:kGetMainNewsDownloadKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            self.newsListArray = [NSMutableArray arrayWithCapacity:0];
+            NSMutableArray *valueArray = [dict objectForKey:@"newsList"];
+            if (valueArray.count > 0) {
+                for (NSDictionary *valueDict in valueArray) {
+                    AdModel *ad = [[AdModel alloc]initWithDict:valueDict];
+                    [self.newsListArray addObject:ad];
+                }
+            }
+            [self loadSubViews];
+        }
+    }
+    else
+    {
+        NSString *message = [dict objectForKey:kMessageKey];
+        if ([message isKindOfClass:[NSNull class]])
+        {
+            message = @"";
+        }
+        if(message.length == 0)
+            message = @"首页新闻获取失败";
+    }
+}
+
+- (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString *)message
+{
+    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:kNetWorkErrorString hideDelay:2.f];
+}
 
 @end

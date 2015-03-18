@@ -9,5 +9,6 @@
 #import "BaseMenuViewController.h"
 
 @interface HomeViewController : BaseMenuViewController<UISearchBarDelegate>
+@property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 @end

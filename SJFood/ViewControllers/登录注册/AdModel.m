@@ -9,7 +9,7 @@
 #import "AdModel.h"
 
 @implementation AdModel
-@synthesize imgUrl;
+@synthesize imgUrl,newsId;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
