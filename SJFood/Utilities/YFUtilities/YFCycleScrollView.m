@@ -56,8 +56,8 @@
             //设置frame
             YFAsynImageView *asynImgView = [[YFAsynImageView alloc] init];
             CGRect rect = self.bounds;
-            rect.size.width = self.frame.size.width;
-            rect.origin.x = index*self.frame.size.width;
+            rect.size.width = ScreenWidth;
+            rect.origin.x = index*ScreenWidth;
             asynImgView.frame = rect;
             asynImgView.contentMode = UIViewContentModeScaleAspectFill;
             //加载图片
@@ -72,8 +72,8 @@
             [self addSubview:asynImgView];
             index++;
         }
-        [self setContentSize:CGSizeMake(self.frame.size.width*self.cycleArray.count, self.frame.size.height)];
-        [self setContentOffset:CGPointMake(self.frame.size.width, 0)];
+        [self setContentSize:CGSizeMake(ScreenWidth*self.cycleArray.count, self.frame.size.height)];
+        [self setContentOffset:CGPointMake(ScreenWidth, 0)];
     }
     else
     {

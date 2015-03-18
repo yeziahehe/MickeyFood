@@ -64,27 +64,32 @@
     
     //加载每个子模块
     CGFloat originY = kSubViewGap;
+    [self.contentScrollView layoutIfNeeded];
     for (NSString *classString in self.subViewArray) {
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:classString owner:self options:nil];
         HomeSubView *homeSubView = [nibs lastObject];
         CGRect rect = homeSubView.frame;
+        //rect.size.width = ScreenWidth;
         rect.origin.y = originY;
         rect.origin.x = 0.0f;
         if ([homeSubView isKindOfClass:[ImagesContainView class]]) {
             ImagesContainView *icv = (ImagesContainView *)homeSubView;
-            rect = icv.frame;
+            rect.size.height = icv.frame.size.height;
+            icv.translatesAutoresizingMaskIntoConstraints = YES;
             if (self.newsListArray.count > 0) {
                 [icv reloadWithProductAds:self.newsListArray];
             }
         }
         else if ([homeSubView isKindOfClass:[HomeModuleView class]]) {
             HomeModuleView *hmv = (HomeModuleView *)homeSubView;
+            rect.size.height = hmv.frame.size.height;
+            hmv.translatesAutoresizingMaskIntoConstraints = YES;
         }
         homeSubView.frame = rect;
         [self.contentScrollView addSubview:homeSubView];
         originY = rect.origin.y + rect.size.height + kSubViewGap;
     }
-    [self.contentScrollView setContentSize:CGSizeMake(self.contentScrollView.frame.size.width, originY)];
+    [self.contentScrollView setContentSize:CGSizeMake(ScreenWidth, originY)];
 }
 
 - (void)requestForNews

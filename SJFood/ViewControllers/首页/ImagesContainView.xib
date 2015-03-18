@@ -16,13 +16,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="CQ4-3j-TaC" secondAttribute="height" multiplier="320:179" id="qp0-SS-h6h"/>
+                        <constraint firstAttribute="width" secondItem="CQ4-3j-TaC" secondAttribute="height" multiplier="320:179" id="XSf-sE-aQU"/>
                     </constraints>
                 </scrollView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-sH-m3l">
                     <rect key="frame" x="160" y="143" width="160" height="36"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="36" id="o9p-mD-8NV"/>
+                        <constraint firstAttribute="width" constant="160" id="MJU-zS-hoE"/>
+                        <constraint firstAttribute="height" constant="36" id="rM2-ac-snD"/>
                     </constraints>
                     <color key="pageIndicatorTintColor" white="0.61265120969999998" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -30,13 +31,12 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="CQ4-3j-TaC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6ar-6G-Hrx"/>
-                <constraint firstItem="bBE-sH-m3l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="160" id="8MI-mW-PiH"/>
-                <constraint firstAttribute="trailing" secondItem="CQ4-3j-TaC" secondAttribute="trailing" id="CFs-Em-JEk"/>
-                <constraint firstAttribute="trailing" secondItem="bBE-sH-m3l" secondAttribute="trailing" id="FFM-WI-MOx"/>
-                <constraint firstItem="CQ4-3j-TaC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aoh-Vk-bYS"/>
-                <constraint firstAttribute="bottom" secondItem="CQ4-3j-TaC" secondAttribute="bottom" id="frB-m6-pCn"/>
-                <constraint firstAttribute="bottom" secondItem="bBE-sH-m3l" secondAttribute="bottom" id="lbo-pj-vji"/>
+                <constraint firstAttribute="bottom" secondItem="bBE-sH-m3l" secondAttribute="bottom" id="3LI-zB-lHq"/>
+                <constraint firstItem="CQ4-3j-TaC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jad-DE-RAd"/>
+                <constraint firstAttribute="bottom" secondItem="CQ4-3j-TaC" secondAttribute="bottom" id="NYS-sm-vle"/>
+                <constraint firstAttribute="trailing" secondItem="bBE-sH-m3l" secondAttribute="trailing" id="dbx-86-G97"/>
+                <constraint firstAttribute="trailing" secondItem="CQ4-3j-TaC" secondAttribute="trailing" id="pCh-S3-00s"/>
+                <constraint firstItem="CQ4-3j-TaC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ygx-EQ-vbw"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
