@@ -81,7 +81,6 @@
         else if ([homeSubView isKindOfClass:[HomeModuleView class]]) {
             HomeModuleView *hmv = (HomeModuleView *)homeSubView;
             rect.size.height = hmv.frame.size.height/320 * ScreenWidth;
-            NSLog(@"%f",[UIScreen mainScreen].bounds.size.height);
             if (IsDevicePhone4) {}
             else {
                 rect.origin.y = ScreenHeight - 49.f - rect.size.height - 64.f;
