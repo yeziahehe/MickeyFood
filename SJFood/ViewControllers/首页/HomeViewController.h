@@ -7,8 +7,9 @@
 //
 
 #import "BaseMenuViewController.h"
+#import "ImagesContainView.h"
 
-@interface HomeViewController : BaseMenuViewController<UISearchBarDelegate>
+@interface HomeViewController : BaseMenuViewController<UISearchBarDelegate,ImagesContainViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 @end

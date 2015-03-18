@@ -10,7 +10,6 @@
 #import "HomeSubView.h"
 #import "SearchHistoryViewController.h"
 #import "FoodViewController.h"
-#import "ImagesContainView.h"
 #import "HomeModuleView.h"
 
 #define kHomeMapFileName        @"HomeMap"
@@ -131,6 +130,11 @@
     return NO;
 }
 
+#pragma mark - ImagesContainViewDelegate Methods
+- (void)didTappedWithProductAd:(AdModel *)productAd
+{
+    //点击事件
+}
 
 #pragma mark - YFDownloaderDelegate Methods
 - (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData *)data
