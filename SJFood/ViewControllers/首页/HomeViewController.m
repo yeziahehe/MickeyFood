@@ -11,6 +11,7 @@
 #import "FoodViewController.h"
 
 @interface HomeViewController ()
+@property (strong, nonatomic) UISearchBar *searchBar;
 @end
 
 @implementation HomeViewController
