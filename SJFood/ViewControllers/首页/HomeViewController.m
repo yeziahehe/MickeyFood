@@ -63,27 +63,30 @@
     self.subViewArray = [NSMutableArray arrayWithContentsOfFile:path];
     
     //加载每个子模块
-    CGFloat originY = kSubViewGap;
+    CGFloat originY = 0.f;
     [self.contentScrollView layoutIfNeeded];
     for (NSString *classString in self.subViewArray) {
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:classString owner:self options:nil];
         HomeSubView *homeSubView = [nibs lastObject];
         CGRect rect = homeSubView.frame;
-        //rect.size.width = ScreenWidth;
+        rect.size.width = ScreenWidth;
         rect.origin.y = originY;
         rect.origin.x = 0.0f;
         if ([homeSubView isKindOfClass:[ImagesContainView class]]) {
             ImagesContainView *icv = (ImagesContainView *)homeSubView;
-            rect.size.height = icv.frame.size.height;
-            icv.translatesAutoresizingMaskIntoConstraints = YES;
+            rect.size.height = icv.frame.size.height/320 * ScreenWidth;
             if (self.newsListArray.count > 0) {
                 [icv reloadWithProductAds:self.newsListArray];
             }
         }
         else if ([homeSubView isKindOfClass:[HomeModuleView class]]) {
             HomeModuleView *hmv = (HomeModuleView *)homeSubView;
-            rect.size.height = hmv.frame.size.height;
-            hmv.translatesAutoresizingMaskIntoConstraints = YES;
+            rect.size.height = hmv.frame.size.height/320 * ScreenWidth;
+            NSLog(@"%f",[UIScreen mainScreen].bounds.size.height);
+            if (IsDevicePhone4) {}
+            else {
+                rect.origin.y = ScreenHeight - 49.f - rect.size.height - 64.f;
+            }
         }
         homeSubView.frame = rect;
         [self.contentScrollView addSubview:homeSubView];

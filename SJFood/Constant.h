@@ -34,6 +34,7 @@
 //Constant Values
 #define kMaxCacheSize       1000*1024*1024
 #define IsIos8              [[UIDevice currentDevice].systemVersion floatValue]>=8.0?YES:NO
+#define IsDevicePhone4      [UIScreen mainScreen].bounds.size.height==480.f?YES:NO
 #define IsDevicePhone5      [UIScreen mainScreen].bounds.size.height==568.f?YES:NO
 #define IsDevicePhone6      [UIScreen mainScreen].bounds.size.height==667.f?YES:NO
 #define IsDevicePhone6P     [UIScreen mainScreen].bounds.size.height==736.f?YES:NO
