@@ -29,6 +29,22 @@
 		75158D211A2EBBE60034523F /* ForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D1F1A2EBBE60034523F /* ForgetPwdViewController.xib */; };
 		75158D251A2EBC190034523F /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75158D231A2EBC190034523F /* ResetPwdViewController.m */; };
 		75158D261A2EBC190034523F /* ResetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75158D241A2EBC190034523F /* ResetPwdViewController.xib */; };
+		75164D8D1ABAA7AA0046F86E /* guidepage_1_480h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D891ABAA7AA0046F86E /* guidepage_1_480h@2x.png */; };
+		75164D8E1ABAA7AA0046F86E /* guidepage_1_568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D8A1ABAA7AA0046F86E /* guidepage_1_568h@2x.png */; };
+		75164D8F1ABAA7AA0046F86E /* guidepage_1_667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D8B1ABAA7AA0046F86E /* guidepage_1_667h@2x.png */; };
+		75164D901ABAA7AA0046F86E /* guidepage_1_736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D8C1ABAA7AA0046F86E /* guidepage_1_736h@3x.png */; };
+		75164D951ABAA7B50046F86E /* guidepage_2_480h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D911ABAA7B50046F86E /* guidepage_2_480h@2x.png */; };
+		75164D961ABAA7B50046F86E /* guidepage_2_568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D921ABAA7B50046F86E /* guidepage_2_568h@2x.png */; };
+		75164D971ABAA7B50046F86E /* guidepage_2_667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D931ABAA7B50046F86E /* guidepage_2_667h@2x.png */; };
+		75164D981ABAA7B50046F86E /* guidepage_2_736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D941ABAA7B50046F86E /* guidepage_2_736h@3x.png */; };
+		75164D9D1ABAA7C30046F86E /* guidepage_3_480h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D991ABAA7C30046F86E /* guidepage_3_480h@2x.png */; };
+		75164D9E1ABAA7C30046F86E /* guidepage_3_568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D9A1ABAA7C30046F86E /* guidepage_3_568h@2x.png */; };
+		75164D9F1ABAA7C30046F86E /* guidepage_3_667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D9B1ABAA7C30046F86E /* guidepage_3_667h@2x.png */; };
+		75164DA01ABAA7C30046F86E /* guidepage_3_736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164D9C1ABAA7C30046F86E /* guidepage_3_736h@3x.png */; };
+		75164DA51ABAA7D00046F86E /* guidepage_4_480h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164DA11ABAA7D00046F86E /* guidepage_4_480h@2x.png */; };
+		75164DA61ABAA7D00046F86E /* guidepage_4_568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164DA21ABAA7D00046F86E /* guidepage_4_568h@2x.png */; };
+		75164DA71ABAA7D00046F86E /* guidepage_4_667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164DA31ABAA7D00046F86E /* guidepage_4_667h@2x.png */; };
+		75164DAA1ABAA81B0046F86E /* guidepage_4_736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75164DA91ABAA81B0046F86E /* guidepage_4_736h@3x.png */; };
 		7519C7791AB962B40069F400 /* HomeSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7519C7781AB962B40069F400 /* HomeSubView.m */; };
 		7519C77B1AB964550069F400 /* HomeMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7519C77A1AB964550069F400 /* HomeMap.plist */; };
 		751B20FD1AB1D4B000B1CFE6 /* btn_cancel_specal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 751B20FB1AB1D4B000B1CFE6 /* btn_cancel_specal@2x.png */; };
@@ -381,6 +397,22 @@
 		75158D221A2EBC190034523F /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
 		75158D231A2EBC190034523F /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		75158D241A2EBC190034523F /* ResetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPwdViewController.xib; sourceTree = "<group>"; };
+		75164D891ABAA7AA0046F86E /* guidepage_1_480h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_1_480h@2x.png"; sourceTree = "<group>"; };
+		75164D8A1ABAA7AA0046F86E /* guidepage_1_568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_1_568h@2x.png"; sourceTree = "<group>"; };
+		75164D8B1ABAA7AA0046F86E /* guidepage_1_667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_1_667h@2x.png"; sourceTree = "<group>"; };
+		75164D8C1ABAA7AA0046F86E /* guidepage_1_736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_1_736h@3x.png"; sourceTree = "<group>"; };
+		75164D911ABAA7B50046F86E /* guidepage_2_480h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_2_480h@2x.png"; sourceTree = "<group>"; };
+		75164D921ABAA7B50046F86E /* guidepage_2_568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_2_568h@2x.png"; sourceTree = "<group>"; };
+		75164D931ABAA7B50046F86E /* guidepage_2_667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_2_667h@2x.png"; sourceTree = "<group>"; };
+		75164D941ABAA7B50046F86E /* guidepage_2_736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_2_736h@3x.png"; sourceTree = "<group>"; };
+		75164D991ABAA7C30046F86E /* guidepage_3_480h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_3_480h@2x.png"; sourceTree = "<group>"; };
+		75164D9A1ABAA7C30046F86E /* guidepage_3_568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_3_568h@2x.png"; sourceTree = "<group>"; };
+		75164D9B1ABAA7C30046F86E /* guidepage_3_667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_3_667h@2x.png"; sourceTree = "<group>"; };
+		75164D9C1ABAA7C30046F86E /* guidepage_3_736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_3_736h@3x.png"; sourceTree = "<group>"; };
+		75164DA11ABAA7D00046F86E /* guidepage_4_480h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_4_480h@2x.png"; sourceTree = "<group>"; };
+		75164DA21ABAA7D00046F86E /* guidepage_4_568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_4_568h@2x.png"; sourceTree = "<group>"; };
+		75164DA31ABAA7D00046F86E /* guidepage_4_667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_4_667h@2x.png"; sourceTree = "<group>"; };
+		75164DA91ABAA81B0046F86E /* guidepage_4_736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guidepage_4_736h@3x.png"; sourceTree = "<group>"; };
 		7519C7771AB962B40069F400 /* HomeSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSubView.h; sourceTree = "<group>"; };
 		7519C7781AB962B40069F400 /* HomeSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSubView.m; sourceTree = "<group>"; };
 		7519C77A1AB964550069F400 /* HomeMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeMap.plist; sourceTree = "<group>"; };
@@ -959,6 +991,22 @@
 		7533EEB11A2E14C6001D12D4 /* 欢迎页 */ = {
 			isa = PBXGroup;
 			children = (
+				75164D891ABAA7AA0046F86E /* guidepage_1_480h@2x.png */,
+				75164D8A1ABAA7AA0046F86E /* guidepage_1_568h@2x.png */,
+				75164D8B1ABAA7AA0046F86E /* guidepage_1_667h@2x.png */,
+				75164D8C1ABAA7AA0046F86E /* guidepage_1_736h@3x.png */,
+				75164D911ABAA7B50046F86E /* guidepage_2_480h@2x.png */,
+				75164D921ABAA7B50046F86E /* guidepage_2_568h@2x.png */,
+				75164D931ABAA7B50046F86E /* guidepage_2_667h@2x.png */,
+				75164D941ABAA7B50046F86E /* guidepage_2_736h@3x.png */,
+				75164D991ABAA7C30046F86E /* guidepage_3_480h@2x.png */,
+				75164D9A1ABAA7C30046F86E /* guidepage_3_568h@2x.png */,
+				75164D9B1ABAA7C30046F86E /* guidepage_3_667h@2x.png */,
+				75164D9C1ABAA7C30046F86E /* guidepage_3_736h@3x.png */,
+				75164DA11ABAA7D00046F86E /* guidepage_4_480h@2x.png */,
+				75164DA21ABAA7D00046F86E /* guidepage_4_568h@2x.png */,
+				75164DA31ABAA7D00046F86E /* guidepage_4_667h@2x.png */,
+				75164DA91ABAA81B0046F86E /* guidepage_4_736h@3x.png */,
 			);
 			name = "欢迎页";
 			sourceTree = "<group>";
@@ -1770,6 +1818,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75EED4401A320F61002ECA75 /* UserInfoTableViewCell.xib in Resources */,
+				75164DA71ABAA7D00046F86E /* guidepage_4_667h@2x.png in Resources */,
 				758954481A24BB0E001C2350 /* RootTabBarViewController.xib in Resources */,
 				75D1E2C11A3ACA25008555B1 /* btn_edit_address@2x.png in Resources */,
 				75F5F3BD1AB8A31E00FA849E /* btn_today_cool@3x.png in Resources */,
@@ -1797,11 +1846,13 @@
 				756C62FA1A47083B007B2ECB /* bg_star_half@3x.png in Resources */,
 				7533EF021A2E1549001D12D4 /* icon_header_back@2x.png in Resources */,
 				75F5F3BB1AB8A31E00FA849E /* btn_special_food@3x.png in Resources */,
+				75164D9D1ABAA7C30046F86E /* guidepage_3_480h@2x.png in Resources */,
 				75E478A41A7F6AAC002DC26D /* icon_no_food@2x.png in Resources */,
 				7533EF091A2E177E001D12D4 /* htmlTemplate.html in Resources */,
 				7533EEC91A2E14E7001D12D4 /* icon_message@2x.png in Resources */,
 				755722921A344C4B00CC6A8F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				75D1E2BE1A3AC806008555B1 /* btn_default_address@3x.png in Resources */,
+				75164D8E1ABAA7AA0046F86E /* guidepage_1_568h@2x.png in Resources */,
 				75EED4351A320B79002ECA75 /* icon_setting@3x.png in Resources */,
 				758E4C9E1A42BD2E004547E2 /* FoodTableViewCell.xib in Resources */,
 				755722671A34334E00CC6A8F /* AboutAppViewController.xib in Resources */,
@@ -1812,6 +1863,7 @@
 				75F5F3B71AB8A31E00FA849E /* btn_hot_food@3x.png in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
 				7533463E1A416C40000CD338 /* btn_food_sort_selected@3x.png in Resources */,
+				75164D951ABAA7B50046F86E /* guidepage_2_480h@2x.png in Resources */,
 				755077621A46BAB800CD18EF /* bg_star_full@3x.png in Resources */,
 				75D1E2C71A3ACEC5008555B1 /* AddressEditViewController.xib in Resources */,
 				75F5F3BF1AB8A31E00FA849E /* btn_today_discount@3x.png in Resources */,
@@ -1823,9 +1875,11 @@
 				758116381A27611900065E65 /* HomeViewController.xib in Resources */,
 				75D1E2CC1A3ACEE5008555B1 /* AddressAddViewController.xib in Resources */,
 				75F594C11AA74740004B3CDF /* btn_default_shopping_selected@3x.png in Resources */,
+				75164D981ABAA7B50046F86E /* guidepage_2_736h@3x.png in Resources */,
 				75F5F3BA1AB8A31E00FA849E /* btn_special_food@2x.png in Resources */,
 				7514E50F1A3D890D0091A26D /* CategoryViewController.xib in Resources */,
 				7533EEF21A2E1536001D12D4 /* icon_confirm_pwd@2x.png in Resources */,
+				75164D8D1ABAA7AA0046F86E /* guidepage_1_480h@2x.png in Resources */,
 				7533EEF01A2E1536001D12D4 /* icon_code@2x.png in Resources */,
 				751B20FE1AB1D4B000B1CFE6 /* btn_cancel_specal@3x.png in Resources */,
 				75AD58311A3810C000E39640 /* ShareViewController.xib in Resources */,
@@ -1844,6 +1898,7 @@
 				7557224E1A33356500CC6A8F /* SettingTableViewCell.xib in Resources */,
 				7589543C1A24B853001C2350 /* StartViewController.xib in Resources */,
 				75A95CBF1A4014540009962F /* CategoryTableView.xib in Resources */,
+				75164DA51ABAA7D00046F86E /* guidepage_4_480h@2x.png in Resources */,
 				75EED4171A31F7DA002ECA75 /* icon_comment@2x.png in Resources */,
 				751B20FD1AB1D4B000B1CFE6 /* btn_cancel_specal@2x.png in Resources */,
 				75EED4131A31F7D1002ECA75 /* icon_receive@2x.png in Resources */,
@@ -1852,6 +1907,7 @@
 				757DE9A21A455E560054BE47 /* FoodDetailViewController.xib in Resources */,
 				7533EEF11A2E1536001D12D4 /* icon_code@3x.png in Resources */,
 				758937BD1AB673A30003ECEE /* btn_shopping@2x.png in Resources */,
+				75164DAA1ABAA81B0046F86E /* guidepage_4_736h@3x.png in Resources */,
 				75A95CD91A4035D00009962F /* tab_select_bg@2x.png in Resources */,
 				758512961A32F43400504FA8 /* MyAccountViewController.xib in Resources */,
 				75EED4301A320B79002ECA75 /* icon_feedback@2x.png in Resources */,
@@ -1872,9 +1928,12 @@
 				7542C48F1A2CD09E00BB083D /* ConfirmViewController.xib in Resources */,
 				7533EEEC1A2E1536001D12D4 /* btn_full@2x.png in Resources */,
 				755722BB1A34891400CC6A8F /* icon_qzone@3x.png in Resources */,
+				75164D8F1ABAA7AA0046F86E /* guidepage_1_667h@2x.png in Resources */,
 				757DE9A81A45617F0054BE47 /* bg_add_shopping_car@3x.png in Resources */,
+				75164D901ABAA7AA0046F86E /* guidepage_1_736h@3x.png in Resources */,
 				758937BF1AB673A30003ECEE /* btn_user@2x.png in Resources */,
 				75EED42F1A320B79002ECA75 /* icon_address@3x.png in Resources */,
+				75164DA61ABAA7D00046F86E /* guidepage_4_568h@2x.png in Resources */,
 				7557228F1A344C4B00CC6A8F /* Resource.bundle in Resources */,
 				756C62F01A47071C007B2ECB /* bg_star_empty@3x.png in Resources */,
 				7550776B1A46BCF300CD18EF /* FoodImageDetailView.xib in Resources */,
@@ -1912,6 +1971,7 @@
 				7533EED71A2E150A001D12D4 /* line_ver_1px_right.png in Resources */,
 				75A95CAF1A4006BD0009962F /* CategoryTableViewCell.xib in Resources */,
 				7519C77B1AB964550069F400 /* HomeMap.plist in Resources */,
+				75164D961ABAA7B50046F86E /* guidepage_2_568h@2x.png in Resources */,
 				7533463D1A416C40000CD338 /* btn_food_sort_selected@2x.png in Resources */,
 				7542C4A51A2D972400BB083D /* UserInfoViewController.xib in Resources */,
 				758937BA1AB673A30003ECEE /* btn_category@3x.png in Resources */,
@@ -1920,6 +1980,7 @@
 				75A35B9E1A39B85E00533148 /* btn_add_address@2x.png in Resources */,
 				757DE9A91A45617F0054BE47 /* bg_buy_shopping@2x.png in Resources */,
 				75EED4391A320B79002ECA75 /* icon_user_message@3x.png in Resources */,
+				75164D9E1ABAA7C30046F86E /* guidepage_3_568h@2x.png in Resources */,
 				755722B31A34886500CC6A8F /* ShareSettingMap.plist in Resources */,
 				75AD582F1A3810C000E39640 /* ShareTableViewCell.xib in Resources */,
 				75AD583D1A38122C00E39640 /* MyAccountMap.plist in Resources */,
@@ -1936,6 +1997,7 @@
 				75EED43B1A320DDA002ECA75 /* OrderInfoMap.plist in Resources */,
 				7533EECA1A2E14E7001D12D4 /* icon_message@3x.png in Resources */,
 				7550774F1A469F0700CD18EF /* FoodHeaderView.xib in Resources */,
+				75164D971ABAA7B50046F86E /* guidepage_2_667h@2x.png in Resources */,
 				75EED42E1A320B79002ECA75 /* icon_address@2x.png in Resources */,
 				75AD585A1A388F5F00E39640 /* AddressTableViewCell.xib in Resources */,
 				75AD583B1A38113A00E39640 /* MyAccountTableViewCell.xib in Resources */,
@@ -1944,11 +2006,13 @@
 				75F594BD1AA72999004B3CDF /* ShoppingCarTableViewCell.xib in Resources */,
 				7533EEED1A2E1536001D12D4 /* btn_full@3x.png in Resources */,
 				75A95CDD1A403B0A0009962F /* loading_square.png in Resources */,
+				75164DA01ABAA7C30046F86E /* guidepage_3_736h@3x.png in Resources */,
 				7533EEF31A2E1536001D12D4 /* icon_confirm_pwd@3x.png in Resources */,
 				75D1E2C21A3ACA25008555B1 /* btn_edit_address@3x.png in Resources */,
 				755077541A46A2DE00CD18EF /* FoodParamView.xib in Resources */,
 				75EED4031A31EDDE002ECA75 /* icon_user_image_defult@2x.png in Resources */,
 				7533EED51A2E150A001D12D4 /* line_hon_1px_up.png in Resources */,
+				75164D9F1ABAA7C30046F86E /* guidepage_3_667h@2x.png in Resources */,
 				7533EEFC1A2E1536001D12D4 /* icon_user@2x.png in Resources */,
 				7533EF031A2E1549001D12D4 /* icon_header_back@3x.png in Resources */,
 				758937C01AB673A30003ECEE /* btn_user@3x.png in Resources */,

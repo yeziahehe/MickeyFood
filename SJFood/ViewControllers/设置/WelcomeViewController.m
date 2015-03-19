@@ -57,31 +57,31 @@
     // Do any additional setup after loading the view from its nib.
     if(IsDevicePhone6P)
     {
-        self.welcomeImageArray = [NSArray arrayWithObjects:@"v2ex_736h@2x.png", @"v2ex_736h@2x.png",@"v2ex_736h@2x.png",nil];
+        self.welcomeImageArray = [NSArray arrayWithObjects:@"guidepage_1_736h@3x.png", @"guidepage_2_736h@3x.png",@"guidepage_3_736h@3x.png",@"guidepage_4_736h@3x.png", nil];
     }
     else if (IsDevicePhone6)
     {
-        self.welcomeImageArray = [NSArray arrayWithObjects:@"v2ex_667h@2x.png", @"v2ex_667h@2x.png",@"v2ex_667h@2x.png",nil];
+        self.welcomeImageArray = [NSArray arrayWithObjects:@"guidepage_1_667h@2x.png", @"guidepage_2_667h@2x.png",@"guidepage_3_667h@2x.png",@"guidepage_4_667h@2x.png",nil];
     }
     else if (IsDevicePhone5)
     {
-        self.welcomeImageArray = [NSArray arrayWithObjects:@"v2ex_736h@2x.png", @"v2ex_736h@2x.png",@"v2ex_736h@2x.png",nil];
+        self.welcomeImageArray = [NSArray arrayWithObjects:@"guidepage_1_568h@2x.png", @"guidepage_2_568h@2x.png",@"guidepage_3_568h@2x.png",@"guidepage_4_568h@2x.png",nil];
     }
     else
     {
-        self.welcomeImageArray = [NSArray arrayWithObjects:@"v2ex_736h@2x.png", @"v2ex_736h@2x.png",@"v2ex_736h@2x.png",nil];
+        self.welcomeImageArray = [NSArray arrayWithObjects:@"guidepage_1_480h@2x.png", @"guidepage_2_480h@2x.png",@"guidepage_3_480h@2x.png",@"guidepage_4_480h@2x.png",nil];
     }
     
     NSInteger index = 0;
     for(NSString *imgName in self.welcomeImageArray)
     {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(index*ScreenWidth, 0, ScreenWidth, ScreenWidth)];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(index*ScreenWidth, 0, ScreenWidth, ScreenHeight)];
         imgView.image = [UIImage imageNamed:imgName];
-        imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+        //imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [self.welcomeScrollView addSubview:imgView];
         index++;
     }
-    [self.welcomeScrollView setContentSize:CGSizeMake(ScreenWidth*self.welcomeImageArray.count, [UIScreen mainScreen].bounds.size.height)];
+    [self.welcomeScrollView setContentSize:CGSizeMake(ScreenWidth*self.welcomeImageArray.count, 0)];
     
     UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeWithGesture:)];
     swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;

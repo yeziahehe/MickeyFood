@@ -52,23 +52,23 @@
     // to do
     if(IsDevicePhone6P)
     {
-        self.startImageView.image = [UIImage imageNamed:@"v2ex_736h@2x.png"];
-        self.guideArray = [NSArray arrayWithObjects:@"v2ex_736h@2x.png", @"v2ex_736h@2x.png",@"v2ex_736h@2x.png",nil];
+        //self.startImageView.image = [UIImage imageNamed:@"v2ex_736h@2x.png"];
+        self.guideArray = [NSArray arrayWithObjects:@"guidepage_1_736h@3x.png", @"guidepage_2_736h@3x.png",@"guidepage_3_736h@3x.png",@"guidepage_4_736h@3x.png", nil];
     }
     else if (IsDevicePhone6)
     {
-        self.startImageView.image = [UIImage imageNamed:@"v2ex_667h@2x.png"];
-        self.guideArray = [NSArray arrayWithObjects:@"v2ex_667h@2x.png", @"v2ex_667h@2x.png",@"v2ex_667h@2x.png",nil];
+        //self.startImageView.image = [UIImage imageNamed:@"v2ex_667h@2x.png"];
+        self.guideArray = [NSArray arrayWithObjects:@"guidepage_1_667h@2x.png", @"guidepage_2_667h@2x.png",@"guidepage_3_667h@2x.png",@"guidepage_4_667h@2x.png",nil];
     }
     else if (IsDevicePhone5)
     {
-        self.startImageView.image = [UIImage imageNamed:@"v2ex_568h@2x.png"];
-        self.guideArray = [NSArray arrayWithObjects:@"v2ex_736h@2x.png", @"v2ex_736h@2x.png",@"v2ex_736h@2x.png",nil];
+        //self.startImageView.image = [UIImage imageNamed:@"v2ex_568h@2x.png"];
+        self.guideArray = [NSArray arrayWithObjects:@"guidepage_1_568h@2x.png", @"guidepage_2_568h@2x.png",@"guidepage_3_568h@2x.png",@"guidepage_4_568h@2x.png",nil];
     }
     else
     {
-        self.startImageView.image = [UIImage imageNamed:@"v2ex_480h@2x.png"];
-        self.guideArray = [NSArray arrayWithObjects:@"v2ex_736h@2x.png", @"v2ex_736h@2x.png",@"v2ex_736h@2x.png",nil];
+        //self.startImageView.image = [UIImage imageNamed:@"v2ex_480h@2x.png"];
+        self.guideArray = [NSArray arrayWithObjects:@"guidepage_1_480h@2x.png", @"guidepage_2_480h@2x.png",@"guidepage_3_480h@2x.png",@"guidepage_4_480h@2x.png",nil];
     }
     
     if([[[NSUserDefaults standardUserDefaults] objectForKey:kIsWelcomeShown] isEqualToString:@"1"])
@@ -87,11 +87,11 @@
         {
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(index*ScreenWidth, 0, ScreenWidth, ScreenHeight)];
             imgView.image = [UIImage imageNamed:imgName];
-            imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+            //imgView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
             [self.startScrollView addSubview:imgView];
             index++;
         }
-        [self.startScrollView setContentSize:CGSizeMake(ScreenWidth*self.guideArray.count, [UIScreen mainScreen].bounds.size.height)];
+        [self.startScrollView setContentSize:CGSizeMake(ScreenWidth*self.guideArray.count, 0)];
         
         UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeWithGesture:)];
         swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
