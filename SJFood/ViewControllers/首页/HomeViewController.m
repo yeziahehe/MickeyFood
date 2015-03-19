@@ -73,7 +73,8 @@
         rect.origin.x = 0.0f;
         if ([homeSubView isKindOfClass:[ImagesContainView class]]) {
             ImagesContainView *icv = (ImagesContainView *)homeSubView;
-            rect.size.height = icv.frame.size.height/320 * ScreenWidth;
+            //rect.size.height = icv.frame.size.height/320 * ScreenWidth;
+            rect.size.height = ScreenHeight - 49.f - 64.f - 276.f*ScreenWidth/320.f;
             if (self.newsListArray.count > 0) {
                 [icv reloadWithProductAds:self.newsListArray];
             }

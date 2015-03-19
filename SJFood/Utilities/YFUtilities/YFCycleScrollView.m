@@ -58,6 +58,7 @@
             CGRect rect = self.bounds;
             rect.size.width = ScreenWidth;
             rect.origin.x = index*ScreenWidth;
+            rect.size.height = ScreenHeight - 49.f - 64.f - 276.f*ScreenWidth/320.f;
             asynImgView.frame = rect;
             asynImgView.contentMode = UIViewContentModeScaleAspectFill;
             //加载图片
@@ -72,7 +73,7 @@
             [self addSubview:asynImgView];
             index++;
         }
-        [self setContentSize:CGSizeMake(ScreenWidth*self.cycleArray.count, self.frame.size.height)];
+        [self setContentSize:CGSizeMake(ScreenWidth*self.cycleArray.count, 0)];
         [self setContentOffset:CGPointMake(ScreenWidth, 0)];
     }
     else
