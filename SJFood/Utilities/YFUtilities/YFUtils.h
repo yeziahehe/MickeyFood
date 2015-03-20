@@ -24,6 +24,8 @@
     加入iOS8下tableview分割线的问题
  -v1.5
     加入截屏和毛玻璃效果
+ -v1.6
+    加入头图海报通用类和计算cell中label，text高度的类
 */
 
 #ifndef YFUtils_YFUtils_h
@@ -45,6 +47,7 @@
 #import "UIImage+YFBlurGlass.h"
 #import "UIImage+YFScreenShot.h"
 #import "YFCycleScrollView.h"
+#import "YFCommonMethods.h"
 
 #endif
 

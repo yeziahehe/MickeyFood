@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -16,7 +16,11 @@
             </tabBar>
             <viewControllers>
                 <navigationController definesPresentationContext="YES" id="ApY-LZ-J8t" userLabel="首页" customClass="CustomNavigationController">
-                    <tabBarItem key="tabBarItem" title="首页" image="btn_home.png" id="m0S-cV-HGi" userLabel="首页"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="btn_home.png" id="m0S-cV-HGi" userLabel="首页">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="btn_home_selected.png"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VJL-qP-fp2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +32,11 @@
                     </viewControllers>
                 </navigationController>
                 <navigationController definesPresentationContext="YES" id="dK7-HT-iC8" userLabel="挑食" customClass="CustomLightNavigationController">
-                    <tabBarItem key="tabBarItem" title="挑食" image="btn_category.png" id="YPf-hZ-VIz"/>
+                    <tabBarItem key="tabBarItem" title="挑食" image="btn_category.png" id="YPf-hZ-VIz">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="btn_category_selected.png"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DWj-th-3hO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,7 +48,11 @@
                     </viewControllers>
                 </navigationController>
                 <navigationController definesPresentationContext="YES" id="Cvn-Lx-B7O" userLabel="购物车" customClass="CustomLightNavigationController">
-                    <tabBarItem key="tabBarItem" title="购物车" image="btn_shopping.png" id="gmA-aF-PkS"/>
+                    <tabBarItem key="tabBarItem" title="购物车" image="btn_shopping.png" id="gmA-aF-PkS">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="btn_shopping_selected.png"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TYQ-Ne-uZl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +64,11 @@
                     </viewControllers>
                 </navigationController>
                 <navigationController definesPresentationContext="YES" id="8mh-ca-kl7" userLabel="我的" customClass="CustomLightNavigationController">
-                    <tabBarItem key="tabBarItem" title="我的" image="btn_user.png" id="IIy-ar-FDw" userLabel="我的"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="btn_user.png" id="IIy-ar-FDw" userLabel="我的">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="btn_user_selected.png"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tre-8Y-lAp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -72,9 +88,13 @@
     </objects>
     <resources>
         <image name="btn_category.png" width="23" height="23"/>
+        <image name="btn_category_selected.png" width="23" height="23"/>
         <image name="btn_home.png" width="23" height="23"/>
+        <image name="btn_home_selected.png" width="33" height="33"/>
         <image name="btn_shopping.png" width="21" height="22"/>
+        <image name="btn_shopping_selected.png" width="23" height="23"/>
         <image name="btn_user.png" width="20" height="22"/>
+        <image name="btn_user_selected.png" width="23" height="23"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

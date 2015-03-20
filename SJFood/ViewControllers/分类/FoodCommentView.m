@@ -17,6 +17,7 @@
 }
 
 - (IBAction)commentButtonClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kRemarkViewShowNotification object:nil];
 }
 
 #pragma mark - Public Methods

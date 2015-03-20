@@ -13,6 +13,7 @@
 #import "FoodCommentView.h"
 #import "FoodImageDetailView.h"
 #import "SpecView.h"
+#import "FoodRemarkViewController.h"
 
 #define kGetFoodByIdDownloaderKey         @"GetFoodByIdDownloaderKey"
 #define kFoodDetailMapFileName            @"FoodDetailMap"
@@ -134,6 +135,13 @@
     }
 }
 
+- (void)remarkViewShowNotification:(NSNotification *)notification
+{
+    FoodRemarkViewController *foodRemarkViewController = [[FoodRemarkViewController alloc] initWithNibName:@"FoodRemarkViewController" bundle:nil];
+    foodRemarkViewController.foodId = self.foodId;
+    [self.navigationController pushViewController:foodRemarkViewController animated:YES];
+}
+
 #pragma mark - BaseViewController Methods
 - (void)extraItemTapped
 {
@@ -149,6 +157,7 @@
     [self requestForFoodDetail];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(specChooseNotification:) name:kSpecChooseNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(specViewShowNotification:) name:kSpecViewShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(remarkViewShowNotification:) name:kRemarkViewShowNotification object:nil];
 }
 
 - (void)dealloc

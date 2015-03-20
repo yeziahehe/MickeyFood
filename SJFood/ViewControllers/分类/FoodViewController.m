@@ -237,6 +237,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     FoodDetailViewController *foodDetailViewController = [[FoodDetailViewController alloc] initWithNibName:@"FoodDetailViewController" bundle:nil];
     FoodSelect *foods = [self.foodArray objectAtIndex:indexPath.row];
     foodDetailViewController.foodId = foods.foodId;
@@ -273,6 +274,11 @@
                         [self.foodArray addObject:fs];
                     }
                     self.lastestId = @"1";
+                    if (valueArray.count < 10) {
+                        [self.foodTableView removeFooter];
+                        self.loadMessageLabel.text = @"已加载全部食品";
+                        self.foodTableView.tableFooterView = self.messageFooterView;
+                    }
                 }
             }
             else
@@ -292,6 +298,11 @@
                     }
                     NSString *previousId = [NSString stringWithFormat:@"%ldd",[self.lastestId integerValue] + 1];
                     self.lastestId = previousId;
+                    if (valueArray.count < 10) {
+                        [self.foodTableView removeFooter];
+                        self.loadMessageLabel.text = @"已加载全部食品";
+                        self.foodTableView.tableFooterView = self.messageFooterView;
+                    }
                 }
             }
             [self loadSubViews];

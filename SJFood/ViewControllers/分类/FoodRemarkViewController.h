@@ -9,5 +9,9 @@
 #import "BaseViewController.h"
 
 @interface FoodRemarkViewController : BaseViewController
+@property (strong, nonatomic) IBOutlet UITableView *remarkTableView;
+@property (strong, nonatomic) NSString *foodId;
+@property (strong, nonatomic) IBOutlet UIView *messageFooterView;
+@property (strong, nonatomic) IBOutlet UILabel *loadMessageLabel;
 
 @end
