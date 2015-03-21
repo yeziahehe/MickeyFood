@@ -99,5 +99,6 @@
 #define kCreateOrderUrl         @"order/createOrder.do"
 #define kGetMainImageUrl        @"news/getMainImage.do"
 #define kGetCommentsUrl         @"food/getCommentsByFoodId.do"
+#define kUploadImageUrl         @"user/uploadUserImage.do"
 
 #endif

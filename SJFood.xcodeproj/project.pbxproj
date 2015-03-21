@@ -185,6 +185,7 @@
 		756C62FA1A47083B007B2ECB /* bg_star_half@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C62F81A47083B007B2ECB /* bg_star_half@3x.png */; };
 		756C62FD1A4721AD007B2ECB /* FoodDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 756C62FC1A4721AD007B2ECB /* FoodDetail.m */; };
 		757331D81A3C0EB300D32E12 /* feedback_input_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 757331D71A3C0EB300D32E12 /* feedback_input_box.png */; };
+		757B7CA11ABD857F00470F69 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757B7C9F1ABD855700470F69 /* AssetsLibrary.framework */; };
 		757DE9A11A455E560054BE47 /* FoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DE99F1A455E560054BE47 /* FoodDetailViewController.m */; };
 		757DE9A21A455E560054BE47 /* FoodDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757DE9A01A455E560054BE47 /* FoodDetailViewController.xib */; };
 		757DE9A71A45617F0054BE47 /* bg_add_shopping_car@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757DE9A31A45617F0054BE47 /* bg_add_shopping_car@2x.png */; };
@@ -604,6 +605,7 @@
 		756C62FB1A4721AD007B2ECB /* FoodDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodDetail.h; sourceTree = "<group>"; };
 		756C62FC1A4721AD007B2ECB /* FoodDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodDetail.m; sourceTree = "<group>"; };
 		757331D71A3C0EB300D32E12 /* feedback_input_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback_input_box.png; sourceTree = "<group>"; };
+		757B7C9F1ABD855700470F69 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		757DE99E1A455E560054BE47 /* FoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodDetailViewController.h; sourceTree = "<group>"; };
 		757DE99F1A455E560054BE47 /* FoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodDetailViewController.m; sourceTree = "<group>"; };
 		757DE9A01A455E560054BE47 /* FoodDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetailViewController.xib; sourceTree = "<group>"; };
@@ -875,6 +877,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757B7CA11ABD857F00470F69 /* AssetsLibrary.framework in Frameworks */,
 				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				755722AC1A344E6400CC6A8F /* libsqlite3.dylib in Frameworks */,
 				755722AA1A344E5600CC6A8F /* libstdc++.dylib in Frameworks */,
@@ -1550,6 +1553,7 @@
 		7589544F1A24E663001C2350 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				757B7C9F1ABD855700470F69 /* AssetsLibrary.framework */,
 				75AD58511A387EA800E39640 /* CoreLocation.framework */,
 				7557226D1A344C4B00CC6A8F /* ShareSDK2.10.3 */,
 				755722AB1A344E6400CC6A8F /* libsqlite3.dylib */,

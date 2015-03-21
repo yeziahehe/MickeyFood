@@ -33,4 +33,14 @@
  */
 + (CGFloat)measureHeightOfUILabel:(UILabel *)textLabel;
 
+/**
+ *  base64编码
+ *  文字或图片转成二进制data之后进行base64编码，lineLength传0即可
+ *  @param imgData    需要编码的数据流
+ *  @param lineLength 传0即可
+ *
+ *  @return 编码后的base64字符串
+ */
++ (NSString *) base64StringFromData:(NSData *)imgData length:(NSInteger)lineLength;
+
 @end

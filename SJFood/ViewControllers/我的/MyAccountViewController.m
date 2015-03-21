@@ -14,6 +14,7 @@
 #import "ShareViewController.h"
 
 #define kMyAccountMapFileName           @"MyAccountMap"
+#define kUploadImageDownloadKey         @"UploadImageDownloadKey"
 
 @interface MyAccountViewController ()
 @property (nonatomic, strong) NSArray *myAccountArray;
@@ -35,6 +36,20 @@
     [self.MyAccountTableView reloadData];
 }
 
+- (void)uploadImageRequestForImageFile:(NSData *)imageFile
+{
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kUploadImageUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
+    [dict setObject:[YFCommonMethods base64StringFromData:imageFile length:0] forKey:@"image"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kUploadImageDownloadKey];
+    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"上传头像中..."];
+}
+
 #pragma mark - Notification Methods
 - (void)refreshAccountWithNotification:(NSNotification *)notification
 {
@@ -42,6 +57,12 @@
 }
 
 #pragma mark - UIViewController Methods
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+    [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -192,6 +213,8 @@
     
     self.imageData = userIconData;
     self.imageFileName = mediaPicker.fileName;
+    //上传图片请求
+    [self uploadImageRequestForImageFile:self.imageData];
 }
 
 - (void)didGetFileFailedWithMessage:(NSString *)message
@@ -216,5 +239,38 @@
         [[YFMediaPicker sharedPicker] getPhotoFromLibrary];
     }
 }
+
+#pragma mark - YFDownloaderDelegate Methods
+- (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData *)data
+{
+    NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [str JSONValue];
+    if ([downloader.purpose isEqualToString:kUploadImageDownloadKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"上传头像成功" hideDelay:2.f];
+            [self loadSubViews];
+        }
+    }
+    else
+    {
+        NSString *message = [dict objectForKey:kMessageKey];
+        if ([message isKindOfClass:[NSNull class]])
+        {
+            message = @"";
+        }
+        if(message.length == 0)
+            message = @"上传头像失败";
+        [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+    }
+}
+
+- (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString *)message
+{
+    NSLog(@"%@",message);
+    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:kNetWorkErrorString hideDelay:2.f];
+}
+
 
 @end

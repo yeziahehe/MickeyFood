@@ -65,7 +65,7 @@
             self.imagePickerController.mediaTypes = [NSArray arrayWithObjects:@"public.image",@"public.movie", nil];
         }
         self.imagePickerController.delegate = self;
-        self.imagePickerController.allowsEditing = self.mediaEditing;
+        self.imagePickerController.allowsEditing = YES;
         
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
         {
@@ -103,7 +103,7 @@
             self.imagePickerController.mediaTypes = [NSArray arrayWithObjects:@"public.image",@"public.movie", nil];
         }
         self.imagePickerController.delegate = self;
-        self.imagePickerController.allowsEditing = self.mediaEditing;
+        self.imagePickerController.allowsEditing = YES;
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         {
             return self.imagePickerController;
