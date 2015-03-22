@@ -74,7 +74,7 @@
         if ([homeSubView isKindOfClass:[ImagesContainView class]]) {
             ImagesContainView *icv = (ImagesContainView *)homeSubView;
             //rect.size.height = icv.frame.size.height/320 * ScreenWidth;
-            rect.size.height = ScreenHeight - 49.f - 64.f - 276.f*ScreenWidth/320.f;
+            //rect.size.height = ScreenHeight - 49.f - 64.f - 276.f*ScreenWidth/320.f;
             if (self.newsListArray.count > 0) {
                 [icv reloadWithProductAds:self.newsListArray];
             }
@@ -82,10 +82,6 @@
         else if ([homeSubView isKindOfClass:[HomeModuleView class]]) {
             HomeModuleView *hmv = (HomeModuleView *)homeSubView;
             rect.size.height = hmv.frame.size.height/320 * ScreenWidth;
-            if (IsDevicePhone4) {}
-            else {
-                rect.origin.y = ScreenHeight - 49.f - rect.size.height - 64.f;
-            }
         }
         homeSubView.frame = rect;
         [self.contentScrollView addSubview:homeSubView];
