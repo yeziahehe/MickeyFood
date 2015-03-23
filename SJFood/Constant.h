@@ -100,5 +100,6 @@
 #define kGetMainImageUrl        @"news/getMainImage.do"
 #define kGetCommentsUrl         @"food/getCommentsByFoodId.do"
 #define kUploadImageUrl         @"user/uploadUserImage.do"
+#define kGetOrderByStatusUrl    @"order/getOrderInMine.do"
 
 #endif

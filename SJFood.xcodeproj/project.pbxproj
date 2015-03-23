@@ -20,6 +20,10 @@
 		750DF7231A2F66E10010A2E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7221A2F66E10010A2E9 /* CoreGraphics.framework */; };
 		750DF7251A2F66EB0010A2E9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7241A2F66EB0010A2E9 /* libz.dylib */; };
 		750DF7271A2F66F70010A2E9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 750DF7261A2F66F70010A2E9 /* libicucore.dylib */; };
+		750F6B301AC04AAE00891124 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F6B2E1AC04AAE00891124 /* OrderTableViewCell.m */; };
+		750F6B311AC04AAE00891124 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750F6B2F1AC04AAE00891124 /* OrderTableViewCell.xib */; };
+		750F6B351AC0524700891124 /* OrderDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750F6B331AC0524700891124 /* OrderDetailTableViewCell.m */; };
+		750F6B361AC0524700891124 /* OrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750F6B341AC0524700891124 /* OrderDetailTableViewCell.xib */; };
 		7514E5021A3D81470091A26D /* bg_user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7514E5011A3D81470091A26D /* bg_user@2x.png */; };
 		7514E50E1A3D890D0091A26D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514E50C1A3D890D0091A26D /* CategoryViewController.m */; };
 		7514E50F1A3D890D0091A26D /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7514E50D1A3D890D0091A26D /* CategoryViewController.xib */; };
@@ -417,6 +421,12 @@
 		750DF7221A2F66E10010A2E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		750DF7241A2F66EB0010A2E9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		750DF7261A2F66F70010A2E9 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		750F6B2D1AC04AAE00891124 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		750F6B2E1AC04AAE00891124 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
+		750F6B2F1AC04AAE00891124 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		750F6B321AC0524700891124 /* OrderDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailTableViewCell.h; sourceTree = "<group>"; };
+		750F6B331AC0524700891124 /* OrderDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailTableViewCell.m; sourceTree = "<group>"; };
+		750F6B341AC0524700891124 /* OrderDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetailTableViewCell.xib; sourceTree = "<group>"; };
 		7514E5011A3D81470091A26D /* bg_user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_user@2x.png"; sourceTree = "<group>"; };
 		7514E50B1A3D890D0091A26D /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		7514E50C1A3D890D0091A26D /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
@@ -1784,6 +1794,12 @@
 				7585128D1A32F2AC00504FA8 /* AllOrderViewController.h */,
 				7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */,
 				7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */,
+				750F6B2D1AC04AAE00891124 /* OrderTableViewCell.h */,
+				750F6B2E1AC04AAE00891124 /* OrderTableViewCell.m */,
+				750F6B2F1AC04AAE00891124 /* OrderTableViewCell.xib */,
+				750F6B321AC0524700891124 /* OrderDetailTableViewCell.h */,
+				750F6B331AC0524700891124 /* OrderDetailTableViewCell.m */,
+				750F6B341AC0524700891124 /* OrderDetailTableViewCell.xib */,
 				758512921A32F43400504FA8 /* MyAccountViewController.h */,
 				758512931A32F43400504FA8 /* MyAccountViewController.m */,
 				758512941A32F43400504FA8 /* MyAccountViewController.xib */,
@@ -1979,6 +1995,7 @@
 				75A816D91ABE75B4004CAEF5 /* button_pudding@2x.png in Resources */,
 				756C62EF1A47071C007B2ECB /* bg_star_empty@2x.png in Resources */,
 				75164DB01ABAAEAF0046F86E /* loading_rectangle@3x.png in Resources */,
+				750F6B361AC0524700891124 /* OrderDetailTableViewCell.xib in Resources */,
 				75A8173E1ABEBB76004CAEF5 /* button_pudding@3x.png in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
 				7533463E1A416C40000CD338 /* btn_food_sort_selected@3x.png in Resources */,
@@ -2066,6 +2083,7 @@
 				7550776B1A46BCF300CD18EF /* FoodImageDetailView.xib in Resources */,
 				7564F2B11ABC0A8700506E68 /* btn_user_selected@2x.png in Resources */,
 				7533EEFD1A2E1536001D12D4 /* icon_user@3x.png in Resources */,
+				750F6B311AC04AAE00891124 /* OrderTableViewCell.xib in Resources */,
 				755722BE1A34891400CC6A8F /* icon_wechat_moment@2x.png in Resources */,
 				758AAD721A4A5FC10047E678 /* btn_num_bg@3x.png in Resources */,
 				75EED4381A320B79002ECA75 /* icon_user_message@2x.png in Resources */,
@@ -2211,6 +2229,7 @@
 				7585129F1A32F45800504FA8 /* AddressViewController.m in Sources */,
 				7514E50E1A3D890D0091A26D /* CategoryViewController.m in Sources */,
 				7514E5151A3D92C30091A26D /* FoodCategoryDetail.m in Sources */,
+				750F6B301AC04AAE00891124 /* OrderTableViewCell.m in Sources */,
 				75F5F3A31AB8947E00FA849E /* ImagesContainView.m in Sources */,
 				75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */,
 				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
@@ -2232,6 +2251,7 @@
 				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,
 				755722661A34334E00CC6A8F /* AboutAppViewController.m in Sources */,
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
+				750F6B351AC0524700891124 /* OrderDetailTableViewCell.m in Sources */,
 				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
 				75AD58501A387E8300E39640 /* YFMediaPicker.m in Sources */,
 				758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */,

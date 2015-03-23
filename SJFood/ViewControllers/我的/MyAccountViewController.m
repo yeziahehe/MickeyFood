@@ -250,7 +250,7 @@
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
             [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"上传头像成功" hideDelay:2.f];
-            [self loadSubViews];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kRefreshUserInfoNotificaiton object:nil];
         }
     }
     else
