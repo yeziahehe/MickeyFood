@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -19,7 +19,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="H6q-uu-SiR"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -29,7 +29,7 @@
                             <constraint firstAttribute="height" constant="21" id="68v-KG-KaR"/>
                             <constraint firstAttribute="width" constant="67" id="Fpa-TI-Vl4"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -55,12 +55,12 @@
                             <constraint firstAttribute="height" constant="21" id="SB7-gu-GT4"/>
                             <constraint firstAttribute="width" constant="67" id="vyv-wa-8bK"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_hon_1px_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="gjO-CC-JAv">
-                        <rect key="frame" x="0.0" y="79" width="320" height="1"/>
+                        <rect key="frame" x="12" y="79" width="308" height="1"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Drb-6X-RHT"/>
                         </constraints>
@@ -69,7 +69,7 @@
                 <constraints>
                     <constraint firstItem="gjO-CC-JAv" firstAttribute="top" secondItem="eQ2-bC-N8d" secondAttribute="bottom" constant="31" id="6ZL-gY-AV0"/>
                     <constraint firstItem="Qda-3g-ARw" firstAttribute="leading" secondItem="3LH-zU-Wyl" secondAttribute="trailing" constant="13" id="6fu-aQ-oHV"/>
-                    <constraint firstItem="gjO-CC-JAv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6p7-wb-Yir"/>
+                    <constraint firstItem="gjO-CC-JAv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="6p7-wb-Yir"/>
                     <constraint firstItem="l9i-ie-jFp" firstAttribute="top" secondItem="3LH-zU-Wyl" secondAttribute="bottom" constant="5" id="HYb-Nb-cm0"/>
                     <constraint firstItem="L1m-Gm-tQh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Kpp-BL-Taj"/>
                     <constraint firstItem="eQ2-bC-N8d" firstAttribute="leading" secondItem="3LH-zU-Wyl" secondAttribute="trailing" constant="13" id="Rfj-9V-C3V"/>
@@ -99,9 +99,15 @@
                 <outlet property="foodSpecLabel" destination="l9i-ie-jFp" id="ekg-KG-aCb"/>
                 <outlet property="iconImageView" destination="L1m-Gm-tQh" id="4cO-sE-Exq"/>
             </connections>
+            <point key="canvasLocation" x="239" y="278"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="line_hon_1px_down.png" width="640" height="2"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

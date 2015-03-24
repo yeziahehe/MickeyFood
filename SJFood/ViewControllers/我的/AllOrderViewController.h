@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface AllOrderViewController : BaseViewController
+@property (strong, nonatomic) IBOutlet UITableView *allOrderTableView;
+@property (strong, nonatomic) IBOutlet UIView *noOrderView;
 
 @end

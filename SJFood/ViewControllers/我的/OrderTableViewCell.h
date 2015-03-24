@@ -13,6 +13,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *orderDateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *orderStatusLabel;
 @property (strong, nonatomic) IBOutlet UIButton *orderStatusChangeButton;
-@property (strong, nonatomic) NSMutableArray *orderDetailArray;
+@property (strong, nonatomic) IBOutlet UILabel *orderTotalPriceLabel;
+
+- (void)reloadData:(NSMutableArray *)orderDetail;
 
 @end
