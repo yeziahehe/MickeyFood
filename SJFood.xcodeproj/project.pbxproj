@@ -130,6 +130,8 @@
 		7555FF8C1AC187CF001A0497 /* OrderDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF8B1AC187CF001A0497 /* OrderDetails.m */; };
 		7555FF8F1AC18CC6001A0497 /* icon_no_status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF8D1AC18CC6001A0497 /* icon_no_status@2x.png */; };
 		7555FF901AC18CC6001A0497 /* icon_no_status@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF8E1AC18CC6001A0497 /* icon_no_status@3x.png */; };
+		7555FF941AC1D731001A0497 /* CalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF921AC1D731001A0497 /* CalculateViewController.m */; };
+		7555FF951AC1D731001A0497 /* CalculateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF931AC1D731001A0497 /* CalculateViewController.xib */; };
 		7557224D1A33356500CC6A8F /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557224B1A33356500CC6A8F /* SettingTableViewCell.m */; };
 		7557224E1A33356500CC6A8F /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7557224C1A33356500CC6A8F /* SettingTableViewCell.xib */; };
 		755722501A3339DE00CC6A8F /* SettingMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7557224F1A3339DE00CC6A8F /* SettingMap.plist */; };
@@ -559,6 +561,9 @@
 		7555FF8B1AC187CF001A0497 /* OrderDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetails.m; sourceTree = "<group>"; };
 		7555FF8D1AC18CC6001A0497 /* icon_no_status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_no_status@2x.png"; sourceTree = "<group>"; };
 		7555FF8E1AC18CC6001A0497 /* icon_no_status@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_no_status@3x.png"; sourceTree = "<group>"; };
+		7555FF911AC1D731001A0497 /* CalculateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateViewController.h; sourceTree = "<group>"; };
+		7555FF921AC1D731001A0497 /* CalculateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateViewController.m; sourceTree = "<group>"; };
+		7555FF931AC1D731001A0497 /* CalculateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateViewController.xib; sourceTree = "<group>"; };
 		7557224A1A33356500CC6A8F /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
 		7557224B1A33356500CC6A8F /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 		7557224C1A33356500CC6A8F /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
@@ -1752,6 +1757,9 @@
 				75F594B91AA72999004B3CDF /* ShoppingCarTableViewCell.h */,
 				75F594BA1AA72999004B3CDF /* ShoppingCarTableViewCell.m */,
 				75F594BB1AA72999004B3CDF /* ShoppingCarTableViewCell.xib */,
+				7555FF911AC1D731001A0497 /* CalculateViewController.h */,
+				7555FF921AC1D731001A0497 /* CalculateViewController.m */,
+				7555FF931AC1D731001A0497 /* CalculateViewController.xib */,
 			);
 			path = "购物车";
 			sourceTree = "<group>";
@@ -2053,6 +2061,7 @@
 				7589543C1A24B853001C2350 /* StartViewController.xib in Resources */,
 				75A95CBF1A4014540009962F /* CategoryTableView.xib in Resources */,
 				75164DA51ABAA7D00046F86E /* guidepage_4_480h@2x.png in Resources */,
+				7555FF951AC1D731001A0497 /* CalculateViewController.xib in Resources */,
 				75EED4171A31F7DA002ECA75 /* icon_comment@2x.png in Resources */,
 				751B20FD1AB1D4B000B1CFE6 /* btn_cancel_specal@2x.png in Resources */,
 				75EED4131A31F7D1002ECA75 /* icon_receive@2x.png in Resources */,
@@ -2269,6 +2278,7 @@
 				75A95CBD1A4014470009962F /* CategoryTableView.m in Sources */,
 				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,
 				755722661A34334E00CC6A8F /* AboutAppViewController.m in Sources */,
+				7555FF941AC1D731001A0497 /* CalculateViewController.m in Sources */,
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
 				750F6B351AC0524700891124 /* OrderDetailTableViewCell.m in Sources */,
 				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
