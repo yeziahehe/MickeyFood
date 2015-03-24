@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -17,8 +17,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9cC-sq-mMS">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9cC-sq-mMS">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="rtz-s5-kZu"/>
@@ -27,45 +28,25 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="9cC-sq-mMS" secondAttribute="bottom" id="1Dc-93-8Qm"/>
-                <constraint firstAttribute="trailing" secondItem="9cC-sq-mMS" secondAttribute="trailing" id="LWb-v1-t2u"/>
-                <constraint firstItem="9cC-sq-mMS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x1p-hc-srL"/>
-                <constraint firstItem="9cC-sq-mMS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yrz-9p-Obi"/>
-            </constraints>
             <point key="canvasLocation" x="239" y="278"/>
         </view>
         <view contentMode="scaleToFill" id="MyK-cD-uet">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_no_status.png" translatesAutoresizingMaskIntoConstraints="NO" id="FA8-4c-zhv">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_no_status.png" id="FA8-4c-zhv">
                     <rect key="frame" x="130" y="243" width="60" height="81"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="81" id="bDQ-MY-LZJ"/>
-                        <constraint firstAttribute="width" constant="60" id="rMk-MT-NlB"/>
-                    </constraints>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCg-lS-4SC">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mCg-lS-4SC">
                     <rect key="frame" x="8" y="332" width="304" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="RpA-1b-Woi"/>
-                    </constraints>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="mCg-lS-4SC" secondAttribute="trailing" constant="8" id="3Pz-LC-d6u"/>
-                <constraint firstItem="mCg-lS-4SC" firstAttribute="top" secondItem="FA8-4c-zhv" secondAttribute="bottom" constant="8" id="4OU-np-Fcd"/>
-                <constraint firstAttribute="bottom" secondItem="mCg-lS-4SC" secondAttribute="bottom" constant="215" id="AMI-RW-8rc"/>
-                <constraint firstItem="mCg-lS-4SC" firstAttribute="leading" secondItem="MyK-cD-uet" secondAttribute="leading" constant="8" id="GNq-c3-QHM"/>
-                <constraint firstItem="FA8-4c-zhv" firstAttribute="leading" secondItem="MyK-cD-uet" secondAttribute="leading" constant="130" id="K2o-5b-CYe"/>
-                <constraint firstAttribute="trailing" secondItem="FA8-4c-zhv" secondAttribute="trailing" constant="130" id="evt-YR-oxJ"/>
-                <constraint firstItem="mCg-lS-4SC" firstAttribute="top" secondItem="FA8-4c-zhv" secondAttribute="bottom" constant="8" id="gbo-1f-oep"/>
-            </constraints>
             <point key="canvasLocation" x="649" y="272"/>
         </view>
     </objects>

@@ -16,7 +16,7 @@
 @end
 
 @implementation OrderTableViewCell
-@synthesize orderDetailTableView,orderDateLabel,orderStatusLabel,orderStatusChangeButton,orderDetailArray;
+@synthesize orderDetailTableView,orderDateLabel,orderStatusLabel,orderStatusChangeButton,orderDetailArray,orderTotalPriceLabel;
 @synthesize orderDetails;
 
 #pragma mark - Public Methods

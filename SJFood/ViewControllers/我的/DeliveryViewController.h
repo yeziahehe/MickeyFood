@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface DeliveryViewController : BaseViewController
+@property (strong, nonatomic) IBOutlet UITableView *deliveryTableView;
+@property (strong, nonatomic) IBOutlet UIView *noOrderView;
 
 @end

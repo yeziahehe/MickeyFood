@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface CommentViewController : BaseViewController
+@property (strong, nonatomic) IBOutlet UITableView *commentTableView;
+@property (strong, nonatomic) IBOutlet UIView *noOrderView;
 
 @end

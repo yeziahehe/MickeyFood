@@ -81,18 +81,18 @@
                                     <constraint firstAttribute="height" constant="1" id="Aqa-OC-S0v"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥100.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCO-E0-vox">
-                                <rect key="frame" x="245" y="116" width="53" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCO-E0-vox">
+                                <rect key="frame" x="241" y="116" width="57" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="8WR-F2-ggs"/>
-                                    <constraint firstAttribute="width" constant="53" id="gpe-t9-hdk"/>
+                                    <constraint firstAttribute="width" constant="57" id="gpe-t9-hdk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总金额：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5z-By-hc5">
-                                <rect key="frame" x="195" y="116" width="48" height="20"/>
+                                <rect key="frame" x="192" y="116" width="48" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="eeZ-Rk-Fcp"/>
                                     <constraint firstAttribute="height" constant="20" id="mi8-d1-zjl"/>
@@ -129,7 +129,7 @@
                             <constraint firstItem="MCO-E0-vox" firstAttribute="top" secondItem="jhb-5x-NEf" secondAttribute="bottom" constant="6" id="gz0-qr-1m9"/>
                             <constraint firstAttribute="trailing" secondItem="eW4-VB-Cef" secondAttribute="trailing" id="icx-wc-kXi"/>
                             <constraint firstItem="FPI-Sw-1gs" firstAttribute="top" secondItem="puM-eU-2ZV" secondAttribute="top" id="ipc-cG-mEg"/>
-                            <constraint firstItem="MCO-E0-vox" firstAttribute="leading" secondItem="N5z-By-hc5" secondAttribute="trailing" constant="2" id="jJW-TL-aV3"/>
+                            <constraint firstItem="MCO-E0-vox" firstAttribute="leading" secondItem="N5z-By-hc5" secondAttribute="trailing" constant="1" id="jJW-TL-aV3"/>
                             <constraint firstItem="N5z-By-hc5" firstAttribute="top" secondItem="jhb-5x-NEf" secondAttribute="bottom" constant="6" id="kCX-4l-ZxF"/>
                             <constraint firstItem="Bkc-fQ-x05" firstAttribute="top" secondItem="FPI-Sw-1gs" secondAttribute="bottom" constant="4" id="l90-no-W7b"/>
                             <constraint firstAttribute="trailing" secondItem="jhb-5x-NEf" secondAttribute="trailing" id="mmG-3t-YU1"/>
@@ -137,7 +137,7 @@
                             <constraint firstItem="jhb-5x-NEf" firstAttribute="top" secondItem="eW4-VB-Cef" secondAttribute="bottom" id="qtt-6Y-ZPG"/>
                             <constraint firstItem="5jt-mW-RwN" firstAttribute="top" secondItem="FPI-Sw-1gs" secondAttribute="bottom" constant="4" id="rV5-sz-bQj"/>
                             <constraint firstAttribute="trailing" secondItem="5jt-mW-RwN" secondAttribute="trailing" constant="12" id="sn6-2w-yno"/>
-                            <constraint firstItem="MCO-E0-vox" firstAttribute="leading" secondItem="N5z-By-hc5" secondAttribute="trailing" constant="2" id="uk5-Mw-uxZ"/>
+                            <constraint firstItem="MCO-E0-vox" firstAttribute="leading" secondItem="N5z-By-hc5" secondAttribute="trailing" constant="1" id="uk5-Mw-uxZ"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -155,6 +155,7 @@
                 <outlet property="orderDetailTableView" destination="jhb-5x-NEf" id="Ife-5I-izc"/>
                 <outlet property="orderStatusChangeButton" destination="oJa-YI-TdE" id="r8q-tZ-fwy"/>
                 <outlet property="orderStatusLabel" destination="5jt-mW-RwN" id="xkF-pn-inY"/>
+                <outlet property="orderTotalPriceLabel" destination="MCO-E0-vox" id="uSG-UY-vya"/>
             </connections>
             <point key="canvasLocation" x="239" y="312"/>
         </tableViewCell>

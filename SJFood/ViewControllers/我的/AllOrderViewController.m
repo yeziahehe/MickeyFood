@@ -9,6 +9,7 @@
 #import "AllOrderViewController.h"
 #import "OrderTableViewCell.h"
 #import "Order.h"
+#import "OrderDetails.h"
 
 #define kGetAllOrderDownloadKey     @"GetAllOrderDownloadKey"
 
@@ -41,6 +42,22 @@
                                                             contentType:@"application/x-www-form-urlencoded"
                                                                delegate:self
                                                                 purpose:kGetAllOrderDownloadKey];
+}
+
+#pragma mark - IBAction Methods
+- (void)deliveryButtonClicked:(UIButton *)button
+{
+    [[YFProgressHUD sharedProgressHUD]showWithMessage:@"提醒发货成功" customView:nil hideDelay:2.f];
+}
+
+- (void)receiveButtonClicked:(UIButton *)button
+{
+    [[YFProgressHUD sharedProgressHUD]showWithMessage:@"成功催了小哥" customView:nil hideDelay:2.f];
+}
+
+- (void)commentButtonClicked:(UIButton *)button
+{
+    
 }
 
 #pragma mark - UIViewController Methods
@@ -88,6 +105,7 @@
         {
             cell.orderStatusLabel.text = @"尚未发货";
             [cell.orderStatusChangeButton setTitle:@"提醒发货" forState:UIControlStateNormal];
+            [cell.orderStatusChangeButton addTarget:self action:@selector(deliveryButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         }
             break;
             
@@ -95,18 +113,36 @@
         {
             cell.orderStatusLabel.text = @"正在派送";
             [cell.orderStatusChangeButton setTitle:@"催催小哥" forState:UIControlStateNormal];
+            [cell.orderStatusChangeButton addTarget:self action:@selector(receiveButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         }
             break;
             
         case 3:
         {
             cell.orderStatusLabel.text = @"交易完成";
-            //暂且不写
+            OrderDetails *od = [self.order.smallOrders firstObject];
+            if ([od.isRemarked isEqualToString:@"0"]) {
+                [cell.orderStatusChangeButton setTitle:@"评价订单" forState:UIControlStateNormal];
+                [cell.orderStatusChangeButton addTarget:self action:@selector(commentButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+            } else {
+                [cell.orderStatusChangeButton setTitle:@"已评价" forState:UIControlStateNormal];
+                cell.orderTotalPriceLabel.userInteractionEnabled = NO;
+            }
         }
             
         default:
             break;
     }
+    NSString *totalPrice = @"0.00";
+    for (OrderDetails *od in self.order.smallOrders) {
+        if ([od.isDiscount isEqualToString:@"0"]) {
+            totalPrice = [NSString stringWithFormat:@"%.2f",[totalPrice floatValue] + [od.orderCount integerValue] * [od.price floatValue]];
+        } else {
+            totalPrice = [NSString stringWithFormat:@"%.2f",[totalPrice floatValue] + [od.orderCount integerValue] * [od.discountPrice floatValue]];
+        }
+    }
+    cell.orderTotalPriceLabel.text = [NSString stringWithFormat:@"￥%@",totalPrice];
+    
     [cell reloadData:self.order.smallOrders];
     CGRect rect = cell.orderDetailTableView.frame;
     rect.size.height = cell.orderDetailTableView.contentSize.height;
