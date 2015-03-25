@@ -26,6 +26,7 @@
 - (void)loadSubViews
 {
     //初始化界面为没有地址
+    self.deliveryTableView.scrollEnabled = NO;
     self.orderArray = [NSMutableArray arrayWithCapacity:0];
     self.deliveryTableView.tableFooterView = self.noOrderView;
     [self.deliveryTableView reloadData];

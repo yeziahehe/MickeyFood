@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface CalculateViewController : BaseViewController
+@property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
+@property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
 
 @end

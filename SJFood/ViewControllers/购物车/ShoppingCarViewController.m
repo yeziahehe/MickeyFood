@@ -10,6 +10,7 @@
 #import "ShoppingCarTableViewCell.h"
 #import "FoodDetailViewController.h"
 #import "ShoppingCar.h"
+#import "CalculateViewController.h"
 
 #define kGetShoppingCarDownloadKey          @"GetShoppingCarDownloadKey"
 #define kDeleteShoppingCarDownloadKey       @"DeleteShoppingCarDownloadKey"
@@ -289,6 +290,8 @@
         [[YFProgressHUD sharedProgressHUD] showWithMessage:@"请选择要结算的购物车商品" customView:nil hideDelay:2.f];
     } else {
         //下单请求
+        CalculateViewController *calculateViewController = [[CalculateViewController alloc]initWithNibName:@"CalculateViewController" bundle:nil];
+        [self.navigationController pushViewController:calculateViewController animated:YES];
     }
 }
 

@@ -73,6 +73,8 @@
 #define kRefreshShoppingCarNotification     @"RefreshShoppingCarNotification"
 #define kSpecViewShowNotification           @"SpecViewShowNotification"
 #define kRemarkViewShowNotification         @"RemarkViewShowNotification"
+#define kAddressViewShowNotification        @"AddressViewShowNotification"
+#define kReloadRefreshAddressNotification   @"ReloadRefreshAddressNotification"
 
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"

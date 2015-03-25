@@ -29,6 +29,7 @@
 - (void)loadSubViews
 {
     //初始化界面为没有地址
+    self.addressTableView.scrollEnabled = NO;
     self.addressArray = [NSMutableArray arrayWithCapacity:0];
     self.addressTableView.tableFooterView = self.noAddressView;
     [self.addressTableView reloadData];
@@ -185,6 +186,7 @@
                 [self.addressArray addObject:address];
             }
             if ([self.addressArray count] != 0) {
+                self.addressTableView.scrollEnabled = YES;
                 self.addressTableView.tableFooterView = [UIView new];
                 [self.addressTableView reloadData];
             } else {

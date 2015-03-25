@@ -26,6 +26,7 @@
 - (void)loadSubViews
 {
     //初始化界面为没有地址
+    self.commentTableView.scrollEnabled = NO;
     self.orderArray = [NSMutableArray arrayWithCapacity:0];
     self.commentTableView.tableFooterView = self.noOrderView;
     [self.commentTableView reloadData];
