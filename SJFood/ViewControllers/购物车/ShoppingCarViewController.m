@@ -22,6 +22,7 @@
 @property (nonatomic, strong) NSMutableArray *shoppingCarArray;
 @property (nonatomic, strong) ShoppingCar *shoppingCarInfo;
 @property (nonatomic, strong) NSMutableArray *shoppingCarCodeArray;
+@property (nonatomic, strong) NSMutableArray *shoppingCarSelectedArray;
 @property (nonatomic, strong) NSMutableArray *selectStatusArray;//0-未选中，1-选中
 @property (nonatomic, strong) NSMutableArray *editStatusArray;//0-未编辑，1-编辑
 @property (nonatomic, strong) NSString *tag;//0-未选择，1-全选，2-选择部分
@@ -38,6 +39,7 @@
 @synthesize totalPriceLabel;
 @synthesize shoppingCarArray,shoppingCarInfo,shoppingCarCodeArray,selectStatusArray,editStatusArray,tag,totalPrice,totalPriceButton,editTag;
 @synthesize calculateButton,allLabel,RMBLabel;
+@synthesize shoppingCarSelectedArray;
 
 #pragma mark - Public Methods
 - (void)loadSubViews
@@ -131,10 +133,12 @@
     ShoppingCar *sc = [self.shoppingCarArray objectAtIndex:indexPath.row];
     if (button.selected) {
         [self.shoppingCarCodeArray addObject:sc.orderId];
+        [self.shoppingCarSelectedArray addObject:sc];
         self.totalPrice = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]+[cell.priceLabel.text floatValue]*[sc.orderCount intValue]];
         [self.selectStatusArray replaceObjectAtIndex:indexPath.row withObject:@"1"];
     } else {
         [self.shoppingCarCodeArray removeObject:sc.orderId];
+        [self.shoppingCarSelectedArray removeObject:sc];
         self.totalPrice = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]-[cell.priceLabel.text floatValue]*[sc.orderCount intValue]];
         [self.selectStatusArray replaceObjectAtIndex:indexPath.row withObject:@"0"];
     }
@@ -203,11 +207,13 @@
     if (sender.selected) {
         self.tag = @"1";
         [self.shoppingCarCodeArray removeAllObjects];
+        [self.shoppingCarSelectedArray removeAllObjects];
         [self.selectStatusArray removeAllObjects];
         self.totalPrice = @"0.00";
         for (int i = 0; i < self.shoppingCarArray.count; i++) {
             ShoppingCar *sc = [self.shoppingCarArray objectAtIndex:i];
             [self.shoppingCarCodeArray addObject:sc.orderId];
+            [self.shoppingCarSelectedArray addObject:sc];
             [self.selectStatusArray addObject:@"1"];
             if ([sc.isDiscount isEqualToString:@"1"]) {
                 self.totalPrice = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]+[sc.discountPrice floatValue]*[sc.orderCount intValue]];
@@ -218,6 +224,7 @@
     } else {
         self.tag = @"0";
         [self.shoppingCarCodeArray removeAllObjects];
+        [self.shoppingCarSelectedArray removeAllObjects];
         [self.selectStatusArray removeAllObjects];
         for (int i = 0; i < self.shoppingCarArray.count; i++) {
             [self.selectStatusArray addObject:@"0"];
@@ -258,6 +265,7 @@
                                                             }
                                                         }
                                                         [self.shoppingCarCodeArray removeAllObjects];
+                                                        [self.shoppingCarSelectedArray removeAllObjects];
                                                         [self setNaviTitle:[NSString stringWithFormat:@"购物车(%lu)",(unsigned long)self.shoppingCarArray.count]];
                                                         [self requestForDeleteAll:orderIdString];
                                                     }]];
@@ -277,6 +285,7 @@
                 }
             }
             [self.shoppingCarCodeArray removeAllObjects];
+            [self.shoppingCarSelectedArray removeAllObjects];
             [self setNaviTitle:[NSString stringWithFormat:@"购物车(%lu)",(unsigned long)self.shoppingCarArray.count]];
             [self requestForDeleteAll:orderIdString];
         }
@@ -331,6 +340,7 @@
         self.allLabel.hidden = YES;
         self.totalPriceLabel.hidden = YES;
         self.RMBLabel.hidden = YES;
+        [self.calculateButton removeTarget:self action:@selector(calculateButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.calculateButton addTarget:self action:@selector(editForDeleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.shoppingCarTableView reloadData];
     } else if ([self.editTag isEqualToString:@"1"]){
@@ -344,6 +354,7 @@
         self.allLabel.hidden = NO;
         self.totalPriceLabel.hidden = NO;
         self.RMBLabel.hidden = NO;
+        [self.calculateButton removeTarget:self action:@selector(editForDeleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.calculateButton addTarget:self action:@selector(calculateButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.shoppingCarTableView reloadData];
     }
@@ -495,39 +506,39 @@
     [self.navigationController pushViewController:foodDetailViewController animated:YES];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        if (IsIos8) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                           message:@"确认删除？"
-                                                                    preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"取消"
-                                                      style:UIAlertActionStyleDefault
-                                                    handler:^(UIAlertAction *action) {
-                                                    }]];
-            [alert addAction:[UIAlertAction actionWithTitle:@"确定"
-                                                      style:UIAlertActionStyleDefault
-                                                    handler:^(UIAlertAction *action) {
-                                                        ShoppingCarTableViewCell *cell = (ShoppingCarTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-                                                        [self requestForDelete:cell.orderId];
-                                                        [self.shoppingCarArray removeObjectAtIndex:indexPath.row];
-                                                        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-                                                    }]];
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-        else
-        {
-            ShoppingCarTableViewCell *cell = (ShoppingCarTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-            [self requestForDelete:cell.orderId];
-            [self.shoppingCarArray removeObjectAtIndex:indexPath.row];
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        }
-    }
-}
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//}
+//
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        if (IsIos8) {
+//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+//                                                                           message:@"确认删除？"
+//                                                                    preferredStyle:UIAlertControllerStyleAlert];
+//            [alert addAction:[UIAlertAction actionWithTitle:@"取消"
+//                                                      style:UIAlertActionStyleDefault
+//                                                    handler:^(UIAlertAction *action) {
+//                                                    }]];
+//            [alert addAction:[UIAlertAction actionWithTitle:@"确定"
+//                                                      style:UIAlertActionStyleDefault
+//                                                    handler:^(UIAlertAction *action) {
+//                                                        ShoppingCarTableViewCell *cell = (ShoppingCarTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+//                                                        [self requestForDelete:cell.orderId];
+//                                                        [self.shoppingCarArray removeObjectAtIndex:indexPath.row];
+//                                                        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//                                                    }]];
+//            [self presentViewController:alert animated:YES completion:nil];
+//        }
+//        else
+//        {
+//            ShoppingCarTableViewCell *cell = (ShoppingCarTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+//            [self requestForDelete:cell.orderId];
+//            [self.shoppingCarArray removeObjectAtIndex:indexPath.row];
+//            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        }
+//    }
+//}
 
 #pragma mark - UITextFieldDelegate methods
 - (void)resignAllField
@@ -570,6 +581,7 @@
             self.totalPriceButton.selected = NO;
             self.shoppingCarArray = [NSMutableArray arrayWithCapacity:0];
             self.shoppingCarCodeArray = [NSMutableArray arrayWithCapacity:0];
+            self.shoppingCarSelectedArray = [NSMutableArray arrayWithCapacity:0];
             self.selectStatusArray = [NSMutableArray arrayWithCapacity:0];
             self.editStatusArray = [NSMutableArray arrayWithCapacity:0];
             [self.calculateButton setTitle:@"结算" forState:UIControlStateNormal];

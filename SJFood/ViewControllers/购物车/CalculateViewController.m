@@ -26,7 +26,7 @@
 @implementation CalculateViewController
 @synthesize contentScrollView;
 @synthesize totalPriceLabel;
-@synthesize subViewArray,addressArray;
+@synthesize subViewArray,addressArray,orderListArray;
 
 #pragma mark - Private Methods
 - (void)loadSubViews:(Address *)address
