@@ -90,6 +90,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //选择
+    [self.navigationController popViewControllerAnimated:YES];
+    [[NSNotificationCenter defaultCenter]postNotificationName:kSelectAddressNotification object:[self.addressArray objectAtIndex:indexPath.row]];
 }
 
 @end

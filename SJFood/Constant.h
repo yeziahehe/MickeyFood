@@ -75,6 +75,7 @@
 #define kRemarkViewShowNotification         @"RemarkViewShowNotification"
 #define kAddressViewShowNotification        @"AddressViewShowNotification"
 #define kReloadRefreshAddressNotification   @"ReloadRefreshAddressNotification"
+#define kSelectAddressNotification          @"SelectAddressNotification"
 
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"

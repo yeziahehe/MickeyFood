@@ -131,6 +131,11 @@
     [self.navigationController pushViewController:addressListViewController animated:YES];
 }
 
+- (void)selectAddressNotification:(NSNotification *)notification
+{
+    [self loadSubViews:notification.object];
+}
+
 #pragma mark - BaseViewController methods
 - (void)extraItemTapped
 {
@@ -145,6 +150,7 @@
     [self requestForAddressInfo];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshAddressInfoWithNotification:) name:kRefreshAddressNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addressViewShowNotification:) name:kAddressViewShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectAddressNotification:) name:kSelectAddressNotification object:nil];
 }
 
 - (void)dealloc
