@@ -16,17 +16,19 @@
 
 #define kCalculateInfoMapFileName           @"CalculateInfoMap"
 #define kGetAddressDownloaderKey            @"GetAddressDownloaderKey"
+#define kCalculateDownloaderKey             @"CalculateDownloaderKey"
 #define kSubViewGap                         15.f
 
 @interface CalculateViewController ()
 @property (nonatomic, strong) NSMutableArray *subViewArray;
 @property (nonatomic, strong) NSMutableArray *addressArray;
+@property (nonatomic, strong) NSString *rank;
 @end
 
 @implementation CalculateViewController
 @synthesize contentScrollView;
 @synthesize totalPriceLabel;
-@synthesize subViewArray,addressArray,orderListArray,orderCodeArray,totalPrice;
+@synthesize subViewArray,addressArray,orderListArray,orderCodeArray,totalPrice,rank;
 
 #pragma mark - Private Methods
 - (void)loadSubViews:(Address *)address
@@ -88,6 +90,7 @@
     //找到默认地址
     for (Address *address in self.addressArray) {
         if ([address.tag isEqualToString:@"0"]) {
+            self.rank = address.rank;
             return address;
         }
     }
@@ -122,7 +125,18 @@
 
 #pragma mark - IBAction Methods
 - (IBAction)confirmButtonClicked:(id)sender {
-    
+    [[YFProgressHUD sharedProgressHUD] startedNetWorkActivityWithText:@"下单中，请稍等..."];
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kCalculateUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
+    [dict setObject:self.rank forKey:@"rank"];
+    NSString *orderIdString = [self.orderCodeArray componentsJoinedByString:@","];
+    [dict setObject:orderIdString forKey:@"orderId"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kCalculateDownloaderKey];
 }
 
 #pragma mark - Notification Methods
@@ -141,7 +155,9 @@
 
 - (void)selectAddressNotification:(NSNotification *)notification
 {
-    [self loadSubViews:notification.object];
+    Address *address = notification.object;
+    self.rank = address.rank;
+    [self loadSubViews:address];
 }
 
 #pragma mark - BaseViewController methods
@@ -218,6 +234,28 @@
             [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
         }
     }
+    else if ([downloader.purpose isEqualToString:kCalculateDownloaderKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[NSNotificationCenter defaultCenter]postNotificationName:kRefreshShoppingCarNotification object:nil];
+            [[YFProgressHUD sharedProgressHUD]showSuccessViewWithMessage:@"下单成功，等待配送" hideDelay:2.f];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"下单失败失败";
+            [self.navigationController popViewControllerAnimated:YES];
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+        }
+    }
+    
 }
 
 - (void)downloader:(YFDownloader *)downloader didFinishWithError:(NSString *)message

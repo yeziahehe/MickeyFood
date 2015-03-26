@@ -189,6 +189,7 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
+            [[NSNotificationCenter defaultCenter]postNotificationName:kRefreshShoppingCarNotification object:nil];
             [[YFProgressHUD sharedProgressHUD] showWithMessage:@"添加购物车成功，请去购物车结算" customView:nil hideDelay:3.f];
         }
         else
