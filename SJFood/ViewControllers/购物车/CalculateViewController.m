@@ -26,11 +26,12 @@
 @implementation CalculateViewController
 @synthesize contentScrollView;
 @synthesize totalPriceLabel;
-@synthesize subViewArray,addressArray,orderListArray;
+@synthesize subViewArray,addressArray,orderListArray,orderCodeArray,totalPrice;
 
 #pragma mark - Private Methods
 - (void)loadSubViews:(Address *)address
 {
+    self.totalPriceLabel.text = self.totalPrice;
     for (UIView *subView in self.contentScrollView.subviews)
     {
         if ([subView isKindOfClass:[CalculateSubView class]])
@@ -53,6 +54,13 @@
             [acv reloadData:address];
             [[NSNotificationCenter defaultCenter]postNotificationName:kReloadRefreshAddressNotification object:self.addressArray];
             rect = acv.frame;
+            rect.size.width = ScreenWidth;
+        }
+        else if ([calculateSubView isKindOfClass:[CalculateDetailView class]]) {
+            CalculateDetailView *cdv = (CalculateDetailView *)calculateSubView;
+            cdv.totalPrice = self.totalPrice;
+            [cdv reloadData:self.orderListArray];
+            rect.size.height = cdv.orderListTableView.contentSize.height + 36.f;
             rect.size.width = ScreenWidth;
         }
         calculateSubView.frame = rect;

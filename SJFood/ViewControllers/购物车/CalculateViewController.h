@@ -11,6 +11,8 @@
 @interface CalculateViewController : BaseViewController
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 @property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
+@property (strong, nonatomic) NSString *totalPrice;
 @property (strong, nonatomic) NSMutableArray *orderListArray;
+@property (strong, nonatomic) NSMutableArray *orderCodeArray;
 
 @end

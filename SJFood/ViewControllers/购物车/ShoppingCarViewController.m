@@ -305,6 +305,8 @@
         //下单请求
         CalculateViewController *calculateViewController = [[CalculateViewController alloc]initWithNibName:@"CalculateViewController" bundle:nil];
         calculateViewController.orderListArray = self.shoppingCarSelectedArray;
+        calculateViewController.totalPrice = self.totalPriceLabel.text;
+        calculateViewController.orderCodeArray = self.shoppingCarCodeArray;
         [self.navigationController pushViewController:calculateViewController animated:YES];
     }
 }

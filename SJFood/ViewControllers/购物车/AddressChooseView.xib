@@ -58,6 +58,12 @@
                         <constraint firstAttribute="width" constant="8" id="UqO-bg-jLO"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_hon_1px_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="qD3-uu-MAC">
+                    <rect key="frame" x="0.0" y="79" width="320" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="5oK-xw-Plu"/>
+                    </constraints>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiZ-zX-vuD">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                     <state key="normal">
@@ -80,15 +86,18 @@
                 <constraint firstItem="oiZ-zX-vuD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HuA-72-3E2"/>
                 <constraint firstItem="gaN-Tb-lB4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="IBT-5h-IpJ"/>
                 <constraint firstItem="HI1-Vl-RNn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="33" id="ITf-Qf-cYl"/>
+                <constraint firstAttribute="trailing" secondItem="qD3-uu-MAC" secondAttribute="trailing" id="JaL-yI-DlI"/>
                 <constraint firstItem="4Gq-kx-Avh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="JsL-FF-uvG"/>
                 <constraint firstAttribute="bottom" secondItem="oiZ-zX-vuD" secondAttribute="bottom" id="NuQ-ik-qUT"/>
                 <constraint firstItem="gaN-Tb-lB4" firstAttribute="leading" secondItem="4Gq-kx-Avh" secondAttribute="trailing" id="TZK-PN-OEX"/>
+                <constraint firstAttribute="bottom" secondItem="qD3-uu-MAC" secondAttribute="bottom" id="Yw7-86-Qqs"/>
                 <constraint firstAttribute="trailing" secondItem="rVa-bb-Kc4" secondAttribute="trailing" constant="24" id="ZDZ-eW-Hjb"/>
                 <constraint firstItem="HI1-Vl-RNn" firstAttribute="leading" secondItem="fhd-9Q-7Zc" secondAttribute="trailing" constant="8" id="aIa-Sb-xra"/>
                 <constraint firstAttribute="bottom" secondItem="HI1-Vl-RNn" secondAttribute="bottom" constant="34" id="dVh-gM-dcV"/>
                 <constraint firstItem="fhd-9Q-7Zc" firstAttribute="top" secondItem="4Gq-kx-Avh" secondAttribute="bottom" constant="2" id="gRG-Zf-tUE"/>
                 <constraint firstItem="gaN-Tb-lB4" firstAttribute="leading" secondItem="4Gq-kx-Avh" secondAttribute="trailing" id="kJ6-11-A87"/>
                 <constraint firstItem="fhd-9Q-7Zc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="35" id="o8e-3U-DwO"/>
+                <constraint firstItem="qD3-uu-MAC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oES-gT-36D"/>
                 <constraint firstAttribute="trailing" secondItem="HI1-Vl-RNn" secondAttribute="trailing" constant="8" id="qQV-GT-JS5"/>
                 <constraint firstAttribute="bottom" secondItem="fhd-9Q-7Zc" secondAttribute="bottom" constant="12" id="s05-ZB-Ph7"/>
             </constraints>
@@ -103,6 +112,7 @@
     </objects>
     <resources>
         <image name="icon_arrow.png" width="8" height="13"/>
+        <image name="line_hon_1px_down.png" width="640" height="2"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -10,4 +10,10 @@
 
 @interface CalculateDetailView : CalculateSubView
 
+@property (strong, nonatomic) IBOutlet UITableView *orderListTableView;
+@property (strong, nonatomic) IBOutlet UILabel *foodNumberLabel;
+@property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
+@property (strong, nonatomic) NSString *totalPrice;
+- (void)reloadData:(NSMutableArray *)orderList;
+
 @end
