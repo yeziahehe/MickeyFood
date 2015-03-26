@@ -64,7 +64,7 @@
     } else {
         cell.foodPriceLabel.text = [NSString stringWithFormat:@"￥%.2f",[self.orderDetails.discountPrice floatValue]];
     }
-    //cell.foodSpecLabel.text = ;
+    cell.foodSpecLabel.text = self.orderDetails.specialName;
     return cell;
 }
 

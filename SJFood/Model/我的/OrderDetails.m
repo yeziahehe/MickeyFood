@@ -9,7 +9,7 @@
 #import "OrderDetails.h"
 
 @implementation OrderDetails
-@synthesize name,imageUrl,orderCount,status,isDiscount,price,discountPrice,orderId,isRemarked;
+@synthesize name,imageUrl,orderCount,status,isDiscount,price,discountPrice,orderId,isRemarked,specialName;
 
 - (id)initWithDict:(NSDictionary *)dict
 {

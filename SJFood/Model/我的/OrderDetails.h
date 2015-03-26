@@ -33,6 +33,7 @@
 @property (nonatomic, copy)NSString *discountPrice;//打折价格
 @property (nonatomic, copy)NSString *orderId;//订单的id
 @property (nonatomic, copy)NSString *isRemarked;//是否评价完成
+@property (nonatomic, copy)NSString *specialName;//口味
 
 - (id)initWithDict:(NSDictionary *)dict;
 

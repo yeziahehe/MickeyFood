@@ -115,6 +115,7 @@
     [self loadSubViews];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kFoodSearchNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kSelectHomeButtonNotification object:nil];
 }
 
 
