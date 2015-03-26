@@ -103,19 +103,19 @@
     [webView stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    if(navigationType == UIWebViewNavigationTypeLinkClicked)
-    {
-        if([request.URL.absoluteString rangeOfString:@"tel:"].length > 0)
-        {
-            return YES;
-        }
-        else
-            return NO;
-    }
-    return YES;
-}
+//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+//{
+//    if(navigationType == UIWebViewNavigationTypeLinkClicked)
+//    {
+//        if([request.URL.absoluteString rangeOfString:@"tel:"].length > 0)
+//        {
+//            return YES;
+//        }
+//        else
+//            return NO;
+//    }
+//    return YES;
+//}
 #pragma mark - YFDownloaderDelegate methods
 - (void)downloader:(YFDownloader *)downloader completeWithNSData:(NSData*)data
 {
