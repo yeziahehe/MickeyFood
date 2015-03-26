@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *foodPriceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *foodSpecLabel;
 @property (strong, nonatomic) IBOutlet UILabel *foodCountLabel;
+@property (strong, nonatomic) IBOutlet UIButton *commentButton;
 
 @end

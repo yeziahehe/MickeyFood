@@ -410,6 +410,8 @@
 		75FCABFF1AC4064F00C1368C /* AboutBOXViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FCABFD1AC4064F00C1368C /* AboutBOXViewController.xib */; };
 		75FCAC011AC414B800C1368C /* box_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAC001AC414B800C1368C /* box_logo@2x.png */; };
 		75FCAC031AC415D800C1368C /* box_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAC021AC415D800C1368C /* box_logo@3x.png */; };
+		75FCAC0C1AC43B0B00C1368C /* RemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCAC0A1AC43B0B00C1368C /* RemarkViewController.m */; };
+		75FCAC0D1AC43B0B00C1368C /* RemarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAC0B1AC43B0B00C1368C /* RemarkViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -961,6 +963,9 @@
 		75FCABFD1AC4064F00C1368C /* AboutBOXViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutBOXViewController.xib; sourceTree = "<group>"; };
 		75FCAC001AC414B800C1368C /* box_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box_logo@2x.png"; sourceTree = "<group>"; };
 		75FCAC021AC415D800C1368C /* box_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box_logo@3x.png"; sourceTree = "<group>"; };
+		75FCAC091AC43B0B00C1368C /* RemarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemarkViewController.h; sourceTree = "<group>"; };
+		75FCAC0A1AC43B0B00C1368C /* RemarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemarkViewController.m; sourceTree = "<group>"; };
+		75FCAC0B1AC43B0B00C1368C /* RemarkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemarkViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1890,6 +1895,9 @@
 				7585128D1A32F2AC00504FA8 /* AllOrderViewController.h */,
 				7585128E1A32F2AC00504FA8 /* AllOrderViewController.m */,
 				7585128F1A32F2AC00504FA8 /* AllOrderViewController.xib */,
+				75FCAC091AC43B0B00C1368C /* RemarkViewController.h */,
+				75FCAC0A1AC43B0B00C1368C /* RemarkViewController.m */,
+				75FCAC0B1AC43B0B00C1368C /* RemarkViewController.xib */,
 				750F6B2D1AC04AAE00891124 /* OrderTableViewCell.h */,
 				750F6B2E1AC04AAE00891124 /* OrderTableViewCell.m */,
 				750F6B2F1AC04AAE00891124 /* OrderTableViewCell.xib */,
@@ -2243,6 +2251,7 @@
 				75164DBA1ABAC0F30046F86E /* loading_square@2x.png in Resources */,
 				7564F2AF1ABC0A8700506E68 /* btn_shopping_selected@2x.png in Resources */,
 				755722BA1A34891400CC6A8F /* icon_qzone@2x.png in Resources */,
+				75FCAC0D1AC43B0B00C1368C /* RemarkViewController.xib in Resources */,
 				75EED4421A3216BA002ECA75 /* UserEditMap.plist in Resources */,
 				75A35B9E1A39B85E00533148 /* btn_add_address@2x.png in Resources */,
 				757DE9A91A45617F0054BE47 /* bg_buy_shopping@2x.png in Resources */,
@@ -2367,6 +2376,7 @@
 				75A95CBD1A4014470009962F /* CategoryTableView.m in Sources */,
 				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,
 				758848A51AC2B499006F98F9 /* AddressChooseView.m in Sources */,
+				75FCAC0C1AC43B0B00C1368C /* RemarkViewController.m in Sources */,
 				755722661A34334E00CC6A8F /* AboutAppViewController.m in Sources */,
 				7555FF941AC1D731001A0497 /* CalculateViewController.m in Sources */,
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,

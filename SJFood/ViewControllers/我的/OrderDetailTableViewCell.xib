@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -65,12 +66,27 @@
                             <constraint firstAttribute="height" constant="1" id="Drb-6X-RHT"/>
                         </constraints>
                     </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfZ-Le-nQT">
+                        <rect key="frame" x="228" y="52" width="70" height="20"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="CgQ-5w-qC3"/>
+                            <constraint firstAttribute="width" constant="70" id="Kxk-3O-fjA"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="bVb-Xs-CkO"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="vIp-k3-x8I"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="去评价">
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gjO-CC-JAv" firstAttribute="top" secondItem="eQ2-bC-N8d" secondAttribute="bottom" constant="31" id="6ZL-gY-AV0"/>
                     <constraint firstItem="Qda-3g-ARw" firstAttribute="leading" secondItem="3LH-zU-Wyl" secondAttribute="trailing" constant="13" id="6fu-aQ-oHV"/>
                     <constraint firstItem="gjO-CC-JAv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="6p7-wb-Yir"/>
                     <constraint firstItem="l9i-ie-jFp" firstAttribute="top" secondItem="3LH-zU-Wyl" secondAttribute="bottom" constant="5" id="HYb-Nb-cm0"/>
+                    <constraint firstItem="gjO-CC-JAv" firstAttribute="top" secondItem="lfZ-Le-nQT" secondAttribute="bottom" constant="7" id="KCV-aF-VGb"/>
                     <constraint firstItem="L1m-Gm-tQh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Kpp-BL-Taj"/>
                     <constraint firstItem="eQ2-bC-N8d" firstAttribute="leading" secondItem="3LH-zU-Wyl" secondAttribute="trailing" constant="13" id="Rfj-9V-C3V"/>
                     <constraint firstItem="Qda-3g-ARw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Rlp-GG-fII"/>
@@ -79,12 +95,14 @@
                     <constraint firstItem="gjO-CC-JAv" firstAttribute="top" secondItem="Qda-3g-ARw" secondAttribute="bottom" constant="50" id="XId-Vb-sca"/>
                     <constraint firstItem="l9i-ie-jFp" firstAttribute="leading" secondItem="L1m-Gm-tQh" secondAttribute="trailing" constant="12" id="ZTw-yn-RQQ"/>
                     <constraint firstItem="eQ2-bC-N8d" firstAttribute="leading" secondItem="3LH-zU-Wyl" secondAttribute="trailing" constant="13" id="aV2-ZR-JDs"/>
+                    <constraint firstItem="lfZ-Le-nQT" firstAttribute="top" secondItem="eQ2-bC-N8d" secondAttribute="bottom" constant="4" id="am5-M0-Zc7"/>
                     <constraint firstItem="L1m-Gm-tQh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bcB-Te-Sib"/>
                     <constraint firstItem="3LH-zU-Wyl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="f4S-QS-sOQ"/>
                     <constraint firstAttribute="bottom" secondItem="gjO-CC-JAv" secondAttribute="bottom" constant="-1" id="gM8-2E-FEM"/>
                     <constraint firstItem="gjO-CC-JAv" firstAttribute="top" secondItem="L1m-Gm-tQh" secondAttribute="bottom" constant="7" id="llU-HK-NLm"/>
                     <constraint firstAttribute="trailing" secondItem="l9i-ie-jFp" secondAttribute="trailing" constant="102" id="ltZ-lH-Mc6"/>
                     <constraint firstItem="3LH-zU-Wyl" firstAttribute="leading" secondItem="L1m-Gm-tQh" secondAttribute="trailing" constant="12" id="nDn-ts-8Cw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="lfZ-Le-nQT" secondAttribute="trailing" constant="14" id="nc1-II-qA7"/>
                     <constraint firstItem="eQ2-bC-N8d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="oIg-Cn-hCE"/>
                     <constraint firstAttribute="trailing" secondItem="gjO-CC-JAv" secondAttribute="trailing" id="p8C-p2-C2e"/>
                     <constraint firstAttribute="trailing" secondItem="Qda-3g-ARw" secondAttribute="trailing" constant="22" id="pqq-bG-DIz"/>
@@ -93,6 +111,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="commentButton" destination="lfZ-Le-nQT" id="biZ-6Z-Gkb"/>
                 <outlet property="foodCountLabel" destination="eQ2-bC-N8d" id="wfs-d5-cTd"/>
                 <outlet property="foodNameLabel" destination="3LH-zU-Wyl" id="Asf-HY-I4X"/>
                 <outlet property="foodPriceLabel" destination="Qda-3g-ARw" id="MWu-sg-ey5"/>

@@ -9,10 +9,12 @@
 #import "OrderDetailTableViewCell.h"
 
 @implementation OrderDetailTableViewCell
-@synthesize iconImageView,foodCountLabel,foodNameLabel,foodPriceLabel,foodSpecLabel;
+@synthesize iconImageView,foodCountLabel,foodNameLabel,foodPriceLabel,foodSpecLabel,commentButton;
 
 - (void)awakeFromNib {
     // Initialization code
+    self.commentButton.layer.cornerRadius = 9.f;
+    self.commentButton.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

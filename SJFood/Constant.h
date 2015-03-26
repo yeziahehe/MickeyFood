@@ -77,6 +77,8 @@
 #define kReloadRefreshAddressNotification   @"ReloadRefreshAddressNotification"
 #define kSelectAddressNotification          @"SelectAddressNotification"
 #define kSelectHomeButtonNotification       @"SelectHomeButtonNotification"
+#define kCommentButtonNotification          @"CommentButtonNotification"
+#define kCommentSuccessNotification         @"CommentSuccessNotification"
 
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"
@@ -106,5 +108,6 @@
 #define kUploadImageUrl         @"user/uploadUserImage.do"
 #define kGetOrderByStatusUrl    @"order/getOrderInMine.do"
 #define kCalculateUrl           @"order/orderToBuy.do"
+#define kCreateCommentUrl       @"food/creatOrderComment.do"
 
 #endif

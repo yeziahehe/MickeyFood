@@ -27,6 +27,14 @@
     [self.orderDetailTableView reloadData];
 }
 
+- (void)commentButtonClicked:(UIButton *)button
+{
+    CGPoint buttonPosition = [button convertPoint:CGPointZero toView:self.orderDetailTableView];
+    NSIndexPath *indexPath = [self.orderDetailTableView indexPathForRowAtPoint:buttonPosition];
+    OrderDetails *od = [self.orderDetailArray objectAtIndex:indexPath.row];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCommentButtonNotification object:od];
+}
+
 #pragma mark - UIView Methods
 - (void)awakeFromNib {
     // Initialization code
@@ -65,6 +73,10 @@
         cell.foodPriceLabel.text = [NSString stringWithFormat:@"￥%.2f",[self.orderDetails.discountPrice floatValue]];
     }
     cell.foodSpecLabel.text = self.orderDetails.specialName;
+    if ([self.orderDetails.status isEqualToString:@"3"] && [self.orderDetails.isRemarked isEqualToString:@"0"]) {
+        cell.commentButton.hidden = NO;
+        [cell.commentButton addTarget:self action:@selector(commentButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
     return cell;
 }
 

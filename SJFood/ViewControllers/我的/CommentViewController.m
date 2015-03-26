@@ -10,6 +10,7 @@
 #import "Order.h"
 #import "OrderTableViewCell.h"
 #import "OrderDetails.h"
+#import "RemarkViewController.h"
 
 #define kGetAllOrderDownloadKey     @"GetAllOrderDownloadKey"
 
@@ -46,10 +47,18 @@
                                                                 purpose:kGetAllOrderDownloadKey];
 }
 
-#pragma mark - IBAction Methods
-- (void)commentButtonClicked:(UIButton *)button
+#pragma mark - Notification Methods
+- (void)commentButtonClickedNotification:(NSNotification *)notification
 {
-    
+    OrderDetails *od = notification.object;
+    RemarkViewController *remarkViewController = [[RemarkViewController alloc]initWithNibName:@"RemarkViewController" bundle:nil];
+    remarkViewController.orderDetails = od;
+    [self.navigationController pushViewController:remarkViewController animated:YES];
+}
+
+- (void)refreshNotification:(NSNotification *)notification
+{
+    [self requestForCommentOrder];
 }
 
 #pragma mark - UIViewController Methods
@@ -66,11 +75,14 @@
     self.orderArray = [NSMutableArray arrayWithCapacity:0];
     self.commentTableView.tableFooterView = [UIView new];
     [self requestForCommentOrder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(commentButtonClickedNotification:) name:kCommentButtonNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshNotification:) name:kCommentSuccessNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -93,14 +105,7 @@
     cell.orderDateLabel.text = self.order.togetherDate;
 
     cell.orderStatusLabel.text = @"交易完成";
-    OrderDetails *od = [self.order.smallOrders firstObject];
-    if ([od.isRemarked isEqualToString:@"0"]) {
-        [cell.orderStatusChangeButton setTitle:@"评价订单" forState:UIControlStateNormal];
-        [cell.orderStatusChangeButton addTarget:self action:@selector(commentButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    } else {
-        [cell.orderStatusChangeButton setTitle:@"已评价" forState:UIControlStateNormal];
-        cell.orderTotalPriceLabel.userInteractionEnabled = NO;
-    }
+    [cell.orderStatusChangeButton setTitle:@"评价未完成" forState:UIControlStateNormal];
 
     NSString *totalPrice = @"0.00";
     for (OrderDetails *od in self.order.smallOrders) {

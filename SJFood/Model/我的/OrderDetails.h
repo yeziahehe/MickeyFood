@@ -34,6 +34,7 @@
 @property (nonatomic, copy)NSString *orderId;//订单的id
 @property (nonatomic, copy)NSString *isRemarked;//是否评价完成
 @property (nonatomic, copy)NSString *specialName;//口味
+@property (nonatomic, copy)NSString *foodId;//食品id
 
 - (id)initWithDict:(NSDictionary *)dict;
 

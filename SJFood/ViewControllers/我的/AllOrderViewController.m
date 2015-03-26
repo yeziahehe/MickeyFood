@@ -10,6 +10,7 @@
 #import "OrderTableViewCell.h"
 #import "Order.h"
 #import "OrderDetails.h"
+#import "RemarkViewController.h"
 
 #define kGetAllOrderDownloadKey     @"GetAllOrderDownloadKey"
 
@@ -45,6 +46,20 @@
                                                                 purpose:kGetAllOrderDownloadKey];
 }
 
+#pragma mark - Notification Methods
+- (void)commentButtonClickedNotification:(NSNotification *)notification
+{
+    OrderDetails *od = notification.object;
+    RemarkViewController *remarkViewController = [[RemarkViewController alloc]initWithNibName:@"RemarkViewController" bundle:nil];
+    remarkViewController.orderDetails = od;
+    [self.navigationController pushViewController:remarkViewController animated:YES];
+}
+
+- (void)refreshNotification:(NSNotification *)notification
+{
+    [self requestForAllOrder];
+}
+
 #pragma mark - IBAction Methods
 - (void)deliveryButtonClicked:(UIButton *)button
 {
@@ -54,11 +69,6 @@
 - (void)receiveButtonClicked:(UIButton *)button
 {
     [[YFProgressHUD sharedProgressHUD]showWithMessage:@"成功催了小哥" customView:nil hideDelay:2.f];
-}
-
-- (void)commentButtonClicked:(UIButton *)button
-{
-    
 }
 
 #pragma mark - UIViewController Methods
@@ -75,12 +85,14 @@
     self.orderArray = [NSMutableArray arrayWithCapacity:0];
     self.allOrderTableView.tableFooterView = [UIView new];
     [self requestForAllOrder];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(commentButtonClickedNotification:) name:kCommentButtonNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshNotification:) name:kCommentSuccessNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -121,13 +133,12 @@
         case 3:
         {
             cell.orderStatusLabel.text = @"交易完成";
-            OrderDetails *od = [self.order.smallOrders firstObject];
-            if ([od.isRemarked isEqualToString:@"0"]) {
-                [cell.orderStatusChangeButton setTitle:@"评价订单" forState:UIControlStateNormal];
-                [cell.orderStatusChangeButton addTarget:self action:@selector(commentButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-            } else {
-                [cell.orderStatusChangeButton setTitle:@"已评价" forState:UIControlStateNormal];
-                cell.orderTotalPriceLabel.userInteractionEnabled = NO;
+            [cell.orderStatusChangeButton setTitle:@"已评价" forState:UIControlStateNormal];
+            for (OrderDetails *od in self.order.smallOrders) {
+                if ([od.isRemarked isEqualToString:@"0"]) {
+                    [cell.orderStatusChangeButton setTitle:@"评价订单" forState:UIControlStateNormal];
+                }
+                break;
             }
         }
             
