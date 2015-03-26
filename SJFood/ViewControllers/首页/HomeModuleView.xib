@@ -20,8 +20,11 @@
                     <state key="normal" image="button_special.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="gkW-BL-yX3"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-5S-aLU">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-5S-aLU">
                     <rect key="frame" x="113" y="10" width="94" height="131"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="5Ne-5S-aLU" secondAttribute="height" multiplier="94:131" id="USL-Uq-HmM"/>
@@ -29,8 +32,11 @@
                     <state key="normal" image="button_hot.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="tEJ-z6-OkJ"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbc-hJ-AiR">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbc-hJ-AiR">
                     <rect key="frame" x="217" y="10" width="95" height="131"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Pbc-hJ-AiR" secondAttribute="height" multiplier="95:131" id="6dU-sX-hqT"/>
@@ -38,8 +44,11 @@
                     <state key="normal" image="button_new.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="YHL-hl-1sN"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-lb-9Q4">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-lb-9Q4">
                     <rect key="frame" x="8" y="151" width="147" height="133"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="q1h-lb-9Q4" secondAttribute="height" multiplier="21:19" id="mCx-tv-huC"/>
@@ -47,8 +56,11 @@
                     <state key="normal" image="button_today.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="pm3-v5-LK2"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-ck-pid">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-ck-pid">
                     <rect key="frame" x="165" y="151" width="147" height="133"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="slv-ck-pid" secondAttribute="height" multiplier="21:19" id="eln-oR-4is"/>
@@ -56,8 +68,11 @@
                     <state key="normal" image="button_sale.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="k8c-Nf-WM6"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-Uj-RSa">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-Uj-RSa">
                     <rect key="frame" x="8" y="294" width="147" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ccb-Uj-RSa" secondAttribute="height" multiplier="49:25" id="6mJ-1e-91s"/>
@@ -65,8 +80,11 @@
                     <state key="normal" image="button_meat.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="vFO-kJ-bib"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Od-S1-Pye">
+                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Od-S1-Pye">
                     <rect key="frame" x="165" y="294" width="147" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="5Od-S1-Pye" secondAttribute="height" multiplier="49:25" id="N8T-Pt-N43"/>
@@ -74,8 +92,11 @@
                     <state key="normal" image="button_nut.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="r6c-Pk-sud"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awM-Mw-ymu">
+                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awM-Mw-ymu">
                     <rect key="frame" x="8" y="379" width="147" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="awM-Mw-ymu" secondAttribute="height" multiplier="49:25" id="8sd-YN-0UZ"/>
@@ -83,8 +104,11 @@
                     <state key="normal" image="button_biscuit.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="RxU-Ch-ffN"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ez-xK-tCR">
+                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ez-xK-tCR">
                     <rect key="frame" x="165" y="379" width="147" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="4Ez-xK-tCR" secondAttribute="height" multiplier="49:25" id="TA5-yy-Ggq"/>
@@ -92,8 +116,11 @@
                     <state key="normal" image="button_sweet.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="xD8-TJ-e2I"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaF-9S-q5N">
+                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaF-9S-q5N">
                     <rect key="frame" x="8" y="464" width="147" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="UaF-9S-q5N" secondAttribute="height" multiplier="49:25" id="AMz-G7-AaG"/>
@@ -101,8 +128,11 @@
                     <state key="normal" image="button_pudding.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="UMr-Ov-SfP"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOQ-iL-o0z">
+                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOQ-iL-o0z">
                     <rect key="frame" x="165" y="464" width="147" height="75"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="qOQ-iL-o0z" secondAttribute="height" multiplier="49:25" id="aVq-vB-4gV"/>
@@ -110,6 +140,9 @@
                     <state key="normal" image="button_coffee.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="vh9-Wl-saq"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -179,7 +212,7 @@
         <image name="button_biscuit.png" width="176" height="89"/>
         <image name="button_coffee.png" width="176" height="89"/>
         <image name="button_hot.png" width="115" height="159"/>
-        <image name="button_meat.png" width="176" height="89"/>
+        <image name="button_meat.png" width="176" height="90"/>
         <image name="button_new.png" width="115" height="159"/>
         <image name="button_nut.png" width="176" height="89"/>
         <image name="button_pudding.png" width="176" height="89"/>

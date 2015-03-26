@@ -10,6 +10,9 @@
 
 @implementation HomeModuleView
 
+#pragma mark - IBAction Methods
+- (IBAction)homeButtonClicked:(UIButton *)sender {
+}
 #pragma mark - UIView methods
 - (void)awakeFromNib
 {
