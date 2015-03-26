@@ -7,12 +7,19 @@
 //
 
 #import "AboutAppViewController.h"
+#import "AboutBOXViewController.h"
 
 @interface AboutAppViewController ()
 
 @end
 
 @implementation AboutAppViewController
+
+#pragma mark - IBAction Methods
+- (IBAction)aboutBOXButtonClicked:(id)sender {
+    AboutBOXViewController *aboutBOXViewController = [[AboutBOXViewController alloc]initWithNibName:@"AboutBOXViewController" bundle:nil];
+    [self.navigationController pushViewController:aboutBOXViewController animated:YES];
+}
 
 #pragma mark - UIViewController Methods
 - (void)viewDidLoad {
