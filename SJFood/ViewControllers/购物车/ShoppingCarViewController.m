@@ -266,6 +266,8 @@
                                                         }
                                                         [self.shoppingCarCodeArray removeAllObjects];
                                                         [self.shoppingCarSelectedArray removeAllObjects];
+                                                        self.totalPrice = @"0.00";
+                                                        self.totalPriceLabel.text = @"0.00";
                                                         [self setNaviTitle:[NSString stringWithFormat:@"购物车(%lu)",(unsigned long)self.shoppingCarArray.count]];
                                                         [self requestForDeleteAll:orderIdString];
                                                     }]];
@@ -286,6 +288,8 @@
             }
             [self.shoppingCarCodeArray removeAllObjects];
             [self.shoppingCarSelectedArray removeAllObjects];
+            self.totalPrice = @"0.00";
+            self.totalPriceLabel.text = @"0.00";
             [self setNaviTitle:[NSString stringWithFormat:@"购物车(%lu)",(unsigned long)self.shoppingCarArray.count]];
             [self requestForDeleteAll:orderIdString];
         }
@@ -300,6 +304,7 @@
     } else {
         //下单请求
         CalculateViewController *calculateViewController = [[CalculateViewController alloc]initWithNibName:@"CalculateViewController" bundle:nil];
+        calculateViewController.orderListArray = self.shoppingCarSelectedArray;
         [self.navigationController pushViewController:calculateViewController animated:YES];
     }
 }

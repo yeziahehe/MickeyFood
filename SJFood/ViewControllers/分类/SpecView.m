@@ -146,7 +146,7 @@
     if ([self.foodCount integerValue] > [self.restLabel.text integerValue]) {
         [[YFProgressHUD sharedProgressHUD] showWithMessage:@"已增加到最大库存" customView:nil hideDelay:2.f];
     } else {
-        self.foodCount = [NSString stringWithFormat:@"%ldd",[self.foodCount integerValue] + 1];
+        self.foodCount = [NSString stringWithFormat:@"%d",[self.foodCount intValue] + 1];
         [self.buyNumButton setTitle:self.foodCount forState:UIControlStateNormal];
     }
 }
@@ -155,7 +155,7 @@
     if ([self.foodCount isEqualToString:@"1"]) {
         [[YFProgressHUD sharedProgressHUD] showWithMessage:@"已减少到最小数量" customView:nil hideDelay:2.f];
     } else {
-        self.foodCount = [NSString stringWithFormat:@"%ldd",[self.foodCount integerValue] - 1];
+        self.foodCount = [NSString stringWithFormat:@"%d",[self.foodCount intValue] - 1];
         [self.buyNumButton setTitle:self.foodCount forState:UIControlStateNormal];
     }
 }
