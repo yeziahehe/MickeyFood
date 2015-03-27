@@ -109,6 +109,16 @@
 		7542C48F1A2CD09E00BB083D /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7542C48D1A2CD09E00BB083D /* ConfirmViewController.xib */; };
 		7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542C4A21A2D972400BB083D /* UserInfoViewController.m */; };
 		7542C4A51A2D972400BB083D /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7542C4A31A2D972400BB083D /* UserInfoViewController.xib */; };
+		754547451AC593F500A872E4 /* SendOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 754547441AC593F500A872E4 /* SendOrderView.m */; };
+		754547471AC5997000A872E4 /* SendOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754547461AC5997000A872E4 /* SendOrderView.xib */; };
+		754547491AC59A2100A872E4 /* CourierOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754547481AC59A2100A872E4 /* CourierOrderView.xib */; };
+		7545474C1AC59A3200A872E4 /* CourierOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7545474B1AC59A3200A872E4 /* CourierOrderView.m */; };
+		7545474E1AC5A4B500A872E4 /* SendOrderMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7545474D1AC5A4B500A872E4 /* SendOrderMap.plist */; };
+		754547521AC5A54500A872E4 /* SendOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754547501AC5A54500A872E4 /* SendOrdersViewController.m */; };
+		754547531AC5A54500A872E4 /* SendOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754547511AC5A54500A872E4 /* SendOrdersViewController.xib */; };
+		754547571AC5A56900A872E4 /* CourierOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754547551AC5A56900A872E4 /* CourierOrdersViewController.m */; };
+		754547581AC5A56900A872E4 /* CourierOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754547561AC5A56900A872E4 /* CourierOrdersViewController.xib */; };
+		7545475A1AC5A5A000A872E4 /* CourierOrderMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 754547591AC5A5A000A872E4 /* CourierOrderMap.plist */; };
 		7550774D1A469EF800CD18EF /* FoodHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7550774C1A469EF800CD18EF /* FoodHeaderView.m */; };
 		7550774F1A469F0700CD18EF /* FoodHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7550774E1A469F0700CD18EF /* FoodHeaderView.xib */; };
 		755077521A46A2CF00CD18EF /* FoodParamView.m in Sources */ = {isa = PBXBuildFile; fileRef = 755077511A46A2CF00CD18EF /* FoodParamView.m */; };
@@ -202,6 +212,10 @@
 		757DE9A81A45617F0054BE47 /* bg_add_shopping_car@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757DE9A41A45617F0054BE47 /* bg_add_shopping_car@3x.png */; };
 		757DE9A91A45617F0054BE47 /* bg_buy_shopping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757DE9A51A45617F0054BE47 /* bg_buy_shopping@2x.png */; };
 		757DE9AA1A45617F0054BE47 /* bg_buy_shopping@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757DE9A61A45617F0054BE47 /* bg_buy_shopping@3x.png */; };
+		757E83EB1AC5AE77004DF3F7 /* icon_select_order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757E83E71AC5AE77004DF3F7 /* icon_select_order@2x.png */; };
+		757E83EC1AC5AE77004DF3F7 /* icon_select_order@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757E83E81AC5AE77004DF3F7 /* icon_select_order@3x.png */; };
+		757E83ED1AC5AE77004DF3F7 /* icon_send_order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757E83E91AC5AE77004DF3F7 /* icon_send_order@2x.png */; };
+		757E83EE1AC5AE77004DF3F7 /* icon_send_order@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757E83EA1AC5AE77004DF3F7 /* icon_send_order@3x.png */; };
 		758116371A27611900065E65 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758116351A27611900065E65 /* HomeViewController.m */; };
 		758116381A27611900065E65 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758116361A27611900065E65 /* HomeViewController.xib */; };
 		758349521AB95D3D00C60CD7 /* HomeModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758349511AB95D3D00C60CD7 /* HomeModuleView.m */; };
@@ -552,6 +566,20 @@
 		7542C4A11A2D972400BB083D /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		7542C4A21A2D972400BB083D /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		7542C4A31A2D972400BB083D /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		754547431AC593F500A872E4 /* SendOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendOrderView.h; sourceTree = "<group>"; };
+		754547441AC593F500A872E4 /* SendOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendOrderView.m; sourceTree = "<group>"; };
+		754547461AC5997000A872E4 /* SendOrderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendOrderView.xib; sourceTree = "<group>"; };
+		754547481AC59A2100A872E4 /* CourierOrderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourierOrderView.xib; sourceTree = "<group>"; };
+		7545474A1AC59A3200A872E4 /* CourierOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourierOrderView.h; sourceTree = "<group>"; };
+		7545474B1AC59A3200A872E4 /* CourierOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourierOrderView.m; sourceTree = "<group>"; };
+		7545474D1AC5A4B500A872E4 /* SendOrderMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SendOrderMap.plist; sourceTree = "<group>"; };
+		7545474F1AC5A54500A872E4 /* SendOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendOrdersViewController.h; sourceTree = "<group>"; };
+		754547501AC5A54500A872E4 /* SendOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendOrdersViewController.m; sourceTree = "<group>"; };
+		754547511AC5A54500A872E4 /* SendOrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendOrdersViewController.xib; sourceTree = "<group>"; };
+		754547541AC5A56900A872E4 /* CourierOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourierOrdersViewController.h; sourceTree = "<group>"; };
+		754547551AC5A56900A872E4 /* CourierOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourierOrdersViewController.m; sourceTree = "<group>"; };
+		754547561AC5A56900A872E4 /* CourierOrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourierOrdersViewController.xib; sourceTree = "<group>"; };
+		754547591AC5A5A000A872E4 /* CourierOrderMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CourierOrderMap.plist; sourceTree = "<group>"; };
 		7550774B1A469EF800CD18EF /* FoodHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodHeaderView.h; sourceTree = "<group>"; };
 		7550774C1A469EF800CD18EF /* FoodHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodHeaderView.m; sourceTree = "<group>"; };
 		7550774E1A469F0700CD18EF /* FoodHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodHeaderView.xib; sourceTree = "<group>"; };
@@ -670,6 +698,10 @@
 		757DE9A41A45617F0054BE47 /* bg_add_shopping_car@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_add_shopping_car@3x.png"; sourceTree = "<group>"; };
 		757DE9A51A45617F0054BE47 /* bg_buy_shopping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_buy_shopping@2x.png"; sourceTree = "<group>"; };
 		757DE9A61A45617F0054BE47 /* bg_buy_shopping@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_buy_shopping@3x.png"; sourceTree = "<group>"; };
+		757E83E71AC5AE77004DF3F7 /* icon_select_order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_select_order@2x.png"; sourceTree = "<group>"; };
+		757E83E81AC5AE77004DF3F7 /* icon_select_order@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_select_order@3x.png"; sourceTree = "<group>"; };
+		757E83E91AC5AE77004DF3F7 /* icon_send_order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_send_order@2x.png"; sourceTree = "<group>"; };
+		757E83EA1AC5AE77004DF3F7 /* icon_send_order@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_send_order@3x.png"; sourceTree = "<group>"; };
 		758116341A27611900065E65 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		758116351A27611900065E65 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		758116361A27611900065E65 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -1132,6 +1164,8 @@
 				7550776F1A46C07100CD18EF /* FoodDetailMap.plist */,
 				7519C77A1AB964550069F400 /* HomeMap.plist */,
 				758848B81AC2F8E0006F98F9 /* CalculateInfoMap.plist */,
+				7545474D1AC5A4B500A872E4 /* SendOrderMap.plist */,
+				754547591AC5A5A000A872E4 /* CourierOrderMap.plist */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -1873,6 +1907,12 @@
 				758512AC1A32F77500504FA8 /* UserSettingView.h */,
 				758512AD1A32F77500504FA8 /* UserSettingView.m */,
 				758512AF1A32F78400504FA8 /* UserSettingView.xib */,
+				754547431AC593F500A872E4 /* SendOrderView.h */,
+				754547441AC593F500A872E4 /* SendOrderView.m */,
+				754547461AC5997000A872E4 /* SendOrderView.xib */,
+				7545474A1AC59A3200A872E4 /* CourierOrderView.h */,
+				7545474B1AC59A3200A872E4 /* CourierOrderView.m */,
+				754547481AC59A2100A872E4 /* CourierOrderView.xib */,
 				75EED43C1A320F61002ECA75 /* UserInfoTableViewCell.h */,
 				75EED43D1A320F61002ECA75 /* UserInfoTableViewCell.m */,
 				75EED43E1A320F61002ECA75 /* UserInfoTableViewCell.xib */,
@@ -1924,6 +1964,12 @@
 				75AD58571A388F5F00E39640 /* AddressTableViewCell.m */,
 				75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */,
 				75D1E2CD1A3ACEF1008555B1 /* 地址管理子页面 */,
+				7545474F1AC5A54500A872E4 /* SendOrdersViewController.h */,
+				754547501AC5A54500A872E4 /* SendOrdersViewController.m */,
+				754547511AC5A54500A872E4 /* SendOrdersViewController.xib */,
+				754547541AC5A56900A872E4 /* CourierOrdersViewController.h */,
+				754547551AC5A56900A872E4 /* CourierOrdersViewController.m */,
+				754547561AC5A56900A872E4 /* CourierOrdersViewController.xib */,
 			);
 			name = "我的子页面";
 			sourceTree = "<group>";
@@ -1931,6 +1977,10 @@
 		75EED4001A31EDD3002ECA75 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				757E83E71AC5AE77004DF3F7 /* icon_select_order@2x.png */,
+				757E83E81AC5AE77004DF3F7 /* icon_select_order@3x.png */,
+				757E83E91AC5AE77004DF3F7 /* icon_send_order@2x.png */,
+				757E83EA1AC5AE77004DF3F7 /* icon_send_order@3x.png */,
 				7555FF8D1AC18CC6001A0497 /* icon_no_status@2x.png */,
 				7555FF8E1AC18CC6001A0497 /* icon_no_status@3x.png */,
 				7514E5011A3D81470091A26D /* bg_user@2x.png */,
@@ -2074,6 +2124,7 @@
 				75AD58481A38285300E39640 /* NicknameEditViewController.xib in Resources */,
 				758512911A32F2AC00504FA8 /* AllOrderViewController.xib in Resources */,
 				758E4CA21A42C648004547E2 /* tag_discount@3x.png in Resources */,
+				7545474E1AC5A4B500A872E4 /* SendOrderMap.plist in Resources */,
 				75EED4311A320B79002ECA75 /* icon_feedback@3x.png in Resources */,
 				7542C4641A2CA42400BB083D /* LoginViewController.xib in Resources */,
 				758512A01A32F45800504FA8 /* AddressViewController.xib in Resources */,
@@ -2084,6 +2135,7 @@
 				756C62FA1A47083B007B2ECB /* bg_star_half@3x.png in Resources */,
 				7555FF901AC18CC6001A0497 /* icon_no_status@3x.png in Resources */,
 				75FCABF51AC3D60F00C1368C /* button_meat@2x.png in Resources */,
+				754547581AC5A56900A872E4 /* CourierOrdersViewController.xib in Resources */,
 				7533EF021A2E1549001D12D4 /* icon_header_back@2x.png in Resources */,
 				75164D9D1ABAA7C30046F86E /* guidepage_3_480h@2x.png in Resources */,
 				75E478A41A7F6AAC002DC26D /* icon_no_food@2x.png in Resources */,
@@ -2095,6 +2147,7 @@
 				75EED4351A320B79002ECA75 /* icon_setting@3x.png in Resources */,
 				758E4C9E1A42BD2E004547E2 /* FoodTableViewCell.xib in Resources */,
 				755722671A34334E00CC6A8F /* AboutAppViewController.xib in Resources */,
+				7545475A1AC5A5A000A872E4 /* CourierOrderMap.plist in Resources */,
 				7527DF841AAC8D2C00A20A01 /* btn_confirm_num@2x.png in Resources */,
 				7564F2B61ABC163C00506E68 /* btn_category_selected@3x.png in Resources */,
 				75F90A8B1A49CFF600CB19EB /* SpecView.xib in Resources */,
@@ -2116,6 +2169,7 @@
 				75EED4211A32040B002ECA75 /* UserView.xib in Resources */,
 				758512821A32EEEC00504FA8 /* ReceiveViewController.xib in Resources */,
 				758349541AB95D4C00C60CD7 /* HomeModuleView.xib in Resources */,
+				757E83EE1AC5AE77004DF3F7 /* icon_send_order@3x.png in Resources */,
 				7585127D1A32EE7A00504FA8 /* DeliveryViewController.xib in Resources */,
 				758116381A27611900065E65 /* HomeViewController.xib in Resources */,
 				75D1E2CC1A3ACEE5008555B1 /* AddressAddViewController.xib in Resources */,
@@ -2126,10 +2180,12 @@
 				75164D8D1ABAA7AA0046F86E /* guidepage_1_480h@2x.png in Resources */,
 				7533EEF01A2E1536001D12D4 /* icon_code@2x.png in Resources */,
 				751B20FE1AB1D4B000B1CFE6 /* btn_cancel_specal@3x.png in Resources */,
+				754547531AC5A54500A872E4 /* SendOrdersViewController.xib in Resources */,
 				758848A91AC2B4BF006F98F9 /* AddressChooseView.xib in Resources */,
 				75AD58311A3810C000E39640 /* ShareViewController.xib in Resources */,
 				75EED4441A321A33002ECA75 /* SettingInfoMap.plist in Resources */,
 				75A817401ABEBB76004CAEF5 /* button_special@3x.png in Resources */,
+				757E83EB1AC5AE77004DF3F7 /* icon_select_order@2x.png in Resources */,
 				7533EEF91A2E1536001D12D4 /* icon_radio_normal@3x.png in Resources */,
 				7533EEFA1A2E1536001D12D4 /* icon_radio_selected@2x.png in Resources */,
 				7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */,
@@ -2156,6 +2212,7 @@
 				758848B91AC2F8E0006F98F9 /* CalculateInfoMap.plist in Resources */,
 				75F90A811A49B44700CB19EB /* ImageTemplete.html in Resources */,
 				758512B01A32F78400504FA8 /* UserSettingView.xib in Resources */,
+				754547491AC59A2100A872E4 /* CourierOrderView.xib in Resources */,
 				757DE9A21A455E560054BE47 /* FoodDetailViewController.xib in Resources */,
 				7533EEF11A2E1536001D12D4 /* icon_code@3x.png in Resources */,
 				758937BD1AB673A30003ECEE /* btn_shopping@2x.png in Resources */,
@@ -2213,6 +2270,7 @@
 				7533EED41A2E150A001D12D4 /* line_hon_1px_down.png in Resources */,
 				7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */,
 				755722621A34290F00CC6A8F /* WelcomeViewController.xib in Resources */,
+				754547471AC5997000A872E4 /* SendOrderView.xib in Resources */,
 				755077661A46BC6900CD18EF /* icon_arrow@3x.png in Resources */,
 				7533EF041A2E1549001D12D4 /* icon_header_cancel@2x.png in Resources */,
 				75A8173A1ABEBB76004CAEF5 /* button_hot@3x.png in Resources */,
@@ -2267,6 +2325,7 @@
 				75C1439D1A415EF100E6F92B /* FoodViewController.xib in Resources */,
 				758512871A32EEFF00504FA8 /* CommentViewController.xib in Resources */,
 				758937BC1AB673A30003ECEE /* btn_home@3x.png in Resources */,
+				757E83ED1AC5AE77004DF3F7 /* icon_send_order@2x.png in Resources */,
 				75544EBE1AAC114F0034F4A8 /* btn_shoppingcar_edit@2x.png in Resources */,
 				7533EECE1A2E14E7001D12D4 /* icon_search@3x.png in Resources */,
 				75EED41C1A31F7E5002ECA75 /* icon_refund@3x.png in Resources */,
@@ -2285,6 +2344,7 @@
 				75F594BD1AA72999004B3CDF /* ShoppingCarTableViewCell.xib in Resources */,
 				7533EEED1A2E1536001D12D4 /* btn_full@3x.png in Resources */,
 				75164DA01ABAA7C30046F86E /* guidepage_3_736h@3x.png in Resources */,
+				757E83EC1AC5AE77004DF3F7 /* icon_select_order@3x.png in Resources */,
 				7533EEF31A2E1536001D12D4 /* icon_confirm_pwd@3x.png in Resources */,
 				75D1E2C21A3ACA25008555B1 /* btn_edit_address@3x.png in Resources */,
 				755077541A46A2DE00CD18EF /* FoodParamView.xib in Resources */,
@@ -2365,11 +2425,14 @@
 				75AD58301A3810C000E39640 /* ShareViewController.m in Sources */,
 				758512951A32F43400504FA8 /* MyAccountViewController.m in Sources */,
 				7555FF8C1AC187CF001A0497 /* OrderDetails.m in Sources */,
+				754547521AC5A54500A872E4 /* SendOrdersViewController.m in Sources */,
+				7545474C1AC59A3200A872E4 /* CourierOrderView.m in Sources */,
 				7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */,
 				7585127C1A32EE7A00504FA8 /* DeliveryViewController.m in Sources */,
 				75544EC31AAC13BC0034F4A8 /* ShoppingCar.m in Sources */,
 				75F594BC1AA72999004B3CDF /* ShoppingCarTableViewCell.m in Sources */,
 				758512AE1A32F77500504FA8 /* UserSettingView.m in Sources */,
+				754547451AC593F500A872E4 /* SendOrderView.m in Sources */,
 				75D1E2C61A3ACEC5008555B1 /* AddressEditViewController.m in Sources */,
 				758954531A24E685001C2350 /* Reachability.m in Sources */,
 				7599AA051A259D910052E7A9 /* YFAsynImageView.m in Sources */,
@@ -2382,6 +2445,7 @@
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
 				750F6B351AC0524700891124 /* OrderDetailTableViewCell.m in Sources */,
 				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
+				754547571AC5A56900A872E4 /* CourierOrdersViewController.m in Sources */,
 				75AD58501A387E8300E39640 /* YFMediaPicker.m in Sources */,
 				758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */,
 				7557225D1A34264C00CC6A8F /* YFAppBackgroudConfiger.m in Sources */,

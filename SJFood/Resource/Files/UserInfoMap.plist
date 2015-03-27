@@ -6,5 +6,7 @@
 	<string>OrderInfoView</string>
 	<string>UserEditView</string>
 	<string>UserSettingView</string>
+	<string>SendOrderView</string>
+	<string>CourierOrderView</string>
 </array>
 </plist>

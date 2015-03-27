@@ -13,8 +13,10 @@
 
 - (RoleType)roleType
 {
-    if ([self.type isEqualToString:@"1"])
+    if ([self.type isEqualToString:@"0"])
         return kRoleAdmin;
+    else if ([self.type isEqualToString:@"1"])
+        return kRoleCourier;
     else
         return kRoleUser;
 }

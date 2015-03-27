@@ -22,7 +22,8 @@
 
 typedef enum {
     kRoleUser = 0,
-    kRoleAdmin
+    kRoleAdmin = 1,
+    kRoleCourier = 2
 }RoleType;
 
 @interface UserInfo : NSObject

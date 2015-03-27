@@ -11,6 +11,8 @@
 #import "OrderInfoView.h"
 #import "UserEditView.h"
 #import "UserSettingView.h"
+#import "SendOrderView.h"
+#import "CourierOrderView.h"
 #import "MineInfo.h"
 #import "MyAccountViewController.h"
 
@@ -37,6 +39,14 @@
     }
     NSString *path = [[NSBundle mainBundle] pathForResource:kUserInfoMapFileName ofType:@"plist"];
     self.subViewArray = [NSMutableArray arrayWithContentsOfFile:path];
+    if (self.mineInfo.userInfo.roleType == kRoleAdmin) {
+        [self.subViewArray removeObject:@"CourierOrderView"];
+    } else if (self.mineInfo.userInfo.roleType == kRoleCourier) {
+        [self.subViewArray removeObject:@"SendOrderView"];
+    } else {
+        [self.subViewArray removeObject:@"SendOrderView"];
+        [self.subViewArray removeObject:@"CourierOrderView"];
+    }
     
     //加载每个子模块
     CGFloat originY = kSubViewGap;
@@ -56,27 +66,26 @@
         }
         else if ([userInfoSubView isKindOfClass:[OrderInfoView class]]) {
             OrderInfoView *oiv = (OrderInfoView *)userInfoSubView;
-//            if ([[MemberDataManager sharedManager] isLogin]) {
-//                [oiv reloadWithUserInfo:self.mineInfo];
-//            }
             rect.size.height = oiv.orderInfoTableView.contentSize.height;
             rect.size.width = ScreenWidth;
         }
         else if ([userInfoSubView isKindOfClass:[UserEditView class]]) {
             UserEditView *uev = (UserEditView *)userInfoSubView;
-//            if ([[MemberDataManager sharedManager] isLogin]) {
-//                [uev reloadWithUserInfo:self.mineInfo];
-//            }
             rect.size.height = uev.userEditTableView.contentSize.height;
             rect.size.width = ScreenWidth;
         }
         else if ([userInfoSubView isKindOfClass:[UserSettingView class]]) {
             UserSettingView *usv = (UserSettingView *)userInfoSubView;
-//            if ([[MemberDataManager sharedManager] isLogin]) {
-//                [usv reloadWithUserInfo:self.mineInfo];
-//            }
             rect.size.height = usv.userSettingTableView.contentSize.height;
             rect.size.width = ScreenWidth;
+        }
+        else if ([userInfoSubView isKindOfClass:[SendOrderView class]]) {
+            SendOrderView *sov = (SendOrderView *)userInfoSubView;
+            rect.size.height = sov.sendOrderTableView.contentSize.height;
+            rect.size.width = ScreenWidth;
+        }
+        else if ([userInfoSubView isKindOfClass:[CourierOrderView class]]) {
+            
         }
         userInfoSubView.frame = rect;
         [self.contentScrollView addSubview:userInfoSubView];
