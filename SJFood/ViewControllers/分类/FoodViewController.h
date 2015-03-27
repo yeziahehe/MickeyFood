@@ -16,8 +16,11 @@
 @property (strong, nonatomic) IBOutlet UITableView *foodTableView;
 @property (strong, nonatomic) IBOutlet UIView *messageFooterView;
 @property (strong, nonatomic) IBOutlet UILabel *loadMessageLabel;
+@property (strong, nonatomic) NSString *urlTag;
 
 - (void)requestForFoodSearchWithCategoryId:(NSString *)category foodTag:(NSString *)tag sortId:(NSString *)sortId page:(NSString *)page;
+
+- (void)requestForHomeWithUrlTag:(NSString *)tag page:(NSString *)page;
 
 - (IBAction)sortByAllButtonClicked:(id)sender;
 - (IBAction)sortByPriceButtonClicked:(id)sender;

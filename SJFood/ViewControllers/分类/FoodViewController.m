@@ -13,6 +13,7 @@
 #import "FoodDetailViewController.h"
 
 #define kFoodSearchDownloaderKey        @"FoodSearchDownloaderKey"
+#define kHomeFoodDownloaderKey          @"HomeFoodDownloaderKey"
 #define kLastIdInit             @"0"
 
 @interface FoodViewController ()
@@ -26,7 +27,7 @@
 
 @implementation FoodViewController
 @synthesize sortByAllButton,sortByPriceButton,sortBySaleButton,foodTableView;
-@synthesize searchBar,categoryId,foodTag,foodArray,food,lastestId,sort,messageFooterView,loadMessageLabel;
+@synthesize searchBar,categoryId,foodTag,foodArray,food,lastestId,sort,messageFooterView,loadMessageLabel,urlTag;
 
 #pragma mark - Private Methods
 - (void)loadSubViews
@@ -69,6 +70,37 @@
                                                                 purpose:kFoodSearchDownloaderKey];
 }
 
+- (void)requestForHomeWithUrlTag:(NSString *)tag page:(NSString *)page
+{
+    NSString *urlWithTag = @"";
+    switch ([tag intValue]) {
+        case 1:
+            urlWithTag = kHotFoodUrl;
+            break;
+        
+        case 2:
+            urlWithTag = kFreshFoodUrl;
+            break;
+            
+        case 4:
+            urlWithTag = kDiscountFoodUrl;
+            break;
+            
+        default:
+            break;
+    }
+    self.lastestId = page;
+    self.urlTag = tag;
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,urlWithTag];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:page forKey:@"page"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kHomeFoodDownloaderKey];
+}
+
 #pragma mark - IBAction Methods
 - (IBAction)sortByAllButtonClicked:(id)sender {
     if (!self.sortByAllButton.selected)
@@ -81,8 +113,13 @@
         self.sortByAllButton.selected = YES;
         self.sortByPriceButton.selected = NO;
         self.sortBySaleButton.selected = NO;
-        [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
-        [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+        if ([self.urlTag isEqualToString:@"-1"]) {
+            [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+            [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+        } else {
+            [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+            [self requestForHomeWithUrlTag:self.urlTag page:kLastIdInit];
+        }
     }
 }
 
@@ -97,8 +134,13 @@
         self.sortByAllButton.selected = NO;
         self.sortByPriceButton.selected = YES;
         self.sortBySaleButton.selected = NO;
-        [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
-        [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+        if ([self.urlTag isEqualToString:@"-1"]) {
+            [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+            [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+        } else {
+            [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+            [self requestForHomeWithUrlTag:self.urlTag page:kLastIdInit];
+        }
     }
 }
 
@@ -113,8 +155,13 @@
         self.sortByAllButton.selected = NO;
         self.sortByPriceButton.selected = NO;
         self.sortBySaleButton.selected = YES;
-        [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
-        [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+        if ([self.urlTag isEqualToString:@"-1"]) {
+            [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+            [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:kLastIdInit];
+        } else {
+            [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+            [self requestForHomeWithUrlTag:self.urlTag page:kLastIdInit];
+        }
     }
 }
 
@@ -124,7 +171,11 @@
     if (self.foodArray.count != 0) {
         more = self.lastestId;
     }
-    [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:more];
+    if ([self.urlTag isEqualToString:@"-1"]) {
+        [self requestForFoodSearchWithCategoryId:self.categoryId foodTag:self.foodTag sortId:self.sort page:more];
+    } else {
+        [self requestForHomeWithUrlTag:self.urlTag page:more];
+    }
 }
 
 #pragma mark - NSNotification Methods
@@ -137,6 +188,7 @@
     [self.foodTableView addFooterWithTarget:self action:@selector(refreshFooter)];
     self.foodArray = [NSMutableArray arrayWithCapacity:0];
     self.sort = @"0";
+    self.urlTag = @"-1";
     self.sortByAllButton.selected = YES;
     self.sortByPriceButton.selected = NO;
     self.sortBySaleButton.selected = NO;
@@ -172,6 +224,8 @@
     // Do any additional setup after loading the view from its nib.
     [self setNaviSearchTitle];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    if (self.urlTag == nil)
+        self.urlTag = @"-1";
     self.lastestId = kLastIdInit;
     self.foodArray = [NSMutableArray arrayWithCapacity:0];
     self.foodTableView.tableFooterView = [UIView new];
@@ -297,6 +351,76 @@
                         [self.foodArray addObject:fs];
                     }
                     NSString *previousId = [NSString stringWithFormat:@"%ldd",[self.lastestId integerValue] + 1];
+                    self.lastestId = previousId;
+                    if (valueArray.count < 10) {
+                        [self.foodTableView removeFooter];
+                        self.loadMessageLabel.text = @"已加载全部食品";
+                        self.foodTableView.tableFooterView = self.messageFooterView;
+                    }
+                }
+            }
+            [self loadSubViews];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"加载失败";
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+        }
+    }
+    else if ([downloader.purpose isEqualToString:kHomeFoodDownloaderKey])
+    {
+        [self.foodTableView footerEndRefreshing];
+        [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            NSMutableArray *valueArray = [dict objectForKey:@"foods"];
+            
+            if ([self.lastestId isEqualToString:kLastIdInit])
+            {
+                //第一次加载
+                [self.foodTableView setContentOffset:CGPointMake(0, -self.foodTableView.contentInset.top) animated:NO];
+                if (valueArray.count == 0)
+                {
+                    [self.foodTableView removeFooter];
+                    self.loadMessageLabel.text = @"暂无食品信息";
+                    self.foodTableView.tableFooterView = self.messageFooterView;
+                }
+                else
+                {
+                    for (NSDictionary *valueDict in valueArray) {
+                        FoodSelect *fs = [[FoodSelect alloc]initWithDict:valueDict];
+                        [self.foodArray addObject:fs];
+                    }
+                    self.lastestId = @"1";
+                    if (valueArray.count < 10) {
+                        [self.foodTableView removeFooter];
+                        self.loadMessageLabel.text = @"已加载全部食品";
+                        self.foodTableView.tableFooterView = self.messageFooterView;
+                    }
+                }
+            }
+            else
+            {
+                //下拉获取更多
+                if (valueArray.count == 0)
+                {
+                    [self.foodTableView removeFooter];
+                    self.loadMessageLabel.text = @"已加载全部食品";
+                    self.foodTableView.tableFooterView = self.messageFooterView;
+                }
+                else
+                {
+                    for (NSDictionary *valueDict in valueArray) {
+                        FoodSelect *fs = [[FoodSelect alloc]initWithDict:valueDict];
+                        [self.foodArray addObject:fs];
+                    }
+                    NSString *previousId = [NSString stringWithFormat:@"%d",[self.lastestId intValue] + 1];
                     self.lastestId = previousId;
                     if (valueArray.count < 10) {
                         [self.foodTableView removeFooter];

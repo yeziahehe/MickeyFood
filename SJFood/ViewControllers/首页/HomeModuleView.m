@@ -18,14 +18,8 @@
 #pragma mark - IBAction Methods
 - (IBAction)homeButtonClicked:(UIButton *)sender {
     //1,2,4
-    if (sender.tag == 1) {
-        //
-    }
-    else if (sender.tag == 2) {
-        //
-    }
-    else if (sender.tag == 4) {
-        //
+    if (sender.tag == 1 || sender.tag == 2 || sender.tag == 4) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:kSelectHomeButtonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
     }
     else {
         switch (sender.tag) {

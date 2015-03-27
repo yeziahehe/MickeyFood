@@ -99,10 +99,18 @@
 }
 
 #pragma mark - NSNotification Methods
-- (void)foodSearchWithNotification:(NSNotification *)notification
+- (void)foodSearchHomeWithNotification:(NSNotification *)notification
 {
     FoodViewController *foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController" bundle:nil];
     [foodViewController requestForFoodSearchWithCategoryId:nil foodTag:notification.object sortId:@"0" page:@"0"];
+    [self.navigationController pushViewController:foodViewController animated:YES];
+}
+
+- (void)selectHomeButtonWithTagNotification:(NSNotification *)notification
+{
+    FoodViewController *foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController" bundle:nil];
+    foodViewController.urlTag = notification.object;
+    [foodViewController requestForHomeWithUrlTag:notification.object page:@"0"];
     [self.navigationController pushViewController:foodViewController animated:YES];
 }
 
@@ -114,8 +122,8 @@
     [self loadSearchBar];
     [self loadSubViews];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kFoodSearchNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchWithNotification:) name:kSelectHomeButtonNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchHomeWithNotification:) name:kSelectHomeButtonNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectHomeButtonWithTagNotification:) name:kSelectHomeButtonWithTagNotification object:nil];
 }
 
 
