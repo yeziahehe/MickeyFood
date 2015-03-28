@@ -33,7 +33,6 @@
 
 - (void)requestForSendOrder
 {
-    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
     NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kSendOrderUrl];
     NSMutableDictionary *dict = kCommonParamsDict;
     [dict setObject:self.isSelected forKey:@"isSelected"];
@@ -86,6 +85,7 @@
 #pragma mark - Notification Methods
 - (void)selectCourierNotification:(NSNotification *)notification
 {
+    [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"选择快递员成功，请去已派单中查看" hideDelay:2.f];
     [self requestForSendOrder];
 }
 

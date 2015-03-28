@@ -90,7 +90,9 @@
             rect.size.width = ScreenWidth;
         }
         else if ([userInfoSubView isKindOfClass:[CourierOrderView class]]) {
-            
+            CourierOrderView *cov = (CourierOrderView *)userInfoSubView;
+            rect.size.height = cov.courierOrderTableView.contentSize.height;
+            rect.size.width = ScreenWidth;
         }
         userInfoSubView.frame = rect;
         [self.contentScrollView addSubview:userInfoSubView];

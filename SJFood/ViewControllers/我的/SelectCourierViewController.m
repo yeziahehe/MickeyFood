@@ -139,7 +139,6 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
-            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"选择快递员成功，请去已派单中查看" hideDelay:2.f];
             [[NSNotificationCenter defaultCenter] postNotificationName:kSelectCourierNotification object:nil];
             [self.navigationController popViewControllerAnimated:YES];
         }

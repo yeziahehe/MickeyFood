@@ -12,4 +12,6 @@
 @interface HomeViewController : BaseMenuViewController<UISearchBarDelegate,ImagesContainViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
+- (void)requestForNews;
+
 @end

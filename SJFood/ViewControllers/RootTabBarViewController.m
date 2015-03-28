@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "CategoryViewController.h"
 #import "ShoppingCarViewController.h"
+#import "HomeViewController.h"
 
 @interface RootTabBarViewController ()
 
@@ -71,13 +72,13 @@
                 }
             }
         }
-        if ([vc isKindOfClass:[CategoryViewController class]]) {
+        else if ([vc isKindOfClass:[CategoryViewController class]]) {
             if (vc != nil) {
                 CategoryViewController *cvc = (CategoryViewController *)vc;
                 [cvc requestForGetFoodCategory];
             }
         }
-        if ([vc isKindOfClass:[ShoppingCarViewController class]]) {
+        else if ([vc isKindOfClass:[ShoppingCarViewController class]]) {
             if (vc != nil) {
                 if ([[MemberDataManager sharedManager] isLogin]) {
                     ShoppingCarViewController *scvc = (ShoppingCarViewController *)vc;
@@ -86,6 +87,12 @@
                     ShoppingCarViewController *scvc = (ShoppingCarViewController *)vc;
                     [scvc loadSubViews];
                 }
+            }
+        }
+        else if ([vc isKindOfClass:[HomeViewController class]]) {
+            if (vc != nil) {
+                HomeViewController *hvc = (HomeViewController *)vc;
+                [hvc requestForNews];
             }
         }
     }
