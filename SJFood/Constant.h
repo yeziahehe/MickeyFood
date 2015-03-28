@@ -45,6 +45,7 @@
 #define kLightTextColor     [UIColor colorWithRed:155.f/255 green:155.f/255 blue:155.f/255 alpha:1.0f]
 #define DOCUMENTS_FOLDER    [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/"]
 #define kCommonParamsDict   [NSMutableDictionary dictionaryWithObjectsAndKeys:nil];
+#define kDeviceTokenKey     @"DeviceTokenKey"
 
 #define kNetWorkErrorString @"当前网络不给力"
 #define kIsWelcomeShown     @"IsWelcomeShown"

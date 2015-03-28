@@ -55,6 +55,20 @@
 }
 
 #pragma mark - Private Methods
+/**
+ *  清空通知数据
+ */
+- (void)clearNotifications
+{
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
+
+/**
+ *  监听到网络状态变化
+ *
+ *  @param note 网络状态
+ */
 - (void)reachabilityChanged:(NSNotification *)note
 {
     Reachability * reach = [note object];
@@ -70,6 +84,9 @@
     }
 }
 
+/**
+ *  开启网络监听
+ */
 - (void)notifyNetworkStatus
 {
     self.hostReachability = [Reachability reachabilityWithHostName:@"www.apple.com"];
@@ -91,11 +108,48 @@
     [self connectShareSDK];
     //检测网络状态
     [self notifyNetworkStatus];
+    //清空通知数据
+    [self clearNotifications];
+    
     self.window.tintColor = kMainProjColor;
     self.window.rootViewController = self.startViewController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //注册APNS
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        //ios 8
+        UIUserNotificationSettings * settings = [UIUserNotificationSettings settingsForTypes: UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound categories: nil ];
+        [[UIApplication sharedApplication] registerUserNotificationSettings: settings];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    } else {
+        //ios 7
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |UIRemoteNotificationTypeAlert |UIRemoteNotificationTypeSound];
+        
+    }
+    
     return YES;
+}
+
+#pragma mark - Push Notification Methods
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Prepare the Device Token for Registration (remove spaces and < >)
+    NSString *devToken = [[[[deviceToken description]stringByReplacingOccurrencesOfString:@"<"withString:@""]stringByReplacingOccurrencesOfString:@">" withString:@""]stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    NSLog(@"device token: %@",devToken);
+    if(devToken.length > 0)
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:devToken forKey:kDeviceTokenKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    if ([[MemberDataManager sharedManager] loginMember]) {
+        //将devicetoken与用户绑定
+    }
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"注册失败，无法获取设备ID, 具体错误: %@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -106,10 +160,13 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self clearNotifications];
+    [[MemberDataManager sharedManager] saveLoginMemberData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [self clearNotifications];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -118,6 +175,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Notification Methods
+- (void)dealNotificationWithLaunchOptions:(NSDictionary *)launchOptions
+{
+    //根据不同的推送状态处理跳转页面
 }
 
 #pragma mark - ShareSDK methods
