@@ -27,7 +27,7 @@
 #define RootDirectory_Constant_h
 
 //apple api
-#define kAppAppleId         @"563444753"
+#define kAppAppleId         @"980883989"
 #define kAppRateUrl         @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@"
 #define kAppDownloadUrl     @"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=%@&mt=8"
 
