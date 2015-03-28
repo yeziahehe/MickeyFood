@@ -216,6 +216,10 @@
 		757E83EC1AC5AE77004DF3F7 /* icon_select_order@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757E83E81AC5AE77004DF3F7 /* icon_select_order@3x.png */; };
 		757E83ED1AC5AE77004DF3F7 /* icon_send_order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757E83E91AC5AE77004DF3F7 /* icon_send_order@2x.png */; };
 		757E83EE1AC5AE77004DF3F7 /* icon_send_order@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757E83EA1AC5AE77004DF3F7 /* icon_send_order@3x.png */; };
+		757E83F21AC5B48E004DF3F7 /* SendOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E83F01AC5B48E004DF3F7 /* SendOrderTableViewCell.m */; };
+		757E83F31AC5B48E004DF3F7 /* SendOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757E83F11AC5B48E004DF3F7 /* SendOrderTableViewCell.xib */; };
+		757E83F81AC5B502004DF3F7 /* CourierTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E83F61AC5B502004DF3F7 /* CourierTableViewCell.m */; };
+		757E83F91AC5B502004DF3F7 /* CourierTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757E83F71AC5B502004DF3F7 /* CourierTableViewCell.xib */; };
 		758116371A27611900065E65 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758116351A27611900065E65 /* HomeViewController.m */; };
 		758116381A27611900065E65 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758116361A27611900065E65 /* HomeViewController.xib */; };
 		758349521AB95D3D00C60CD7 /* HomeModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758349511AB95D3D00C60CD7 /* HomeModuleView.m */; };
@@ -702,6 +706,12 @@
 		757E83E81AC5AE77004DF3F7 /* icon_select_order@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_select_order@3x.png"; sourceTree = "<group>"; };
 		757E83E91AC5AE77004DF3F7 /* icon_send_order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_send_order@2x.png"; sourceTree = "<group>"; };
 		757E83EA1AC5AE77004DF3F7 /* icon_send_order@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_send_order@3x.png"; sourceTree = "<group>"; };
+		757E83EF1AC5B48E004DF3F7 /* SendOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendOrderTableViewCell.h; sourceTree = "<group>"; };
+		757E83F01AC5B48E004DF3F7 /* SendOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendOrderTableViewCell.m; sourceTree = "<group>"; };
+		757E83F11AC5B48E004DF3F7 /* SendOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendOrderTableViewCell.xib; sourceTree = "<group>"; };
+		757E83F51AC5B502004DF3F7 /* CourierTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourierTableViewCell.h; sourceTree = "<group>"; };
+		757E83F61AC5B502004DF3F7 /* CourierTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourierTableViewCell.m; sourceTree = "<group>"; };
+		757E83F71AC5B502004DF3F7 /* CourierTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourierTableViewCell.xib; sourceTree = "<group>"; };
 		758116341A27611900065E65 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		758116351A27611900065E65 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		758116361A27611900065E65 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -1495,6 +1505,19 @@
 			path = "我的";
 			sourceTree = "<group>";
 		};
+		757E83F41AC5B49A004DF3F7 /* 选单派单子页面 */ = {
+			isa = PBXGroup;
+			children = (
+				757E83EF1AC5B48E004DF3F7 /* SendOrderTableViewCell.h */,
+				757E83F01AC5B48E004DF3F7 /* SendOrderTableViewCell.m */,
+				757E83F11AC5B48E004DF3F7 /* SendOrderTableViewCell.xib */,
+				757E83F51AC5B502004DF3F7 /* CourierTableViewCell.h */,
+				757E83F61AC5B502004DF3F7 /* CourierTableViewCell.m */,
+				757E83F71AC5B502004DF3F7 /* CourierTableViewCell.xib */,
+			);
+			name = "选单派单子页面";
+			sourceTree = "<group>";
+		};
 		758116301A26E46200065E65 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1970,6 +1993,7 @@
 				754547541AC5A56900A872E4 /* CourierOrdersViewController.h */,
 				754547551AC5A56900A872E4 /* CourierOrdersViewController.m */,
 				754547561AC5A56900A872E4 /* CourierOrdersViewController.xib */,
+				757E83F41AC5B49A004DF3F7 /* 选单派单子页面 */,
 			);
 			name = "我的子页面";
 			sourceTree = "<group>";
@@ -2250,6 +2274,7 @@
 				75164D901ABAA7AA0046F86E /* guidepage_1_736h@3x.png in Resources */,
 				758937BF1AB673A30003ECEE /* btn_user@2x.png in Resources */,
 				75EED42F1A320B79002ECA75 /* icon_address@3x.png in Resources */,
+				757E83F91AC5B502004DF3F7 /* CourierTableViewCell.xib in Resources */,
 				7564F2A11ABBF91800506E68 /* icon_triangle@2x.png in Resources */,
 				7564F2B21ABC0A8700506E68 /* btn_user_selected@3x.png in Resources */,
 				75164DA61ABAA7D00046F86E /* guidepage_4_568h@2x.png in Resources */,
@@ -2276,6 +2301,7 @@
 				75A8173A1ABEBB76004CAEF5 /* button_hot@3x.png in Resources */,
 				75A8173D1ABEBB76004CAEF5 /* button_nut@3x.png in Resources */,
 				755077611A46BAB800CD18EF /* bg_star_full@2x.png in Resources */,
+				757E83F31AC5B48E004DF3F7 /* SendOrderTableViewCell.xib in Resources */,
 				7555FF8F1AC18CC6001A0497 /* icon_no_status@2x.png in Resources */,
 				75CD70AE1A41C5140073A7E5 /* SearchHistoryViewController.xib in Resources */,
 				755722BD1A34891400CC6A8F /* icon_sina_weibo@3x.png in Resources */,
@@ -2445,6 +2471,7 @@
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
 				750F6B351AC0524700891124 /* OrderDetailTableViewCell.m in Sources */,
 				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
+				757E83F21AC5B48E004DF3F7 /* SendOrderTableViewCell.m in Sources */,
 				754547571AC5A56900A872E4 /* CourierOrdersViewController.m in Sources */,
 				75AD58501A387E8300E39640 /* YFMediaPicker.m in Sources */,
 				758512861A32EEFF00504FA8 /* CommentViewController.m in Sources */,
@@ -2498,6 +2525,7 @@
 				75CD70AD1A41C5140073A7E5 /* SearchHistoryViewController.m in Sources */,
 				758848A21AC2B477006F98F9 /* CalculateSubView.m in Sources */,
 				758954401A24BA69001C2350 /* BaseViewController.m in Sources */,
+				757E83F81AC5B502004DF3F7 /* CourierTableViewCell.m in Sources */,
 				75E4789F1A7F58AE002DC26D /* ShoppingCarViewController.m in Sources */,
 				75E18EC41A39C932000AEF48 /* Address.m in Sources */,
 				7550775C1A46B71300CD18EF /* FoodCommentView.m in Sources */,

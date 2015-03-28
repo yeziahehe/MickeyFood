@@ -112,6 +112,7 @@
 #define kCreateCommentUrl       @"food/creatOrderComment.do"
 #define kHotFoodUrl             @"food/getFoodListWelcome.do"
 #define kFreshFoodUrl           @"food/getFoodListFresh.do"
-#define kDiscountFoodUrl        @"food.getFoodListDiscount.do"
+#define kDiscountFoodUrl        @"food/getFoodListDiscount.do"
+#define kSendOrderUrl           @"order/superAdminGetOrder.do"
 
 #endif

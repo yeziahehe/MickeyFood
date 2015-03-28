@@ -7,6 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendOrdersViewController">
             <connections>
+                <outlet property="noOrderView" destination="bld-Ku-EL6" id="Fxc-Ya-yqe"/>
+                <outlet property="notSelectButton" destination="FvC-L3-usL" id="Vhu-dl-EJk"/>
+                <outlet property="selectedButton" destination="gM8-7a-3Uv" id="mJn-Jb-kVy"/>
+                <outlet property="sendOrderTableView" destination="rQ4-rZ-sEY" id="u2D-ow-ZCL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,10 +18,118 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rQ4-rZ-sEY">
+                    <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMw-IT-YtY">
+                    <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_ver_1px_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pe2-Bh-lgM">
+                            <rect key="frame" x="160" y="8" width="1" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="hIG-TF-F6D"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvC-L3-usL">
+                            <rect key="frame" x="8" y="0.0" width="143" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="LvX-9y-FmK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="未选单">
+                                <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" title="综合" backgroundImage="btn_food_sort_selected">
+                                <color key="titleColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="notSelectButtonClicked:" destination="-1" eventType="touchUpInside" id="FyU-ay-KQj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM8-7a-3Uv">
+                            <rect key="frame" x="169" y="0.0" width="143" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="SrN-De-oEd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="已选单">
+                                <color key="titleColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" title="销量" backgroundImage="btn_food_sort_selected">
+                                <color key="titleColor" red="0.94117647059999998" green="0.3803921569" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="selectButtonClicked:" destination="-1" eventType="touchUpInside" id="sUM-l5-in5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gM8-7a-3Uv" firstAttribute="width" secondItem="FvC-L3-usL" secondAttribute="width" id="7wy-HW-bW1"/>
+                        <constraint firstItem="FvC-L3-usL" firstAttribute="top" secondItem="yMw-IT-YtY" secondAttribute="top" id="Adb-ct-RZg"/>
+                        <constraint firstItem="Pe2-Bh-lgM" firstAttribute="leading" secondItem="FvC-L3-usL" secondAttribute="trailing" constant="9" id="CPi-TX-mjc"/>
+                        <constraint firstAttribute="trailing" secondItem="gM8-7a-3Uv" secondAttribute="trailing" constant="8" id="DUA-dC-qRD"/>
+                        <constraint firstItem="Pe2-Bh-lgM" firstAttribute="leading" secondItem="FvC-L3-usL" secondAttribute="trailing" constant="9" id="GsM-Ih-ALa"/>
+                        <constraint firstItem="gM8-7a-3Uv" firstAttribute="height" secondItem="FvC-L3-usL" secondAttribute="height" id="Ls4-Ve-Qqc"/>
+                        <constraint firstItem="Pe2-Bh-lgM" firstAttribute="top" secondItem="yMw-IT-YtY" secondAttribute="top" constant="8" id="QWW-OD-Ww8"/>
+                        <constraint firstItem="gM8-7a-3Uv" firstAttribute="top" secondItem="yMw-IT-YtY" secondAttribute="top" id="QpL-AJ-fRQ"/>
+                        <constraint firstAttribute="bottom" secondItem="gM8-7a-3Uv" secondAttribute="bottom" id="aWd-p2-91S"/>
+                        <constraint firstItem="FvC-L3-usL" firstAttribute="leading" secondItem="yMw-IT-YtY" secondAttribute="leading" constant="8" id="iSG-Fn-VGg"/>
+                        <constraint firstAttribute="bottom" secondItem="Pe2-Bh-lgM" secondAttribute="bottom" constant="8" id="ih2-7d-5RX"/>
+                        <constraint firstAttribute="bottom" secondItem="FvC-L3-usL" secondAttribute="bottom" id="jkf-Wu-tlJ"/>
+                        <constraint firstItem="gM8-7a-3Uv" firstAttribute="leading" secondItem="Pe2-Bh-lgM" secondAttribute="trailing" constant="8" id="lez-Gn-yBK"/>
+                        <constraint firstAttribute="height" constant="40" id="mhd-Oz-Oqc"/>
+                        <constraint firstItem="gM8-7a-3Uv" firstAttribute="leading" secondItem="Pe2-Bh-lgM" secondAttribute="trailing" constant="8" id="nLo-YI-gfh"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yMw-IT-YtY" secondAttribute="trailing" id="3Nk-hM-xJb"/>
+                <constraint firstItem="yMw-IT-YtY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8wD-dV-iaM"/>
+                <constraint firstItem="rQ4-rZ-sEY" firstAttribute="top" secondItem="yMw-IT-YtY" secondAttribute="bottom" id="BOX-lb-hEy"/>
+                <constraint firstAttribute="bottom" secondItem="rQ4-rZ-sEY" secondAttribute="bottom" id="La7-eF-XeV"/>
+                <constraint firstAttribute="trailing" secondItem="rQ4-rZ-sEY" secondAttribute="trailing" id="XC4-Tb-NR6"/>
+                <constraint firstItem="yMw-IT-YtY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="geU-yp-3p0"/>
+                <constraint firstItem="rQ4-rZ-sEY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n5p-96-Wpt"/>
+                <constraint firstItem="rQ4-rZ-sEY" firstAttribute="top" secondItem="yMw-IT-YtY" secondAttribute="bottom" id="r9B-7E-DCZ"/>
+            </constraints>
             <point key="canvasLocation" x="239" y="278"/>
         </view>
+        <view contentMode="scaleToFill" id="bld-Ku-EL6">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂时没有未配送订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfy-gu-ukG">
+                    <rect key="frame" x="8" y="14" width="304" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="G2h-8Q-cka"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kfy-gu-ukG" secondAttribute="trailing" constant="8" id="4QS-j2-iRx"/>
+                <constraint firstItem="Kfy-gu-ukG" firstAttribute="top" secondItem="bld-Ku-EL6" secondAttribute="top" constant="14" id="kIF-e3-Unp"/>
+                <constraint firstItem="Kfy-gu-ukG" firstAttribute="leading" secondItem="bld-Ku-EL6" secondAttribute="leading" constant="8" id="msK-Jo-IcX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="800" y="178"/>
+        </view>
     </objects>
+    <resources>
+        <image name="btn_food_sort_selected" width="2" height="149"/>
+        <image name="line_ver_1px_left.png" width="2" height="149"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

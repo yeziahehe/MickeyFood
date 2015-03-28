@@ -10,4 +10,13 @@
 
 @interface SendOrdersViewController : BaseViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *sendOrderTableView;
+@property (strong, nonatomic) IBOutlet UIButton *notSelectButton;
+@property (strong, nonatomic) IBOutlet UIButton *selectedButton;
+@property (strong, nonatomic) IBOutlet UIView *noOrderView;
+
+- (IBAction)notSelectButtonClicked:(id)sender;
+- (IBAction)selectButtonClicked:(id)sender;
+
+
 @end
