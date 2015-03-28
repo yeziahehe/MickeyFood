@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SendOrderTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *togetherIdLabel;
+@property (strong, nonatomic) IBOutlet UILabel *CourierNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *orderDateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
+@property (strong, nonatomic) IBOutlet UILabel *addressLabel;
+@property (strong, nonatomic) IBOutlet UIButton *sendOrderButton;
 
 @end

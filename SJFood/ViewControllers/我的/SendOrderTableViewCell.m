@@ -9,9 +9,12 @@
 #import "SendOrderTableViewCell.h"
 
 @implementation SendOrderTableViewCell
+@synthesize togetherIdLabel,CourierNameLabel,orderDateLabel,totalPriceLabel,addressLabel,sendOrderButton;
 
 - (void)awakeFromNib {
     // Initialization code
+    self.sendOrderButton.layer.cornerRadius = 5.f;
+    self.sendOrderButton.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

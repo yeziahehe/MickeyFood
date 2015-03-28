@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <ShareSDK/ShareSDK.h>
 #import <SMS_SDK/SMS_SDK.h>
 
 @interface AppDelegate ()
@@ -124,12 +123,8 @@
 #pragma mark - ShareSDK methods
 - (void)connectShareSDK
 {
-    //配置shareSDK appId
-    [ShareSDK registerApp:@"486f6cde1a52"];
     //配置SMS
     [SMS_SDK registerApp:@"486f6cde1a52" withSecret:@"0af52d82128a9eadab1447b94435a47c"];
-    //新浪微博
-    [ShareSDK connectSinaWeiboWithAppKey:@"2043084331" appSecret:@"a3f0fe36c93d879ac78704864ec334f1" redirectUri:@"http://www.baidu.com/"];
 }
 
 @end

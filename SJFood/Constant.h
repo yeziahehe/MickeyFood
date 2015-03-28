@@ -80,6 +80,7 @@
 #define kCommentButtonNotification          @"CommentButtonNotification"
 #define kCommentSuccessNotification         @"CommentSuccessNotification"
 #define kSelectHomeButtonWithTagNotification @"SelectHomeButtonWithTagNotification"
+#define kSelectCourierNotification          @"SelectCourierNotification"
 
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"
@@ -114,5 +115,7 @@
 #define kFreshFoodUrl           @"food/getFoodListFresh.do"
 #define kDiscountFoodUrl        @"food/getFoodListDiscount.do"
 #define kSendOrderUrl           @"order/superAdminGetOrder.do"
+#define kGetCourierUrl          @"user/getDeliverAdmin.do"
+#define kSetCourierUrl          @"order/setDeliverAdmin.do"
 
 #endif

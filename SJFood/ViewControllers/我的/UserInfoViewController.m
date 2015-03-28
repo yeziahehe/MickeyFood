@@ -39,10 +39,15 @@
     }
     NSString *path = [[NSBundle mainBundle] pathForResource:kUserInfoMapFileName ofType:@"plist"];
     self.subViewArray = [NSMutableArray arrayWithContentsOfFile:path];
-    if (self.mineInfo.userInfo.roleType == kRoleAdmin) {
-        [self.subViewArray removeObject:@"CourierOrderView"];
-    } else if (self.mineInfo.userInfo.roleType == kRoleCourier) {
-        [self.subViewArray removeObject:@"SendOrderView"];
+    if ([[MemberDataManager sharedManager] isLogin]) {
+        if (self.mineInfo.userInfo.roleType == kRoleAdmin) {
+            [self.subViewArray removeObject:@"CourierOrderView"];
+        } else if (self.mineInfo.userInfo.roleType == kRoleCourier) {
+            [self.subViewArray removeObject:@"SendOrderView"];
+        } else {
+            [self.subViewArray removeObject:@"SendOrderView"];
+            [self.subViewArray removeObject:@"CourierOrderView"];
+        }
     } else {
         [self.subViewArray removeObject:@"SendOrderView"];
         [self.subViewArray removeObject:@"CourierOrderView"];

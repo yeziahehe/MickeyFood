@@ -13,7 +13,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.commentButton.layer.cornerRadius = 9.f;
+    self.commentButton.layer.cornerRadius = 5.f;
     self.commentButton.layer.masksToBounds = YES;
 }
 

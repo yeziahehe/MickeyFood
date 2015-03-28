@@ -38,7 +38,7 @@
 #pragma mark - UIView Methods
 - (void)awakeFromNib {
     // Initialization code
-    self.orderStatusChangeButton.layer.cornerRadius = 9.f;
+    self.orderStatusChangeButton.layer.cornerRadius = 5.f;
     self.orderStatusChangeButton.layer.masksToBounds = YES;
 }
 
