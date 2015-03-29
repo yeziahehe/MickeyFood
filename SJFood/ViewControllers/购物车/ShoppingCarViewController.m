@@ -595,6 +595,7 @@
             self.allLabel.hidden = NO;
             self.totalPriceLabel.hidden = NO;
             self.RMBLabel.hidden = NO;
+            [self.calculateButton removeTarget:self action:@selector(editForDeleteButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
             [self.calculateButton addTarget:self action:@selector(calculateButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
             NSArray *valueArray = [dict objectForKey:@"orderList"];
             for(NSDictionary *valueDict in valueArray)
