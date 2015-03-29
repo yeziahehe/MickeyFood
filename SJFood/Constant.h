@@ -10,7 +10,7 @@
  RootDirectory 是yefan创建的一个基本的项目模板，包含内容如下：
  AppDelegate                 - 包含了start - pannel的切换动画
  StartViewController         - 启动view，可加载广告
- PannelViewController        - root view，管理项目中所有子模块
+ RootTabBarViewController    - root view，管理项目中所有子模块
  ModuleViewControlers        - 所有子模块
  
  使用方法：
@@ -89,7 +89,8 @@
 #define kRegisterUrl            @"user/registerIn.do"
 #define kCheckUserExistUrl      @"user/checkUserIsExist.do"
 #define kResetPwdUrl            @"user/resetPassword.do"
-#define kCheckVersionUrl        @"version/getVersion.do"
+//#define kCheckVersionUrl        @"version/getVersion.do"
+#define kCheckVersionUrl        @"http://itunes.apple.com/lookup?id=%@"
 #define kUserInfoUrl            @"user/mineInfo.do"
 #define kUpdateNicknameUrl      @"user/updateUserInfo.do"
 #define kGetAddressInfoUrl      @"receiver/selectReceiver.do"

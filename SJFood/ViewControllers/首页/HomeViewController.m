@@ -15,6 +15,7 @@
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
 #define kGetMainNewsDownloadKey @"GetMainNewsDownloadKey"
+#define kVersionDownloaderKey       @"VersionDownloaderKey"
 
 @interface HomeViewController ()
 @property (strong, nonatomic) UISearchBar *searchBar;
@@ -98,6 +99,12 @@
                                                                purpose:kGetMainNewsDownloadKey];
 }
 
+- (void)checkVersionRequest
+{
+    NSString *url = [NSString stringWithFormat:kCheckVersionUrl,kAppAppleId];
+    [[YFDownloaderManager sharedManager] requestDataByGetWithURLString:url delegate:self purpose:kVersionDownloaderKey];
+}
+
 #pragma mark - NSNotification Methods
 - (void)foodSearchHomeWithNotification:(NSNotification *)notification
 {
@@ -122,10 +129,11 @@
     [self loadSearchBar];
     [self loadSubViews];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
+    //检测更新
+    [self checkVersionRequest];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchHomeWithNotification:) name:kSelectHomeButtonNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectHomeButtonWithTagNotification:) name:kSelectHomeButtonWithTagNotification object:nil];
 }
-
 
 #pragma mark - UISearchBar Delegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
@@ -139,6 +147,15 @@
 - (void)didTappedWithProductAd:(AdModel *)productAd
 {
     //点击事件
+}
+
+#pragma mark - AlertViewDelegate methods
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 1)
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:kAppDownloadUrl,kAppAppleId]]];
+    }
 }
 
 #pragma mark - YFDownloaderDelegate Methods
@@ -160,16 +177,64 @@
             }
             [self loadSubViews];
         }
-    }
-    else
-    {
-        NSString *message = [dict objectForKey:kMessageKey];
-        if ([message isKindOfClass:[NSNull class]])
+        else
         {
-            message = @"";
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"首页新闻获取失败";
         }
-        if(message.length == 0)
-            message = @"首页新闻获取失败";
+    }
+    else if([downloader.purpose isEqualToString:kVersionDownloaderKey])
+    {
+        //版本检测返回
+        NSDictionary *dict = [str JSONValue];
+        if (dict != nil)
+        {
+            NSInteger resultCount = [[dict objectForKey:@"resultCount"]integerValue];
+            if (resultCount == 1) {
+                NSDictionary *resultDict = [[dict objectForKey:@"results"]objectAtIndex:0];
+                NSString *appVersion = [resultDict objectForKey:@"version"];
+                if (appVersion)
+                {
+                    NSString *localVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+                    if (![appVersion isEqualToString:localVersion])
+                    {
+                        //更新应用版本
+                        if (IsIos8)
+                        {
+                            NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+                            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"升级提醒"
+                                                                                           message:[NSString stringWithFormat:@"%@有新版本，是否马上升级？",appName]
+                                                                                    preferredStyle:UIAlertControllerStyleAlert];
+                            [alert addAction:[UIAlertAction actionWithTitle:@"取消"
+                                                                      style:UIAlertActionStyleDefault
+                                                                    handler:^(UIAlertAction *action) {
+                                                                    }]];
+                            [alert addAction:[UIAlertAction actionWithTitle:@"升级"
+                                                                      style:UIAlertActionStyleDefault
+                                                                    handler:^(UIAlertAction *action) {
+                                                                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:kAppDownloadUrl,kAppAppleId]]];
+                                                                    }]];
+                            [self presentViewController:alert animated:YES completion:nil];
+                        }
+                        else
+                        {
+                            NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+                            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"升级提醒"
+                                                                                message:[NSString stringWithFormat:@"检测到新版本新版本%@，是否马上升级？",appName]
+                                                                               delegate:self
+                                                                      cancelButtonTitle:@"取消"
+                                                                      otherButtonTitles:@"升级", nil];
+                            [alertView show];
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -88,13 +88,13 @@
     </objects>
     <resources>
         <image name="btn_category.png" width="23" height="23"/>
-        <image name="btn_category_selected.png" width="23" height="23"/>
+        <image name="btn_category_selected.png" width="22" height="22"/>
         <image name="btn_home.png" width="23" height="23"/>
-        <image name="btn_home_selected.png" width="33" height="33"/>
+        <image name="btn_home_selected.png" width="22" height="22"/>
         <image name="btn_shopping.png" width="21" height="22"/>
-        <image name="btn_shopping_selected.png" width="23" height="23"/>
+        <image name="btn_shopping_selected.png" width="22" height="23"/>
         <image name="btn_user.png" width="20" height="22"/>
-        <image name="btn_user_selected.png" width="23" height="23"/>
+        <image name="btn_user_selected.png" width="20" height="22"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

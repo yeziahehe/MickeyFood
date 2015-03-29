@@ -116,6 +116,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    if (launchOptions)
+    {
+        [self dealNotificationWithLaunchOptions:launchOptions];
+    }
+    
     //注册APNS
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         //ios 8

@@ -9,7 +9,7 @@
 #import "BaseMenuViewController.h"
 #import "ImagesContainView.h"
 
-@interface HomeViewController : BaseMenuViewController<UISearchBarDelegate,ImagesContainViewDelegate>
+@interface HomeViewController : BaseMenuViewController<UISearchBarDelegate,ImagesContainViewDelegate,UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 - (void)requestForNews;
