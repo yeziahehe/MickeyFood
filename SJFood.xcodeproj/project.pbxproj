@@ -238,6 +238,10 @@
 		758512AB1A32F68D00504FA8 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512A91A32F68D00504FA8 /* FeedbackViewController.xib */; };
 		758512AE1A32F77500504FA8 /* UserSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758512AD1A32F77500504FA8 /* UserSettingView.m */; };
 		758512B01A32F78400504FA8 /* UserSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758512AF1A32F78400504FA8 /* UserSettingView.xib */; };
+		75878A091AC9A3C800EE75B3 /* CourierDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75878A071AC9A3C800EE75B3 /* CourierDetailTableViewCell.m */; };
+		75878A0A1AC9A3C800EE75B3 /* CourierDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75878A081AC9A3C800EE75B3 /* CourierDetailTableViewCell.xib */; };
+		75878A0D1AC9A72600EE75B3 /* CourierOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75878A0C1AC9A72600EE75B3 /* CourierOrder.m */; };
+		75878A101AC9A8A600EE75B3 /* OrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 75878A0F1AC9A8A600EE75B3 /* OrderList.m */; };
 		758848A21AC2B477006F98F9 /* CalculateSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758848A11AC2B477006F98F9 /* CalculateSubView.m */; };
 		758848A51AC2B499006F98F9 /* AddressChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758848A41AC2B499006F98F9 /* AddressChooseView.m */; };
 		758848A91AC2B4BF006F98F9 /* AddressChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758848A81AC2B4BF006F98F9 /* AddressChooseView.xib */; };
@@ -735,6 +739,13 @@
 		758512AC1A32F77500504FA8 /* UserSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingView.h; sourceTree = "<group>"; };
 		758512AD1A32F77500504FA8 /* UserSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingView.m; sourceTree = "<group>"; };
 		758512AF1A32F78400504FA8 /* UserSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSettingView.xib; sourceTree = "<group>"; };
+		75878A061AC9A3C800EE75B3 /* CourierDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourierDetailTableViewCell.h; sourceTree = "<group>"; };
+		75878A071AC9A3C800EE75B3 /* CourierDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourierDetailTableViewCell.m; sourceTree = "<group>"; };
+		75878A081AC9A3C800EE75B3 /* CourierDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourierDetailTableViewCell.xib; sourceTree = "<group>"; };
+		75878A0B1AC9A72600EE75B3 /* CourierOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourierOrder.h; sourceTree = "<group>"; };
+		75878A0C1AC9A72600EE75B3 /* CourierOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourierOrder.m; sourceTree = "<group>"; };
+		75878A0E1AC9A8A600EE75B3 /* OrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderList.h; sourceTree = "<group>"; };
+		75878A0F1AC9A8A600EE75B3 /* OrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderList.m; sourceTree = "<group>"; };
 		758848A01AC2B477006F98F9 /* CalculateSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateSubView.h; sourceTree = "<group>"; };
 		758848A11AC2B477006F98F9 /* CalculateSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateSubView.m; sourceTree = "<group>"; };
 		758848A31AC2B499006F98F9 /* AddressChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressChooseView.h; sourceTree = "<group>"; };
@@ -1381,6 +1392,10 @@
 				7555FF8B1AC187CF001A0497 /* OrderDetails.m */,
 				757E83FA1AC65170004DF3F7 /* SendOrder.h */,
 				757E83FB1AC65170004DF3F7 /* SendOrder.m */,
+				75878A0B1AC9A72600EE75B3 /* CourierOrder.h */,
+				75878A0C1AC9A72600EE75B3 /* CourierOrder.m */,
+				75878A0E1AC9A8A600EE75B3 /* OrderList.h */,
+				75878A0F1AC9A8A600EE75B3 /* OrderList.m */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -1397,6 +1412,9 @@
 				757E83FD1AC6873B004DF3F7 /* SelectCourierViewController.h */,
 				757E83FE1AC6873B004DF3F7 /* SelectCourierViewController.m */,
 				757E83FF1AC6873B004DF3F7 /* SelectCourierViewController.xib */,
+				75878A061AC9A3C800EE75B3 /* CourierDetailTableViewCell.h */,
+				75878A071AC9A3C800EE75B3 /* CourierDetailTableViewCell.m */,
+				75878A081AC9A3C800EE75B3 /* CourierDetailTableViewCell.xib */,
 			);
 			name = "选单派单子页面";
 			sourceTree = "<group>";
@@ -2268,6 +2286,7 @@
 				751B21021AB1DED900B1CFE6 /* btn_spec_num@3x.png in Resources */,
 				757DE9AA1A45617F0054BE47 /* bg_buy_shopping@3x.png in Resources */,
 				75EED4141A31F7D1002ECA75 /* icon_receive@3x.png in Resources */,
+				75878A0A1AC9A3C800EE75B3 /* CourierDetailTableViewCell.xib in Resources */,
 				75EED4331A320B79002ECA75 /* icon_order@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2370,6 +2389,7 @@
 				758512721A32E91100504FA8 /* MJRefreshBaseView.m in Sources */,
 				757E83FC1AC65170004DF3F7 /* SendOrder.m in Sources */,
 				755077521A46A2CF00CD18EF /* FoodParamView.m in Sources */,
+				75878A101AC9A8A600EE75B3 /* OrderList.m in Sources */,
 				75F90A891A49CFE700CB19EB /* SpecView.m in Sources */,
 				758512771A32E91100504FA8 /* UIScrollView+MJRefresh.m in Sources */,
 				758116371A27611900065E65 /* HomeViewController.m in Sources */,
@@ -2408,6 +2428,7 @@
 				757E83F81AC5B502004DF3F7 /* CourierTableViewCell.m in Sources */,
 				75E4789F1A7F58AE002DC26D /* ShoppingCarViewController.m in Sources */,
 				75E18EC41A39C932000AEF48 /* Address.m in Sources */,
+				75878A0D1AC9A72600EE75B3 /* CourierOrder.m in Sources */,
 				7550775C1A46B71300CD18EF /* FoodCommentView.m in Sources */,
 				75A95CD61A4024450009962F /* CategoryCollectionViewCell.m in Sources */,
 				758E4C991A42BA17004547E2 /* FoodSelect.m in Sources */,
@@ -2415,6 +2436,7 @@
 				75A95CE01A4059B40009962F /* CacheManager.m in Sources */,
 				7564F2B91ABC210C00506E68 /* FoodComment.m in Sources */,
 				75F90A7F1A49966B00CB19EB /* FoodSpec.m in Sources */,
+				75878A091AC9A3C800EE75B3 /* CourierDetailTableViewCell.m in Sources */,
 				758954141A24B4A1001C2350 /* AppDelegate.m in Sources */,
 				75A95CB41A4012870009962F /* UITableView+YFAdditions.m in Sources */,
 				758954111A24B4A1001C2350 /* main.m in Sources */,

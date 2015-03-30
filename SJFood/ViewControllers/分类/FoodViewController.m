@@ -350,7 +350,7 @@
                         FoodSelect *fs = [[FoodSelect alloc]initWithDict:valueDict];
                         [self.foodArray addObject:fs];
                     }
-                    NSString *previousId = [NSString stringWithFormat:@"%ldd",[self.lastestId integerValue] + 1];
+                    NSString *previousId = [NSString stringWithFormat:@"%ld",[self.lastestId integerValue] + 1];
                     self.lastestId = previousId;
                     if (valueArray.count < 10) {
                         [self.foodTableView removeFooter];

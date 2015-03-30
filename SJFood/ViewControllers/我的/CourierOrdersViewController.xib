@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CourierOrdersViewController">
             <connections>
+                <outlet property="courierOrdersTableView" destination="E4u-TS-kd6" id="8Zt-U6-yEr"/>
+                <outlet property="noOrderView" destination="OQQ-kl-6lJ" id="iUy-1S-NWy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,10 +16,46 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-TS-kd6">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="A6X-v7-tmk"/>
+                        <outlet property="delegate" destination="-1" id="Kfr-w5-fQS"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="E4u-TS-kd6" secondAttribute="bottom" id="3uU-yp-Soe"/>
+                <constraint firstItem="E4u-TS-kd6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NeM-03-hkz"/>
+                <constraint firstItem="E4u-TS-kd6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OI5-IN-60Q"/>
+                <constraint firstAttribute="trailing" secondItem="E4u-TS-kd6" secondAttribute="trailing" id="lNi-X7-Mly"/>
+            </constraints>
             <point key="canvasLocation" x="239" y="278"/>
         </view>
+        <view contentMode="scaleToFill" id="OQQ-kl-6lJ">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_no_status.png" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-Ot-2Z8">
+                    <rect key="frame" x="130" y="243" width="60" height="81"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暂无订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg9-f7-roE">
+                    <rect key="frame" x="8" y="332" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="649" y="272"/>
+        </view>
     </objects>
+    <resources>
+        <image name="icon_no_status.png" width="105" height="144"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

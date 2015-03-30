@@ -10,4 +10,7 @@
 
 @interface CourierOrdersViewController : BaseViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *courierOrdersTableView;
+@property (strong, nonatomic) IBOutlet UIView *noOrderView;
+
 @end

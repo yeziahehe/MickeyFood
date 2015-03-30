@@ -137,6 +137,7 @@
 - (void)userInfoResponseWithNotification:(NSNotification *)notification
 {
     if (notification.object) {
+        [self.contentScrollView headerEndRefreshing];
         [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:@"个人信息获取失败" hideDelay:2.f];
     } else {
         self.mineInfo = [MemberDataManager sharedManager].mineInfo;
