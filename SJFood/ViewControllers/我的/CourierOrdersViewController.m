@@ -60,6 +60,17 @@
     [self requestForCourierOrder];
 }
 
+- (void)refreshCourierOrder
+{
+    [self requestForCourierOrder];
+}
+
+#pragma mark - BaseViewController Methods
+- (void)extraItemTapped
+{
+    [self.courierOrdersTableView setContentOffset:CGPointMake(0, -self.courierOrdersTableView.contentInset.top) animated:YES];
+}
+
 #pragma mark - UIViewController Methods
 - (void)viewDidDisappear:(BOOL)animated
 {
@@ -74,6 +85,7 @@
     self.courierOrdersArray = [NSMutableArray arrayWithCapacity:0];
     self.courierOrdersTableView.tableFooterView = [UIView new];
     [self requestForCourierOrder];
+    [self.courierOrdersTableView addHeaderWithTarget:self action:@selector(refreshCourierOrder) dateKey:@"CourierOrderScrollView"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshNotification:) name:kChangeOrderStatusNotification object:nil];
 }
 
@@ -161,6 +173,7 @@
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
             [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+            [self.courierOrdersTableView headerEndRefreshing];
             self.courierOrdersArray = [NSMutableArray arrayWithCapacity:0];
             self.courierOrdersTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
             NSArray *valueArray = [dict objectForKey:@"orderList"];
@@ -185,6 +198,7 @@
             }
             if(message.length == 0)
                 message = @"订单获取失败";
+            [self.courierOrdersTableView headerEndRefreshing];
             [self loadSubViews];
             [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
         }

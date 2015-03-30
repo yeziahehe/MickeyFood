@@ -110,7 +110,7 @@
     self.notSelectButton.selected = YES;
     self.isSelected = @"0";
     [self requestForSendOrder];
-    [self.sendOrderTableView addHeaderWithTarget:self action:@selector(refreshSendOrder) dateKey:@"userInfoScrollView"];
+    [self.sendOrderTableView addHeaderWithTarget:self action:@selector(refreshSendOrder) dateKey:@"SendOrderScrollView"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectCourierNotification:) name:kSelectCourierNotification object:nil];
 }
 
@@ -202,6 +202,7 @@
             }
             if(message.length == 0)
                 message = @"加载失败";
+             [self.sendOrderTableView headerEndRefreshing];
             [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
         }
     }

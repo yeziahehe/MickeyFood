@@ -60,7 +60,6 @@
  */
 - (void)clearNotifications
 {
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
@@ -150,6 +149,15 @@
     }
     if ([[MemberDataManager sharedManager] loginMember]) {
         //将devicetoken与用户绑定
+        NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kPostTokenUrl];
+        NSMutableDictionary *dict = kCommonParamsDict;
+        [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
+        [dict setObject:devToken forKey:@"token"];
+        [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                                 postParams:dict
+                                                                contentType:@"application/x-www-form-urlencoded"
+                                                                   delegate:self
+                                                                    purpose:nil];
     }
 }
 

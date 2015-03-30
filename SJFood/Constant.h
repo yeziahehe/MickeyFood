@@ -121,5 +121,6 @@
 #define kGetCourierUrl          @"user/getDeliverAdmin.do"
 #define kSetCourierUrl          @"order/setDeliverAdmin.do"
 #define kGetCourierOrderUrl     @"order/DeliverAdminGetOrder.do"
+#define kPostTokenUrl           @"order/postIOSToken.do"
 
 #endif
