@@ -11,6 +11,8 @@
 #import "CourierOrder.h"
 
 #define kCourierOrderDownloaderKey      @"CourierOrderDownloaderKey"
+#define kOrderToDeliverDownloaderKey    @"OrderToDeliverDownloaderKey"
+#define kOrderToBuyDownloaderKey        @"OrderToBuyDownloaderKey"
 
 @interface CourierOrdersViewController ()
 @property (nonatomic, strong) NSMutableArray *courierOrdersArray;
@@ -32,7 +34,7 @@
 
 - (void)requestForCourierOrder
 {
-    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中"];
+    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
     NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kGetCourierOrderUrl];
     NSMutableDictionary *dict = kCommonParamsDict;
     [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
@@ -46,12 +48,39 @@
 #pragma mark - IBAction Methods
 - (void)changeToDeliveryButtonClicked:(UIButton *)button
 {
+    CGPoint buttonPosition = [button convertPoint:CGPointZero toView:self.courierOrdersTableView];
+    NSIndexPath *indexPath = [self.courierOrdersTableView indexPathForRowAtPoint:buttonPosition];
+    CourierOrder *co = [self.courierOrdersArray objectAtIndex:indexPath.row];
+    
+    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"确认配送中..."];
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kOrderToDeliverUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
+    [dict setObject:co.togetherId forKey:@"togetherId"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kOrderToDeliverDownloaderKey];
     
 }
 
 - (void)changeToReceiveButtonClicked:(UIButton *)button
 {
+    CGPoint buttonPosition = [button convertPoint:CGPointZero toView:self.courierOrdersTableView];
+    NSIndexPath *indexPath = [self.courierOrdersTableView indexPathForRowAtPoint:buttonPosition];
+    CourierOrder *co = [self.courierOrdersArray objectAtIndex:indexPath.row];
     
+    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"确认送达中..."];
+    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kOrderToBuyUrl];
+    NSMutableDictionary *dict = kCommonParamsDict;
+    [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
+    [dict setObject:co.togetherId forKey:@"togetherId"];
+    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                             postParams:dict
+                                                            contentType:@"application/x-www-form-urlencoded"
+                                                               delegate:self
+                                                                purpose:kOrderToBuyDownloaderKey];
 }
 
 #pragma mark - Notification Methods
@@ -122,7 +151,7 @@
         case 1:
         {
             cell.statusLabel.text = @"尚未发货";
-            [cell.changeStatusButton setTitle:@"派送" forState:UIControlStateNormal];
+            [cell.changeStatusButton setTitle:@"配送" forState:UIControlStateNormal];
             [cell.changeStatusButton addTarget:self action:@selector(changeToDeliveryButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         }
             break;
@@ -200,6 +229,44 @@
                 message = @"订单获取失败";
             [self.courierOrdersTableView headerEndRefreshing];
             [self loadSubViews];
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+        }
+    }
+    else if ([downloader.purpose isEqualToString:kOrderToDeliverDownloaderKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+            [self requestForCourierOrder];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"确认失败";
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+        }
+    }
+    else if ([downloader.purpose isEqualToString:kOrderToBuyDownloaderKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+            [self requestForCourierOrder];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"确认失败";
             [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
         }
     }
