@@ -147,7 +147,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:devToken forKey:kDeviceTokenKey];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-    if ([[MemberDataManager sharedManager] loginMember]) {
+    if ([[MemberDataManager sharedManager] isLogin]) {
         //将devicetoken与用户绑定
         NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kPostTokenUrl];
         NSMutableDictionary *dict = kCommonParamsDict;
