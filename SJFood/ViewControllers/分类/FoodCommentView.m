@@ -29,11 +29,11 @@
     int starNum = [foodDetail.grade intValue]/1;
     if (starNum == 0) {
         float value = gradeNum - 0;
-        if (0<= value <=.3) {
+        if (0.0 <= value && value <=.3) {
             self.firstStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
-        } else if (.3< value <.7) {
+        } else if (.3< value && value <.7) {
             self.firstStarImageView.image = [UIImage imageNamed:@"bg_star_half"];
-        } else if (0.7<value <1) {
+        } else if (0.7<value && value <1) {
             self.firstStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         }
         self.secondStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
@@ -43,11 +43,11 @@
     } else if (starNum == 1) {
         self.firstStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         float value = gradeNum - 1;
-        if (0<= value <=.3) {
+        if (0.0<= value && value <=.3) {
             self.secondStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
-        } else if (.3< value <.7) {
+        } else if (.3< value && value <.7) {
             self.secondStarImageView.image = [UIImage imageNamed:@"bg_star_half"];
-        } else if (0.7<value <1) {
+        } else if (0.7<value && value <1) {
             self.secondStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         }
         self.thirdStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
@@ -57,11 +57,11 @@
         self.firstStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         self.secondStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         float value = gradeNum - 2;
-        if (0<= value <=.3) {
+        if (0.0<= value && value <=.3) {
             self.thirdStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
-        } else if (.3< value <.7) {
+        } else if (.3< value && value <.7) {
             self.thirdStarImageView.image = [UIImage imageNamed:@"bg_star_half"];
-        } else if (0.7<value <1) {
+        } else if (0.7<value && value <1) {
             self.thirdStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         }
         self.furthStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
@@ -71,11 +71,11 @@
         self.secondStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         self.thirdStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         float value = gradeNum - 3;
-        if (0<= value <=.3) {
+        if (0.0<= value && value <=.3) {
             self.furthStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
-        } else if (.3< value <.7) {
+        } else if (.3< value && value <.7) {
             self.furthStarImageView.image = [UIImage imageNamed:@"bg_star_half"];
-        } else if (0.7<value <1) {
+        } else if (0.7<value && value <1) {
             self.furthStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         }
         self.fifthStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
@@ -85,11 +85,11 @@
         self.thirdStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         self.furthStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         float value = gradeNum - 3;
-        if (0<= value <=.3) {
+        if (0.0<= value && value <=.3) {
             self.fifthStarImageView.image = [UIImage imageNamed:@"bg_star_empty"];
-        } else if (.3< value <.7) {
+        } else if (.3< value && value <.7) {
             self.fifthStarImageView.image = [UIImage imageNamed:@"bg_star_half"];
-        } else if (0.7<value <1) {
+        } else if (0.7<value && value <1) {
             self.fifthStarImageView.image = [UIImage imageNamed:@"bg_star_full"];
         }
     } else if (starNum == 5) {
