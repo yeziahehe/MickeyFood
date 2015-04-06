@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define kCategoryCacheKey               @"CategoryCacheKey"
+#define kRootImageCacheKey              @"RootImageCacheKey"
 
 /**
  * 该类用于管理本地缓存
@@ -30,5 +31,17 @@
  * @return 分类model
  */
 - (NSMutableArray *)category;
+
+/**
+ * 缓存首页面图片信息
+ * @param array 服务端返回的数据
+ */
+- (void)cacheRootImageWithArray:(NSMutableArray *)array;
+
+/**
+ * 获取首页面图片信息
+ * @return 分类model
+ */
+- (NSMutableArray *)rootImage;
 
 @end

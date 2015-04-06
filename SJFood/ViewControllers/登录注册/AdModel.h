@@ -14,5 +14,6 @@
 @property (nonatomic, copy) NSString *newsId;
 
 - (id)initWithDict:(NSDictionary *)dict;
+- (NSMutableDictionary *)toCacheDictionary;
 
 @end

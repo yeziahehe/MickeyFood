@@ -21,6 +21,9 @@
     if (sender.tag == 1 || sender.tag == 2 || sender.tag == 4) {
         [[NSNotificationCenter defaultCenter]postNotificationName:kSelectHomeButtonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
     }
+    else if (sender.tag == 11) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"更多功能正在开发中，敬请期待..." customView:nil hideDelay:3.f];
+    }
     else {
         switch (sender.tag) {
             case 0:

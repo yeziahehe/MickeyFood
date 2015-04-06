@@ -125,8 +125,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.newsListArray = [NSMutableArray arrayWithCapacity:0];
     [self requestForNews];
     [self loadSearchBar];
+    if ([[CacheManager sharedManager] rootImage]) {
+        for (NSDictionary *valueDict in [[CacheManager sharedManager] rootImage]) {
+            AdModel *ad = [[AdModel alloc]initWithDict:valueDict];
+            [self.newsListArray addObject:ad];
+        }
+    }
     [self loadSubViews];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
     //检测更新
@@ -175,6 +182,7 @@
                     [self.newsListArray addObject:ad];
                 }
             }
+            [[CacheManager sharedManager] cacheRootImageWithArray:self.newsListArray];
             [self loadSubViews];
         }
         else

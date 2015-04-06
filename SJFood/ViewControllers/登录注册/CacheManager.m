@@ -9,6 +9,7 @@
 #import "CacheManager.h"
 #import "FoodCategory.h"
 #import "FoodCategoryDetail.h"
+#import "AdModel.h"
 
 @implementation CacheManager
 @synthesize cacheDict,cachePhone;
@@ -48,6 +49,25 @@
     NSMutableArray *categoryArray = [self.cacheDict objectForKey:kCategoryCacheKey];
     if (categoryArray)
         return categoryArray;
+    return nil;
+}
+
+- (void)cacheRootImageWithArray:(NSMutableArray *)array
+{
+    NSMutableArray *rootImageArray = [NSMutableArray array];
+    for (AdModel *ad in array) {
+        NSDictionary *dict = [ad toCacheDictionary];
+        [rootImageArray addObject:dict];
+    }
+    [self.cacheDict setObject:rootImageArray forKey:kRootImageCacheKey];
+    [self cacheUsersData];
+}
+
+- (NSMutableArray *)rootImage
+{
+    NSMutableArray *rootImageArray = [self.cacheDict objectForKey:kRootImageCacheKey];
+    if (rootImageArray)
+        return rootImageArray;
     return nil;
 }
 
