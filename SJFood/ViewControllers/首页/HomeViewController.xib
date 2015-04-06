@@ -16,21 +16,30 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-r8-eSM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-2Y-nLz">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="Scz-r8-eSM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1C6-sF-xCs"/>
+                <constraint firstAttribute="bottom" secondItem="Scz-r8-eSM" secondAttribute="bottom" id="Bwm-yt-i6W"/>
                 <constraint firstItem="rnK-2Y-nLz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZtT-SZ-o1z"/>
+                <constraint firstAttribute="trailing" secondItem="Scz-r8-eSM" secondAttribute="trailing" id="ddd-n3-3ho"/>
                 <constraint firstAttribute="trailing" secondItem="rnK-2Y-nLz" secondAttribute="trailing" id="f6I-vL-fo8"/>
                 <constraint firstAttribute="bottom" secondItem="rnK-2Y-nLz" secondAttribute="bottom" id="j2C-KY-35I"/>
+                <constraint firstItem="Scz-r8-eSM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kpW-s9-v2x"/>
                 <constraint firstItem="rnK-2Y-nLz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yzC-1R-dJx"/>
             </constraints>
             <point key="canvasLocation" x="269" y="271"/>
         </view>
     </objects>
+    <resources>
+        <image name="background.png" width="375" height="667"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
