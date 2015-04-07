@@ -15,6 +15,7 @@
 #import "CourierOrderView.h"
 #import "MineInfo.h"
 #import "MyAccountViewController.h"
+#import "MyMessageViewController.h"
 
 #define kUserInfoMapFileName            @"UserInfoMap"
 #define kSubViewGap                     15.f
@@ -22,11 +23,12 @@
 @interface UserInfoViewController ()
 @property (nonatomic, strong) NSMutableArray *subViewArray;
 @property (nonatomic, strong) MineInfo *mineInfo;
+@property (nonatomic, strong) NSString *notificationMessage;
 @end
 
 @implementation UserInfoViewController
 @synthesize contentScrollView;
-@synthesize subViewArray,mineInfo;
+@synthesize subViewArray,mineInfo,notificationMessage;
 
 #pragma mark - Private Methods
 - (void)loadSubViews
@@ -111,6 +113,12 @@
 {
     if (notification) {
         NSString *moduleClassName = notification.object;
+        if ([moduleClassName isEqualToString:@"MyMessageViewController"]) {
+            MyMessageViewController *myMessageViewController = [[MyMessageViewController alloc] initWithNibName:@"MyMessageViewController" bundle:nil];
+            myMessageViewController.messageDetail = self.notificationMessage;
+            [self.navigationController pushViewController:myMessageViewController animated:YES];
+            return;
+        }
         id moduleViewController = [[NSClassFromString(moduleClassName) alloc] init];
         [self.navigationController pushViewController:moduleViewController animated:YES];
     }
@@ -147,6 +155,13 @@
     }
 }
 
+- (void)dealNotification:(NSNotification *)notification
+{
+    if (notification) {
+        self.notificationMessage = notification.object;
+    }
+}
+
 #pragma mark - BaseViewController methods
 - (void)extraItemTapped
 {
@@ -158,6 +173,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"我的"];
+    self.notificationMessage = @"";
     [self loadSubViews];
     [self.contentScrollView addHeaderWithTarget:self action:@selector(refreshUserInfo) dateKey:@"userInfoScrollView"];
     if ([[MemberDataManager sharedManager] isLogin]) {
@@ -169,6 +185,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userChangeWithNotification:) name:kUserChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUserInfoWithNotification:) name:kRefreshUserInfoNotificaiton object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userInfoResponseWithNotification:) name:kUserInfoResponseNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealNotification:) name:kApnsNotification object:nil];
 }
 
 - (void)dealloc
