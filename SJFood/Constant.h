@@ -83,6 +83,7 @@
 #define kSelectHomeButtonWithTagNotification @"SelectHomeButtonWithTagNotification"
 #define kSelectCourierNotification          @"SelectCourierNotification"
 #define kChangeOrderStatusNotification      @"ChangeOrderStatusNotification"
+#define kApnsNotification                   @"ApnsNotification"
 
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"

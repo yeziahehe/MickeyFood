@@ -10,4 +10,7 @@
 
 @interface MyMessageViewController : BaseViewController
 
+@property (nonatomic, strong) NSString *messageDetail;
+@property (strong, nonatomic) IBOutlet UILabel *messageLabel;
+
 @end

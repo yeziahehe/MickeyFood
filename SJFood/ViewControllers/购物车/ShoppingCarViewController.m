@@ -54,7 +54,7 @@
     self.shoppingCarTableView.scrollEnabled = NO;
     self.calculateFoodView.hidden = YES;
     [self setNaviTitle:@"购物车"];
-    [self setRightNaviItemWithTitle:nil imageName:nil];
+    self.navigationItem.rightBarButtonItem = nil;
     [self.shoppingCarTableView reloadData];
 }
 

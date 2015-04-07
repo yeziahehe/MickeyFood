@@ -39,17 +39,31 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_no_status.png" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-Ot-2Z8">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_no_status.png" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-Ot-2Z8">
                     <rect key="frame" x="130" y="243" width="60" height="81"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="BaK-g6-pzP"/>
+                        <constraint firstAttribute="height" constant="81" id="CQx-Lx-DeE"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暂无订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg9-f7-roE">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg9-f7-roE">
                     <rect key="frame" x="8" y="332" width="304" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="iff-Yt-ZZu"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Fg9-f7-roE" firstAttribute="top" secondItem="gd7-Ot-2Z8" secondAttribute="bottom" constant="8" id="73f-zl-lar"/>
+                <constraint firstAttribute="centerY" secondItem="gd7-Ot-2Z8" secondAttribute="centerY" id="Nxt-lc-eb2"/>
+                <constraint firstItem="Fg9-f7-roE" firstAttribute="leading" secondItem="OQQ-kl-6lJ" secondAttribute="leading" constant="8" id="WJM-6b-PZI"/>
+                <constraint firstAttribute="trailing" secondItem="Fg9-f7-roE" secondAttribute="trailing" constant="8" id="kOK-HB-OZQ"/>
+                <constraint firstAttribute="centerX" secondItem="gd7-Ot-2Z8" secondAttribute="centerX" id="p7S-EF-H0B"/>
+            </constraints>
             <point key="canvasLocation" x="649" y="272"/>
         </view>
     </objects>

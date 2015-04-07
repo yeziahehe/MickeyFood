@@ -13,11 +13,18 @@
 @end
 
 @implementation MyMessageViewController
+@synthesize messageDetail,messageLabel;
 
+#pragma mark - UIViewController Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"我的消息"];
+    if ([messageDetail isEqualToString:@""]) {
+        messageLabel.text = @"暂无最新消息";
+    } else {
+        messageLabel.text = messageDetail;
+    }
 }
 
 @end

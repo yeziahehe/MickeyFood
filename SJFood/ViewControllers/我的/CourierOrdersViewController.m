@@ -236,7 +236,7 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
-            [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"确认配送成功..." hideDelay:2.f];
             [self requestForCourierOrder];
         }
         else
@@ -255,7 +255,7 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
-            [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
+            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"确认送达成功..." hideDelay:2.f];
             [self requestForCourierOrder];
         }
         else

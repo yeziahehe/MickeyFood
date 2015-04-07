@@ -196,6 +196,26 @@
     //根据不同的推送状态处理跳转页面
 }
 
+// The notification is delivered when the application is running in the foreground.
+// 收到推送时，除了App未启动外（此时调用didFinishLaunchingWithOptions：），其余情形都调用此方法。
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive)
+    {
+        //do no action
+    }
+    else
+    {
+        if ([[userInfo objectForKey:@"aps"] objectForKey:@"alert"] != nil)
+        {
+            // 点击推送，启动应用时，并不调用到此方法。
+            // 用于点击推送，将应用恢复到前台时使用。
+            [[NSNotificationCenter defaultCenter] postNotificationName:kApnsNotification object:[[userInfo objectForKey:@"aps"] objectForKey:@"alert"]];
+        }
+    }
+}
+
 #pragma mark - ShareSDK methods
 - (void)connectShareSDK
 {

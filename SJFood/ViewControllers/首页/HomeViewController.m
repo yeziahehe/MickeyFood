@@ -11,6 +11,7 @@
 #import "SearchHistoryViewController.h"
 #import "FoodViewController.h"
 #import "HomeModuleView.h"
+#import "MyMessageViewController.h"
 
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
@@ -21,11 +22,12 @@
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property (strong, nonatomic) NSMutableArray *subViewArray;
 @property (strong, nonatomic) NSMutableArray *newsListArray;
+@property (strong, nonatomic) NSString *notificationMessage;
 @end
 
 @implementation HomeViewController
 
-@synthesize contentScrollView,subViewArray,newsListArray;
+@synthesize contentScrollView,subViewArray,newsListArray,notificationMessage;
 @synthesize searchBar;
 
 #pragma mark - Private Methods
@@ -121,11 +123,27 @@
     [self.navigationController pushViewController:foodViewController animated:YES];
 }
 
+- (void)dealNotification:(NSNotification *)notification
+{
+    if (notification) {
+        self.notificationMessage = notification.object;
+    }
+}
+
+#pragma mark - BaseViewController Methods
+- (void)rightItemTapped
+{
+    MyMessageViewController *myMessageViewController = [[MyMessageViewController alloc] initWithNibName:@"MyMessageViewController" bundle:nil];
+    myMessageViewController.messageDetail = self.notificationMessage;
+    [self.navigationController pushViewController:myMessageViewController animated:YES];
+}
+
 #pragma mark - UIViewController Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.newsListArray = [NSMutableArray arrayWithCapacity:0];
+    self.notificationMessage = @"";
     [self requestForNews];
     [self loadSearchBar];
     if ([[CacheManager sharedManager] rootImage]) {
@@ -140,6 +158,7 @@
     [self checkVersionRequest];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchHomeWithNotification:) name:kSelectHomeButtonNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectHomeButtonWithTagNotification:) name:kSelectHomeButtonWithTagNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealNotification:) name:kApnsNotification object:nil];
 }
 
 #pragma mark - UISearchBar Delegate
