@@ -124,6 +124,6 @@
 #define kGetCourierOrderUrl     @"order/DeliverAdminGetOrder.do"
 #define kPostTokenUrl           @"user/postIOSToken.do"
 #define kOrderToDeliverUrl      @"order/orderToDeliver.do"
-#define kOrderToBuyUrl          @"order/orderToBuy.do"
+#define kOrderToBuyUrl          @"order/orderToFinish.do"
 
 #endif
