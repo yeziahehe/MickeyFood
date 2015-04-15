@@ -17,7 +17,7 @@
 
 @implementation SearchHistoryViewController
 @synthesize searchBar,searchHistoryTableView,clearSearchHistoryView,noSearchHistoryView;
-@synthesize userDefaults,searchHistoryArray;
+@synthesize userDefaults,searchHistoryArray,searchViewTag;
 
 #pragma mark - IBAction Methods
 - (IBAction)clearSearchButtonClicked:(id)sender {
@@ -65,7 +65,11 @@
     [self.userDefaults setObject:self.searchHistoryArray forKey:kSearchHistoryArray];
     [self.userDefaults synchronize];
     [self dismissViewControllerAnimated:NO completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:kFoodSearchNotification object:self.searchBar.text];
+        if ([searchViewTag isEqualToString:@"1"]) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kSelectHomeButtonNotification object:self.searchBar.text];
+        } else {
+            [[NSNotificationCenter defaultCenter] postNotificationName:kFoodSearchNotification object:self.searchBar.text];
+        }
     }];
 }
 
@@ -110,7 +114,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:kFoodSearchNotification object:[self.searchHistoryArray objectAtIndex:indexPath.row]];
+    if ([searchViewTag isEqualToString:@"1"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSelectHomeButtonNotification object:[self.searchHistoryArray objectAtIndex:indexPath.row]];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kFoodSearchNotification object:[self.searchHistoryArray objectAtIndex:indexPath.row]];
+    }
     [self.searchHistoryArray exchangeObjectAtIndex:indexPath.row withObjectAtIndex:0];
     [self.userDefaults setObject:self.searchHistoryArray forKey:kSearchHistoryArray];
     [self.userDefaults synchronize];

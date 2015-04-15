@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *searchHistoryTableView;
 @property (strong, nonatomic) IBOutlet UIView *clearSearchHistoryView;
 @property (strong, nonatomic) IBOutlet UIView *noSearchHistoryView;
+@property (strong, nonatomic) NSString *searchViewTag;
 
 - (IBAction)clearSearchButtonClicked:(id)sender;
 - (IBAction)cancelButtonClicked:(id)sender;

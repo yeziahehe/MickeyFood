@@ -34,7 +34,7 @@
 
 - (void)requestForCourierOrder
 {
-    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
+    //[[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"加载中..."];
     NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kGetCourierOrderUrl];
     NSMutableDictionary *dict = kCommonParamsDict;
     [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
@@ -236,7 +236,7 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
-            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"确认配送成功..." hideDelay:2.f];
+            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"确认配送成功" hideDelay:2.f];
             [self requestForCourierOrder];
         }
         else
@@ -255,7 +255,7 @@
     {
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
-            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"确认送达成功..." hideDelay:2.f];
+            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"确认送达成功" hideDelay:2.f];
             [self requestForCourierOrder];
         }
         else

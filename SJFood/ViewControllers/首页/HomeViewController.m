@@ -165,6 +165,7 @@
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {
     SearchHistoryViewController *searchHistoryViewController = [[SearchHistoryViewController alloc] initWithNibName:@"SearchHistoryViewController" bundle:nil];
+    searchHistoryViewController.searchViewTag = @"1";
     [self presentViewController:searchHistoryViewController animated:NO completion:nil];
     return NO;
 }
