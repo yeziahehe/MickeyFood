@@ -37,7 +37,7 @@
     CGRect rect = ctv.frame;
     rect.origin.y = 64.0f;
     rect.origin.x = 0.0f;
-    rect.size.height = ScreenHeight;
+    rect.size.height = ScreenHeight - 64.f - 44.f;
     [ctv reloadWithCategory:self.categoryTableArray];
     ctv.frame = rect;
     self.originX = ctv.frame.size.width;
@@ -50,7 +50,7 @@
     rect = ccv.frame;
     rect.origin.y = 64.f;
     rect.origin.x = self.originX;
-    rect.size.height = ScreenHeight;
+    rect.size.height = ScreenHeight - 64.f - 44.f;
     rect.size.width = ScreenWidth - 80.f;
     [ccv reloadWithCategory:self.categoryCollectionArray];
     ccv.frame = rect;
