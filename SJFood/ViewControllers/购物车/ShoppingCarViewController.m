@@ -301,6 +301,8 @@
     //结算按钮
     if (self.shoppingCarCodeArray.count == 0) {
         [[YFProgressHUD sharedProgressHUD] showWithMessage:@"请选择要结算的购物车商品" customView:nil hideDelay:2.f];
+    } else if ([self.totalPriceLabel.text floatValue] < 10.0f) {
+        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"亲，10元起送哦~" customView:nil hideDelay:2.f];
     } else {
         //下单请求
         CalculateViewController *calculateViewController = [[CalculateViewController alloc]initWithNibName:@"CalculateViewController" bundle:nil];

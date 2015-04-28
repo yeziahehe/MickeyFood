@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface AboutAppViewController : BaseViewController
+@property (strong, nonatomic) IBOutlet UILabel *versionLabel;
 
 @end

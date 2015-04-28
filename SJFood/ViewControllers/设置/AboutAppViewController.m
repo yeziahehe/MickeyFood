@@ -14,6 +14,7 @@
 @end
 
 @implementation AboutAppViewController
+@synthesize versionLabel;
 
 #pragma mark - IBAction Methods
 - (IBAction)aboutBOXButtonClicked:(id)sender {
@@ -26,6 +27,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"关于我们"];
+    NSString *localVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    self.versionLabel.text = localVersion;
 }
 
 @end
