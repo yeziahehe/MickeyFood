@@ -330,6 +330,8 @@
 		75AD58551A38832D00E39640 /* UIImage+YFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58541A38832D00E39640 /* UIImage+YFUtilities.m */; };
 		75AD58591A388F5F00E39640 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AD58571A388F5F00E39640 /* AddressTableViewCell.m */; };
 		75AD585A1A388F5F00E39640 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */; };
+		75AD610F1AF5228700DCBB33 /* btn_to_shopping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75AD610D1AF5228700DCBB33 /* btn_to_shopping@2x.png */; };
+		75AD61101AF5228700DCBB33 /* btn_to_shopping@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75AD610E1AF5228700DCBB33 /* btn_to_shopping@3x.png */; };
 		75AED3BC1AC3254300E31D67 /* AddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AED3BA1AC3254300E31D67 /* AddressListViewController.m */; };
 		75AED3BD1AC3254300E31D67 /* AddressListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AED3BB1AC3254300E31D67 /* AddressListViewController.xib */; };
 		75AED3C11AC3261A00E31D67 /* AddressListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AED3BF1AC3261A00E31D67 /* AddressListTableViewCell.m */; };
@@ -885,6 +887,8 @@
 		75AD58561A388F5F00E39640 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
 		75AD58571A388F5F00E39640 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
 		75AD58581A388F5F00E39640 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		75AD610D1AF5228700DCBB33 /* btn_to_shopping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_to_shopping@2x.png"; sourceTree = "<group>"; };
+		75AD610E1AF5228700DCBB33 /* btn_to_shopping@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_to_shopping@3x.png"; sourceTree = "<group>"; };
 		75AED3B91AC3254300E31D67 /* AddressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListViewController.h; sourceTree = "<group>"; };
 		75AED3BA1AC3254300E31D67 /* AddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListViewController.m; sourceTree = "<group>"; };
 		75AED3BB1AC3254300E31D67 /* AddressListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressListViewController.xib; sourceTree = "<group>"; };
@@ -1747,6 +1751,8 @@
 				757DE9A61A45617F0054BE47 /* bg_buy_shopping@3x.png */,
 				7550775F1A46BAB800CD18EF /* bg_star_full@2x.png */,
 				755077601A46BAB800CD18EF /* bg_star_full@3x.png */,
+				75AD610D1AF5228700DCBB33 /* btn_to_shopping@2x.png */,
+				75AD610E1AF5228700DCBB33 /* btn_to_shopping@3x.png */,
 			);
 			name = "分类";
 			sourceTree = "<group>";
@@ -2135,6 +2141,7 @@
 				7588530C1AD39500001DA0BB /* btn_more@3x.png in Resources */,
 				75EED4441A321A33002ECA75 /* SettingInfoMap.plist in Resources */,
 				758EA2761AD2C2E0008BD7B2 /* btn_candy@3x.png in Resources */,
+				75AD61101AF5228700DCBB33 /* btn_to_shopping@3x.png in Resources */,
 				757E83EB1AC5AE77004DF3F7 /* icon_select_order@2x.png in Resources */,
 				7533EEF91A2E1536001D12D4 /* icon_radio_normal@3x.png in Resources */,
 				75C764081AD2B6B500A2A486 /* btn_lingshi@2x.png in Resources */,
@@ -2238,6 +2245,7 @@
 				75EED4041A31EDDE002ECA75 /* icon_user_image_defult@3x.png in Resources */,
 				75EED4101A31F7C7002ECA75 /* icon_delevery@3x.png in Resources */,
 				756C62F91A47083B007B2ECB /* bg_star_half@2x.png in Resources */,
+				75AD610F1AF5228700DCBB33 /* btn_to_shopping@2x.png in Resources */,
 				75E478A01A7F58AE002DC26D /* ShoppingCarViewController.xib in Resources */,
 				75164DBB1ABAC0F30046F86E /* loading_square@3x.png in Resources */,
 				7533EEEE1A2E1536001D12D4 /* btn_get_code_bg@2x.png in Resources */,

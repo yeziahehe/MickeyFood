@@ -14,6 +14,7 @@
 #import "FoodImageDetailView.h"
 #import "SpecView.h"
 #import "FoodRemarkViewController.h"
+#import "ShoppingCarViewController.h"
 
 #define kGetFoodByIdDownloaderKey         @"GetFoodByIdDownloaderKey"
 #define kFoodDetailMapFileName            @"FoodDetailMap"
@@ -148,11 +149,18 @@
     [self.contentScrollView setContentOffset:CGPointMake(0, -self.contentScrollView.contentInset.top) animated:YES];
 }
 
+- (void)rightItemTapped
+{
+    ShoppingCarViewController *shoppingCarViewController = [[ShoppingCarViewController alloc]initWithNibName:@"ShoppingCarViewController" bundle:nil];
+    [self.navigationController pushViewController:shoppingCarViewController animated:YES];
+}
+
 #pragma mark - UIViewController Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"宝贝详情"];
+    [self setRightNaviItemWithTitle:nil imageName:@"btn_to_shopping.png"];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self requestForFoodDetail];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(specChooseNotification:) name:kSpecChooseNotification object:nil];
