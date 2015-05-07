@@ -13,6 +13,7 @@
 #import "CalculateDetailView.h"
 #import "AddressAddViewController.h"
 #import "AddressListViewController.h"
+#import "OrderNoteView.h"
 
 #define kCalculateInfoMapFileName           @"CalculateInfoMap"
 #define kGetAddressDownloaderKey            @"GetAddressDownloaderKey"
@@ -23,12 +24,15 @@
 @property (nonatomic, strong) NSMutableArray *subViewArray;
 @property (nonatomic, strong) NSMutableArray *addressArray;
 @property (nonatomic, strong) NSString *rank;
+@property (nonatomic, strong) OrderTimePicker *timePickerView;
+@property (nonatomic, strong) NSString *time;
+@property (nonatomic, strong) NSString *note;
 @end
 
 @implementation CalculateViewController
 @synthesize contentScrollView;
 @synthesize totalPriceLabel;
-@synthesize subViewArray,addressArray,orderListArray,orderCodeArray,totalPrice,rank;
+@synthesize subViewArray,addressArray,orderListArray,orderCodeArray,totalPrice,rank,timePickerView,time,note;
 
 #pragma mark - Private Methods
 - (void)loadSubViews:(Address *)address
@@ -57,6 +61,11 @@
             [[NSNotificationCenter defaultCenter]postNotificationName:kReloadRefreshAddressNotification object:self.addressArray];
             rect = acv.frame;
             rect.size.width = ScreenWidth;
+        }
+        else if ([calculateSubView isKindOfClass:[OrderNoteView class]]) {
+            OrderNoteView *onv = (OrderNoteView *)calculateSubView;
+            rect.size.width = ScreenWidth;
+            
         }
         else if ([calculateSubView isKindOfClass:[CalculateDetailView class]]) {
             CalculateDetailView *cdv = (CalculateDetailView *)calculateSubView;
@@ -123,6 +132,15 @@
     }
 }
 
+- (void)hidePickerView
+{
+    [UIView animateWithDuration:0.3f animations:^(void){
+        CGRect rect = self.timePickerView.frame;
+        rect.origin.y = self.view.frame.size.height;
+        self.timePickerView.frame = rect;
+    }];
+}
+
 #pragma mark - IBAction Methods
 - (IBAction)confirmButtonClicked:(id)sender {
     [[YFProgressHUD sharedProgressHUD] startedNetWorkActivityWithText:@"下单中，请稍等..."];
@@ -160,6 +178,37 @@
     [self loadSubViews:address];
 }
 
+- (void)timeNotification:(NSNotification *)notification
+{
+    if (nil == self.timePickerView) {
+        NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"OrderTimePicker"
+                                                      owner:self
+                                                    options:nil];
+        self.timePickerView = [nibs lastObject];
+    }
+    self.timePickerView.delegate = self;
+    if (nil == self.timePickerView.superview) {
+        CGRect rect = self.timePickerView.frame;
+        rect.size.width = ScreenWidth;
+        rect.origin.y = self.view.frame.size.height;
+        self.timePickerView.frame = rect;
+        [self.view addSubview:self.timePickerView];
+        [self.timePickerView reload];
+    }
+    
+    [UIView animateWithDuration:0.3f animations:^(void){
+        CGRect rect = self.timePickerView.frame;
+        rect.origin.y = self.view.frame.size.height - rect.size.height;
+        self.timePickerView.frame = rect;
+    }];
+    self.contentScrollView.userInteractionEnabled = NO;
+}
+
+- (void)noteNotification:(NSNotification *)notification
+{
+    //添加留言
+}
+
 #pragma mark - BaseViewController methods
 - (void)extraItemTapped
 {
@@ -167,20 +216,44 @@
 }
 
 #pragma mark - UIViewController Methods
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.contentScrollView.userInteractionEnabled = YES;
+    [self hidePickerView];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setNaviTitle:@"确认订单"];
     [self requestForAddressInfo];
+    self.time = @"立即送达";
+    self.note = @"";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshAddressInfoWithNotification:) name:kRefreshAddressNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addressViewShowNotification:) name:kAddressViewShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectAddressNotification:) name:kSelectAddressNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(timeNotification:) name:kTimeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noteNotification:) name:kNoteNotification object:nil];
 }
 
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager]cancelDownloaderWithDelegate:self purpose:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+#pragma mark - PeriodPickerViewDelegate Methods
+- (void)didTextCanceled
+{
+    [self hidePickerView];
+}
+
+- (void)didTextConfirmed:(NSString *)textValue
+{
+    [self didTextCanceled];
+    //to do 显示
+    self.time = textValue;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kTimeChangeNotification object:textValue];
 }
 
 #pragma mark - AlertViewDelegate methods

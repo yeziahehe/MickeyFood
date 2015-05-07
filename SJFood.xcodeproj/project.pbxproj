@@ -97,6 +97,9 @@
 		7542C48F1A2CD09E00BB083D /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7542C48D1A2CD09E00BB083D /* ConfirmViewController.xib */; };
 		7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542C4A21A2D972400BB083D /* UserInfoViewController.m */; };
 		7542C4A51A2D972400BB083D /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7542C4A31A2D972400BB083D /* UserInfoViewController.xib */; };
+		754389481AFB12070010398D /* OrderNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 754389471AFB12070010398D /* OrderNoteView.m */; };
+		7543894A1AFB12160010398D /* OrderNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754389491AFB12160010398D /* OrderNoteView.xib */; };
+		754389511AFB49110010398D /* bg_upperKeyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 754389501AFB49110010398D /* bg_upperKeyboard.png */; };
 		754547451AC593F500A872E4 /* SendOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 754547441AC593F500A872E4 /* SendOrderView.m */; };
 		754547471AC5997000A872E4 /* SendOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754547461AC5997000A872E4 /* SendOrderView.xib */; };
 		754547491AC59A2100A872E4 /* CourierOrderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754547481AC59A2100A872E4 /* CourierOrderView.xib */; };
@@ -339,6 +342,8 @@
 		75C11BCC1AD393B200045998 /* btn_special@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C11BC71AD393B200045998 /* btn_special@3x.png */; };
 		75C1439C1A415EF100E6F92B /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C1439A1A415EF100E6F92B /* FoodViewController.m */; };
 		75C1439D1A415EF100E6F92B /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C1439B1A415EF100E6F92B /* FoodViewController.xib */; };
+		75C241AD1AFB4C0600E1DA29 /* OrderTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C241AC1AFB4C0600E1DA29 /* OrderTimePicker.xib */; };
+		75C241B01AFB4CC700E1DA29 /* OrderTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C241AF1AFB4CC700E1DA29 /* OrderTimePicker.m */; };
 		75C763F51AD2B50900A2A486 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C763F31AD2B50900A2A486 /* background@2x.png */; };
 		75C763F61AD2B50900A2A486 /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C763F41AD2B50900A2A486 /* background@3x.png */; };
 		75C764041AD2B6B500A2A486 /* btn_bao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C763F71AD2B6B500A2A486 /* btn_bao@2x.png */; };
@@ -559,6 +564,10 @@
 		7542C4A11A2D972400BB083D /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		7542C4A21A2D972400BB083D /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		7542C4A31A2D972400BB083D /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		754389461AFB12070010398D /* OrderNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderNoteView.h; sourceTree = "<group>"; };
+		754389471AFB12070010398D /* OrderNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderNoteView.m; sourceTree = "<group>"; };
+		754389491AFB12160010398D /* OrderNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderNoteView.xib; sourceTree = "<group>"; };
+		754389501AFB49110010398D /* bg_upperKeyboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_upperKeyboard.png; sourceTree = "<group>"; };
 		754547431AC593F500A872E4 /* SendOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendOrderView.h; sourceTree = "<group>"; };
 		754547441AC593F500A872E4 /* SendOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendOrderView.m; sourceTree = "<group>"; };
 		754547461AC5997000A872E4 /* SendOrderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendOrderView.xib; sourceTree = "<group>"; };
@@ -899,6 +908,9 @@
 		75C143991A415EF100E6F92B /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
 		75C1439A1A415EF100E6F92B /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		75C1439B1A415EF100E6F92B /* FoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodViewController.xib; sourceTree = "<group>"; };
+		75C241AC1AFB4C0600E1DA29 /* OrderTimePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTimePicker.xib; sourceTree = "<group>"; };
+		75C241AE1AFB4CC700E1DA29 /* OrderTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTimePicker.h; sourceTree = "<group>"; };
+		75C241AF1AFB4CC700E1DA29 /* OrderTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTimePicker.m; sourceTree = "<group>"; };
 		75C763F31AD2B50900A2A486 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		75C763F41AD2B50900A2A486 /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
 		75C763F71AD2B6B500A2A486 /* btn_bao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bao@2x.png"; sourceTree = "<group>"; };
@@ -1529,6 +1541,12 @@
 				75AED3BE1AC3261A00E31D67 /* AddressListTableViewCell.h */,
 				75AED3BF1AC3261A00E31D67 /* AddressListTableViewCell.m */,
 				75AED3C01AC3261A00E31D67 /* AddressListTableViewCell.xib */,
+				754389461AFB12070010398D /* OrderNoteView.h */,
+				754389471AFB12070010398D /* OrderNoteView.m */,
+				754389491AFB12160010398D /* OrderNoteView.xib */,
+				75C241AE1AFB4CC700E1DA29 /* OrderTimePicker.h */,
+				75C241AF1AFB4CC700E1DA29 /* OrderTimePicker.m */,
+				75C241AC1AFB4C0600E1DA29 /* OrderTimePicker.xib */,
 			);
 			name = "结算页面";
 			sourceTree = "<group>";
@@ -1831,6 +1849,7 @@
 		75E478A11A7F6A9A002DC26D /* 购物车 */ = {
 			isa = PBXGroup;
 			children = (
+				754389501AFB49110010398D /* bg_upperKeyboard.png */,
 				75FCABEF1AC3D50A00C1368C /* logo_local@2x.png */,
 				75FCABF01AC3D50A00C1368C /* logo_local@3x.png */,
 				7527DF821AAC8D2C00A20A01 /* btn_confirm_num@2x.png */,
@@ -2136,6 +2155,7 @@
 				7533EEF01A2E1536001D12D4 /* icon_code@2x.png in Resources */,
 				751B20FE1AB1D4B000B1CFE6 /* btn_cancel_specal@3x.png in Resources */,
 				754547531AC5A54500A872E4 /* SendOrdersViewController.xib in Resources */,
+				754389511AFB49110010398D /* bg_upperKeyboard.png in Resources */,
 				758848A91AC2B4BF006F98F9 /* AddressChooseView.xib in Resources */,
 				75AD58311A3810C000E39640 /* ShareViewController.xib in Resources */,
 				7588530C1AD39500001DA0BB /* btn_more@3x.png in Resources */,
@@ -2239,6 +2259,7 @@
 				757E83F31AC5B48E004DF3F7 /* SendOrderTableViewCell.xib in Resources */,
 				7555FF8F1AC18CC6001A0497 /* icon_no_status@2x.png in Resources */,
 				75CD70AE1A41C5140073A7E5 /* SearchHistoryViewController.xib in Resources */,
+				75C241AD1AFB4C0600E1DA29 /* OrderTimePicker.xib in Resources */,
 				755722BD1A34891400CC6A8F /* icon_sina_weibo@3x.png in Resources */,
 				758AAD711A4A5FC10047E678 /* btn_num_bg@2x.png in Resources */,
 				75EED4341A320B79002ECA75 /* icon_setting@2x.png in Resources */,
@@ -2291,6 +2312,7 @@
 				75C763F61AD2B50900A2A486 /* background@3x.png in Resources */,
 				75535B511AC8235D00B9C551 /* guidepage_3_667h@2x.png in Resources */,
 				75544EBE1AAC114F0034F4A8 /* btn_shoppingcar_edit@2x.png in Resources */,
+				7543894A1AFB12160010398D /* OrderNoteView.xib in Resources */,
 				7533EECE1A2E14E7001D12D4 /* icon_search@3x.png in Resources */,
 				75EED41C1A31F7E5002ECA75 /* icon_refund@3x.png in Resources */,
 				75A95CD71A4024450009962F /* CategoryCollectionViewCell.xib in Resources */,
@@ -2400,6 +2422,7 @@
 				75D1E2C61A3ACEC5008555B1 /* AddressEditViewController.m in Sources */,
 				758954531A24E685001C2350 /* Reachability.m in Sources */,
 				7599AA051A259D910052E7A9 /* YFAsynImageView.m in Sources */,
+				754389481AFB12070010398D /* OrderNoteView.m in Sources */,
 				75A95CBD1A4014470009962F /* CategoryTableView.m in Sources */,
 				7589544B1A24BB51001C2350 /* CustomNavigationController.m in Sources */,
 				758848A51AC2B499006F98F9 /* AddressChooseView.m in Sources */,
@@ -2409,6 +2432,7 @@
 				7542C4851A2CC11C00BB083D /* RegisterViewController.m in Sources */,
 				750F6B351AC0524700891124 /* OrderDetailTableViewCell.m in Sources */,
 				750DF71D1A2F4F4B0010A2E9 /* SBJsonWriter.m in Sources */,
+				75C241B01AFB4CC700E1DA29 /* OrderTimePicker.m in Sources */,
 				757E83F21AC5B48E004DF3F7 /* SendOrderTableViewCell.m in Sources */,
 				754547571AC5A56900A872E4 /* CourierOrdersViewController.m in Sources */,
 				75AD58501A387E8300E39640 /* YFMediaPicker.m in Sources */,

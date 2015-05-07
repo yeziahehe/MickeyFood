@@ -65,6 +65,7 @@
 {
     //[[YFProgressHUD sharedProgressHUD]showWithMessage:@"提醒发货成功" customView:nil hideDelay:2.f];
     //待发货情况下，用户可以手动取消订单
+    //UIAlertView
     
 }
 

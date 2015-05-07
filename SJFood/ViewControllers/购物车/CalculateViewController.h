@@ -7,8 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "OrderTimePicker.h"
 
-@interface CalculateViewController : BaseViewController
+@interface CalculateViewController : BaseViewController<OrderTimePickerViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
 @property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
 @property (strong, nonatomic) NSString *totalPrice;

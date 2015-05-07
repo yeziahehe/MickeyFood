@@ -3,6 +3,7 @@
 <plist version="1.0">
 <array>
 	<string>AddressChooseView</string>
+	<string>OrderNoteView</string>
 	<string>CalculateDetailView</string>
 </array>
 </plist>

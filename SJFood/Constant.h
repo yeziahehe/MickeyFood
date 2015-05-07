@@ -84,6 +84,10 @@
 #define kSelectCourierNotification          @"SelectCourierNotification"
 #define kChangeOrderStatusNotification      @"ChangeOrderStatusNotification"
 #define kApnsNotification                   @"ApnsNotification"
+#define kTimeNotification                   @"TimeNotification"
+#define kTimeChangeNotification             @"TimeChangeNotification"
+#define kNoteNotification                   @"NoteNotification"
+#define kNoteChangeNotification             @"NoteChangeNotification"
 
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"

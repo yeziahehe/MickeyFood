@@ -81,6 +81,7 @@
             if (self.newsListArray.count > 0) {
                 [icv reloadWithProductAds:self.newsListArray];
             }
+            icv.delegate = self;
         }
         else if ([homeSubView isKindOfClass:[HomeModuleView class]]) {
             HomeModuleView *hmv = (HomeModuleView *)homeSubView;
