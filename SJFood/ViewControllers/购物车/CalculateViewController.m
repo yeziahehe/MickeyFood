@@ -14,6 +14,7 @@
 #import "AddressAddViewController.h"
 #import "AddressListViewController.h"
 #import "OrderNoteView.h"
+#import "NoteViewController.h"
 
 #define kCalculateInfoMapFileName           @"CalculateInfoMap"
 #define kGetAddressDownloaderKey            @"GetAddressDownloaderKey"
@@ -206,7 +207,15 @@
 
 - (void)noteNotification:(NSNotification *)notification
 {
-    //添加留言
+    NoteViewController *noteViewController = [[NoteViewController alloc]initWithNibName:@"NoteViewController" bundle:nil];
+    [self.navigationController pushViewController:noteViewController animated:YES];
+}
+
+- (void)noteChangeNotification:(NSNotification *)notification
+{
+    if (notification.object) {
+        self.note = notification.object;
+    }
 }
 
 #pragma mark - BaseViewController methods
@@ -234,6 +243,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectAddressNotification:) name:kSelectAddressNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(timeNotification:) name:kTimeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noteNotification:) name:kNoteNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noteChangeNotification:) name:kNoteChangeNotification object:nil];
 }
 
 - (void)dealloc

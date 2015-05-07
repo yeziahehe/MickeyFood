@@ -18,6 +18,13 @@
     }
 }
 
+- (void)noteChangeNotification:(NSNotification *)notification
+{
+    if (notification.object) {
+        self.noteLabel.text = notification.object;
+    }
+}
+
 #pragma mark - IBAction Methods
 - (IBAction)timeButtonClicked:(id)sender {
     [[NSNotificationCenter defaultCenter]postNotificationName:kTimeNotification object:nil];
@@ -32,6 +39,7 @@
 {
     [super awakeFromNib];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(timeChangeNotification:) name:kTimeChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noteChangeNotification:) name:kNoteChangeNotification object:nil];
 }
 
 - (void)dealloc

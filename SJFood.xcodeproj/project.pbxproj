@@ -344,6 +344,8 @@
 		75C1439D1A415EF100E6F92B /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C1439B1A415EF100E6F92B /* FoodViewController.xib */; };
 		75C241AD1AFB4C0600E1DA29 /* OrderTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C241AC1AFB4C0600E1DA29 /* OrderTimePicker.xib */; };
 		75C241B01AFB4CC700E1DA29 /* OrderTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C241AF1AFB4CC700E1DA29 /* OrderTimePicker.m */; };
+		75C241B41AFB90EB00E1DA29 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C241B21AFB90EB00E1DA29 /* NoteViewController.m */; };
+		75C241B51AFB90EB00E1DA29 /* NoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C241B31AFB90EB00E1DA29 /* NoteViewController.xib */; };
 		75C763F51AD2B50900A2A486 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C763F31AD2B50900A2A486 /* background@2x.png */; };
 		75C763F61AD2B50900A2A486 /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C763F41AD2B50900A2A486 /* background@3x.png */; };
 		75C764041AD2B6B500A2A486 /* btn_bao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C763F71AD2B6B500A2A486 /* btn_bao@2x.png */; };
@@ -911,6 +913,9 @@
 		75C241AC1AFB4C0600E1DA29 /* OrderTimePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderTimePicker.xib; sourceTree = "<group>"; };
 		75C241AE1AFB4CC700E1DA29 /* OrderTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTimePicker.h; sourceTree = "<group>"; };
 		75C241AF1AFB4CC700E1DA29 /* OrderTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTimePicker.m; sourceTree = "<group>"; };
+		75C241B11AFB90EB00E1DA29 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		75C241B21AFB90EB00E1DA29 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		75C241B31AFB90EB00E1DA29 /* NoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteViewController.xib; sourceTree = "<group>"; };
 		75C763F31AD2B50900A2A486 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		75C763F41AD2B50900A2A486 /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
 		75C763F71AD2B6B500A2A486 /* btn_bao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bao@2x.png"; sourceTree = "<group>"; };
@@ -1547,6 +1552,9 @@
 				75C241AE1AFB4CC700E1DA29 /* OrderTimePicker.h */,
 				75C241AF1AFB4CC700E1DA29 /* OrderTimePicker.m */,
 				75C241AC1AFB4C0600E1DA29 /* OrderTimePicker.xib */,
+				75C241B11AFB90EB00E1DA29 /* NoteViewController.h */,
+				75C241B21AFB90EB00E1DA29 /* NoteViewController.m */,
+				75C241B31AFB90EB00E1DA29 /* NoteViewController.xib */,
 			);
 			name = "结算页面";
 			sourceTree = "<group>";
@@ -2163,6 +2171,7 @@
 				758EA2761AD2C2E0008BD7B2 /* btn_candy@3x.png in Resources */,
 				75AD61101AF5228700DCBB33 /* btn_to_shopping@3x.png in Resources */,
 				757E83EB1AC5AE77004DF3F7 /* icon_select_order@2x.png in Resources */,
+				75C241B51AFB90EB00E1DA29 /* NoteViewController.xib in Resources */,
 				7533EEF91A2E1536001D12D4 /* icon_radio_normal@3x.png in Resources */,
 				75C764081AD2B6B500A2A486 /* btn_lingshi@2x.png in Resources */,
 				75535B4C1AC8235D00B9C551 /* guidepage_2_568h@2x.png in Resources */,
@@ -2371,6 +2380,7 @@
 				7585129A1A32F44700504FA8 /* MyMessageViewController.m in Sources */,
 				758512731A32E91100504FA8 /* MJRefreshConst.m in Sources */,
 				7542C4671A2CAB0500BB083D /* CustomLightNavigationController.m in Sources */,
+				75C241B41AFB90EB00E1DA29 /* NoteViewController.m in Sources */,
 				758512781A32E91100504FA8 /* UIView+MJExtension.m in Sources */,
 				758512811A32EEEC00504FA8 /* ReceiveViewController.m in Sources */,
 				750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */,
