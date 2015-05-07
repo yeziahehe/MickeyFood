@@ -219,7 +219,7 @@
 
 - (void)didGetFileFailedWithMessage:(NSString *)message
 {
-    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.0f];
+    [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:4.0f];
 }
 
 #pragma mark - UIActionSheet Delegate Methods

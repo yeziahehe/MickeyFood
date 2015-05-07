@@ -27,7 +27,7 @@
     self.loginMember.phone = nil;
     self.loginMember.password = nil;
     [self saveLoginMemberData];
-    [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"退出成功" hideDelay:2.0f];
+    [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"退出成功" hideDelay:4.0f];
     [[NSNotificationCenter defaultCenter] postNotificationName:kUserChangeNotification object:nil];
 }
 

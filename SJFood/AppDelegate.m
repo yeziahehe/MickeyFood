@@ -78,7 +78,7 @@
     else
     {
         if (self.window.rootViewController != self.startViewController) {
-            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:@"当前无网络连接" hideDelay:2.0f];
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:@"当前无网络连接" hideDelay:4.0f];
         }
     }
 }

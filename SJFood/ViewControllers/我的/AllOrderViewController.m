@@ -63,7 +63,9 @@
 #pragma mark - IBAction Methods
 - (void)deliveryButtonClicked:(UIButton *)button
 {
-    [[YFProgressHUD sharedProgressHUD]showWithMessage:@"提醒发货成功" customView:nil hideDelay:2.f];
+    //[[YFProgressHUD sharedProgressHUD]showWithMessage:@"提醒发货成功" customView:nil hideDelay:2.f];
+    //待发货情况下，用户可以手动取消订单
+    
 }
 
 - (void)receiveButtonClicked:(UIButton *)button
@@ -117,7 +119,7 @@
         case 1:
         {
             cell.orderStatusLabel.text = @"尚未发货";
-            [cell.orderStatusChangeButton setTitle:@"提醒发货" forState:UIControlStateNormal];
+            [cell.orderStatusChangeButton setTitle:@"取消订单" forState:UIControlStateNormal];
             [cell.orderStatusChangeButton addTarget:self action:@selector(deliveryButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         }
             break;
