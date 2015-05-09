@@ -151,8 +151,8 @@
 
 - (void)rightItemTapped
 {
-    ShoppingCarViewController *shoppingCarViewController = [[ShoppingCarViewController alloc]initWithNibName:@"ShoppingCarViewController" bundle:nil];
-    [self.navigationController pushViewController:shoppingCarViewController animated:YES];
+    //跳转到购物车
+    self.tabBarController.selectedIndex = 2;
 }
 
 #pragma mark - UIViewController Methods

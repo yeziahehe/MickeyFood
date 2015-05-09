@@ -16,6 +16,12 @@
     "price": 200,
     "discountPrice": null,
     "isDiscount": 0
+ 
+ ===================
+ 2015.5.9 add
+ ===================
+    "message" : ""
+    "reserveTime" : ""
  },
  */
 
@@ -30,6 +36,8 @@
 @property (nonatomic, strong)NSString *price;//订单总价格
 @property (nonatomic, strong)NSString *discountPrice;//订单折扣价
 @property (nonatomic, strong)NSString *isDiscount;//订单是否有折扣
+@property (nonatomic, strong)NSString *message;//备注
+@property (nonatomic, strong)NSString *reserveTime;//送达时间
 
 - (id)initWithDict:(NSDictionary *)dict;
 

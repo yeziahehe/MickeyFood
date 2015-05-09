@@ -9,7 +9,7 @@
 #import "SendOrderTableViewCell.h"
 
 @implementation SendOrderTableViewCell
-@synthesize togetherIdLabel,CourierNameLabel,orderDateLabel,totalPriceLabel,addressLabel,sendOrderButton;
+@synthesize togetherIdLabel,CourierNameLabel,orderDateLabel,totalPriceLabel,addressLabel,sendOrderButton,noteLabel,timeLabel;
 
 - (void)awakeFromNib {
     // Initialization code
