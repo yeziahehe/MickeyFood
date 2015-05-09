@@ -119,18 +119,30 @@
     {
         [self dealNotificationWithLaunchOptions:launchOptions];
     }
-    
-    //注册APNS
-    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
-        //ios 8
-        UIUserNotificationSettings * settings = [UIUserNotificationSettings settingsForTypes: UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound categories: nil ];
-        [[UIApplication sharedApplication] registerUserNotificationSettings: settings];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    // Required
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                       UIUserNotificationTypeSound |
+                                                       UIUserNotificationTypeAlert)
+                                           categories:nil];
     } else {
-        //ios 7
-        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge |UIRemoteNotificationTypeAlert |UIRemoteNotificationTypeSound];
-        
+        //categories 必须为nil
+        [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                       UIRemoteNotificationTypeSound |
+                                                       UIRemoteNotificationTypeAlert)
+                                           categories:nil];
     }
+#else
+    //categories 必须为nil
+    [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                   UIRemoteNotificationTypeSound |
+                                                   UIRemoteNotificationTypeAlert)
+                                       categories:nil];
+#endif
+    // Required
+    [APService setupWithOption:launchOptions];
     
     return YES;
 }
@@ -148,17 +160,16 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     if ([[MemberDataManager sharedManager] isLogin]) {
-        //将devicetoken与用户绑定
-        NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kPostTokenUrl];
-        NSMutableDictionary *dict = kCommonParamsDict;
-        [dict setObject:[MemberDataManager sharedManager].loginMember.phone forKey:@"phoneId"];
-        [dict setObject:devToken forKey:@"token"];
-        [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
-                                                                 postParams:dict
-                                                                contentType:@"application/x-www-form-urlencoded"
-                                                                   delegate:self
-                                                                    purpose:nil];
+        [APService registerDeviceToken:deviceToken];
+        [APService setTags:[NSSet setWithObject:[MemberDataManager sharedManager].loginMember.type] alias:[MemberDataManager sharedManager].loginMember.phone callbackSelector:@selector(tagsAliasCallback:tags:alias:) object:self];
     }
+}
+
+-(void)tagsAliasCallback:(int)iResCode
+                    tags:(NSSet *)tags
+                   alias:(NSString *)alias
+{
+    NSLog(@"rescode: %d, \ntags: %@, \nalias: %@\n", iResCode, tags , alias);
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {

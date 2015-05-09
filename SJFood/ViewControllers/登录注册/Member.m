@@ -10,10 +10,11 @@
 
 #define kPhoneKey               @"PhoneKey"
 #define kPasswordKey            @"PasswordKey"
+#define kTypeKey                @"TypeKey"
 
 @implementation Member
 
-@synthesize phone,password;
+@synthesize phone,password,type;
 
 - (id)initWithDict:(NSDictionary *)dict
 {
@@ -47,6 +48,7 @@
 {
     [aCoder encodeObject:self.phone forKey:kPhoneKey];
     [aCoder encodeObject:self.password forKey:kPasswordKey];
+    [aCoder encodeObject:self.type forKey:kTypeKey];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -55,6 +57,7 @@
     {
         self.phone = [aDecoder decodeObjectForKey:kPhoneKey];
         self.password = [aDecoder decodeObjectForKey:kPasswordKey];
+        self.type = [aDecoder decodeObjectForKey:kTypeKey];
     }
     return self;
 }

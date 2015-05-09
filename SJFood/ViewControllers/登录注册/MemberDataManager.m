@@ -26,9 +26,11 @@
     //清空用户信息
     self.loginMember.phone = nil;
     self.loginMember.password = nil;
+    self.loginMember.type = nil;
     [self saveLoginMemberData];
     [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"退出成功" hideDelay:4.0f];
     [[NSNotificationCenter defaultCenter] postNotificationName:kUserChangeNotification object:nil];
+    [APService setTags:[NSSet set] alias:@"" callbackSelector:nil object:nil];
 }
 
 - (void)loginWithAccountName:(NSString *)phone password:(NSString *)password
@@ -161,6 +163,7 @@
         NSDictionary *dict = [str JSONValue];
         if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
         {
+            self.loginMember.type = [NSString stringWithFormat:@"%@",[dict objectForKey:@"type"]];
             //self.loginMember = [Member memberWithDict:dict];
             [[MemberDataManager sharedManager] saveLoginMemberData];
             [[NSNotificationCenter defaultCenter] postNotificationName:kLoginResponseNotification object:nil];

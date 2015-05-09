@@ -88,6 +88,12 @@
 		7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF011A2E1549001D12D4 /* icon_header_cancel@3x.png */; };
 		7533EF071A2E1568001D12D4 /* Mickeyabout.html in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF061A2E1568001D12D4 /* Mickeyabout.html */; };
 		7533EF091A2E177E001D12D4 /* htmlTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF081A2E177E001D12D4 /* htmlTemplate.html */; };
+		753FAF2F1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF2E1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a */; };
+		753FAF321AFD0C7000F12B94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF301AFD0C5C00F12B94 /* CFNetwork.framework */; };
+		753FAF351AFD0CC200F12B94 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF331AFD0CA800F12B94 /* CoreFoundation.framework */; };
+		753FAF381AFD0CE800F12B94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF361AFD0CDD00F12B94 /* Foundation.framework */; };
+		753FAF3B1AFD0D2900F12B94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF391AFD0D1F00F12B94 /* UIKit.framework */; };
+		753FAF3D1AFD0EC900F12B94 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 753FAF3C1AFD0EC900F12B94 /* PushConfig.plist */; };
 		7542C4631A2CA42400BB083D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542C4611A2CA42400BB083D /* LoginViewController.m */; };
 		7542C4641A2CA42400BB083D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7542C4621A2CA42400BB083D /* LoginViewController.xib */; };
 		7542C4671A2CAB0500BB083D /* CustomLightNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542C4661A2CAB0500BB083D /* CustomLightNavigationController.m */; };
@@ -552,6 +558,13 @@
 		7533EF011A2E1549001D12D4 /* icon_header_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_header_cancel@3x.png"; sourceTree = "<group>"; };
 		7533EF061A2E1568001D12D4 /* Mickeyabout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Mickeyabout.html; sourceTree = "<group>"; };
 		7533EF081A2E177E001D12D4 /* htmlTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlTemplate.html; sourceTree = "<group>"; };
+		753FAF2D1AFD0C1E00F12B94 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APService.h; path = lib/APService.h; sourceTree = "<group>"; };
+		753FAF2E1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPushSDK-1.8.3.a"; path = "lib/libPushSDK-1.8.3.a"; sourceTree = "<group>"; };
+		753FAF301AFD0C5C00F12B94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		753FAF331AFD0CA800F12B94 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		753FAF361AFD0CDD00F12B94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		753FAF391AFD0D1F00F12B94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		753FAF3C1AFD0EC900F12B94 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		7542C4601A2CA42400BB083D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7542C4611A2CA42400BB083D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7542C4621A2CA42400BB083D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -1035,9 +1048,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753FAF3B1AFD0D2900F12B94 /* UIKit.framework in Frameworks */,
+				753FAF381AFD0CE800F12B94 /* Foundation.framework in Frameworks */,
+				753FAF351AFD0CC200F12B94 /* CoreFoundation.framework in Frameworks */,
+				753FAF321AFD0C7000F12B94 /* CFNetwork.framework in Frameworks */,
 				757B7CA11ABD857F00470F69 /* AssetsLibrary.framework in Frameworks */,
 				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				755722AC1A344E6400CC6A8F /* libsqlite3.dylib in Frameworks */,
+				753FAF2F1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a in Frameworks */,
 				755722AA1A344E5600CC6A8F /* libstdc++.dylib in Frameworks */,
 				755722A81A344E1C00CC6A8F /* SystemConfiguration.framework in Frameworks */,
 				755722A71A344E1700CC6A8F /* QuartzCore.framework in Frameworks */,
@@ -1185,6 +1203,7 @@
 				758848B81AC2F8E0006F98F9 /* CalculateInfoMap.plist */,
 				7545474D1AC5A4B500A872E4 /* SendOrderMap.plist */,
 				754547591AC5A5A000A872E4 /* CourierOrderMap.plist */,
+				753FAF3C1AFD0EC900F12B94 /* PushConfig.plist */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -1318,6 +1337,15 @@
 				7533EF011A2E1549001D12D4 /* icon_header_cancel@3x.png */,
 			);
 			name = header;
+			sourceTree = "<group>";
+		};
+		753FAF2C1AFD0BF900F12B94 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				753FAF2D1AFD0C1E00F12B94 /* APService.h */,
+				753FAF2E1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 		7542C45F1A2CA2EA00BB083D /* 登录注册 */ = {
@@ -1706,6 +1734,11 @@
 		7589544F1A24E663001C2350 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				753FAF391AFD0D1F00F12B94 /* UIKit.framework */,
+				753FAF361AFD0CDD00F12B94 /* Foundation.framework */,
+				753FAF331AFD0CA800F12B94 /* CoreFoundation.framework */,
+				753FAF301AFD0C5C00F12B94 /* CFNetwork.framework */,
+				753FAF2C1AFD0BF900F12B94 /* lib */,
 				757B7C9F1ABD855700470F69 /* AssetsLibrary.framework */,
 				75AD58511A387EA800E39640 /* CoreLocation.framework */,
 				755722AB1A344E6400CC6A8F /* libsqlite3.dylib */,
@@ -2049,6 +2082,11 @@
 					7589540A1A24B4A1001C2350 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 3WTM5PLDUE;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					758954231A24B4A2001C2350 = {
 						CreatedOnToolsVersion = 6.1;
@@ -2091,6 +2129,7 @@
 				75A95CD21A4023700009962F /* CategoryCollectionView.xib in Resources */,
 				7533EEAA1A2E0EF4001D12D4 /* YFWebViewController.xib in Resources */,
 				75D1E2BA1A3AC6F6008555B1 /* btn_default_address_selected@3x.png in Resources */,
+				753FAF3D1AFD0EC900F12B94 /* PushConfig.plist in Resources */,
 				75F594C01AA74740004B3CDF /* btn_default_shopping_selected@2x.png in Resources */,
 				755722BF1A34891400CC6A8F /* icon_wechat_moment@3x.png in Resources */,
 				757DE9A71A45617F0054BE47 /* bg_add_shopping_car@2x.png in Resources */,
@@ -2621,7 +2660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fan Ye (FA9634J7X6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fan Ye (FA9634J7X6)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2630,7 +2669,10 @@
 				INFOPLIST_FILE = SJFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SJFood/Utilities/3rd/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9e5cefda-8547-4cc6-b902-8b75117c8dc8";
 			};
@@ -2641,7 +2683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Fan Ye (3WTM5PLDUE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fan Ye (3WTM5PLDUE)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2650,7 +2692,10 @@
 				INFOPLIST_FILE = SJFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SJFood/Utilities/3rd/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a60f0cb8-9da4-4386-8c74-1fdb3e9d1e34";
 			};

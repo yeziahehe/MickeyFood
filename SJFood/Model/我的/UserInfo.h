@@ -21,9 +21,9 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    kRoleUser = 0,
-    kRoleAdmin = 1,
-    kRoleCourier = 2
+    kRoleAdmin = 0,
+    kRoleCourier = 1,
+    kRoleUser = 2
 }RoleType;
 
 @interface UserInfo : NSObject

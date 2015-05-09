@@ -66,7 +66,6 @@
         else if ([calculateSubView isKindOfClass:[OrderNoteView class]]) {
             OrderNoteView *onv = (OrderNoteView *)calculateSubView;
             rect.size.width = ScreenWidth;
-            
         }
         else if ([calculateSubView isKindOfClass:[CalculateDetailView class]]) {
             CalculateDetailView *cdv = (CalculateDetailView *)calculateSubView;
@@ -151,6 +150,8 @@
     [dict setObject:self.rank forKey:@"rank"];
     NSString *orderIdString = [self.orderCodeArray componentsJoinedByString:@","];
     [dict setObject:orderIdString forKey:@"orderId"];
+    [dict setObject:self.note forKey:@"message"];
+    [dict setObject:self.time forKey:@"reserveTime"];
     [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
                                                              postParams:dict
                                                             contentType:@"application/x-www-form-urlencoded"

@@ -22,4 +22,5 @@
     #import "MemberDataManager.h"
     #import "MJRefresh.h"
     #import "CacheManager.h"
+    #import "APService.h"
 #endif
