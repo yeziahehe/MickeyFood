@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 /**
     基于MBProgressHUD封装的hud的进度条显示功能
     将一个全局的hud加入到keyWindow中，所有的show/hide操作只是设置hud的alpha属性

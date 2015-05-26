@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UITableView *orderDetailTableView;
 @property (strong, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *noteLabel;
 
 - (void)reloadData:(NSMutableArray *)orderDetail;
 

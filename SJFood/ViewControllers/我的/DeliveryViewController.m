@@ -12,6 +12,7 @@
 #import "OrderDetails.h"
 
 #define kGetAllOrderDownloadKey     @"GetAllOrderDownloadKey"
+#define kSetOrderInvalidDownloadKey @"SetOrderInvalidDownloadKey"
 
 @interface DeliveryViewController ()
 @property (nonatomic, strong) NSMutableArray *orderArray;
@@ -61,12 +62,33 @@
         [alert addAction:[UIAlertAction actionWithTitle:@"确定"
                                                   style:UIAlertActionStyleDefault
                                                 handler:^(UIAlertAction *action) {
-                                                    //请求
+                                                    CGPoint buttonPosition = [button convertPoint:CGPointZero toView:self.deliveryTableView];
+                                                    NSIndexPath *indexPath = [self.deliveryTableView indexPathForRowAtPoint:buttonPosition];
+                                                    Order *od = [self.orderArray objectAtIndex:indexPath.row];
+                                                    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"删除订单中..."];
+                                                    NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kSetOrderInvalidUrl];
+                                                    NSMutableDictionary *dict = kCommonParamsDict;
+                                                    [dict setObject:od.togetherId forKey:@"togetherId"];
+                                                    [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                                                                             postParams:dict
+                                                                                                            contentType:@"application/x-www-form-urlencoded"
+                                                                                                               delegate:self
+                                                                                                                purpose:kSetOrderInvalidDownloadKey];
                                                 }]];
         [self presentViewController:alert animated:YES completion:nil];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"取消订单" message:@"确定待发货订单？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alert show];
+        CGPoint buttonPosition = [button convertPoint:CGPointZero toView:self.deliveryTableView];
+        NSIndexPath *indexPath = [self.deliveryTableView indexPathForRowAtPoint:buttonPosition];
+        Order *od = [self.orderArray objectAtIndex:indexPath.row];
+        [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:@"删除订单中..."];
+        NSString *url = [NSString stringWithFormat:@"%@%@",kServerAddress,kSetOrderInvalidUrl];
+        NSMutableDictionary *dict = kCommonParamsDict;
+        [dict setObject:od.togetherId forKey:@"togetherId"];
+        [[YFDownloaderManager sharedManager] requestDataByPostWithURLString:url
+                                                                 postParams:dict
+                                                                contentType:@"application/x-www-form-urlencoded"
+                                                                   delegate:self
+                                                                    purpose:kSetOrderInvalidDownloadKey];
     }
 }
 
@@ -89,15 +111,6 @@
 - (void)dealloc
 {
     [[YFDownloaderManager sharedManager] cancelDownloaderWithDelegate:self purpose:nil];
-}
-
-#pragma mark - AlertViewDelegate methods
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1)
-    {
-        //请求
-    }
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -192,6 +205,26 @@
             }
             if(message.length == 0)
                 message = @"待发货订单获取失败";
+            [self loadSubViews];
+            [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
+        }
+    }
+    else if ([downloader.purpose isEqualToString:kSetOrderInvalidDownloadKey])
+    {
+        if([[dict objectForKey:kCodeKey] isEqualToString:kSuccessCode])
+        {
+            [[YFProgressHUD sharedProgressHUD] showSuccessViewWithMessage:@"订单取消成功" hideDelay:2.f];
+            [self requestForDeliveryOrder];
+        }
+        else
+        {
+            NSString *message = [dict objectForKey:kMessageKey];
+            if ([message isKindOfClass:[NSNull class]])
+            {
+                message = @"";
+            }
+            if(message.length == 0)
+                message = @"订单取消失败";
             [self loadSubViews];
             [[YFProgressHUD sharedProgressHUD] showFailureViewWithMessage:message hideDelay:2.f];
         }

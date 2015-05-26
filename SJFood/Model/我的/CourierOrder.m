@@ -11,7 +11,7 @@
 
 @implementation CourierOrder
 
-@synthesize togetherId,togetherDate,status,address,customePhone,totalPrice,nickName,orderList;
+@synthesize togetherId,togetherDate,status,address,customePhone,totalPrice,nickName,orderList,message,reserveTime;
 
 - (id)initWithDict:(NSDictionary *)dict
 {

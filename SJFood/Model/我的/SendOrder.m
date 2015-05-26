@@ -9,7 +9,7 @@
 #import "SendOrder.h"
 
 @implementation SendOrder
-@synthesize togetherDate,togetherId,address,adminName,price,isDiscount,discountPrice;
+@synthesize togetherDate,togetherId,address,adminName,price,isDiscount,discountPrice,message,reserveTime;
 
 - (id)initWithDict:(NSDictionary *)dict
 {

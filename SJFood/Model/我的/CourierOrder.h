@@ -49,6 +49,8 @@
 @property (nonatomic, copy)NSString *customePhone;//收货人手机号
 @property (nonatomic, copy)NSString *totalPrice;//总价
 @property (nonatomic, copy)NSString *nickName;//收货人姓名
+@property (nonatomic, copy)NSString *message;//备注
+@property (nonatomic, copy)NSString *reserveTime;//送达时间
 @property (nonatomic, strong)NSMutableArray *orderList;//订单中商品的详情
 
 - (id)initWithDict:(NSDictionary *)dict;

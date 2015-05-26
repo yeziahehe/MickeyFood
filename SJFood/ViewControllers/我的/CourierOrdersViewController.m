@@ -147,6 +147,11 @@
     cell.phoneLabel.text = self.courierOrder.customePhone;
     cell.nameLabel.text = self.courierOrder.nickName;
     cell.addressLabel.text = self.courierOrder.address;
+    if ([self.courierOrder.message isEqualToString:@""]) {
+        self.courierOrder.message = @"用户未填写备注";
+    }
+    cell.noteLabel.text = self.courierOrder.message;
+    cell.timeLabel.text = self.courierOrder.reserveTime;
     switch ([self.courierOrder.status integerValue]) {
         case 1:
         {

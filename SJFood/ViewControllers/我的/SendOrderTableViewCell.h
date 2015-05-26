@@ -15,5 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *totalPriceLabel;
 @property (strong, nonatomic) IBOutlet UILabel *addressLabel;
 @property (strong, nonatomic) IBOutlet UIButton *sendOrderButton;
+@property (strong, nonatomic) IBOutlet UILabel *noteLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end

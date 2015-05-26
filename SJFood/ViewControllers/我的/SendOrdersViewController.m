@@ -140,6 +140,11 @@
     cell.togetherIdLabel.text = self.sendOrder.togetherId;
     cell.orderDateLabel.text = self.sendOrder.togetherDate;
     cell.addressLabel.text = self.sendOrder.address;
+    if ([self.sendOrder.message isEqualToString:@""]) {
+        self.sendOrder.message = @"用户未填写备注";
+    }
+    cell.noteLabel.text = self.sendOrder.message;
+    cell.timeLabel.text = self.sendOrder.reserveTime;
     if ([self.sendOrder.isDiscount isEqualToString:@"1"]) {
         cell.totalPriceLabel.text = [NSString stringWithFormat:@"￥%.2f",[self.sendOrder.discountPrice floatValue]];
     } else {
@@ -159,7 +164,7 @@
 #pragma mark - UITableViewDelegate methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 105.f;
+    return 140.f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

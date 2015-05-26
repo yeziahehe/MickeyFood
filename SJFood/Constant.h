@@ -91,6 +91,7 @@
 
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"
+//#define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
 #define kLoginUrl               @"user/toLogin.do"
 #define kRegisterUrl            @"user/registerIn.do"
 #define kCheckUserExistUrl      @"user/checkUserIsExist.do"
@@ -129,5 +130,6 @@
 #define kPostTokenUrl           @"user/postIOSToken.do"
 #define kOrderToDeliverUrl      @"order/orderToDeliver.do"
 #define kOrderToBuyUrl          @"order/orderToFinish.do"
+#define kSetOrderInvalidUrl     @"order/setOrderInvalid.do"
 
 #endif
