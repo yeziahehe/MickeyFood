@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeSubView.h"
-#import "YFCycleScrollView.h"
 #import "AdModel.h"
 
 @protocol ImagesContainViewDelegate;

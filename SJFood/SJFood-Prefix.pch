@@ -17,6 +17,7 @@
     #import <Foundation/Foundation.h>
     #import "Constant.h"
     #import "YFUtils.h"
+    #import <YFFramework/YFFramework.h>
     #import "Reachability.h"
     #import "JSON.h"
     #import "MemberDataManager.h"
