@@ -98,13 +98,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-////测试用崩溃方法
-//- (void)crash {
-//    [NSException raise:NSGenericException format:@"只是测试，模拟一条崩溃信息。"];
-//}
-
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //打开错误报告
@@ -160,10 +153,6 @@
 #endif
     // Required
     [APService setupWithOption:launchOptions];
-    
-    
-//    //调用崩溃方法
-//    [self performSelector:@selector(crash) withObject:nil afterDelay:5.0];
     
     return YES;
 }

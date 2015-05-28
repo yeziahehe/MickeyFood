@@ -7,8 +7,7 @@
 //
 
 #import "StartViewController.h"
-#import <AVOSCloud/AVOSCloud.h>
-#import <AVOSCloudCrashReporting/AVOSCloudCrashReporting.h>
+
 @interface StartViewController ()
 
 @property (nonatomic, retain) NSArray *guideArray;
