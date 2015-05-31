@@ -99,17 +99,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    //打开错误报告
-    [AVOSCloudCrashReporting enable];
-    //LeanCloud SDK初始化
-    [AVOSCloud setApplicationId:@"xmu2ppnheb9v9aiqof6091c6axl42fs9nusns0apmmfvsle3"
-                      clientKey:@"89fvp60f267h6nllp55kypvor4lwzliie227owntur00f92f"];
-    //打开情况统计
-    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    
     // Override point for customization after application launch.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showPannelViewWithNotification:) name:kShowPannelViewNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
