@@ -132,6 +132,11 @@
 }
 
 #pragma mark - BaseViewController Methods
+- (void)leftItemTapped
+{
+    
+}
+
 - (void)rightItemTapped
 {
     MyMessageViewController *myMessageViewController = [[MyMessageViewController alloc] initWithNibName:@"MyMessageViewController" bundle:nil];
@@ -154,6 +159,7 @@
         }
     }
     [self loadSubViews];
+    [self setLeftNaviItemWithTitle:@"定位" imageName:nil];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
     //检测更新
     [self checkVersionRequest];
