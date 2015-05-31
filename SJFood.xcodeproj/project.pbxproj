@@ -429,12 +429,6 @@
 		75FCAC031AC415D800C1368C /* box_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAC021AC415D800C1368C /* box_logo@3x.png */; };
 		75FCAC0C1AC43B0B00C1368C /* RemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCAC0A1AC43B0B00C1368C /* RemarkViewController.m */; };
 		75FCAC0D1AC43B0B00C1368C /* RemarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75FCAC0B1AC43B0B00C1368C /* RemarkViewController.xib */; };
-		CB2234FB1B15AC2500B547D7 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2234FA1B15AC2500B547D7 /* AVOSCloud.framework */; };
-		CB2234FC1B15AC2500B547D7 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2234FA1B15AC2500B547D7 /* AVOSCloud.framework */; };
-		CB2234FE1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2234FD1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework */; };
-		CB2234FF1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2234FD1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework */; };
-		CB2235011B15AC3E00B547D7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2235001B15AC3E00B547D7 /* MobileCoreServices.framework */; };
-		CB2235031B15AC8F00B547D7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2235021B15AC8E00B547D7 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1012,10 +1006,6 @@
 		75FCAC091AC43B0B00C1368C /* RemarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemarkViewController.h; sourceTree = "<group>"; };
 		75FCAC0A1AC43B0B00C1368C /* RemarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemarkViewController.m; sourceTree = "<group>"; };
 		75FCAC0B1AC43B0B00C1368C /* RemarkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemarkViewController.xib; sourceTree = "<group>"; };
-		CB2234FA1B15AC2500B547D7 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
-		CB2234FD1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudCrashReporting.framework; sourceTree = "<group>"; };
-		CB2235001B15AC3E00B547D7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		CB2235021B15AC8E00B547D7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1023,26 +1013,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2235031B15AC8F00B547D7 /* libc++.dylib in Frameworks */,
-				750DF7271A2F66F70010A2E9 /* libicucore.dylib in Frameworks */,
-				755722A61A344E1000CC6A8F /* CoreTelephony.framework in Frameworks */,
-				755722A81A344E1C00CC6A8F /* SystemConfiguration.framework in Frameworks */,
-				CB2235011B15AC3E00B547D7 /* MobileCoreServices.framework in Frameworks */,
-				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				753FAF3B1AFD0D2900F12B94 /* UIKit.framework in Frameworks */,
 				753FAF381AFD0CE800F12B94 /* Foundation.framework in Frameworks */,
 				753FAF351AFD0CC200F12B94 /* CoreFoundation.framework in Frameworks */,
 				753FAF321AFD0C7000F12B94 /* CFNetwork.framework in Frameworks */,
 				757B7CA11ABD857F00470F69 /* AssetsLibrary.framework in Frameworks */,
-				CB2234FB1B15AC2500B547D7 /* AVOSCloud.framework in Frameworks */,
+				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				75AAC0C51B14D2EE00558DFE /* YFFramework.framework in Frameworks */,
 				755722AC1A344E6400CC6A8F /* libsqlite3.dylib in Frameworks */,
 				753FAF2F1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a in Frameworks */,
 				755722AA1A344E5600CC6A8F /* libstdc++.dylib in Frameworks */,
+				755722A81A344E1C00CC6A8F /* SystemConfiguration.framework in Frameworks */,
 				755722A71A344E1700CC6A8F /* QuartzCore.framework in Frameworks */,
+				755722A61A344E1000CC6A8F /* CoreTelephony.framework in Frameworks */,
 				755722A51A344E0A00CC6A8F /* libz.1.2.5.dylib in Frameworks */,
 				755722A41A344DFF00CC6A8F /* Security.framework in Frameworks */,
-				CB2234FE1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework in Frameworks */,
+				750DF7271A2F66F70010A2E9 /* libicucore.dylib in Frameworks */,
 				750DF7251A2F66EB0010A2E9 /* libz.dylib in Frameworks */,
 				750DF7231A2F66E10010A2E9 /* CoreGraphics.framework in Frameworks */,
 				750DF7211A2F66AC0010A2E9 /* MessageUI.framework in Frameworks */,
@@ -1054,9 +1040,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2234FF1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework in Frameworks */,
 				75AAC0C41B14D2E800558DFE /* YFFramework.framework in Frameworks */,
-				CB2234FC1B15AC2500B547D7 /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1683,10 +1667,6 @@
 		7589544F1A24E663001C2350 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
-				CB2235021B15AC8E00B547D7 /* libc++.dylib */,
-				CB2235001B15AC3E00B547D7 /* MobileCoreServices.framework */,
-				CB2234FD1B15AC2E00B547D7 /* AVOSCloudCrashReporting.framework */,
-				CB2234FA1B15AC2500B547D7 /* AVOSCloud.framework */,
 				753FAF391AFD0D1F00F12B94 /* UIKit.framework */,
 				753FAF361AFD0CDD00F12B94 /* Foundation.framework */,
 				753FAF331AFD0CA800F12B94 /* CoreFoundation.framework */,
@@ -1996,7 +1976,6 @@
 				758954081A24B4A1001C2350 /* Frameworks */,
 				758954091A24B4A1001C2350 /* Resources */,
 				75AAC0BD1B14D0D800558DFE /* Embed Frameworks */,
-				CB2235051B15AE8E00B547D7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2364,22 +2343,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		CB2235051B15AE8E00B547D7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "leancloud upload_symbol \\\n-f \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\" \\\n-i \"xmu2ppnheb9v9aiqof6091c6axl42fs9nusns0apmmfvsle3\" \\\n-k \"89fvp60f267h6nllp55kypvor4lwzliie227owntur00f92f\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		758954071A24B4A1001C2350 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -2664,7 +2627,6 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJFood",
-					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -2685,7 +2647,6 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJFood",
-					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
 				);
 				INFOPLIST_FILE = SJFoodTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

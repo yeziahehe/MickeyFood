@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "StartViewController.h"
 #import "RootTabBarViewController.h"
-#import <AVOSCloud/AVOSCloud.h>
-#import <AVOSCloudCrashReporting/AVOSCloudCrashReporting.h>
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
