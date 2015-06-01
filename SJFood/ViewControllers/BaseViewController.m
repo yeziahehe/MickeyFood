@@ -21,7 +21,9 @@
 }
 
 - (void)rightItemTapped
-{}
+{
+    
+}
 
 - (void)extraItemTapped
 {}

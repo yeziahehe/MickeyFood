@@ -1018,12 +1018,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				753FAF3B1AFD0D2900F12B94 /* UIKit.framework in Frameworks */,
 				753FAF381AFD0CE800F12B94 /* Foundation.framework in Frameworks */,
 				753FAF351AFD0CC200F12B94 /* CoreFoundation.framework in Frameworks */,
 				753FAF321AFD0C7000F12B94 /* CFNetwork.framework in Frameworks */,
 				757B7CA11ABD857F00470F69 /* AssetsLibrary.framework in Frameworks */,
-				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				75AAC0C51B14D2EE00558DFE /* YFFramework.framework in Frameworks */,
 				755722AC1A344E6400CC6A8F /* libsqlite3.dylib in Frameworks */,
 				753FAF2F1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a in Frameworks */,
@@ -2023,7 +2023,7 @@
 				TargetAttributes = {
 					7589540A1A24B4A1001C2350 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 3WTM5PLDUE;
+						DevelopmentTeam = C4Q55SNFQ6;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -2586,8 +2586,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fan Ye (FA9634J7X6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fan Ye (FA9634J7X6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
@@ -2601,7 +2601,7 @@
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9e5cefda-8547-4cc6-b902-8b75117c8dc8";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2610,8 +2610,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Fan Ye (3WTM5PLDUE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fan Ye (3WTM5PLDUE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
@@ -2625,7 +2625,7 @@
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a60f0cb8-9da4-4386-8c74-1fdb3e9d1e34";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

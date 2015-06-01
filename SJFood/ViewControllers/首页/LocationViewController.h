@@ -6,8 +6,11 @@
 //  Copyright (c) 2015年 Ye Fan. All rights reserved.
 //
 
-#import "BaseMenuViewController.h"
+#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+#import "CoreLocation/CoreLocation.h"
 
-@interface LocationViewController : BaseMenuViewController
+@interface LocationViewController : BaseViewController<CLLocationManagerDelegate>
+//
 
 @end

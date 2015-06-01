@@ -12,6 +12,7 @@
 #import "FoodViewController.h"
 #import "HomeModuleView.h"
 #import "MyMessageViewController.h"
+#import "LocationViewController.h"
 
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
@@ -134,6 +135,8 @@
 #pragma mark - BaseViewController Methods
 - (void)leftItemTapped
 {
+    LocationViewController *myLocationViewController = [[LocationViewController alloc] initWithNibName:@"LocationViewController" bundle:nil];
+    [self.navigationController pushViewController:myLocationViewController animated:YES];
     
 }
 
