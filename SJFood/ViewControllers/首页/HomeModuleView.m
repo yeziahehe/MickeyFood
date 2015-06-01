@@ -8,9 +8,20 @@
 
 #import "HomeModuleView.h"
 #import "FoodViewController.h"
+#import "Masonry.h"
+#import "TalkingViewController.h"
+#import "PostViewController.h"
+#import "CategoryViewController.h"
 
 @interface HomeModuleView ()
 @property (nonatomic, strong) NSString *foodTag;
+@property (weak, nonatomic) IBOutlet UIButton *cloudShopButton;
+@property (weak, nonatomic) IBOutlet UIButton *postButton;
+@property (weak, nonatomic) IBOutlet UIButton *weeklyNewButton;
+@property (weak, nonatomic) IBOutlet UIButton *discountButton;
+@property (weak, nonatomic) IBOutlet UIButton *hotThingsButton;
+@property (weak, nonatomic) IBOutlet UIButton *talkButton;
+
 @end
 
 @implementation HomeModuleView
@@ -21,48 +32,25 @@
     if (sender.tag == 1 || sender.tag == 2 || sender.tag == 4) {
         [[NSNotificationCenter defaultCenter]postNotificationName:kSelectHomeButtonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
     }
-    else if (sender.tag == 11) {
-        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"更多功能正在开发中，敬请期待..." customView:nil hideDelay:3.f];
-    }
-    else {
-        switch (sender.tag) {
-            case 0:
-                self.foodTag = @"特色口味";
-                break;
-                
-            case 3:
-                self.foodTag = @"爆款";
-                break;
-                
-            case 5:
-                self.foodTag = @"肉干 肉脯";
-                break;
-                
-            case 6:
-                self.foodTag = @"坚果 炒货";
-                break;
-                
-            case 7:
-                self.foodTag = @"饼干 糕点";
-                break;
-                
-            case 8:
-                self.foodTag = @"蜜饯 果干";
-                break;
-                
-            case 9:
-                self.foodTag = @"糖果 布丁";
-                break;
-                
-            case 10:
-                self.foodTag = @"咖啡 饮料";
-                break;
-                
-            default:
-                break;
-        }
-        [[NSNotificationCenter defaultCenter]postNotificationName:kSelectHomeButtonNotification object:self.foodTag];
-    }
+//    else if(sender.tag == 11) {
+//        [[YFProgressHUD sharedProgressHUD] showWithMessage:@"更多功能正在开发中，敬请期待..." customView:nil hideDelay:3.f];
+//    }
+}
+
+- (IBAction)cloudShopButtonClicked:(UIButton *)sender {
+
+    [[NSNotificationCenter defaultCenter]postNotificationName:kSelectHomeButtonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
+    
+}
+
+- (IBAction)postButtonClicked:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter]postNotificationName:kPostButtonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
+
+}
+
+- (IBAction)talkButtonClicked:(UIButton *)sender {
+    [[NSNotificationCenter defaultCenter]postNotificationName:kTalkingBUttonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
+
 }
 
 #pragma mark - UIView methods

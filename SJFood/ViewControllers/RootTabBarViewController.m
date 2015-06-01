@@ -72,12 +72,7 @@
                 }
             }
         }
-        else if ([vc isKindOfClass:[CategoryViewController class]]) {
-            if (vc != nil) {
-                CategoryViewController *cvc = (CategoryViewController *)vc;
-                [cvc requestForGetFoodCategory];
-            }
-        }
+       
         else if ([vc isKindOfClass:[ShoppingCarViewController class]]) {
             if (vc != nil) {
                 if ([[MemberDataManager sharedManager] isLogin]) {

@@ -81,6 +81,11 @@
 #define kCommentButtonNotification          @"CommentButtonNotification"
 #define kCommentSuccessNotification         @"CommentSuccessNotification"
 #define kSelectHomeButtonWithTagNotification @"SelectHomeButtonWithTagNotification"
+#define kPostButtonWithTagNotification      @"PostButtonWithTagNotification"
+#define kTalkingBUttonWithTagNotification   @"TalkingBUttonWithTagNotification"
+
+#define kCategoryButtonWithTagNotification  @"CategoryButtonWithTagNotification"
+
 #define kSelectCourierNotification          @"SelectCourierNotification"
 #define kChangeOrderStatusNotification      @"ChangeOrderStatusNotification"
 #define kApnsNotification                   @"ApnsNotification"
