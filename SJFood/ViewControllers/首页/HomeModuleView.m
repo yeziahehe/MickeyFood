@@ -39,7 +39,7 @@
 
 - (IBAction)cloudShopButtonClicked:(UIButton *)sender {
 
-    [[NSNotificationCenter defaultCenter]postNotificationName:kSelectHomeButtonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
+    [[NSNotificationCenter defaultCenter]postNotificationName:kCategoryButtonWithTagNotification object:[NSString stringWithFormat:@"%ld",(long)sender.tag]];
     
 }
 
@@ -57,6 +57,20 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    int padding = 2.5;
+    UIView *superView = self;
+    [self.cloudShopButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(superView.mas_centerX).offset(-padding);
+        make.bottom.greaterThanOrEqualTo(self.weeklyNewButton.mas_bottom).offset(padding);
+        make.bottom.lessThanOrEqualTo(self.discountButton.mas_bottom).offset(padding);
+    }];
+    [self.postButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.talkButton.mas_bottom);
+    }];
+    
+    [self.weeklyNewButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.greaterThanOrEqualTo(self.cloudShopButton.mas_centerY).offset(20);
+    }];
 }
 
 @end

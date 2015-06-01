@@ -129,16 +129,11 @@
 
 - (void)CategoryButtonWithTagNotification:(NSNotification *)notification
 {
-        UINavigationController *naviController = [[UINavigationController alloc]init];
-        id vc = [naviController topViewController];
-    CategoryViewController *cvc = (CategoryViewController *)vc;
-
-//    CategoryViewController *cvc = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController" bundle:nil];
+    CategoryViewController *cvc = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController" bundle:nil];
     [cvc requestForGetFoodCategory];
 
-    //UINavigationController *crc = [[UINavigationController alloc]initWithRootViewController:cvc];
     //[crc requestForGetFoodCategory];
-    [self presentViewController:cvc animated:YES completion:nil];
+    [self.navigationController pushViewController:cvc animated:YES];
 
 }
 
