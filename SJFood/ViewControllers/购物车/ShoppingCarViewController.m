@@ -181,6 +181,12 @@
     } else {
         sc.orderCount = [NSString stringWithFormat:@"%d",[sc.orderCount intValue]-1];
         [self.shoppingCarTableView reloadData];
+        if ([sc.isDiscount isEqualToString:@"1"]) {
+            self.totalPrice = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]-[sc.discountPrice floatValue]];
+        } else {
+            self.totalPrice = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]-[sc.price floatValue]];
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSelecteButtonClickedNotification object:nil];
         //request for change
         [self requestForEdit:sc.orderId withOrderCount:sc.orderCount];
     }
@@ -197,6 +203,12 @@
     } else {
         sc.orderCount = [NSString stringWithFormat:@"%d",[sc.orderCount intValue]+1];
         [self.shoppingCarTableView reloadData];
+        if ([sc.isDiscount isEqualToString:@"1"]) {
+            self.totalPrice = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]+[sc.discountPrice floatValue]];
+        } else {
+            self.totalPrice = [NSString stringWithFormat:@"%.2f",[self.totalPrice floatValue]+[sc.price floatValue]];
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:kSelecteButtonClickedNotification object:nil];
         //request for change
         [self requestForEdit:sc.orderId withOrderCount:sc.orderCount];
     }
