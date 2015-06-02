@@ -70,6 +70,7 @@
     
     [self.weeklyNewButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.greaterThanOrEqualTo(self.cloudShopButton.mas_centerY).offset(20);
+        make.height.greaterThanOrEqualTo(self.talkButton.mas_height).offset(70);
     }];
 }
 

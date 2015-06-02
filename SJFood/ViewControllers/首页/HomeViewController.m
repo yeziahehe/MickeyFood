@@ -130,11 +130,7 @@
 - (void)CategoryButtonWithTagNotification:(NSNotification *)notification
 {
     CategoryViewController *cvc = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController" bundle:nil];
-    [cvc requestForGetFoodCategory];
-
-    //[crc requestForGetFoodCategory];
     [self.navigationController pushViewController:cvc animated:YES];
-
 }
 
 - (void)PostButtonWithTagNotification:(NSNotification *)notification
