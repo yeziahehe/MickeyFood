@@ -37,7 +37,7 @@
     CGRect rect = ctv.frame;
     rect.origin.y = 64.0f;
     rect.origin.x = 0.0f;
-    rect.size.height = ScreenHeight - 64.f - 44.f;
+    rect.size.height = ScreenHeight - 64.f;
     [ctv reloadWithCategory:self.categoryTableArray];
     ctv.frame = rect;
     self.originX = ctv.frame.size.width;
@@ -50,7 +50,7 @@
     rect = ccv.frame;
     rect.origin.y = 64.f;
     rect.origin.x = self.originX;
-    rect.size.height = ScreenHeight - 64.f - 44.f;
+    rect.size.height = ScreenHeight - 64.f;
     rect.size.width = ScreenWidth - 80.f;
     [ccv reloadWithCategory:self.categoryCollectionArray];
     ccv.frame = rect;
@@ -108,6 +108,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self requestForGetFoodCategory];
+    [self setNaviTitle:@"云便利店"];
     self.categoryTableArray = [NSMutableArray arrayWithCapacity:0];
     if ([[CacheManager sharedManager] category]) {
         for (NSDictionary *valueDict in [[CacheManager sharedManager] category]) {

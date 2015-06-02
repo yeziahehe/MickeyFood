@@ -8,6 +8,6 @@
 
 #import "BaseMenuViewController.h"
 
-@interface CategoryViewController : BaseMenuViewController
-- (void)requestForGetFoodCategory;
+@interface CategoryViewController : BaseViewController
+
 @end

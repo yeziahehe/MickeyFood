@@ -12,6 +12,9 @@
 #import "FoodViewController.h"
 #import "HomeModuleView.h"
 #import "MyMessageViewController.h"
+#import "CategoryViewController.h"
+#import "TalkingViewController.h"
+#import "PostViewController.h"
 
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
@@ -85,7 +88,7 @@
         }
         else if ([homeSubView isKindOfClass:[HomeModuleView class]]) {
             HomeModuleView *hmv = (HomeModuleView *)homeSubView;
-            rect.size.height = hmv.frame.size.height/320 * ScreenWidth;
+            rect.size.height = hmv.frame.size.height/375.f * ScreenWidth;
         }
         homeSubView.frame = rect;
         [self.contentScrollView addSubview:homeSubView];
@@ -124,6 +127,26 @@
     [self.navigationController pushViewController:foodViewController animated:YES];
 }
 
+- (void)CategoryButtonWithTagNotification:(NSNotification *)notification
+{
+    CategoryViewController *cvc = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController" bundle:nil];
+    [self.navigationController pushViewController:cvc animated:YES];
+}
+
+- (void)PostButtonWithTagNotification:(NSNotification *)notification
+{
+    PostViewController *postViewController = [[PostViewController alloc] initWithNibName:@"PostViewController" bundle:nil];
+    [self.navigationController pushViewController:postViewController animated:YES];
+}
+
+- (void)TalkingButtonWithTagNotification:(NSNotification *)notification
+{
+    TalkingViewController *talkViewController = [[TalkingViewController alloc] initWithNibName:@"TalkingViewController" bundle:nil];
+    [self.navigationController pushViewController:talkViewController animated:YES];
+
+    
+}
+
 - (void)dealNotification:(NSNotification *)notification
 {
     if (notification) {
@@ -160,6 +183,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchHomeWithNotification:) name:kSelectHomeButtonNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectHomeButtonWithTagNotification:) name:kSelectHomeButtonWithTagNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealNotification:) name:kApnsNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(CategoryButtonWithTagNotification:) name:kCategoryButtonWithTagNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(PostButtonWithTagNotification:) name:kPostButtonWithTagNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(TalkingButtonWithTagNotification:) name:kTalkingBUttonWithTagNotification object:nil];
+
+
 }
 
 #pragma mark - UISearchBar Delegate
