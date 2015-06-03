@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Ye Fan. All rights reserved.
 //
 
-#import "BaseMenuViewController.h"
+#import "BaseViewController.h"
 
-@interface LocationViewController : BaseMenuViewController
+@interface LocationViewController : BaseViewController
 
 @end
