@@ -87,6 +87,8 @@
 		7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF011A2E1549001D12D4 /* icon_header_cancel@3x.png */; };
 		7533EF071A2E1568001D12D4 /* Mickeyabout.html in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF061A2E1568001D12D4 /* Mickeyabout.html */; };
 		7533EF091A2E177E001D12D4 /* htmlTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF081A2E177E001D12D4 /* htmlTemplate.html */; };
+		75383AC71B1AFC1500380144 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75383AC51B1AFC1500380144 /* LocationViewController.m */; };
+		75383AC81B1AFC1500380144 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75383AC61B1AFC1500380144 /* LocationViewController.xib */; };
 		753FAF2F1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF2E1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a */; };
 		753FAF321AFD0C7000F12B94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF301AFD0C5C00F12B94 /* CFNetwork.framework */; };
 		753FAF351AFD0CC200F12B94 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF331AFD0CA800F12B94 /* CoreFoundation.framework */; };
@@ -555,6 +557,9 @@
 		7533EF011A2E1549001D12D4 /* icon_header_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_header_cancel@3x.png"; sourceTree = "<group>"; };
 		7533EF061A2E1568001D12D4 /* Mickeyabout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Mickeyabout.html; sourceTree = "<group>"; };
 		7533EF081A2E177E001D12D4 /* htmlTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlTemplate.html; sourceTree = "<group>"; };
+		75383AC41B1AFC1500380144 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		75383AC51B1AFC1500380144 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		75383AC61B1AFC1500380144 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		753FAF2D1AFD0C1E00F12B94 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APService.h; path = lib/APService.h; sourceTree = "<group>"; };
 		753FAF2E1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPushSDK-1.8.3.a"; path = "lib/libPushSDK-1.8.3.a"; sourceTree = "<group>"; };
 		753FAF301AFD0C5C00F12B94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -1013,12 +1018,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				753FAF3B1AFD0D2900F12B94 /* UIKit.framework in Frameworks */,
 				753FAF381AFD0CE800F12B94 /* Foundation.framework in Frameworks */,
 				753FAF351AFD0CC200F12B94 /* CoreFoundation.framework in Frameworks */,
 				753FAF321AFD0C7000F12B94 /* CFNetwork.framework in Frameworks */,
 				757B7CA11ABD857F00470F69 /* AssetsLibrary.framework in Frameworks */,
-				75AD58521A387EA800E39640 /* CoreLocation.framework in Frameworks */,
 				75AAC0C51B14D2EE00558DFE /* YFFramework.framework in Frameworks */,
 				755722AC1A344E6400CC6A8F /* libsqlite3.dylib in Frameworks */,
 				753FAF2F1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a in Frameworks */,
@@ -1473,6 +1478,9 @@
 				758349501AB95D3D00C60CD7 /* HomeModuleView.h */,
 				758349511AB95D3D00C60CD7 /* HomeModuleView.m */,
 				758349531AB95D4C00C60CD7 /* HomeModuleView.xib */,
+				75383AC41B1AFC1500380144 /* LocationViewController.h */,
+				75383AC51B1AFC1500380144 /* LocationViewController.m */,
+				75383AC61B1AFC1500380144 /* LocationViewController.xib */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -2015,7 +2023,7 @@
 				TargetAttributes = {
 					7589540A1A24B4A1001C2350 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 3WTM5PLDUE;
+						DevelopmentTeam = C4Q55SNFQ6;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -2195,6 +2203,7 @@
 				75EED41B1A31F7E5002ECA75 /* icon_refund@2x.png in Resources */,
 				7533EEF51A2E1536001D12D4 /* icon_mobile_num@3x.png in Resources */,
 				7533EECD1A2E14E7001D12D4 /* icon_search@2x.png in Resources */,
+				75383AC81B1AFC1500380144 /* LocationViewController.xib in Resources */,
 				75AED3BD1AC3254300E31D67 /* AddressListViewController.xib in Resources */,
 				75AED3C21AC3261A00E31D67 /* AddressListTableViewCell.xib in Resources */,
 				75EED3DE1A31639B002ECA75 /* UserEditView.xib in Resources */,
@@ -2391,6 +2400,7 @@
 				7555FF8C1AC187CF001A0497 /* OrderDetails.m in Sources */,
 				754547521AC5A54500A872E4 /* SendOrdersViewController.m in Sources */,
 				7545474C1AC59A3200A872E4 /* CourierOrderView.m in Sources */,
+				75383AC71B1AFC1500380144 /* LocationViewController.m in Sources */,
 				7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */,
 				7585127C1A32EE7A00504FA8 /* DeliveryViewController.m in Sources */,
 				75544EC31AAC13BC0034F4A8 /* ShoppingCar.m in Sources */,
@@ -2576,8 +2586,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fan Ye (FA9634J7X6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fan Ye (FA9634J7X6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
@@ -2591,7 +2601,7 @@
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9e5cefda-8547-4cc6-b902-8b75117c8dc8";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2600,8 +2610,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Fan Ye (3WTM5PLDUE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fan Ye (3WTM5PLDUE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd",
@@ -2615,7 +2625,7 @@
 					"$(PROJECT_DIR)/SJFood/Utilities/3rd/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a60f0cb8-9da4-4386-8c74-1fdb3e9d1e34";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

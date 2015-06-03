@@ -121,7 +121,7 @@
         }
         id moduleViewController = [[NSClassFromString(moduleClassName) alloc] init];
         [self.navigationController pushViewController:moduleViewController animated:YES];
-    }
+    } 
 }
 
 - (void)userChangeWithNotification:(NSNotification *)notification
