@@ -1,18 +1,18 @@
 //
-//  TalkingViewController.m
+//  ChartViewController.m
 //  SJFood
 //
-//  Created by 缪宇青 on 15/6/1.
+//  Created by 缪宇青 on 15/6/4.
 //  Copyright (c) 2015年 Ye Fan. All rights reserved.
 //
 
-#import "TalkingViewController.h"
+#import "ChartViewController.h"
 
-@interface TalkingViewController ()
+@interface ChartViewController ()
 
 @end
 
-@implementation TalkingViewController
+@implementation ChartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

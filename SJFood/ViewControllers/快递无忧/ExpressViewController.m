@@ -1,18 +1,18 @@
 //
-//  PostViewController.m
+//  ExpressViewController.m
 //  SJFood
 //
-//  Created by 缪宇青 on 15/6/1.
+//  Created by 缪宇青 on 15/6/4.
 //  Copyright (c) 2015年 Ye Fan. All rights reserved.
 //
 
-#import "PostViewController.h"
+#import "ExpressViewController.h"
 
-@interface PostViewController ()
+@interface ExpressViewController ()
 
 @end
 
-@implementation PostViewController
+@implementation ExpressViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

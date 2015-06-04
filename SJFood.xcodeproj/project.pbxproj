@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA06B4C1B203E3F001A7081 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B4A1B203E3F001A7081 /* ChartViewController.m */; };
+		0AA06B4D1B203E3F001A7081 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B4B1B203E3F001A7081 /* ChartViewController.xib */; };
+		0AA06B561B203FC3001A7081 /* ExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B541B203FC3001A7081 /* ExpressViewController.m */; };
+		0AA06B571B203FC3001A7081 /* ExpressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B551B203FC3001A7081 /* ExpressViewController.xib */; };
 		0AED7A811B1C450E00617B3C /* button_deliever@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A731B1C450E00617B3C /* button_deliever@2x.png */; };
 		0AED7A821B1C450E00617B3C /* button_deliever@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A741B1C450E00617B3C /* button_deliever@3x.png */; };
 		0AED7A831B1C450E00617B3C /* button_discuss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A751B1C450E00617B3C /* button_discuss@2x.png */; };
@@ -31,10 +35,6 @@
 		0AED7AAF1B1C58F100617B3C /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AA11B1C58F100617B3C /* NSArray+MASAdditions.m */; };
 		0AED7AB01B1C58F100617B3C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AA41B1C58F100617B3C /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		0AED7AB11B1C58F100617B3C /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AA61B1C58F100617B3C /* View+MASAdditions.m */; };
-		0AED7AB61B1C74FA00617B3C /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AB41B1C74FA00617B3C /* PostViewController.m */; };
-		0AED7AB71B1C74FA00617B3C /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7AB51B1C74FA00617B3C /* PostViewController.xib */; };
-		0AED7ABC1B1C759200617B3C /* TalkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7ABA1B1C759200617B3C /* TalkingViewController.m */; };
-		0AED7ABD1B1C759200617B3C /* TalkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7ABB1B1C759200617B3C /* TalkingViewController.xib */; };
 		750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7051A2F46370010A2E9 /* MemberDataManager.m */; };
 		750DF7091A2F49650010A2E9 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7081A2F49650010A2E9 /* Member.m */; };
 		750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF70D1A2F4F4B0010A2E9 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -240,7 +240,6 @@
 		757E83FC1AC65170004DF3F7 /* SendOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E83FB1AC65170004DF3F7 /* SendOrder.m */; };
 		757E84001AC6873B004DF3F7 /* SelectCourierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757E83FE1AC6873B004DF3F7 /* SelectCourierViewController.m */; };
 		757E84011AC6873B004DF3F7 /* SelectCourierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757E83FF1AC6873B004DF3F7 /* SelectCourierViewController.xib */; };
-		758116371A27611900065E65 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 758116351A27611900065E65 /* HomeViewController.m */; };
 		758116381A27611900065E65 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758116361A27611900065E65 /* HomeViewController.xib */; };
 		758349521AB95D3D00C60CD7 /* HomeModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758349511AB95D3D00C60CD7 /* HomeModuleView.m */; };
 		758349541AB95D4C00C60CD7 /* HomeModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758349531AB95D4C00C60CD7 /* HomeModuleView.xib */; };
@@ -484,6 +483,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AA06B491B203E3F001A7081 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartViewController.h; path = "吐槽/ChartViewController.h"; sourceTree = "<group>"; };
+		0AA06B4A1B203E3F001A7081 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartViewController.m; path = "吐槽/ChartViewController.m"; sourceTree = "<group>"; };
+		0AA06B4B1B203E3F001A7081 /* ChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChartViewController.xib; path = "吐槽/ChartViewController.xib"; sourceTree = "<group>"; };
+		0AA06B531B203FC3001A7081 /* ExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpressViewController.h; path = "快递无忧/ExpressViewController.h"; sourceTree = "<group>"; };
+		0AA06B541B203FC3001A7081 /* ExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressViewController.m; path = "快递无忧/ExpressViewController.m"; sourceTree = "<group>"; };
+		0AA06B551B203FC3001A7081 /* ExpressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpressViewController.xib; path = "快递无忧/ExpressViewController.xib"; sourceTree = "<group>"; };
 		0AED7A731B1C450E00617B3C /* button_deliever@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_deliever@2x.png"; sourceTree = "<group>"; };
 		0AED7A741B1C450E00617B3C /* button_deliever@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_deliever@3x.png"; sourceTree = "<group>"; };
 		0AED7A751B1C450E00617B3C /* button_discuss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_discuss@2x.png"; sourceTree = "<group>"; };
@@ -522,12 +527,6 @@
 		0AED7AA51B1C58F100617B3C /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
 		0AED7AA61B1C58F100617B3C /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		0AED7AA71B1C58F100617B3C /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		0AED7AB31B1C74FA00617B3C /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostViewController.h; path = "快递无忧/PostViewController.h"; sourceTree = "<group>"; };
-		0AED7AB41B1C74FA00617B3C /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostViewController.m; path = "快递无忧/PostViewController.m"; sourceTree = "<group>"; };
-		0AED7AB51B1C74FA00617B3C /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostViewController.xib; path = "快递无忧/PostViewController.xib"; sourceTree = "<group>"; };
-		0AED7AB91B1C759200617B3C /* TalkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TalkingViewController.h; path = "吐槽/TalkingViewController.h"; sourceTree = "<group>"; };
-		0AED7ABA1B1C759200617B3C /* TalkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TalkingViewController.m; path = "吐槽/TalkingViewController.m"; sourceTree = "<group>"; };
-		0AED7ABB1B1C759200617B3C /* TalkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TalkingViewController.xib; path = "吐槽/TalkingViewController.xib"; sourceTree = "<group>"; };
 		750DF7041A2F46370010A2E9 /* MemberDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataManager.h; sourceTree = "<group>"; };
 		750DF7051A2F46370010A2E9 /* MemberDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberDataManager.m; sourceTree = "<group>"; };
 		750DF7071A2F49650010A2E9 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
@@ -786,7 +785,6 @@
 		757E83FE1AC6873B004DF3F7 /* SelectCourierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCourierViewController.m; sourceTree = "<group>"; };
 		757E83FF1AC6873B004DF3F7 /* SelectCourierViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCourierViewController.xib; sourceTree = "<group>"; };
 		758116341A27611900065E65 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		758116351A27611900065E65 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		758116361A27611900065E65 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		758349501AB95D3D00C60CD7 /* HomeModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeModuleView.h; sourceTree = "<group>"; };
 		758349511AB95D3D00C60CD7 /* HomeModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeModuleView.m; sourceTree = "<group>"; };
@@ -1182,9 +1180,9 @@
 		0AED7AB21B1C74A200617B3C /* 快递无忧 */ = {
 			isa = PBXGroup;
 			children = (
-				0AED7AB31B1C74FA00617B3C /* PostViewController.h */,
-				0AED7AB41B1C74FA00617B3C /* PostViewController.m */,
-				0AED7AB51B1C74FA00617B3C /* PostViewController.xib */,
+				0AA06B531B203FC3001A7081 /* ExpressViewController.h */,
+				0AA06B541B203FC3001A7081 /* ExpressViewController.m */,
+				0AA06B551B203FC3001A7081 /* ExpressViewController.xib */,
 			);
 			name = "快递无忧";
 			sourceTree = "<group>";
@@ -1192,9 +1190,9 @@
 		0AED7AB81B1C752B00617B3C /* 吐槽 */ = {
 			isa = PBXGroup;
 			children = (
-				0AED7AB91B1C759200617B3C /* TalkingViewController.h */,
-				0AED7ABA1B1C759200617B3C /* TalkingViewController.m */,
-				0AED7ABB1B1C759200617B3C /* TalkingViewController.xib */,
+				0AA06B491B203E3F001A7081 /* ChartViewController.h */,
+				0AA06B4A1B203E3F001A7081 /* ChartViewController.m */,
+				0AA06B4B1B203E3F001A7081 /* ChartViewController.xib */,
 			);
 			name = "吐槽";
 			sourceTree = "<group>";
@@ -1618,7 +1616,6 @@
 				7519C7771AB962B40069F400 /* HomeSubView.h */,
 				7519C7781AB962B40069F400 /* HomeSubView.m */,
 				758116341A27611900065E65 /* HomeViewController.h */,
-				758116351A27611900065E65 /* HomeViewController.m */,
 				758116361A27611900065E65 /* HomeViewController.xib */,
 				75F5F3A11AB8947E00FA849E /* ImagesContainView.h */,
 				75F5F3A21AB8947E00FA849E /* ImagesContainView.m */,
@@ -2271,7 +2268,6 @@
 				758853111AD39512001DA0BB /* btn_bao@3x.png in Resources */,
 				75164DB01ABAAEAF0046F86E /* loading_rectangle@3x.png in Resources */,
 				750F6B361AC0524700891124 /* OrderDetailTableViewCell.xib in Resources */,
-				0AED7AB71B1C74FA00617B3C /* PostViewController.xib in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
 				75FCAC031AC415D800C1368C /* box_logo@3x.png in Resources */,
 				0AED7A8D1B1C450E00617B3C /* local@2x.png in Resources */,
@@ -2312,7 +2308,6 @@
 				7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */,
 				75FCABFA1AC403FC00C1368C /* logo@3x.png in Resources */,
 				7585129B1A32F44700504FA8 /* MyMessageViewController.xib in Resources */,
-				0AED7ABD1B1C759200617B3C /* TalkingViewController.xib in Resources */,
 				751B21011AB1DED900B1CFE6 /* btn_spec_num@2x.png in Resources */,
 				75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */,
 				758937B91AB673A30003ECEE /* btn_category@2x.png in Resources */,
@@ -2428,6 +2423,7 @@
 				75A95CDB1A40367D0009962F /* tab_select_bg@3x.png in Resources */,
 				7533EEF41A2E1536001D12D4 /* icon_mobile_num@2x.png in Resources */,
 				7542C4861A2CC11C00BB083D /* RegisterViewController.xib in Resources */,
+				0AA06B4D1B203E3F001A7081 /* ChartViewController.xib in Resources */,
 				758EA2811AD2C2E0008BD7B2 /* btn_sweetday@3x.png in Resources */,
 				7533EED71A2E150A001D12D4 /* line_ver_1px_right.png in Resources */,
 				75A95CAF1A4006BD0009962F /* CategoryTableViewCell.xib in Resources */,
@@ -2481,6 +2477,7 @@
 				757E83EC1AC5AE77004DF3F7 /* icon_select_order@3x.png in Resources */,
 				0AED7A841B1C450E00617B3C /* button_discuss@3x.png in Resources */,
 				7533EEF31A2E1536001D12D4 /* icon_confirm_pwd@3x.png in Resources */,
+				0AA06B571B203FC3001A7081 /* ExpressViewController.xib in Resources */,
 				0AED7A831B1C450E00617B3C /* button_discuss@2x.png in Resources */,
 				75D1E2C21A3ACA25008555B1 /* btn_edit_address@3x.png in Resources */,
 				755077541A46A2DE00CD18EF /* FoodParamView.xib in Resources */,
@@ -2533,6 +2530,7 @@
 				758E4C9D1A42BD2E004547E2 /* FoodTableViewCell.m in Sources */,
 				758954431A24BA7F001C2350 /* BaseMenuViewController.m in Sources */,
 				7514E5121A3D89840091A26D /* FoodCategory.m in Sources */,
+				0AA06B4C1B203E3F001A7081 /* ChartViewController.m in Sources */,
 				757E84001AC6873B004DF3F7 /* SelectCourierViewController.m in Sources */,
 				758512A51A32F60C00504FA8 /* SettingViewController.m in Sources */,
 				75EED43F1A320F61002ECA75 /* UserInfoTableViewCell.m in Sources */,
@@ -2571,6 +2569,7 @@
 				75F594BC1AA72999004B3CDF /* ShoppingCarTableViewCell.m in Sources */,
 				758512AE1A32F77500504FA8 /* UserSettingView.m in Sources */,
 				754547451AC593F500A872E4 /* SendOrderView.m in Sources */,
+				0AA06B561B203FC3001A7081 /* ExpressViewController.m in Sources */,
 				75D1E2C61A3ACEC5008555B1 /* AddressEditViewController.m in Sources */,
 				758954531A24E685001C2350 /* Reachability.m in Sources */,
 				754389481AFB12070010398D /* OrderNoteView.m in Sources */,
@@ -2592,7 +2591,6 @@
 				0AED7AAC1B1C58F100617B3C /* MASLayoutConstraint.m in Sources */,
 				7542C4631A2CA42400BB083D /* LoginViewController.m in Sources */,
 				75AD58471A38285300E39640 /* NicknameEditViewController.m in Sources */,
-				0AED7ABC1B1C759200617B3C /* TalkingViewController.m in Sources */,
 				7550774D1A469EF800CD18EF /* FoodHeaderView.m in Sources */,
 				75AD583A1A38113A00E39640 /* MyAccountTableViewCell.m in Sources */,
 				75AD584C1A38287200E39640 /* PasswordEditViewController.m in Sources */,
@@ -2607,7 +2605,6 @@
 				75F90A891A49CFE700CB19EB /* SpecView.m in Sources */,
 				0AED7AAB1B1C58F100617B3C /* MASConstraintMaker.m in Sources */,
 				758512771A32E91100504FA8 /* UIScrollView+MJRefresh.m in Sources */,
-				758116371A27611900065E65 /* HomeViewController.m in Sources */,
 				758349521AB95D3D00C60CD7 /* HomeModuleView.m in Sources */,
 				0AED7AB01B1C58F100617B3C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				7542C48E1A2CD09E00BB083D /* ConfirmViewController.m in Sources */,
@@ -2623,7 +2620,6 @@
 				750DF7191A2F4F4B0010A2E9 /* NSString+SBJSON.m in Sources */,
 				0AED7AA91B1C58F100617B3C /* MASCompositeConstraint.m in Sources */,
 				755722C81A35857000CC6A8F /* UserInfo.m in Sources */,
-				0AED7AB61B1C74FA00617B3C /* PostViewController.m in Sources */,
 				75EED3DC1A31638E002ECA75 /* UserEditView.m in Sources */,
 				75F5F3AB1AB89FEE00FA849E /* AdModel.m in Sources */,
 				75AED3C11AC3261A00E31D67 /* AddressListTableViewCell.m in Sources */,
