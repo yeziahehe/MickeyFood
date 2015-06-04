@@ -13,8 +13,8 @@
 #import "HomeModuleView.h"
 #import "MyMessageViewController.h"
 #import "CategoryViewController.h"
-#import "TalkingViewController.h"
-#import "PostViewController.h"
+#import "TalkingV2ViewController.h"
+#import "PostV2ViewController.h"
 
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
@@ -135,13 +135,13 @@
 
 - (void)PostButtonWithTagNotification:(NSNotification *)notification
 {
-    PostViewController *postViewController = [[PostViewController alloc] initWithNibName:@"PostViewController" bundle:nil];
+    PostV2ViewController *postViewController = [[PostV2ViewController alloc] initWithNibName:@"PostV2ViewController" bundle:nil];
     [self.navigationController pushViewController:postViewController animated:YES];
 }
 
 - (void)TalkingButtonWithTagNotification:(NSNotification *)notification
 {
-    TalkingViewController *talkViewController = [[TalkingViewController alloc] initWithNibName:@"TalkingViewController" bundle:nil];
+    TalkingV2ViewController *talkViewController = [[TalkingV2ViewController alloc] initWithNibName:@"TalkingV2ViewController" bundle:nil];
     [self.navigationController pushViewController:talkViewController animated:YES];
 
     

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA06B3D1B1FF770001A7081 /* PostV2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B3B1B1FF770001A7081 /* PostV2ViewController.m */; };
+		0AA06B3E1B1FF770001A7081 /* PostV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B3C1B1FF770001A7081 /* PostV2ViewController.xib */; };
+		0AA06B421B1FF87D001A7081 /* TalkingV2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA06B401B1FF87D001A7081 /* TalkingV2ViewController.m */; };
+		0AA06B431B1FF87D001A7081 /* TalkingV2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA06B411B1FF87D001A7081 /* TalkingV2ViewController.xib */; };
 		0AED7A811B1C450E00617B3C /* button_deliever@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A731B1C450E00617B3C /* button_deliever@2x.png */; };
 		0AED7A821B1C450E00617B3C /* button_deliever@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A741B1C450E00617B3C /* button_deliever@3x.png */; };
 		0AED7A831B1C450E00617B3C /* button_discuss@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7A751B1C450E00617B3C /* button_discuss@2x.png */; };
@@ -31,10 +35,6 @@
 		0AED7AAF1B1C58F100617B3C /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AA11B1C58F100617B3C /* NSArray+MASAdditions.m */; };
 		0AED7AB01B1C58F100617B3C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AA41B1C58F100617B3C /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		0AED7AB11B1C58F100617B3C /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AA61B1C58F100617B3C /* View+MASAdditions.m */; };
-		0AED7AB61B1C74FA00617B3C /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7AB41B1C74FA00617B3C /* PostViewController.m */; };
-		0AED7AB71B1C74FA00617B3C /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7AB51B1C74FA00617B3C /* PostViewController.xib */; };
-		0AED7ABC1B1C759200617B3C /* TalkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AED7ABA1B1C759200617B3C /* TalkingViewController.m */; };
-		0AED7ABD1B1C759200617B3C /* TalkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AED7ABB1B1C759200617B3C /* TalkingViewController.xib */; };
 		750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7051A2F46370010A2E9 /* MemberDataManager.m */; };
 		750DF7091A2F49650010A2E9 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7081A2F49650010A2E9 /* Member.m */; };
 		750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF70D1A2F4F4B0010A2E9 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -484,6 +484,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AA06B3A1B1FF770001A7081 /* PostV2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostV2ViewController.h; path = "快递无忧/PostV2ViewController.h"; sourceTree = "<group>"; };
+		0AA06B3B1B1FF770001A7081 /* PostV2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostV2ViewController.m; path = "快递无忧/PostV2ViewController.m"; sourceTree = "<group>"; };
+		0AA06B3C1B1FF770001A7081 /* PostV2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostV2ViewController.xib; path = "快递无忧/PostV2ViewController.xib"; sourceTree = "<group>"; };
+		0AA06B3F1B1FF87D001A7081 /* TalkingV2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TalkingV2ViewController.h; path = "吐槽/TalkingV2ViewController.h"; sourceTree = "<group>"; };
+		0AA06B401B1FF87D001A7081 /* TalkingV2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TalkingV2ViewController.m; path = "吐槽/TalkingV2ViewController.m"; sourceTree = "<group>"; };
+		0AA06B411B1FF87D001A7081 /* TalkingV2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TalkingV2ViewController.xib; path = "吐槽/TalkingV2ViewController.xib"; sourceTree = "<group>"; };
 		0AED7A731B1C450E00617B3C /* button_deliever@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_deliever@2x.png"; sourceTree = "<group>"; };
 		0AED7A741B1C450E00617B3C /* button_deliever@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_deliever@3x.png"; sourceTree = "<group>"; };
 		0AED7A751B1C450E00617B3C /* button_discuss@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_discuss@2x.png"; sourceTree = "<group>"; };
@@ -522,12 +528,6 @@
 		0AED7AA51B1C58F100617B3C /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
 		0AED7AA61B1C58F100617B3C /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		0AED7AA71B1C58F100617B3C /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		0AED7AB31B1C74FA00617B3C /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostViewController.h; path = "快递无忧/PostViewController.h"; sourceTree = "<group>"; };
-		0AED7AB41B1C74FA00617B3C /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostViewController.m; path = "快递无忧/PostViewController.m"; sourceTree = "<group>"; };
-		0AED7AB51B1C74FA00617B3C /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostViewController.xib; path = "快递无忧/PostViewController.xib"; sourceTree = "<group>"; };
-		0AED7AB91B1C759200617B3C /* TalkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TalkingViewController.h; path = "吐槽/TalkingViewController.h"; sourceTree = "<group>"; };
-		0AED7ABA1B1C759200617B3C /* TalkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TalkingViewController.m; path = "吐槽/TalkingViewController.m"; sourceTree = "<group>"; };
-		0AED7ABB1B1C759200617B3C /* TalkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TalkingViewController.xib; path = "吐槽/TalkingViewController.xib"; sourceTree = "<group>"; };
 		750DF7041A2F46370010A2E9 /* MemberDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataManager.h; sourceTree = "<group>"; };
 		750DF7051A2F46370010A2E9 /* MemberDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberDataManager.m; sourceTree = "<group>"; };
 		750DF7071A2F49650010A2E9 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
@@ -1182,9 +1182,9 @@
 		0AED7AB21B1C74A200617B3C /* 快递无忧 */ = {
 			isa = PBXGroup;
 			children = (
-				0AED7AB31B1C74FA00617B3C /* PostViewController.h */,
-				0AED7AB41B1C74FA00617B3C /* PostViewController.m */,
-				0AED7AB51B1C74FA00617B3C /* PostViewController.xib */,
+				0AA06B3A1B1FF770001A7081 /* PostV2ViewController.h */,
+				0AA06B3B1B1FF770001A7081 /* PostV2ViewController.m */,
+				0AA06B3C1B1FF770001A7081 /* PostV2ViewController.xib */,
 			);
 			name = "快递无忧";
 			sourceTree = "<group>";
@@ -1192,9 +1192,9 @@
 		0AED7AB81B1C752B00617B3C /* 吐槽 */ = {
 			isa = PBXGroup;
 			children = (
-				0AED7AB91B1C759200617B3C /* TalkingViewController.h */,
-				0AED7ABA1B1C759200617B3C /* TalkingViewController.m */,
-				0AED7ABB1B1C759200617B3C /* TalkingViewController.xib */,
+				0AA06B3F1B1FF87D001A7081 /* TalkingV2ViewController.h */,
+				0AA06B401B1FF87D001A7081 /* TalkingV2ViewController.m */,
+				0AA06B411B1FF87D001A7081 /* TalkingV2ViewController.xib */,
 			);
 			name = "吐槽";
 			sourceTree = "<group>";
@@ -2271,7 +2271,6 @@
 				758853111AD39512001DA0BB /* btn_bao@3x.png in Resources */,
 				75164DB01ABAAEAF0046F86E /* loading_rectangle@3x.png in Resources */,
 				750F6B361AC0524700891124 /* OrderDetailTableViewCell.xib in Resources */,
-				0AED7AB71B1C74FA00617B3C /* PostViewController.xib in Resources */,
 				75EED3FF1A3165EC002ECA75 /* UserInfoMap.plist in Resources */,
 				75FCAC031AC415D800C1368C /* box_logo@3x.png in Resources */,
 				0AED7A8D1B1C450E00617B3C /* local@2x.png in Resources */,
@@ -2312,7 +2311,6 @@
 				7589541C1A24B4A1001C2350 /* Images.xcassets in Resources */,
 				75FCABFA1AC403FC00C1368C /* logo@3x.png in Resources */,
 				7585129B1A32F44700504FA8 /* MyMessageViewController.xib in Resources */,
-				0AED7ABD1B1C759200617B3C /* TalkingViewController.xib in Resources */,
 				751B21011AB1DED900B1CFE6 /* btn_spec_num@2x.png in Resources */,
 				75EED3D91A31630B002ECA75 /* OrderInfoView.xib in Resources */,
 				758937B91AB673A30003ECEE /* btn_category@2x.png in Resources */,
@@ -2359,6 +2357,7 @@
 				75EED41B1A31F7E5002ECA75 /* icon_refund@2x.png in Resources */,
 				7533EEF51A2E1536001D12D4 /* icon_mobile_num@3x.png in Resources */,
 				7533EECD1A2E14E7001D12D4 /* icon_search@2x.png in Resources */,
+				0AA06B431B1FF87D001A7081 /* TalkingV2ViewController.xib in Resources */,
 				75AED3BD1AC3254300E31D67 /* AddressListViewController.xib in Resources */,
 				75AED3C21AC3261A00E31D67 /* AddressListTableViewCell.xib in Resources */,
 				75EED3DE1A31639B002ECA75 /* UserEditView.xib in Resources */,
@@ -2415,6 +2414,7 @@
 				75EED4101A31F7C7002ECA75 /* icon_delevery@3x.png in Resources */,
 				756C62F91A47083B007B2ECB /* bg_star_half@2x.png in Resources */,
 				75AD610F1AF5228700DCBB33 /* btn_to_shopping@2x.png in Resources */,
+				0AA06B3E1B1FF770001A7081 /* PostV2ViewController.xib in Resources */,
 				75E478A01A7F58AE002DC26D /* ShoppingCarViewController.xib in Resources */,
 				75164DBB1ABAC0F30046F86E /* loading_square@3x.png in Resources */,
 				7533EEEE1A2E1536001D12D4 /* btn_get_code_bg@2x.png in Resources */,
@@ -2527,6 +2527,7 @@
 				75C241B41AFB90EB00E1DA29 /* NoteViewController.m in Sources */,
 				758512781A32E91100504FA8 /* UIView+MJExtension.m in Sources */,
 				758512811A32EEEC00504FA8 /* ReceiveViewController.m in Sources */,
+				0AA06B3D1B1FF770001A7081 /* PostV2ViewController.m in Sources */,
 				750DF71B1A2F4F4B0010A2E9 /* SBJsonBase.m in Sources */,
 				7557224D1A33356500CC6A8F /* SettingTableViewCell.m in Sources */,
 				0AED7AB11B1C58F100617B3C /* View+MASAdditions.m in Sources */,
@@ -2592,12 +2593,12 @@
 				0AED7AAC1B1C58F100617B3C /* MASLayoutConstraint.m in Sources */,
 				7542C4631A2CA42400BB083D /* LoginViewController.m in Sources */,
 				75AD58471A38285300E39640 /* NicknameEditViewController.m in Sources */,
-				0AED7ABC1B1C759200617B3C /* TalkingViewController.m in Sources */,
 				7550774D1A469EF800CD18EF /* FoodHeaderView.m in Sources */,
 				75AD583A1A38113A00E39640 /* MyAccountTableViewCell.m in Sources */,
 				75AD584C1A38287200E39640 /* PasswordEditViewController.m in Sources */,
 				758512AA1A32F68D00504FA8 /* FeedbackViewController.m in Sources */,
 				755077691A46BCE400CD18EF /* FoodImageDetailView.m in Sources */,
+				0AA06B421B1FF87D001A7081 /* TalkingV2ViewController.m in Sources */,
 				75AD582E1A3810C000E39640 /* ShareTableViewCell.m in Sources */,
 				758512751A32E91100504FA8 /* MJRefreshHeaderView.m in Sources */,
 				758512721A32E91100504FA8 /* MJRefreshBaseView.m in Sources */,
@@ -2623,7 +2624,6 @@
 				750DF7191A2F4F4B0010A2E9 /* NSString+SBJSON.m in Sources */,
 				0AED7AA91B1C58F100617B3C /* MASCompositeConstraint.m in Sources */,
 				755722C81A35857000CC6A8F /* UserInfo.m in Sources */,
-				0AED7AB61B1C74FA00617B3C /* PostViewController.m in Sources */,
 				75EED3DC1A31638E002ECA75 /* UserEditView.m in Sources */,
 				75F5F3AB1AB89FEE00FA849E /* AdModel.m in Sources */,
 				75AED3C11AC3261A00E31D67 /* AddressListTableViewCell.m in Sources */,

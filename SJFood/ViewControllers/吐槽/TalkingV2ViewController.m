@@ -1,18 +1,18 @@
 //
-//  TalkingViewController.m
+//  TalkingV2ViewController.m
 //  SJFood
 //
-//  Created by 缪宇青 on 15/6/1.
+//  Created by 缪宇青 on 15/6/4.
 //  Copyright (c) 2015年 Ye Fan. All rights reserved.
 //
 
-#import "TalkingViewController.h"
+#import "TalkingV2ViewController.h"
 
-@interface TalkingViewController ()
+@interface TalkingV2ViewController ()
 
 @end
 
-@implementation TalkingViewController
+@implementation TalkingV2ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
