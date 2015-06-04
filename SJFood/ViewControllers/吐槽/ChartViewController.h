@@ -1,5 +1,5 @@
 //
-//  TalkingV2ViewController.h
+//  ChartViewController.h
 //  SJFood
 //
 //  Created by 缪宇青 on 15/6/4.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface TalkingV2ViewController : BaseViewController
+@interface ChartViewController : BaseViewController
 
 @end
