@@ -156,7 +156,8 @@
     [self loadSubViews];
     [self setRightNaviItemWithTitle:nil imageName:@"icon_message.png"];
     //检测更新
-    [self checkVersionRequest];
+    //Apple限制，注释掉By yefan 2015年06月05日11:16:28
+    //[self checkVersionRequest];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchHomeWithNotification:) name:kSelectHomeButtonNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectHomeButtonWithTagNotification:) name:kSelectHomeButtonWithTagNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealNotification:) name:kApnsNotification object:nil];
