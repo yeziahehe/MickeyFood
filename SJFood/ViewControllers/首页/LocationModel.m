@@ -10,7 +10,7 @@
 
 @implementation LocationModel
 
-@synthesize LocationName,LocationCoor,Location;
+@synthesize LocationName,LocationCoor;
 
 
 

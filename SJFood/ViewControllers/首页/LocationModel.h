@@ -12,6 +12,4 @@
 
 @property (strong, nonatomic) NSString *LocationName;
 @property (nonatomic, strong) CLLocation *LocationCoor;
-@property(nonatomic,strong)NSString *Location;
-
 @end

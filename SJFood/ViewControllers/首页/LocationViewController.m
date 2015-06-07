@@ -18,21 +18,7 @@
 @end
 @implementation LocationViewController
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setTitle:@"校区选择"];
-    [self AddrCoorInfo];
-    [self setupLocationManager];
-    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(CompareLocation) userInfo:nil repeats:NO];
-    [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
-    self.locationtable.delegate = self;
-    self.locationtable.dataSource = self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
+#pragma mark - Init Methods
 - (void) setupLocationManager {
     self.locationManager = [[CLLocationManager alloc] init];
     if ([CLLocationManager locationServicesEnabled]) {
@@ -47,26 +33,16 @@
     }
 }
 
-
-#pragma mark - CLLocationManagerDelegate
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    NSLog(@"定位失败： %@",error);
-}
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)Locations{
-    self.currLocation = [Locations lastObject];
+#pragma mark - Private Methods
+- (void)loadSubViews
+{
+    //
+    [self AddrCoorInfo];
+    //
+    [self setupLocationManager];
     
+ 
 }
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    switch (status) {
-        case kCLAuthorizationStatusNotDetermined:
-            if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-                [self.locationManager requestWhenInUseAuthorization];
-            }break;
-        default:
-            break;
-    }
-}
-#pragma mark - Dealdata Method
 
 -(void)AddrCoorInfo{
     self.mindisLocation = [[LocationModel alloc]init];
@@ -94,7 +70,10 @@
     }
     
 }
-//比较当前位置与其他所有位置的距离，计算出最小的距离，将其所对应的数据保存
+
+/*
+ 计算距离
+ */
 -(void)CompareLocation {
     double dis[10];
     double mindis;
@@ -104,39 +83,68 @@
         //        NSLog(@"%f",dis[i]);
     }
     mindis = dis[0];
+    
     for(i=0;i<self.schoollocationarray.count;i++){
         if (mindis>=dis[i]) {
             mindis = dis[i];
             self.mindisLocation = self.schoollocationarray[i];
         }
     }
-    //    NSLog(@"%@",self.mindisLocation.LocationName);
-    //    NSLog(@"%@",self.mindisLocation.LocationCoor);
     self.showLocationLabel.text = [NSString stringWithFormat:@"%@",self.mindisLocation.LocationName];
+    [[YFProgressHUD sharedProgressHUD] stoppedNetWorkActivity];
 }
 
-
-#pragma tableview Method
-
+#pragma mark - UIViewController Methods
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.locationtable reloadData];
 }
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setTitle:@"校区选择"];
+    [self loadSubViews];
+    self.locationtable.delegate = self;
+    self.locationtable.dataSource = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(LocationButtonWithNotification:) name:KSelectLocationNotification object:nil];
+}
+#pragma mark - NotificationMethod
+-(void)LocationButtonWithNotification:(NSNotificationCenter *)notification{
+    [self CompareLocation];
+    [self.locationManager stopUpdatingLocation];
+}
+
+#pragma mark - CLLocationManagerDelegate
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"定位失败： %@",error);
+}
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)Locations{
+    self.currLocation = [Locations lastObject];
+    [[NSNotificationCenter defaultCenter]postNotificationName:KSelectLocationNotification object: self.currLocation];
+}
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+            if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+                [self.locationManager requestWhenInUseAuthorization];
+            }break;
+        default:
+            break;
+    }
+}
+#pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.locationnames.count;
 }
+
+#pragma mark - UITableViewDatasource
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationIdentifier"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LocationIdentifier"];
-    }
-    int i;
-    for (i=0; i<self.schoollocationarray.count; i++) {
-        self.locationnames[i] = [self.schoollocationarray[i] LocationName];
     }
     cell.textLabel.text = [self.locationnames objectAtIndex:[indexPath row]];
     return cell;

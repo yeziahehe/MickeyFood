@@ -89,6 +89,7 @@
 #define kNoteNotification                   @"NoteNotification"
 #define kNoteChangeNotification             @"NoteChangeNotification"
 #define kSelectChooseLocationNotification   @"SelectChooseLocationNotification"
+#define KSelectLocationNotification         @"SelectLocationNotification"
 //Url values
 #define kServerAddress          @"http://120.26.76.252:8080/SJFood/"
 //#define kServerAddress          @"http://192.168.1.145:8400/SJFood/"
