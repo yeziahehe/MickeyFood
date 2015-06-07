@@ -12,6 +12,8 @@
 #import "FoodViewController.h"
 #import "HomeModuleView.h"
 #import "MyMessageViewController.h"
+#import "LocationViewController.h"
+#import "LocationModel.h"
 
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
@@ -130,11 +132,17 @@
         self.notificationMessage = notification.object;
     }
 }
-
+-(void)selectChooseLocationWithNotification:(NSNotification *)notification
+{
+    [self setLeftNaviItemWithTitle:notification.object imageName:nil];
+}
 #pragma mark - BaseViewController Methods
 - (void)leftItemTapped
 {
-    
+    LocationViewController *locationViewController = [[LocationViewController alloc]initWithNibName:@"LocationViewController" bundle:nil];
+    NSString *checkString = [NSString stringWithFormat:@"定位中"];
+    [self.navigationController pushViewController: locationViewController animated:YES];
+    [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:checkString];
 }
 
 - (void)rightItemTapped
@@ -166,6 +174,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(foodSearchHomeWithNotification:) name:kSelectHomeButtonNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectHomeButtonWithTagNotification:) name:kSelectHomeButtonWithTagNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dealNotification:) name:kApnsNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectChooseLocationWithNotification:) name:kSelectChooseLocationNotification object:nil];
+    
 }
 
 #pragma mark - UISearchBar Delegate
