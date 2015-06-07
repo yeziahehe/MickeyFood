@@ -83,6 +83,11 @@
                                                                 purpose:kOrderToBuyDownloaderKey];
 }
 
+- (void)cellPhoneButtonClicked:(UIButton *)button
+{
+    //调用电话和短信
+}
+
 #pragma mark - Notification Methods
 - (void)refreshNotification:(NSNotification *)notification
 {
@@ -152,6 +157,7 @@
     }
     cell.noteLabel.text = self.courierOrder.message;
     cell.timeLabel.text = self.courierOrder.reserveTime;
+    [cell.cellPhoneButton addTarget:self action:@selector(cellPhoneButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     switch ([self.courierOrder.status integerValue]) {
         case 1:
         {

@@ -16,7 +16,7 @@
 @end
 
 @implementation CourierTableViewCell
-@synthesize orderIdLabel,dateLabel,totalPriceLabel,addressLabel,statusLabel,changeStatusButton,orderDetailTableView,phoneLabel,nameLabel,timeLabel,noteLabel;
+@synthesize orderIdLabel,dateLabel,totalPriceLabel,addressLabel,statusLabel,changeStatusButton,orderDetailTableView,phoneLabel,nameLabel,timeLabel,noteLabel,cellPhoneButton;
 @synthesize orderList,orderListArray;
 
 #pragma mark - Public Methods

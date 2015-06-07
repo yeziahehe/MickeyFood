@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *noteLabel;
+@property (strong, nonatomic) IBOutlet UIButton *cellPhoneButton;
 
 - (void)reloadData:(NSMutableArray *)orderDetail;
 
