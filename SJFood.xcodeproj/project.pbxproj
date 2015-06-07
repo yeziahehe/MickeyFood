@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2CF0271B228E90008B80C5 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2CF0261B228E90008B80C5 /* LocationModel.m */; };
+		0E2CF0291B228F2F008B80C5 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E2CF0281B228F2F008B80C5 /* LocationViewController.xib */; };
 		750DF7061A2F46370010A2E9 /* MemberDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7051A2F46370010A2E9 /* MemberDataManager.m */; };
 		750DF7091A2F49650010A2E9 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF7081A2F49650010A2E9 /* Member.m */; };
 		750DF7181A2F4F4B0010A2E9 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 750DF70D1A2F4F4B0010A2E9 /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -87,6 +89,7 @@
 		7533EF051A2E1549001D12D4 /* icon_header_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF011A2E1549001D12D4 /* icon_header_cancel@3x.png */; };
 		7533EF071A2E1568001D12D4 /* Mickeyabout.html in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF061A2E1568001D12D4 /* Mickeyabout.html */; };
 		7533EF091A2E177E001D12D4 /* htmlTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 7533EF081A2E177E001D12D4 /* htmlTemplate.html */; };
+		75383AC71B1AFC1500380144 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75383AC51B1AFC1500380144 /* LocationViewController.m */; };
 		753FAF2F1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF2E1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a */; };
 		753FAF321AFD0C7000F12B94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF301AFD0C5C00F12B94 /* CFNetwork.framework */; };
 		753FAF351AFD0CC200F12B94 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753FAF331AFD0CA800F12B94 /* CoreFoundation.framework */; };
@@ -456,6 +459,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E2CF0251B228E90008B80C5 /* LocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationModel.h; sourceTree = "<group>"; };
+		0E2CF0261B228E90008B80C5 /* LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
+		0E2CF0281B228F2F008B80C5 /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		750DF7041A2F46370010A2E9 /* MemberDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataManager.h; sourceTree = "<group>"; };
 		750DF7051A2F46370010A2E9 /* MemberDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberDataManager.m; sourceTree = "<group>"; };
 		750DF7071A2F49650010A2E9 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
@@ -555,6 +561,8 @@
 		7533EF011A2E1549001D12D4 /* icon_header_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_header_cancel@3x.png"; sourceTree = "<group>"; };
 		7533EF061A2E1568001D12D4 /* Mickeyabout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Mickeyabout.html; sourceTree = "<group>"; };
 		7533EF081A2E177E001D12D4 /* htmlTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = htmlTemplate.html; sourceTree = "<group>"; };
+		75383AC41B1AFC1500380144 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		75383AC51B1AFC1500380144 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		753FAF2D1AFD0C1E00F12B94 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APService.h; path = lib/APService.h; sourceTree = "<group>"; };
 		753FAF2E1AFD0C1E00F12B94 /* libPushSDK-1.8.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPushSDK-1.8.3.a"; path = "lib/libPushSDK-1.8.3.a"; sourceTree = "<group>"; };
 		753FAF301AFD0C5C00F12B94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -1047,6 +1055,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E2CF0241B228E78008B80C5 /* LocationModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E2CF0251B228E90008B80C5 /* LocationModel.h */,
+				0E2CF0261B228E90008B80C5 /* LocationModel.m */,
+			);
+			name = LocationModel;
+			sourceTree = "<group>";
+		};
 		750DF7031A2F46010010A2E9 /* DataCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1462,6 +1479,7 @@
 		758116301A26E46200065E65 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				0E2CF0241B228E78008B80C5 /* LocationModel */,
 				7519C7771AB962B40069F400 /* HomeSubView.h */,
 				7519C7781AB962B40069F400 /* HomeSubView.m */,
 				758116341A27611900065E65 /* HomeViewController.h */,
@@ -1473,6 +1491,9 @@
 				758349501AB95D3D00C60CD7 /* HomeModuleView.h */,
 				758349511AB95D3D00C60CD7 /* HomeModuleView.m */,
 				758349531AB95D4C00C60CD7 /* HomeModuleView.xib */,
+				75383AC41B1AFC1500380144 /* LocationViewController.h */,
+				75383AC51B1AFC1500380144 /* LocationViewController.m */,
+				0E2CF0281B228F2F008B80C5 /* LocationViewController.xib */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -2195,6 +2216,7 @@
 				75EED41B1A31F7E5002ECA75 /* icon_refund@2x.png in Resources */,
 				7533EEF51A2E1536001D12D4 /* icon_mobile_num@3x.png in Resources */,
 				7533EECD1A2E14E7001D12D4 /* icon_search@2x.png in Resources */,
+				0E2CF0291B228F2F008B80C5 /* LocationViewController.xib in Resources */,
 				75AED3BD1AC3254300E31D67 /* AddressListViewController.xib in Resources */,
 				75AED3C21AC3261A00E31D67 /* AddressListTableViewCell.xib in Resources */,
 				75EED3DE1A31639B002ECA75 /* UserEditView.xib in Resources */,
@@ -2383,6 +2405,7 @@
 				75EED3D71A316302002ECA75 /* OrderInfoView.m in Sources */,
 				750DF71C1A2F4F4B0010A2E9 /* SBJsonParser.m in Sources */,
 				757DE9A11A455E560054BE47 /* FoodDetailViewController.m in Sources */,
+				0E2CF0271B228E90008B80C5 /* LocationModel.m in Sources */,
 				75D1E2CB1A3ACEE5008555B1 /* AddressAddViewController.m in Sources */,
 				7533EEA91A2E0EF4001D12D4 /* YFWebViewController.m in Sources */,
 				7589543B1A24B853001C2350 /* StartViewController.m in Sources */,
@@ -2391,6 +2414,7 @@
 				7555FF8C1AC187CF001A0497 /* OrderDetails.m in Sources */,
 				754547521AC5A54500A872E4 /* SendOrdersViewController.m in Sources */,
 				7545474C1AC59A3200A872E4 /* CourierOrderView.m in Sources */,
+				75383AC71B1AFC1500380144 /* LocationViewController.m in Sources */,
 				7542C4A41A2D972400BB083D /* UserInfoViewController.m in Sources */,
 				7585127C1A32EE7A00504FA8 /* DeliveryViewController.m in Sources */,
 				75544EC31AAC13BC0034F4A8 /* ShoppingCar.m in Sources */,
