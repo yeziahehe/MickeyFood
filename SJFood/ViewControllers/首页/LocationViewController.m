@@ -36,9 +36,9 @@
 #pragma mark - Private Methods
 - (void)loadSubViews
 {
-    //
+    //加载数据
     [self AddrCoorInfo];
-    //
+    //启动定位系统
     [self setupLocationManager];
     
  
@@ -72,7 +72,7 @@
 }
 
 /*
- 计算距离
+ 计算距离，将最小距离所对应的定位保存在mindislocation中
  */
 -(void)CompareLocation {
     double dis[10];
@@ -105,11 +105,13 @@
     [self loadSubViews];
     self.locationtable.delegate = self;
     self.locationtable.dataSource = self;
+    //接受通知，当按下定位按钮，定位系统启动，获取当前地址之后，接受通知，调用通知方法
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(LocationButtonWithNotification:) name:KSelectLocationNotification object:nil];
 }
 #pragma mark - NotificationMethod
 -(void)LocationButtonWithNotification:(NSNotificationCenter *)notification{
     [self CompareLocation];
+    //当最近校区确定之后，停止定位
     [self.locationManager stopUpdatingLocation];
 }
 

@@ -141,7 +141,7 @@
 {
     LocationViewController *locationViewController = [[LocationViewController alloc]initWithNibName:@"LocationViewController" bundle:nil];
     NSString *checkString = [NSString stringWithFormat:@"定位中"];
-    [self.navigationController pushViewController:locationViewController animated:YES];
+    [self.navigationController pushViewController: locationViewController animated:YES];
     [[YFProgressHUD sharedProgressHUD] showActivityViewWithMessage:checkString];
 }
 

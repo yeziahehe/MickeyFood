@@ -11,7 +11,7 @@
 #import "CoreLocation/CoreLocation.h"
 #import "LocationModel.h"
 
-@interface LocationViewController : UIViewController<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface LocationViewController : BaseViewController<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UILabel *showLocationLabel;
