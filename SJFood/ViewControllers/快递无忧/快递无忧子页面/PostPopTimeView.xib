@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LYU-K9-hef" customClass="PostPopTimeView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="C1B-7i-Jn2">
+                    <rect key="frame" x="0.0" y="39" width="375" height="212"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="LYU-K9-hef" id="T9e-GV-sAK"/>
+                        <outlet property="delegate" destination="LYU-K9-hef" id="FUS-iw-Gam"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efO-lx-iIj">
+                    <rect key="frame" x="10" y="8" width="30" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="skA-jZ-WH7"/>
+                    </constraints>
+                    <state key="normal" title="取消">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBx-Mc-Q6O">
+                    <rect key="frame" x="335" y="8" width="30" height="23"/>
+                    <state key="normal" title="完成">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cBx-Mc-Q6O" firstAttribute="top" secondItem="efO-lx-iIj" secondAttribute="top" id="0y6-3u-ila"/>
+                <constraint firstItem="C1B-7i-Jn2" firstAttribute="leading" secondItem="LYU-K9-hef" secondAttribute="leading" id="6AE-uv-RPc"/>
+                <constraint firstItem="C1B-7i-Jn2" firstAttribute="top" secondItem="efO-lx-iIj" secondAttribute="bottom" constant="8" symbolic="YES" id="8EB-6n-fkQ"/>
+                <constraint firstItem="efO-lx-iIj" firstAttribute="leading" secondItem="LYU-K9-hef" secondAttribute="leading" constant="10" id="H0v-Vk-GRN"/>
+                <constraint firstAttribute="bottom" secondItem="C1B-7i-Jn2" secondAttribute="bottom" constant="-1" id="KQD-Bp-L5s"/>
+                <constraint firstItem="efO-lx-iIj" firstAttribute="baseline" secondItem="cBx-Mc-Q6O" secondAttribute="firstBaseline" id="Q4h-yH-ZwI"/>
+                <constraint firstItem="cBx-Mc-Q6O" firstAttribute="baseline" secondItem="efO-lx-iIj" secondAttribute="firstBaseline" id="TzR-WM-2QA"/>
+                <constraint firstAttribute="trailing" secondItem="C1B-7i-Jn2" secondAttribute="trailing" id="dwo-RE-tcw"/>
+                <constraint firstItem="cBx-Mc-Q6O" firstAttribute="top" secondItem="LYU-K9-hef" secondAttribute="topMargin" id="fAN-PY-yRh"/>
+                <constraint firstAttribute="trailing" secondItem="cBx-Mc-Q6O" secondAttribute="trailing" constant="10" id="tJE-hV-JCj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="efO-lx-iIj" id="VZO-WO-cAM"/>
+                <outlet property="completeButton" destination="cBx-Mc-Q6O" id="b12-0e-M0q"/>
+                <outlet property="timeChoseTableView" destination="C1B-7i-Jn2" id="2qN-MO-mjJ"/>
+            </connections>
+            <point key="canvasLocation" x="465" y="253"/>
+        </view>
+    </objects>
+</document>

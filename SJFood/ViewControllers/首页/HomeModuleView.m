@@ -10,7 +10,6 @@
 #import "FoodViewController.h"
 #import "Masonry.h"
 #import "TalkingViewController.h"
-#import "PostViewController.h"
 #import "CategoryViewController.h"
 
 @interface HomeModuleView ()
