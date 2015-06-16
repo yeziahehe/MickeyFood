@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PVB-EU-eQl" customClass="PostPraiseView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="341-Fu-s3T">
+                    <rect key="frame" x="30" y="47" width="314" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="jVV-8D-KcE"/>
+                    </constraints>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打赏小哥" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWg-Sp-XvI">
+                    <rect key="frame" x="16" y="8" width="52" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="hPw-iA-m27"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="nWg-Sp-XvI" firstAttribute="leading" secondItem="PVB-EU-eQl" secondAttribute="leading" constant="16" id="0Il-Kd-fY4"/>
+                <constraint firstItem="nWg-Sp-XvI" firstAttribute="top" secondItem="PVB-EU-eQl" secondAttribute="top" constant="8" id="1TY-PQ-AST"/>
+                <constraint firstItem="341-Fu-s3T" firstAttribute="leading" secondItem="PVB-EU-eQl" secondAttribute="leading" constant="32" id="8zE-74-tk5"/>
+                <constraint firstAttribute="trailing" secondItem="341-Fu-s3T" secondAttribute="trailing" constant="33" id="daY-p7-mye"/>
+                <constraint firstAttribute="bottom" secondItem="341-Fu-s3T" secondAttribute="bottom" constant="8" id="yaD-nQ-PSd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="slider" destination="341-Fu-s3T" id="wnD-D6-Gtl"/>
+            </connections>
+            <point key="canvasLocation" x="712.5" y="141.5"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

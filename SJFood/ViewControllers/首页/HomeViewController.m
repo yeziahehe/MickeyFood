@@ -14,7 +14,7 @@
 #import "MyMessageViewController.h"
 #import "CategoryViewController.h"
 #import "TalkingViewController.h"
-#import "PostViewController.h"
+#import "PostExpressViewController.h"
 
 #define kHomeMapFileName        @"HomeMap"
 #define kSubViewGap             0.f
@@ -135,8 +135,8 @@
 
 - (void)PostButtonWithTagNotification:(NSNotification *)notification
 {
-    PostViewController *postViewController = [[PostViewController alloc] initWithNibName:@"PostViewController" bundle:nil];
-    [self.navigationController pushViewController:postViewController animated:YES];
+    PostExpressViewController *postExpressViewController = [[PostExpressViewController alloc] initWithNibName:@"PostExpressViewController" bundle:nil];
+    [self.navigationController pushViewController:postExpressViewController animated:YES];
 }
 
 - (void)TalkingButtonWithTagNotification:(NSNotification *)notification
